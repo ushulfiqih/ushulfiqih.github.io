@@ -3947,7 +3947,31 @@
   background-image: linear-gradient(to bottom, #C49152 0%, #C49152 50%, transparent 100%), linear-gradient(to right, transparent 0%, transparent 25%, rgba(0, 0, 0, 0.5) 26%, rgba(0, 0, 0, 0.5) 35%, transparent 36%, transparent 65%, rgba(0, 0, 0, 0.5) 66%, rgba(0, 0, 0, 0.5) 75%, transparent 76%), linear-gradient(to top, #9D7442, #C49152, #cca069);
 }
 
-
+html body {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  -webkit-box-pack: center;
+          justify-content: center;
+  min-height: 100%;
+  height: auto;
+  -webkit-box-align: center;
+          align-items: center;
+  background-image: repeating-linear-gradient(120deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6) 1px, transparent 1px, transparent 30px, rgba(255, 255, 255, 0.3) 30px, rgba(255, 255, 255, 0.3) 31px, transparent 31px, transparent 60px), repeating-linear-gradient(60deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6) 1px, transparent 1px, transparent 30px, rgba(255, 255, 255, 0.3) 30px, rgba(255, 255, 255, 0.3) 31px, transparent 31px, transparent 60px), repeating-linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3) 1px, transparent 1px, transparent 30px);
+  background-size: 70px 120px;
+}
+@media (max-width: 600px) {
+  html body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+  }
+  html body .dex {
+    max-width: 100%;
+  }
+}
 
 .dex {
   font-family: Lato, sans-serif;
@@ -4025,23 +4049,6 @@ a, a:active, a:visited {
 }
 a:hover {
   opacity: 0.8;
-}
-
-html {
-  background: radial-gradient(50vmin 50vmin, #FEB4FF, #A3A3EC);
-  background-position: -20vw center;
-  background-repeat: no-repeat;
-  background-color: #a3a3ec;
-}
-@media (max-width: 600px) {
-  html {
-    background-position: center -20vw;
-  }
-}
-@media (max-width: 300px) {
-  html {
-    background-position: center -30vw;
-  }
 }
 
 html, body {

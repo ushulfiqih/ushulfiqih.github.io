@@ -16,8 +16,8 @@
 :root {
   --f7-theme-color: #ec521e;
   --f7-theme-color-rgb: 0, 122, 255;
-  --f7-theme-color-shade: #ec521e;
-  --f7-theme-color-tint: #ec521e;
+  --f7-theme-color-shade: #0066d6;
+  --f7-theme-color-tint: #298fff;
   --f7-safe-area-left: 0px;
   --f7-safe-area-right: 0px;
   --f7-safe-area-top: 0px;
@@ -1709,7 +1709,6 @@ html.device-full-viewport body {
   --f7-navbar-title-text-align: left;
   --f7-navbar-subtitle-font-size: 14px;
   --f7-navbar-subtitle-line-height: 1.2;
-  --f7-navbar-shadow-image: var(--f7-bars-shadow-bottom-image);
   --f7-navbar-large-title-font-size: 34px;
   --f7-navbar-large-title-height: 56px;
   --f7-navbar-large-title-font-weight: 500;
@@ -1859,7 +1858,7 @@ html.device-full-viewport body {
   z-index: 0;
   background: var(--f7-navbar-bg-color);
   background-image: var(--f7-navbar-bg-image, var(--f7-bars-bg-image));
-  background-color: #ffffff;
+  background-color: var(--f7-navbar-bg-color, var(--f7-bars-bg-color));
   transition-property: transform;
 }
 @supports ((-webkit-backdrop-filter: blur(20px)) or (backdrop-filter: blur(20px))) {

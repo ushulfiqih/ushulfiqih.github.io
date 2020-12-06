@@ -3405,6 +3405,8 @@
             transform:  rotate(0);
   }
 }
+
+
 .eevee {
   height: 325px;
   width: 410px;
@@ -3422,7 +3424,7 @@
   }
 }
 .eevee * {
-  position: absolute;
+  position:absolute;
 }
 
 .body {
@@ -3948,6 +3950,16 @@
 }
 
 
+@media (max-width: 600px) {
+  html body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+  }
+  html body .dex {
+    max-width: 100%;
+  }
+}
 
 .dex {
   font-family: Lato, sans-serif;
@@ -4011,48 +4023,7 @@
 }
 
 p {
-  line-height: 18px;
+  line-height: 25px;
   margin: 0;
   margin-bottom: 1rem;
-}
-
-a {
-  -webkit-transition: opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition: opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-}
-a, a:active, a:visited {
-  color: white;
-}
-a:hover {
-  opacity: 0.8;
-}
-
-html {
-  background: radial-gradient(50vmin 50vmin, #FEB4FF, #A3A3EC);
-  background-position: -20vw center;
-  background-repeat: no-repeat;
-  background-color: #a3a3ec;
-}
-@media (max-width: 600px) {
-  html {
-    background-position: center -20vw;
-  }
-}
-@media (max-width: 300px) {
-  html {
-    background-position: center -30vw;
-  }
-}
-
-html, body {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  font-size: 14px;
-}
-
-*, *:before, *:after {
-  box-sizing: border-box;
-  position: relative;
 }
