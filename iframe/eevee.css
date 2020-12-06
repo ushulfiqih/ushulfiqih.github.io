@@ -3431,7 +3431,7 @@
   height: 100px;
   position: absolute;
   width: 125px;
-  top: 164px;
+  top: 150px;
   left: 140px;
   background: #C49152;
   border-top-right-radius: 30%;
@@ -3943,8 +3943,6 @@
   border-top-right-radius: 40% 40%;
   border-bottom-left-radius: 20%;
   border-bottom-right-radius: 20%;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#C49152), color-stop(50%, #C49152), to(transparent)), -webkit-gradient(linear, left top, right top, from(transparent), color-stop(25%, transparent), color-stop(26%, rgba(0, 0, 0, 0.5)), color-stop(35%, rgba(0, 0, 0, 0.5)), color-stop(36%, transparent), color-stop(65%, transparent), color-stop(66%, rgba(0, 0, 0, 0.5)), color-stop(75%, rgba(0, 0, 0, 0.5)), color-stop(76%, transparent)), -webkit-gradient(linear, left bottom, left top, from(#9D7442), color-stop(#C49152), to(#cca069));
-  background-image: linear-gradient(to bottom, #C49152 0%, #C49152 50%, transparent 100%), linear-gradient(to right, transparent 0%, transparent 25%, rgba(0, 0, 0, 0.5) 26%, rgba(0, 0, 0, 0.5) 35%, transparent 36%, transparent 65%, rgba(0, 0, 0, 0.5) 66%, rgba(0, 0, 0, 0.5) 75%, transparent 76%), linear-gradient(to top, #9D7442, #C49152, #cca069);
 }
 
 html body {
@@ -3959,7 +3957,6 @@ html body {
   height: auto;
   -webkit-box-align: center;
           align-items: center;
-  background-image: repeating-linear-gradient(120deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6) 1px, transparent 1px, transparent 30px, rgba(255, 255, 255, 0.3) 30px, rgba(255, 255, 255, 0.3) 31px, transparent 31px, transparent 60px), repeating-linear-gradient(60deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6) 1px, transparent 1px, transparent 30px, rgba(255, 255, 255, 0.3) 30px, rgba(255, 255, 255, 0.3) 31px, transparent 31px, transparent 60px), repeating-linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3) 1px, transparent 1px, transparent 30px);
   background-size: 70px 120px;
 }
 @media (max-width: 600px) {
