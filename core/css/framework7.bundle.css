@@ -3050,13 +3050,27 @@ html.device-full-viewport body {
   position: absolute;
   left: 0;
   top: 0;
-  width: 100%;
+  width: 50%;
   height: 100%;
+  margin-left: 50%;
   display: flex;
   justify-content: space-between;
   box-sizing: border-box;
   align-items: center;
   align-content: center;
+  overflow: hidden;
+  padding: 0 calc(var(--f7-toolbar-inner-padding-right) + var(--f7-safe-area-right)) 0 calc(var(--f7-toolbar-inner-padding-left) + var(--f7-safe-area-left));
+}
+.toolbar-ushulfiqih {
+  position: absolute;
+  text-align: left;
+  left: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  margin-left: 0%;
+  justify-content: space-between;
+  box-sizing: border-box;
   overflow: hidden;
   padding: 0 calc(var(--f7-toolbar-inner-padding-right) + var(--f7-safe-area-right)) 0 calc(var(--f7-toolbar-inner-padding-left) + var(--f7-safe-area-left));
 }
@@ -3080,6 +3094,7 @@ html.device-full-viewport body {
 .tabbar-labels .tab-link,
 .tabbar .link,
 .tabbar-labels .link {
+  margin-top: 15px;
   height: 100%;
   width: 100%;
   box-sizing: border-box;
@@ -3355,7 +3370,6 @@ html.device-full-viewport body {
 .md .tabbar-labels .tab-link-highlight {
   position: absolute;
   height: 2px;
-  background: var(--f7-tabbar-link-active-border-color, var(--f7-theme-color));
   transition-duration: 300ms;
   left: 0;
 }

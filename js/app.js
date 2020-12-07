@@ -28,7 +28,9 @@ var literasiView = app.views.create('#view-literasi', {
 var settingsView = app.views.create('#view-biblio', {
   url: '/biblio/'
 });
-
+var settingsView = app.views.create('#view-3', {
+  url: '/3/'
+});
 
 
 

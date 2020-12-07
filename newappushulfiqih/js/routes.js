@@ -13,6 +13,10 @@ var routes = [
     path: '/literasi/',
     url: './pages/literasi.html',
   },
+  {
+    path: '/3/',
+    url: './pages/3.html',
+  },
   // About page
   {
     path: '/about/',
