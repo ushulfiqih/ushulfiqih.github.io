@@ -1,138 +1,49 @@
-/* Just basic CSS Reset code */
-
-* { 
-	margin: 0; 
-	padding: 0; 
-	outline: 0;
-}
-
-body, html { 
-	height: 100%; 
-}
-
-body {
-    font-family: 'Muli', sans-serif;
-    font-size: 13px;
-    line-height: 1.4em;
-    color: #978CA8;
-}
-
-img { 
-	height: auto; 
-	max-width: 100%; 
-}
-
-h1,h2,h3,h4,h5,h6{
-	color: #231A3B;
-}
-
-.site {
-	padding: 60px;
-}
-
 /* The parent has the "display: grid;" property and it defines the template areas */
 .profile-card {
+    margin-top: 20px;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	grid-template-areas:
-	"pc-project-1 pc-project-2 pc-project-3 pc-project-4"
 	"pc-user pc-user pc-user pc-user-buttons";
-	max-width: 480px;
 	background: #fff;
-	border-radius: 8px;
-	box-shadow: 0px 0px 10px rgba(63,57,71,.15);
+    background-color: beige;
+    border-radius: 8px;	
+    width: 100%;
 }
 
 /* Direct child of the grid parent. Again we define the name of the "grid-area" porperty */
 .pc-user {
 	display: grid;
-	grid-template-columns: 1fr 2fr;
 	grid-area: pc-user;
 }
 
-.pc-user-image {
-	padding: 18px 26px 18px 18px;
-	position: relative;
-}
-
-.pc-user-image:before {
-	content: '';
-	position: absolute;
-	top: 25px;
-	left: 76px;
-	width: 8px;
-	height: 8px;
-	border-radius: 50%;
-	background: #3fc6a8;
-	border: 4px solid #fff;
-}
-
-.pc-user-image svg {
-	border-radius: 50%;
-	width: 100%;
-}
-
 .pc-user-info {
-	padding: 20px 20px 20px 0;
+	padding: 20px 20px 20px 20px;
 }
 
 .pc-user-info > h3 {
-	font-size: 24px;
+    padding-top: 30px;
+	font-size: 30px;
 	line-height: 1.3em;
-  margin-bottom: 6px;
-}
-
-.pc-user-info > h3 a {
-	color: #241943;
-	text-decoration: none;
-	-webkit-transition: color .3s ease-in-out;
-	transition: color .3s ease-in-out;
-}
-
-.pc-user-info > h3 a:hover {
-	color: #432F7A;
+    margin-bottom: 6px;
+    text-align: center;
 }
 
 .pc-user-title {
-  margin-bottom: 3px;
+  text-align: center;
+  font-weight: bold;
+  font-style: italic;
 }
 
 .pc-user-location {
-	margin-bottom: 20px;
+    text-align: center;
+    margin-top: -20px; margin-bottom: -20px;
 }
 
-.pc-user-location svg {
-	width: 9px;
-	margin-right: 5px;
-	opacity: 0.4;
-}
-
-.pc-social {
-	list-style-type: none;
-	display: -webkit-box;
-	display: flex;
-}
-
-.pc-social li + li {
-	margin-left: 15px;
-}
-
-.pc-social li svg {
-	max-width: 22px;
-	position: relative;
-	opacity: 0.5;
-	-webkit-transition: opacity .2s ease-in-out;
-	transition: opacity .2s ease-in-out;
-}
-
-.pc-social li a:hover svg {
-	opacity: 1;
-}
 
 /* Again >> direct child of the grid parent. We define the "grid-area" name */
 .pc-user-buttons {
 	grid-area: pc-user-buttons;
-	padding: 18px;
 }
 
 .pc-user-buttons .pc-btn {
@@ -144,24 +55,23 @@ h1,h2,h3,h4,h5,h6{
 	text-decoration: none;
 	border-radius: 50px;
 	border: 1px solid #E5DFEF;
-	color: #231A3B;
+	color: #4CAF50;
 	-webkit-transition: background .2s ease-in-out;
 	transition: background .2s ease-in-out;
 }
 
 .pc-user-buttons .pc-btn:hover {
-	background: #E5DFEF;
+	background: #4CAF50; color: white;
 }
 
 .pc-user-buttons .pc-btn.accent {
-	border-color: #4F3FF1;
-	background: #4F3FF1;
+	border-color: #4CAF50;
+	background: #4CAF50;
 	color: #fff;
-	box-shadow: 0 4px 10px rgba(80,60,240,0.2);	
 }
 
 .pc-user-buttons .pc-btn.accent:hover {
-	background: #483AD7;
+	background: #4CAF50;
 }
 
 .pc-user-buttons .pc-btn + .pc-btn {
@@ -171,43 +81,28 @@ h1,h2,h3,h4,h5,h6{
 /* Responsive styling */
 @media only screen and (max-width: 1024px) {
 	.site {
-		padding: 60px;
+		padding: 0px;
 	}
 }
 
 @media only screen and (max-width: 767px) {
 	.site {
-		padding: 25px;
 	}
 	/* Here we define new columns and rows template. Then we rearrange the "grid-area" to match our needs. */
 	.profile-card {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		grid-template-rows: repeat(auto, 4);
 		grid-template-areas:
-		"pc-project-1 pc-project-2"
-		"pc-project-3 pc-project-4"
 		"pc-user pc-user"
 		"pc-user-buttons pc-user-buttons"	
 	}
 
-	.pc-project-2 {
-		border-radius: 0 6px 0 0;
-	}
-
-	.pc-project-4 {
-		border-radius: 0;
-	}
-
-	.pc-user-image {
-		padding: 18px
-	}
 
 	.pc-user-info {
-		padding: 18px 18px 18px 0;
+		padding: 18px 18px 18px 18px;
 	}
 
 	.pc-user-buttons {
-		padding: 0 18px 18px 18px;
+		padding: 0 15% 50px 15%;
 	}
 }
