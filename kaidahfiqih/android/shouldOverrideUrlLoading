@@ -1,0 +1,72 @@
+    private class UriWebViewClient extends WebViewClient {
+        @Override
+        public boolean shouldOverrideUrlLoading(WebView view, String url) {
+            String host = Uri.parse(url).getHost();
+            urlData = url;
+            if (target_url_prefix.equals(host)) {
+                if (mWebviewPop != null) {
+                    mWebviewPop.setVisibility(View.GONE);
+                    mContainer.removeView(mWebviewPop);
+                    mWebviewPop = null;
+                }
+                return false;
+            }
+
+            boolean result = UrlHander.checkUrl(MainActivity.this, url);
+            if (result) {
+                ProgressDialogHelper.dismissProgress();
+            } else {
+                currentUrl = url;
+                if (!show_content) {
+                    ProgressDialogHelper.showProgress(MainActivity.this);
+                }
+            }
+            return result;
+        }
+
+        @Override
+        public void onReceivedSslError(WebView view, SslErrorHandler handler, SslError error) {
+            if (!NetworkHandler.isNetworkAvailable(view.getContext())) {
+                view.loadUrl("file:///android_asset/2.html");
+            }
+            hideStatusBar();
+            ProgressDialogHelper.dismissProgress();
+        }
+
+        @Override
+        public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
+            super.onReceivedError(view, errorCode, description, failingUrl);
+            if (!NetworkHandler.isNetworkAvailable(view.getContext())) {
+                view.loadUrl("file:///android_asset/2.html");
+            }
+            hideStatusBar();
+            ProgressDialogHelper.dismissProgress();
+        }
+
+        @Override
+        public void onReceivedHttpError(WebView view, WebResourceRequest request, WebResourceResponse errorResponse) {
+            super.onReceivedHttpError(view, request, errorResponse);
+            if (!NetworkHandler.isNetworkAvailable(view.getContext())) {
+                view.loadUrl("file:///android_asset/2.html");
+            }
+            hideStatusBar();
+            ProgressDialogHelper.dismissProgress();
+        }
+
+        @Override
+        public void onPageFinished(WebView view, String url) {
+            super.onPageFinished(view, url);
+            showContent();
+            setToolbarButtonColor();
+            hideStatusBar();
+            ProgressDialogHelper.dismissProgress();
+        }
+
+        @Override
+        public void onPageCommitVisible(WebView view, String url) {
+            super.onPageCommitVisible(view, url);
+            setToolbarButtonColor();
+            hideStatusBar();
+            ProgressDialogHelper.dismissProgress();
+        }
+    }

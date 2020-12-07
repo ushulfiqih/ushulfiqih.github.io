@@ -1,0 +1,6 @@
+									<div class="content -light">
+									 <a href="whatsapp://send?text="><button class="button"><img style="margin-top:-2px; height:12px;vertical-align:middle" src="img/whatsapp-logo.png">&nbsp;&nbsp;&nbsp;<span>SHARE TO WHATSAPP</span></button></a>
+									</div>
+									<div class="content -light">
+                                    <p style="color: #ffffff;font-size: 12px;" onclick="copyToClipboard('#copy')">COPY TO CLIPBOARD</p>
+									</div>
