@@ -22,11 +22,11 @@ var app  = new Framework7({
 var homeView = app.views.create('#view-home', {
   url: '/'
 });
-var literasiView = app.views.create('#view-literasi', {
-  url: '/literasi/'
+var literasiView = app.views.create('#view-1', {
+  url: '/1/'
 });
-var settingsView = app.views.create('#view-biblio', {
-  url: '/biblio/'
+var settingsView = app.views.create('#view-2', {
+  url: '/2/'
 });
 var settingsView = app.views.create('#view-3', {
   url: '/3/'

@@ -4,6 +4,18 @@ routes = [
     url: './index.html',
   },
   {
+    path: '/1/',
+    url: './pages/1.html',
+  },
+  {
+    path: '/2/',
+    url: './pages/2.html',
+  },
+  {
+    path: '/3/',
+    url: './pages/3.html',
+  },
+  {
     path: '/antologi/',
     url: 'http://app.smpn21purworejo.sch.id/v7/pages/antologi.html',
   },
@@ -14,10 +26,6 @@ routes = [
   {
     path: '/biblio-text/',
     url: './pages/biblio-text.html',
-  },
-  {
-    path: '/3/',
-    url: './pages/3.html',
   },
   {
     path: '/biblio-anggota/',
