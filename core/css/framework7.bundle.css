@@ -5905,7 +5905,7 @@ i.icon {
 .popover-backdrop.backdrop-in,
 .popup-backdrop.backdrop-in,
 .preloader-backdrop.backdrop-in,
-.sheet-backdrop.backdrop-in,
+.sheet-backdrop.backdrop-in 
 .fab-backdrop.backdrop-in {
   visibility: visible;
   opacity: 1;

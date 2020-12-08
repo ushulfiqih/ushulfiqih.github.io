@@ -236,6 +236,22 @@
                 </div>
                   <br/>
 
+          <p><a class="button sheet-open" href="#" data-sheet=".my-sheet-swipe-to-close">Swipe To Close</a></p>
+
+                  
+  <!-- Swipe to close sheet -->
+  <div class="sheet-modal my-sheet-swipe-to-close" style="height:auto; --f7-sheet-bg-color: #fff;">
+    <div class="sheet-modal-inner">
+      <div class="page-content">
+        <div class="block-title block-title-large">Hello!</div>
+        <div class="block">
+          <p><b>Swipe me down to close</b></p>
+          <p>Eaque maiores ducimus, impedit unde culpa qui...</p>
+        </div>
+      </div>
+    </div>
+  </div>
+                  
                 <div class="card demo-facebook-card">
                   <a class="sheet-open" href="#" data-sheet=".my-sheet">
                   <div class="card-header">
@@ -251,17 +267,12 @@
                   </a>
                   <div class="card-footer"><a href="#" class="link button-raised open-full"><i class="icon f7-icons" style="font-size: 14px;">doc_on_doc</i>&nbsp;&nbsp;Salin</a><a href="#" class="link">Bagikan ke Whatsapp</a></div>
                 </div>
+                  
                 <div class="sheet-modal my-sheet">
-                    <div class="toolbar">
-                      <div class="toolbar-inner">
-                        <div class="left"></div>
-                        <div class="right"><a class="link sheet-close" href="#">Done</a></div>
-                      </div>
-                    </div>
                     <div class="sheet-modal-inner">
                       <div class="block">
                         <h4>Info</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac diam ac quam euismod porta vel a nunc. Quisque sodales scelerisque est, at porta justo cursus ac.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac diam ac quam euismod porta vel a nunc. Quisque sodales scelerisque est, at porta justo cursus ac.</p><a class="link sheet-close" href="#">Done</a>
                       </div>
                     </div>
                 </div>
@@ -475,6 +486,13 @@
 
   </div>
     
+    <script>// Create swipe-to-close Sheet
+// Create swipe-to-close Sheet
+app.sheet.create({
+  el: '.my-sheet-swipe-to-close',
+  swipeToClose: true,
+  backdrop: true,
+});</script>
     <script type="text/javascript" src="core/js/framework7.bundle.min.js"></script>
     <script>var theme = 'ios';
     if (location.href.indexOf('theme=md') >= 0) theme = 'md';
