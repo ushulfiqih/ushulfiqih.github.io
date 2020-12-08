@@ -246,10 +246,11 @@
                   <div class="card-content card-content-padding">
                     <h1>اَلْيَقِيْنُ لَايُزَالُ بِالشَكِّ</h1>
                     <p class="likes">Kepastian / keyakinan itu tidak bisa dihilangkan dengan keraguan.</p>
-
                   </div>
+                    <span id="demo-determinate-container"></span>
+
                   </a>
-                  <div class="card-footer"><a href="#" class="link button-raised open-toast-callback"><i class="icon f7-icons" style="font-size: 14px;">doc_on_doc</i>&nbsp;&nbsp;Salin</a><a href="#" class="link">Bagikan ke Whatsapp</a></div>
+                  <div class="card-footer"><a href="#" class="link button-raised open-toast-callback show-determinate"><i class="icon f7-icons" style="font-size: 14px;">doc_on_doc</i>&nbsp;&nbsp;Salin</a><a href="#" class="link">Bagikan ke Whatsapp</a></div>
                 </div>
                   
                 <div class="sheet-modal my-sheet">
@@ -502,6 +503,49 @@ var toastWithCallback = app.toast.create({
 $$('.open-toast-callback').on('click', function () {
   toastWithCallback.open();
 });
+        
+// Set progress on inline progressbar
+$$('.set-inline-progress').on('click', function (e) {
+  var progress = $$(this).attr('data-progress');
+  app.progressbar.set('#demo-inline-progressbar', progress);
+});
+
+
+// Function show determinate progressbar and emulate loading
+determinateLoading = false;
+function showDeterminate(inline) {
+  determinateLoading = true;
+  var progressBarEl;
+  if (inline) {
+    // inline progressbar
+    progressBarEl = app.progressbar.show('#demo-determinate-container', 0);
+  } else {
+    // root progressbar
+    progressBarEl = app.progressbar.show(0, app.theme === 'md' ? 'yellow' : 'green');
+  }
+  var progress = 0;
+  function simulateLoading() {
+    setTimeout(function () {
+      var progressBefore = progress;
+      progress += Math.random() * 20;
+      app.progressbar.set(progressBarEl, progress);
+      if (progressBefore < 100) {
+        simulateLoading(); //keep "loading"
+      }
+      else {
+        determinateLoading = false;
+        app.progressbar.hide(progressBarEl); //hide
+      }
+    }, Math.random() * 200 + 200);
+  }
+  simulateLoading();
+}
+// show inline determinate progressbar
+$$('.show-determinate').on('click', function (e) {
+  showDeterminate(true);
+});
+
+
     </script>
 
   <script  src="js/type-promise.js"></script>
