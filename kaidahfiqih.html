@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap: content:">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
+  <title>ushulfiqih</title>
+
+  <link rel="stylesheet" href="core/css/framework7.bundle.css">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/type-promise.css">
+  <link disabled id="dark-reader" href="css/dark.css" rel="stylesheet" type="text/css">
+
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <link rel="stylesheet" href="todo/css/todo.css">
+
+  <script type="text/javascript" src="js/localstorage.js"></script>
+  <script type="text/javascript">//<![CDATA[
+
+    window.addEvent('load', function() {
+
+  function handleFileSelect(evt) {
+    var files = evt.target.files; // FileList object
+
+    // Loop through the FileList and render image files as thumbnails.
+    for (var i = 0, f; f = files[i]; i++) {
+
+      // Only process image files.
+      if (!f.type.match('image.*')) {
+        continue;
+      }
+
+      var reader = new FileReader();
+
+      // Closure to capture the file information.
+      reader.onload = (function(theFile) {
+        return function(e) {
+          // Render thumbnail.
+          var span = document.createElement('span');
+          span.innerHTML = ['<img class="thumb" src="', e.target.result,
+                            '" title="', escape(theFile.name), '"/>'].join('');
+
+          document.getElementById('list').insertBefore(span, null);
+          localStorage.setItem('img', e.target.result);
+        };
+      })(f);
+
+      // Read in the image file as a data URL.
+      reader.readAsDataURL(f);
+    }
+  }
+
+  document.getElementById('files').addEventListener('change', handleFileSelect, false);
+
+
+  if(localStorage.img) {
+
+         var span = document.createElement('span');
+          span.innerHTML += ['<img class="thumb" src="', localStorage.img,
+                            '" title="test"/>'].join('');
+
+          document.getElementById('list').insertBefore(span, null);
+
+    }
+
+    });
+
+  //]]></script>
+
+</head>
+<body>
+  <div id="app">
+      
+    <div class="page">
+        <div class="page" data-name="home">
+
+          <!-- Scrollable page content-->
+          <div class="page-content">
+
+  <div class="block" style="top:-30px">
+
+      
+<div class="card demo-facebook-card">
+  <a class="sheet-open" href="#" data-sheet=".my-sheet">
+  <div class="card-header">
+    <div class="demo-facebook-avatar"><img src="img/logo.png" width="34" height="34"/></div>
+    <div class="demo-facebook-name">ushulfiqih.com</div>
+    <div class="demo-facebook-date">Kaidah Fiqih</div>
+  </div>
+  <div class="card-content card-content-padding">
+    <h1>اَلْيَقِيْنُ لَايُزَالُ بِالشَكِّ</h1>
+    <p class="likes">Kepastian / keyakinan itu tidak bisa dihilangkan dengan keraguan.</p>
+      
+  </div>
+  </a>
+  <div class="card-footer"><a href="#" class="link button-raised open-full"><i class="icon f7-icons" style="font-size: 14px;">doc_on_doc</i>&nbsp;&nbsp;Salin</a><a href="#" class="link">Bagikan ke Whatsapp</a></div>
+</div>
+          
+      <p><a class="button-raised open-full" href="#">Full-layout notification</a></p>
+
+
+
+</div>
+
+          </div>
+        </div>
+    </div>
+   
+  </div>
+
+<script type="text/javascript" src="core/js/framework7.bundle.min.js"></script>
+<script>var theme = 'ios';
+if (location.href.indexOf('theme=md') >= 0) theme = 'md';
+if (location.href.indexOf('theme=aurora') >= 0) theme = 'aurora';
+var plugin = {
+  params: {
+    theme: theme,
+    root: '#app',
+  }
+};
+if (Framework7.use) Framework7.use(plugin);
+else if (Framework7.Class && Framework7.Class.use) Framework7.Class.use(plugin);
+</script><style>.demo-icon {
+  background: #EE350F;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+}</style><script>var app = new Framework7();
+
+var $$ = Dom7;
+
+// Create full-layout notification
+var notificationFull = app.notification.create({
+  icon: '<i class="icon demo-icon">7</i>',
+  title: 'Framework7',
+  titleRightText: 'now',
+  subtitle: 'This is a subtitle',
+  text: 'This is a simple notification message',
+  closeTimeout: 3000,
+});
+
+// Open Notifications
+$$('.open-full').on('click', function () {
+  notificationFull.open();
+});
+</script>
+    
+  <script  src="js/type-promise.js"></script>
+
+  <!-- Framework7 library -->
+  <script src="core/js/framework7.bundle.min.js"></script>
+
+  <!-- App routes -->
+  <script src="js/routes.js"></script>
+
+  <!-- Your custom app scripts -->
+  <script src="js/app.js"></script>
+
+  <script src='js/materialize.min.js'></script>
+  <script src='js/fuse.min.js'></script>
+  <script  src="js/databuku.js"></script>
+
+</body>
+</html>
