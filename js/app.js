@@ -5,7 +5,7 @@ var $$ = Dom7;
 var app  = new Framework7({
   root: '#app', // App root element
   id: 'io.framework7.testapp', // App bundle ID
-  name: 'Framework7', // App name
+  name: 'ushulfiqih.com', // App name
   theme: 'auto', // Automatic theme detection
 
   // App root methods
@@ -33,22 +33,7 @@ var settingsView = app.views.create('#view-3', {
 });
 
 
-// Create swipe-to-close Sheet
-app.sheet.create({
-  el: '.my-sheet-swipe-to-close',
-  swipeToClose: true,
-  backdrop: true,
-});
 
-
-// Create toast with button
-var toastWithButton = app.toast.create({
-  text: 'Toast with additional close button',
-  closeButton: true,
-});
-$$('.open-toast-top').on('click', function () {
-  toastTop.open();
-});
 
 
 var thehours = new Date().getHours();

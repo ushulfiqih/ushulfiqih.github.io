@@ -6431,6 +6431,7 @@ html.with-modal-dialog .page-content {
 }
 .md .dialog-text {
   line-height: 1.5;
+  font-size: 13px;
 }
 .md .dialog-buttons {
   height: 48px;
@@ -7619,7 +7620,7 @@ html.with-modal-popup-push-closing .framework7-root > .view.theme-dark:after {
   box-sizing: border-box;
   transition-property: transform;
   transform: translate3d(0, 100%, 0);
-  background: var(--f7-sheet-bg-color);
+  background-color: aliceblue;
   z-index: 12500;
   will-change: transform, opacity;
 }

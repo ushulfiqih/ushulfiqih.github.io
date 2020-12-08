@@ -236,22 +236,6 @@
                 </div>
                   <br/>
 
-          <p><a class="button sheet-open" href="#" data-sheet=".my-sheet-swipe-to-close">Swipe To Close</a></p>
-
-                  
-  <!-- Swipe to close sheet -->
-  <div class="sheet-modal my-sheet-swipe-to-close" style="height:auto; --f7-sheet-bg-color: #fff;">
-    <div class="sheet-modal-inner">
-      <div class="page-content">
-        <div class="block-title block-title-large">Hello!</div>
-        <div class="block">
-          <p><b>Swipe me down to close</b></p>
-          <p>Eaque maiores ducimus, impedit unde culpa qui...</p>
-        </div>
-      </div>
-    </div>
-  </div>
-                  
                 <div class="card demo-facebook-card">
                   <a class="sheet-open" href="#" data-sheet=".my-sheet">
                   <div class="card-header">
@@ -265,7 +249,7 @@
 
                   </div>
                   </a>
-                  <div class="card-footer"><a href="#" class="link button-raised open-full"><i class="icon f7-icons" style="font-size: 14px;">doc_on_doc</i>&nbsp;&nbsp;Salin</a><a href="#" class="link">Bagikan ke Whatsapp</a></div>
+                  <div class="card-footer"><a href="#" class="link button-raised open-toast-callback"><i class="icon f7-icons" style="font-size: 14px;">doc_on_doc</i>&nbsp;&nbsp;Salin</a><a href="#" class="link">Bagikan ke Whatsapp</a></div>
                 </div>
                   
                 <div class="sheet-modal my-sheet">
@@ -486,13 +470,6 @@
 
   </div>
     
-    <script>// Create swipe-to-close Sheet
-// Create swipe-to-close Sheet
-app.sheet.create({
-  el: '.my-sheet-swipe-to-close',
-  swipeToClose: true,
-  backdrop: true,
-});</script>
     <script type="text/javascript" src="core/js/framework7.bundle.min.js"></script>
     <script>var theme = 'ios';
     if (location.href.indexOf('theme=md') >= 0) theme = 'md';
@@ -505,29 +482,26 @@ app.sheet.create({
     };
     if (Framework7.use) Framework7.use(plugin);
     else if (Framework7.Class && Framework7.Class.use) Framework7.Class.use(plugin);
-    </script><style>.demo-icon {
-      background: #EE350F;
-      color: #fff;
-      border-radius: 50%;
-      text-align: center;
-    }</style><script>var app = new Framework7();
+    </script>
+    <script>var app = new Framework7();
 
     var $$ = Dom7;
 
-    // Create full-layout notification
-    var notificationFull = app.notification.create({
-      icon: '<i class="icon demo-icon">7</i>',
-      title: 'Framework7',
-      titleRightText: 'now',
-      subtitle: 'This is a subtitle',
-      text: 'This is a simple notification message',
-      closeTimeout: 3000,
-    });
+// Create toast with callback on close
+var toastWithCallback = app.toast.create({
+  text: 'Kaidah Fiqih berhasil disalin',
+  closeButton: true,
+  on: {
+    close: function () {
+      app.dialog.alert('Bagikan jika bermanfaat');
+    },
+  }
+});
 
-    // Open Notifications
-    $$('.open-full').on('click', function () {
-      notificationFull.open();
-    });
+// Open toasts
+$$('.open-toast-callback').on('click', function () {
+  toastWithCallback.open();
+});
     </script>
 
   <script  src="js/type-promise.js"></script>
