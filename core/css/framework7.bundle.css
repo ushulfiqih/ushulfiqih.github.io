@@ -10564,7 +10564,7 @@ html.with-modal-sheet-push-closing .framework7-root > .panel-in.panel-reveal.pan
   --f7-card-expandable-header-font-weight: bold;
 }
 .md {
-  --f7-card-margin-horizontal: 8px;
+  --f7-card-margin-horizontal: 1px;
   --f7-card-margin-vertical: 8px;
   --f7-card-box-shadow: var(--f7-elevation-1);
   --f7-card-header-font-size: 16px;

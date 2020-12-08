@@ -33,6 +33,28 @@ var settingsView = app.views.create('#view-3', {
 });
 
 
+// Create swipe-to-step Sheet
+app.sheet.create({
+  el: '.my-sheet-swipe-to-step',
+  swipeToClose: true,
+  swipeToStep: true,
+  backdrop: true,
+});
+
+// Create full-layout notification
+var notificationFull = app.notification.create({
+  icon: '<i class="icon demo-icon">7</i>',
+  title: 'Framework7',
+  titleRightText: 'now',
+  subtitle: 'This is a subtitle',
+  text: 'This is a simple notification message',
+  closeTimeout: 3000,
+});
+
+// Open Notifications
+$$('.open-full').on('click', function () {
+  notificationFull.open();
+});
 
 var thehours = new Date().getHours();
 	var themessage;
