@@ -72,6 +72,16 @@
 
   //]]></script>
 
+  <script type="text/javascript">
+  function copyToClipboard(element) {
+  var $temp = $("<input>");
+  $("body").append($temp);
+  $temp.val($(element).text()).select();
+  document.execCommand("copy");
+  $temp.remove();
+  }
+  </script>
+    
 </head>
 <body>
   <div id="app">
@@ -699,15 +709,20 @@
                     <div class="demo-facebook-name">ushulfiqih.com</div>
                     <div class="demo-facebook-date">Kaidah Fiqih</div>
                   </div>
-                  <div class="card-content card-content-padding">
+                  <div class="card-content card-content-padding" id="copy1">
                     <h1>اَلْيَقِيْنُ لَايُزَالُ بِالشَكِّ</h1>
-                    <p class="likes">Kepastian / keyakinan itu tidak bisa dihilangkan dengan keraguan.</p>
+                    <p class="likes">Kepastian / keyakinan itu tidak bisa dihilangkan dengan keraguan. <span style="display:none;">ushulfiqih.com</span></p>
+                    
                   </div>
                     <span id="demo-determinate-container"></span>
 
                   </a>
-                  <div class="card-footer"><a href="#" class="link button-raised open-toast-callback show-determinate"><i class="icon f7-icons" style="font-size: 14px;">doc_on_doc</i>&nbsp;&nbsp;Salin</a><a href="whatsapp://send?text=اَلْيَقِيْنُ لَايُزَالُ بِالشَكِّ %0a Kepastian / keyakinan itu tidak bisa dihilangkan dengan keraguan." class="link external open-progress-infinite">Bagikan ke Whatsapp</a></div>
+                  <div class="card-footer"><a href="#" class="link button-raised open-toast-callback show-determinate" onclick="copyToClipboard('#copy1')"><i class="icon f7-icons" style="font-size: 14px;">doc_on_doc</i>&nbsp;&nbsp;Salin</a><a href="whatsapp://send?text=اَلْيَقِيْنُ لَايُزَالُ بِالشَكِّ %0aKepastian / keyakinan itu tidak bisa dihilangkan dengan keraguan.%0aushulfiqih.com" class="link external open-progress-infinite">Bagikan ke Whatsapp</a></div>
+                    
+                    
                 </div>
+                  
+
                   
                 <div class="sheet-modal my-sheet">
                     <div class="sheet-modal-inner">
