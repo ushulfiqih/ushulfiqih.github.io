@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css?family=Libre+Baskerville");
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  color: #111;
+  font-family: 'Libre Baskerville', serif;
+}
+
+body {
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+}
+
+#stage {
+  -webkit-backface-visibility: visible;
+          backface-visibility: visible;
+}
+
+#download-button {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 10px;
+  display: inline-block;
+  margin: 10px;
+  background-color: #f0f0f0;
+  color: #303030;
+  border-radius: 4px;
+  cursor: pointer;
+  border-bottom: solid 3px #f0f0f0;
+}
+#download-button:hover {
+  border-bottom: solid 3px #d7d7d7;
+}
