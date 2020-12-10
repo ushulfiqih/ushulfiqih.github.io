@@ -1,6 +1,6 @@
 .wrapper {
   z-index: 0;
-  margin-top: -90px;
+  margin-top: -100px;
   height: 65vh;  width: 100%;
   display: -webkit-box;
   display: flex;
@@ -157,18 +157,17 @@
 
 @keyframes carousel-animate-vertical {
   0% {
-    -webkit-transform: translateY(50%) scale(0.2);
-            transform: translateY(50%) scale(0.2);
+    -webkit-transform: translateY(-100%) scale(0.5);
+            transform: translateY(-100%) scale(0.5);
     opacity: 0;
     visibility: hidden;
   }
   3%,
   11.1111111111% {
-    -webkit-transform: translateY(50%) scale(0.5);
-            transform: translateY(50%) scale(0.5);
+    -webkit-transform: translateY(-100%) scale(0.7);
+            transform: translateY(-100%) scale(0.7);
     opacity: 1;
     visibility: visible;
-    z-index: 0;
   }
   14.1111111111%,
   22.2222222222% {
@@ -176,25 +175,31 @@
             transform: translateY(0) scale(1);
     opacity: 1;
     visibility: visible;
-      z-index: 1;
+      z-index: 3;
   }
   25.2222222222%,
   33.3333333333% {
-    -webkit-transform: translateY(-100%) scale(0.7);
-            transform: translateY(-100%) scale(0.7);
+    -webkit-transform: translateY(50%) scale(0.5);
+            transform: translateY(50%) scale(0.5);
     opacity: .4;
     visibility: visible;
+      z-index: 2;
+
   }
   36.3333333333% {
-    -webkit-transform: translateY(-100%) scale(0.5);
-            transform: translateY(-100%) scale(0.5);
+    -webkit-transform: translateY(50%) scale(0.2);
+            transform: translateY(50%) scale(0.2);
     opacity: 0;
     visibility: visible;
+      z-index: 1;
+
   }
   100% {
-    -webkit-transform: translateY(-100%) scale(0.5);
-            transform: translateY(-100%) scale(0.5);
+    -webkit-transform: translateY(50%) scale(0.2);
+            transform: translateY(50%) scale(0.2);
     opacity: 0;
     visibility: hidden;
+    z-index: 0;
+
   }
 }
