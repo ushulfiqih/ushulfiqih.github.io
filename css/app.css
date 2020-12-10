@@ -695,7 +695,7 @@ code {
     color: #c0392b;
 }
 
-.navbar {border-bottom: 0px solid #eeeeee;background-color: #ffffff;margin-left: 10px;}
+.navbar {border-bottom: 0px solid #eeeeee;background-color: #ffffff;}
 .navbarhome {background-color: transparent;}
 
 .tabbar-labels {border-top: 1px solid #eeeeee;background-color: #ffffff}
