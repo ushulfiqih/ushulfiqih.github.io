@@ -26,20 +26,3 @@ body {
   -webkit-backface-visibility: visible;
           backface-visibility: visible;
 }
-
-#download-button {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  padding: 10px;
-  display: inline-block;
-  margin: 10px;
-  background-color: #f0f0f0;
-  color: #303030;
-  border-radius: 4px;
-  cursor: pointer;
-  border-bottom: solid 3px #f0f0f0;
-}
-#download-button:hover {
-  border-bottom: solid 3px #d7d7d7;
-}
