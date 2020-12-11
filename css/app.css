@@ -1111,3 +1111,6 @@ ul li:last-child {
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
+.tombol{float:left;;height:30px;margin-top:0px;line-height:30px;padding-left:20px;padding-right:20px;border-radius:30px;background-color:#c0392b;color:#fff}
+.tombol:hover{color:#fff;background-color:#e74c3c}

@@ -19,6 +19,7 @@
   <script type="text/javascript" src="js/jquery.js"></script>
   <link rel="stylesheet" href="css/audio.css">
   <link rel="stylesheet" href="css/carousel.css">
+  <link rel="stylesheet" href="css/login.css">
 
   <script type="text/javascript" src="js/localstorage.js"></script>
   <script type="text/javascript">//<![CDATA[
@@ -212,6 +213,12 @@
         <iframe src="iframe/plant/index.html" frameborder="0" style="position: absolute; float: left; clear: both; width: 100%; height: 100%; z-index: 0; left no-repeat; margin-top: -50px;opacity: 0.5"></iframe>
 
               <div class="block">
+                  
+                <div id="user_div" class="loggedin-div">
+                    <h3>Welcome User</h3>
+                    <p id="user_para">Welcome to Firebase web login Example. You're currently logged in.</p>
+                </div>
+                  
                 <p style="font-size: 30px;line-height: 1;color: #000000"><b>Principles of Islamic Jurisprudence</b></p>
 
                 <div style="font-size: 16px;margin-bottom: 10px;height: 50px;" id="type-text">
@@ -228,18 +235,33 @@
                   
                 <br/>
                   
-<div>
-  <p class="row">
-    <button class="col button button-fill color-red">Masuk</button>
-    <button class="col button">Daftar</button>
-  </p>
-</div>
+                <div id="login_div" class="main-div">
+                <div class="item-content item-input">
+                    <div class="item-title item-label">Username</div>
+                    <div class="item-input-wrap">
+                      <input type="email" name="username" placeholder="Your username" id="email_field">
+                    </div>
+                </div>
+                <br/>
+                <div class="item-content item-input">
+                    <div class="item-title item-label">Password</div>
+                    <div class="item-input-wrap">
+                      <input type="password" name="password" placeholder="Your password" id="password_field">
+                    </div>
+                </div>
+                <div>
+                  <p>
+                    <a onclick="login()" class="tombol">Masuk <i class="fa fa-angle-right"></i></a>&nbsp;&nbsp;&nbsp;Daftar
+                  </p>
+                </div>
+                </div>
                   
                 <br/>
                   
                 <div>
-                    <label class="pengumuman"><b>Library News:</b></label>
+                    <label class="pengumuman"><b>Terbaru di Ushulfiqih.com</b></label>
                     <div id ="ambil">Sepertinya kamu tidak terhubung internet?</div>
+                    <p onclick="logout()">Logout</p>
                 </div>
                   
               </div>
@@ -976,6 +998,23 @@
     </div>
 
   </div>
+    
+    <!--FIREBASE -->
+    <script src="https://www.gstatic.com/firebasejs/5.8.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyBnyCkwL36UUWTavh_Li-Ksbzky2aRxxfQ",
+        authDomain: "ushulfiqih-89047.firebaseapp.com",
+        projectId: "ushulfiqih-89047",
+        storageBucket: "ushulfiqih-89047.appspot.com",
+        messagingSenderId: "643670286454",
+        appId: "1:643670286454:web:6f0ced96ff67c8caaabf57",
+        measurementId: "G-SL8P3RB8RW"
+      };
+      firebase.initializeApp(config);
+    </script>
+    <script src="js/login.js"></script>
     
     <script type="text/javascript" src="core/js/framework7.bundle.min.js"></script>
     <script>var theme = 'ios';
