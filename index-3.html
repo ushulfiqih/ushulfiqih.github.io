@@ -220,7 +220,7 @@
                 </div>
                   
                 <p style="font-size: 30px;line-height: 1;color: #000000"><b>Principles of Islamic Jurisprudence</b></p>
-                  
+
                 <div style="font-size: 16px;margin-bottom: 10px;height: 50px;" id="type-text">
                     <span class="blinking-cursor">_</span>
                 </div>
@@ -757,7 +757,7 @@
                 <br/>
 
                 <div class="card demo-facebook-card">
-                  <a class="popup-open" href="#" data-popup=".popup-swipe-to-close">
+                  <a class="sheet-open" href="#" data-sheet=".my-sheet">
                   <div class="card-header">
                     <div class="demo-facebook-avatar"><img src="img/logo.png" width="34" height="34"/></div>
                     <div class="demo-facebook-name">ushulfiqih.com</div>
@@ -771,11 +771,14 @@
                   </a>
                   <div class="card-footer"><a href="#" class="link button-raised open-confirm show-determinate" onclick="copyToClipboard('#copy1')"><i class="icon f7-icons" style="font-size: 14px;">doc_on_doc</i>&nbsp;&nbsp;Salin</a><a href="whatsapp://send?text=اَلْيَقِيْنُ لَايُزَالُ بِالشَكِّ %0aKepastian / keyakinan itu tidak bisa dihilangkan dengan keraguan.%0aushulfiqih.com" class="link external open-progress-infinite">Bagikan ke Whatsapp</a></div>
                 </div>
-                  <div class="popup popup-swipe-to-close">
-                    <div class="block text-align-center">
-                      <p>Swipe me up or down to close</p>
+                <div class="sheet-modal my-sheet">
+                    <div class="sheet-modal-inner">
+                      <div class="block">
+                        <h4>اَلْيَقِيْنُ لَايُزَالُ بِالشَكِّ</h4>
+                        <p>Upgrade Ushul Fiqih Pro untuk contoh melihat kasus yang dipecahkan dengan kaidah ini</p><a class="link sheet-close" href="#">Tutup</a>
+                      </div>
                     </div>
-                  </div>
+                </div>
 
                 <div class="card demo-facebook-card">
                   <div class="card-header">
@@ -1030,12 +1033,6 @@
 
     var $$ = Dom7;
 
-// Create Popup with swipe to close
-var swipeToClosePopup = app.popup.create({
-  el: '.popup-swipe-to-close',
-  swipeToClose: true,
-});
-        
 // Confirm
 $$('.open-confirm').on('click', function () {
   app.dialog.confirm('Apakah anda ingin menyalin Kaidah Fiqih ini?', function () {
@@ -1094,8 +1091,6 @@ $$('.show-determinate').on('click', function (e) {
 
 
     </script>
-    
-
 
   <script  src="js/type-promise.js"></script>
   <script  src="iframe/audio/script.js"></script>
