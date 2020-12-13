@@ -1803,6 +1803,7 @@ html.device-full-viewport body {
 }
 .navbar .title {
   position: relative;
+  margin-top: -2px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
