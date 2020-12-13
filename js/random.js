@@ -1,3 +1,3 @@
 $(function() {
-  $(".various" + new Date().getTime() % 5).css("display", "block");
+  $(".various" + new Date().getTime() % 2).css("display", "block");
 });
