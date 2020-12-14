@@ -16,6 +16,10 @@ routes = [
     url: './pages/3.html',
   },
   {
+    path: '/daftar/',
+    url: './pages/daftar.html',
+  },
+  {
     path: '/antologi/',
     url: 'http://app.smpn21purworejo.sch.id/v7/pages/antologi.html',
   },
