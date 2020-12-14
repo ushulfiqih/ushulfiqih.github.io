@@ -11740,7 +11740,7 @@ textarea {
 .md .input:not(.input-outline):after {
   content: '';
   position: absolute;
-  background-color: var(--f7-list-item-border-color);
+  background-color: #999999;
   display: block;
   z-index: 15;
   top: auto;

@@ -5,7 +5,7 @@
 
     <style>
       .forms-out {
-        font-family: "Fira Sans", sans-serif;
+        font-family: sans-serif;
       }
       .forms-in {
         color: #000000;
@@ -61,18 +61,16 @@
   <body>
     <div class="forms-out">
       <div class="forms-in">
-        <div id="registration-page">
+        <div id="registration-page" style="margin-bottom: -50px;">
           <button style="display: none" id="show-login">Sign In</button>
-          Email <br />
+          <p style="font-size: 12px;margin-bottom: 0px;">Email</p>
           <input style="border:none" type="email" id="registration-email" placeholder="Email anda..."/>
           <p style="margin-top: -30px;"><hr/></p>
-          <br />
-          Konfirmasi Email <br />
+          <p style="font-size: 12px;margin-bottom: 0px;">Konfirmasi Email</p>
           <input style="border: none;"
             type="email" id="registration-reemail" autocomplete="disable" placeholder="Masukkan lagi email anda..."/>
           <p style="margin-top: -30px;"><hr/></p>
-          <br />
-          Sandi <br />
+           <p style="font-size: 12px;margin-bottom: 0px;">Sandi</p>
           <input style="border: none;" type="password" id="registration-password" placeholder="Sandi anda..."/>
           <p style="margin-top: -30px;"><hr/></p>
           <br />
@@ -152,11 +150,11 @@
         const password = document.querySelector("#registration-password").value;
 
         if (email.trim() == "") {
-          alert("Enter Email");
-        } else if (password.trim().length < 7) {
-          alert("Password must be at least 7 characters");
+          alert("Masukkan alamat email");
+        } else if (password.trim().length < 6) {
+          alert("Sandi minimal 6 karakter");
         } else if (email != reemail) {
-          alert("emails do not match");
+          alert("Alamat email tidak sama");
         } else {
           auth
             .createUserWithEmailAndPassword(email, password)
