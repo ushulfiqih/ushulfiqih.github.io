@@ -8,10 +8,6 @@ var app  = new Framework7({
   name: 'ushulfiqih.com', // App name
   theme: 'auto', // Automatic theme detection
 
-touch: {
-        materialRipple: false
-    },
-    materialPreloaderHtml: true,  // NOT sure about this setting
     view: {
         pushState: true
     }
