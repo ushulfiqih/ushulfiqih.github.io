@@ -6,12 +6,7 @@ var app  = new Framework7({
   root: '#app', // App root element
   id: 'io.framework7.testapp', // App bundle ID
   name: 'ushulfiqih.com', // App name
-  theme: 'ios', // Automatic theme detection
-
-	view: {
-		pushState :true,
-		stackPages: true,            
-	},
+  theme: 'auto', // Automatic theme detection
 
   // App root methods
   methods: {
@@ -23,19 +18,186 @@ var app  = new Framework7({
   routes: routes,
 });
 
-// Init/Create views
-var homeView = app.views.create('#view-home', {
-  url: '/'
+
+
+
+
+// Create Popup with swipe to close
+var swipeToClosePopup = app.popup.create({
+  el: '.sample',
+  swipeToClose: true,
 });
-var literasiView = app.views.create('#view-1', {
-  url: '/1/'
+        
+// Create Popup with swipe to close
+var swipeToClosePopup = app.popup.create({
+  el: '.daftar',
+  swipeToClose: true,
 });
-var settingsView = app.views.create('#view-2', {
-  url: '/2/'
+        
+// Create Popup with swipe to close
+var swipeToClosePopup = app.popup.create({
+  el: '.lupapwd',
+  swipeToClose: true,
 });
-var settingsView = app.views.create('#view-3', {
-  url: '/3/'
+        
+// Create Popup with swipe to close
+var swipeToClosePopup = app.popup.create({
+  el: '.kf1',
+  swipeToClose: true,
 });
+        
+var swipeToClosePopup = app.popup.create({
+  el: '.kf2',
+  swipeToClose: true,
+});
+        
+var swipeToClosePopup = app.popup.create({
+  el: '.kf3',
+  swipeToClose: true,
+});
+        
+var swipeToClosePopup = app.popup.create({
+  el: '.kf4',
+  swipeToClose: true,
+});
+        
+var swipeToClosePopup = app.popup.create({
+  el: '.kf5',
+  swipeToClose: true,
+});
+        
+var swipeToClosePopup = app.popup.create({
+  el: '.kf6',
+  swipeToClose: true,
+});
+        
+var swipeToClosePopup = app.popup.create({
+  el: '.kf7',
+  swipeToClose: true,
+});
+        
+var swipeToClosePopup = app.popup.create({
+  el: '.kf8',
+  swipeToClose: true,
+});
+        
+var swipeToClosePopup = app.popup.create({
+  el: '.kf9',
+  swipeToClose: true,
+});
+        
+var swipeToClosePopup = app.popup.create({
+  el: '.kf10',
+  swipeToClose: true,
+});
+        
+var swipeToClosePopup = app.popup.create({
+  el: '.kf11',
+  swipeToClose: true,
+});
+        
+var swipeToClosePopup = app.popup.create({
+  el: '.kf12',
+  swipeToClose: true,
+});
+        
+var swipeToClosePopup = app.popup.create({
+  el: '.kf13',
+  swipeToClose: true,
+});
+        
+var swipeToClosePopup = app.popup.create({
+  el: '.kf14',
+  swipeToClose: true,
+});
+        
+var swipeToClosePopup = app.popup.create({
+  el: '.kf15',
+  swipeToClose: true,
+});
+        
+var swipeToClosePopup = app.popup.create({
+  el: '.kf16',
+  swipeToClose: true,
+});
+        
+var swipeToClosePopup = app.popup.create({
+  el: '.kf17',
+  swipeToClose: true,
+});
+        
+var swipeToClosePopup = app.popup.create({
+  el: '.kf18',
+  swipeToClose: true,
+});
+        
+var swipeToClosePopup = app.popup.create({
+  el: '.kf19',
+  swipeToClose: true,
+});
+        
+var swipeToClosePopup = app.popup.create({
+  el: '.kf20',
+  swipeToClose: true,
+});
+        
+var swipeToClosePopup = app.popup.create({
+  el: '.kf21',
+  swipeToClose: true,
+});
+        
+var swipeToClosePopup = app.popup.create({
+  el: '.kf22',
+  swipeToClose: true,
+});
+        
+var swipeToClosePopup = app.popup.create({
+  el: '.kf23',
+  swipeToClose: true,
+});
+        
+var swipeToClosePopup = app.popup.create({
+  el: '.kf24',
+  swipeToClose: true,
+});
+        
+var swipeToClosePopup = app.popup.create({
+  el: '.kf25',
+  swipeToClose: true,
+});
+        
+var swipeToClosePopup = app.popup.create({
+  el: '.kf26',
+  swipeToClose: true,
+});
+        
+var swipeToClosePopup = app.popup.create({
+  el: '.kf27',
+  swipeToClose: true,
+});
+        
+var swipeToClosePopup = app.popup.create({
+  el: '.kf28',
+  swipeToClose: true,
+});
+        
+var swipeToClosePopup = app.popup.create({
+  el: '.kf29',
+  swipeToClose: true,
+});
+        
+var swipeToClosePopup = app.popup.create({
+  el: '.kf30',
+  swipeToClose: true,
+});
+
+
+
+
+
+
+
+
 
 
 
@@ -76,39 +238,6 @@ var thehours = new Date().getHours();
 	$('.greeting').append(themessage);
 
 
-
-
-
-/* Detect browser can use web storage */
-if (!typeof(Storage) !== 'undefined') {
-  $('#yay').fadeIn('slow');
-} else {
-  $('#ooh').fadeIn('slow');
-}
-
-/* set it */
-$('#set').click(function() {
-  var test = $('#text').val();
-  localStorage.setItem("Pemustaka", test);
-});
-
-/* get it */
-$('#get').click(function() {
-  $('#val').text(localStorage.getItem("Pemustaka"));
-});
-
-/* get it */
-$('#get').click(function() {
-  $('#val2').text(localStorage.getItem("Pemustaka"));
-});
-
-/* remove it */
-$('#remove').click(function() {
-  localStorage.removeItem("Pemustaka");
-});
-
-$('#val').text(localStorage.getItem("Pemustaka"));
-$('#val2').text(localStorage.getItem("Pemustaka"));
 
 
 

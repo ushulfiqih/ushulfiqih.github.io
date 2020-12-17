@@ -1452,10 +1452,10 @@
 
   </div>
     
-    <!--FIREBASE versi 7.14.1-->
+    <!--FIREBASE -->
     <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js"></script>
 
-    <!--SDKs Firebase versi 7.14.1-->
+    <!-- TODO: Add SDKs for Firebase products that you want to use-->
     <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-auth.js"></script>
     
     <script>
@@ -1471,12 +1471,12 @@
       };
       firebase.initializeApp(config);
     </script>
-    
     <script src="js/login.js"></script>
     
     <script type="text/javascript" src="core/js/framework7.bundle.min.js"></script>
     <script>var theme = 'ios';
-
+    if (location.href.indexOf('theme=md') >= 0) theme = 'md';
+    if (location.href.indexOf('theme=aurora') >= 0) theme = 'aurora';
     var plugin = {
       params: {
         theme: theme,
@@ -1486,8 +1486,371 @@
     if (Framework7.use) Framework7.use(plugin);
     else if (Framework7.Class && Framework7.Class.use) Framework7.Class.use(plugin);
     </script>
+    <script>var app = new Framework7();
 
+    var $$ = Dom7;
+
+// Create Popup with swipe to close
+var swipeToClosePopup = app.popup.create({
+  el: '.sample',
+  swipeToClose: true,
+});
+        
+// Create Popup with swipe to close
+var swipeToClosePopup = app.popup.create({
+  el: '.daftar',
+  swipeToClose: true,
+});
+        
+// Create Popup with swipe to close
+var swipeToClosePopup = app.popup.create({
+  el: '.lupapwd',
+  swipeToClose: true,
+});
+        
+// Create Popup with swipe to close
+var swipeToClosePopup = app.popup.create({
+  el: '.kf1',
+  swipeToClose: true,
+});
+        
+var swipeToClosePopup = app.popup.create({
+  el: '.kf2',
+  swipeToClose: true,
+});
+        
+var swipeToClosePopup = app.popup.create({
+  el: '.kf3',
+  swipeToClose: true,
+});
+        
+var swipeToClosePopup = app.popup.create({
+  el: '.kf4',
+  swipeToClose: true,
+});
+        
+var swipeToClosePopup = app.popup.create({
+  el: '.kf5',
+  swipeToClose: true,
+});
+        
+var swipeToClosePopup = app.popup.create({
+  el: '.kf6',
+  swipeToClose: true,
+});
+        
+var swipeToClosePopup = app.popup.create({
+  el: '.kf7',
+  swipeToClose: true,
+});
+        
+var swipeToClosePopup = app.popup.create({
+  el: '.kf8',
+  swipeToClose: true,
+});
+        
+var swipeToClosePopup = app.popup.create({
+  el: '.kf9',
+  swipeToClose: true,
+});
+        
+var swipeToClosePopup = app.popup.create({
+  el: '.kf10',
+  swipeToClose: true,
+});
+        
+var swipeToClosePopup = app.popup.create({
+  el: '.kf11',
+  swipeToClose: true,
+});
+        
+var swipeToClosePopup = app.popup.create({
+  el: '.kf12',
+  swipeToClose: true,
+});
+        
+var swipeToClosePopup = app.popup.create({
+  el: '.kf13',
+  swipeToClose: true,
+});
+        
+var swipeToClosePopup = app.popup.create({
+  el: '.kf14',
+  swipeToClose: true,
+});
+        
+var swipeToClosePopup = app.popup.create({
+  el: '.kf15',
+  swipeToClose: true,
+});
+        
+var swipeToClosePopup = app.popup.create({
+  el: '.kf16',
+  swipeToClose: true,
+});
+        
+var swipeToClosePopup = app.popup.create({
+  el: '.kf17',
+  swipeToClose: true,
+});
+        
+var swipeToClosePopup = app.popup.create({
+  el: '.kf18',
+  swipeToClose: true,
+});
+        
+var swipeToClosePopup = app.popup.create({
+  el: '.kf19',
+  swipeToClose: true,
+});
+        
+var swipeToClosePopup = app.popup.create({
+  el: '.kf20',
+  swipeToClose: true,
+});
+        
+var swipeToClosePopup = app.popup.create({
+  el: '.kf21',
+  swipeToClose: true,
+});
+        
+var swipeToClosePopup = app.popup.create({
+  el: '.kf22',
+  swipeToClose: true,
+});
+        
+var swipeToClosePopup = app.popup.create({
+  el: '.kf23',
+  swipeToClose: true,
+});
+        
+var swipeToClosePopup = app.popup.create({
+  el: '.kf24',
+  swipeToClose: true,
+});
+        
+var swipeToClosePopup = app.popup.create({
+  el: '.kf25',
+  swipeToClose: true,
+});
+        
+var swipeToClosePopup = app.popup.create({
+  el: '.kf26',
+  swipeToClose: true,
+});
+        
+var swipeToClosePopup = app.popup.create({
+  el: '.kf27',
+  swipeToClose: true,
+});
+        
+var swipeToClosePopup = app.popup.create({
+  el: '.kf28',
+  swipeToClose: true,
+});
+        
+var swipeToClosePopup = app.popup.create({
+  el: '.kf29',
+  swipeToClose: true,
+});
+        
+var swipeToClosePopup = app.popup.create({
+  el: '.kf30',
+  swipeToClose: true,
+});
+
+
+
+// Confirm
+$$('.open-confirm').on('click', function () {
+  app.dialog.confirm('Apakah anda ingin menyalin Kaidah Fiqih ini?', function () {
+    app.dialog.alert('Kaidah Fiqih berhasil disalin. Bagikan jika bermanfaat');
+  });
+});
+        
+// Progress Infinite
+$$('.open-progress-infinite').on('click', function () {
+  app.dialog.progress();
+  setTimeout(function () {
+    app.dialog.close();
+  }, 3000);
+});
+        
+// Set progress on inline progressbar
+$$('.set-inline-progress').on('click', function (e) {
+  var progress = $$(this).attr('data-progress');
+  app.progressbar.set('#demo-inline-progressbar', progress);
+});
+
+
+// Function show determinate progressbar and emulate loading
+determinateLoading = false;
+function showDeterminate(inline) {
+  determinateLoading = true;
+  var progressBarEl;
+  if (inline) {
+    // inline progressbar
+    progressBarEl = app.progressbar.show('#demo-determinate-container', 0);
+  } else {
+    // root progressbar
+    progressBarEl = app.progressbar.show(0, app.theme === 'md' ? 'yellow' : 'green');
+  }
+  var progress = 0;
+  function simulateLoading() {
+    setTimeout(function () {
+      var progressBefore = progress;
+      progress += Math.random() * 20;
+      app.progressbar.set(progressBarEl, progress);
+      if (progressBefore < 100) {
+        simulateLoading(); //keep "loading"
+      }
+      else {
+        determinateLoading = false;
+        app.progressbar.hide(progressBarEl); //hide
+      }
+    }, Math.random() * 200 + 200);
+  }
+  simulateLoading();
+}
+// show inline determinate progressbar
+$$('.show-determinate').on('click', function (e) {
+  showDeterminate(true);
+});
+
+
+    </script>
     
+    <script>
+      //invokes firebase authentication.
+      const auth = firebase.auth();
+
+      const register = () => {
+        const email = document.querySelector("#registration-email").value;
+        const reemail = document.querySelector("#registration-reemail").value;
+        const password = document.querySelector("#registration-password").value;
+
+        if (email.trim() == "") {
+          alert("Enter Email");
+        } else if (password.trim().length < 6) {
+          alert("Password must be at least 6 characters");
+        } else if (email != reemail) {
+          alert("emails do not match");
+        } else {
+          auth
+            .createUserWithEmailAndPassword(email, password)
+            .catch(function (error) {
+              // Handle Errors here.
+              var errorCode = error.code;
+              var errorMessage = error.message;
+              alert(errorMessage);
+              // ...
+            });
+        }
+      };
+
+      document.querySelector("#register").addEventListener("click", () => {
+        register();
+      });
+
+      //register when you hit the enter key
+      document
+        .querySelector("#registration-password")
+        .addEventListener("keyup", (e) => {
+          if (event.keyCode === 13) {
+            e.preventDefault();
+
+            register();
+          }
+        });
+
+      const login = () => {
+        const email = document.querySelector("#login-email").value;
+        const password = document.querySelector("#login-password").value;
+
+        if (email.trim() == "") {
+          alert("Enter Email");
+        } else if (password.trim() == "") {
+          alert("Enter Password");
+        } else {
+          authenticate(email, password);
+        }
+      };
+
+      document.querySelector("#login").addEventListener("click", () => {
+        login();
+      });
+
+      //sign in when you hit enter
+      document
+        .querySelector("#login-password")
+        .addEventListener("keyup", (e) => {
+          if (event.keyCode === 13) {
+            e.preventDefault();
+
+            login();
+          }
+        });
+
+      const authenticate = (email, password) => {
+        const auth = firebase.auth();
+        auth.signInWithEmailAndPassword(email, password);
+        firebase
+          .auth()
+          .signInWithEmailAndPassword(email, password)
+          .catch(function (error) {
+            // Handle Errors here.
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            alert(errorMessage);
+          });
+      };
+
+      const showHomepage = () => {
+        document.querySelector("#registration-page").classList.add("hide");
+        document.querySelector("#login-page").classList.add("hide");
+        document.querySelector("#homepage").classList.remove("hide");
+      };
+
+      const signOut = () => {
+        firebase
+          .auth()
+          .signOut()
+          .then(function () {
+            location.reload();
+          })
+          .catch(function (error) {
+            alert("error signing out, check network connection");
+          });
+      };
+
+      auth.onAuthStateChanged((firebaseUser) => {
+        if (firebaseUser) {
+          showHomepage();
+        }
+      });
+
+      document
+        .querySelector("#forgot-password")
+        .addEventListener("click", () => {
+          const email = document.querySelector("#login-email").value;
+          if (email.trim() == "") {
+            alert("Enter Email");
+          } else {
+            forgotPassword(email);
+          }
+        });
+
+      const forgotPassword = (email) => {
+        auth
+          .sendPasswordResetEmail(email)
+          .then(function () {
+            alert("email sent");
+          })
+          .catch(function (error) {
+            alert("invalid email or bad network connection");
+          });
+      };
+    </script>
     
   <script src='js/jquery.js'></script>
   <script  src="js/random.js"></script>
@@ -1507,7 +1870,6 @@
   <script src='js/materialize.min.js'></script>
   <script src='js/fuse.min.js'></script>
   <script  src="js/databuku.js"></script>
-  <script  src="js/registration.js"></script>
-    
+
 </body>
 </html>
