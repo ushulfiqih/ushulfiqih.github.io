@@ -6,7 +6,7 @@ var app  = new Framework7({
   root: '#app', // App root element
   id: 'io.framework7.testapp', // App bundle ID
   name: 'ushulfiqih.com', // App name
-  theme: 'auto', // Automatic theme detection
+  theme: 'ios', // Automatic theme detection
 
 	view: {
 		pushState :true,
