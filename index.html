@@ -13,6 +13,9 @@
   <link rel="stylesheet" href="css/app.css">
   <link rel="apple-touch-icon" href="img/logo.png">
   <link rel="icon" href="img/logo.png">
+
+  <link rel="stylesheet" href="css/type-promise.css">
+  <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
   <div id="app">
@@ -94,14 +97,6 @@
           
           <div class="inline various0" style="display:none; margin-top: -60px">
               <div class="block ptr-content ptr-bottom">
-                  
-                <div style="margin-bottom: 20px;">
-                <img src="img/logo.png" style="display: block;margin-left: auto;margin-right: auto;width: 25%;">
-                </div>
-                  
-                <div href="#" data-popup="#my-popup2" class="link icon-only popup-open" class="page-header" style="background-color: #ffffff;padding: 13px 20px 13px 20px;border: 1px solid #dddddd;box-shadow: 1px 1px 4px rgba(0, 0, 0, .1);border-radius: 50px;width: 100%;height: 50px;z-index: 1;margin-bottom: 50px;">
-                    <span class="carispan" style="width:100%;background-color: transparent"><i class="icon f7-icons">search</i><a class="yukcari" style="background-color: transparent;color: #888888 !important">&nbsp;&nbsp;&nbsp;Terpopuler di ushulfiqih.com</a></span>
-                </div>
 
                 <div class="card demo-facebook-card">
                   <a href="#">
@@ -1138,32 +1133,46 @@
 
                 <p style="font-size: 30px;line-height: 1;color: #000000"><b>Principles of Islamic Jurisprudence</b></p>
 
-                <div style="font-size: 16px;margin-bottom: 10px;height: 50px;" id="type-text">
+                <div style="font-size: 16px;height: 50px;" id="type-text">
                     <span class="blinking-cursor">_</span>
                 </div>
 
-                <br/>
-
-                <div class="item-content item-input">
-                    <div class="item-title item-label">Email</div>
-                    <div class="item-input-wrap">
-                      <input style="border:none;background:none;" type="email" name="username" placeholder="Email anda..." id="email_field">
-                    </div>
-                </div>
-                <br/>
-                <div class="item-content item-input">
-                    <div class="item-title item-label">Sandi</div>
-                    <div class="item-input-wrap">
-                      <input style="border:none;background:none;" type="password" name="password" placeholder="Sandi anda..." id="password_field">
-                    </div>
-                </div>
-                <div>
-                  <p>
-                    <a onclick="login()" class="tombol">Masuk <i class="fa fa-angle-right"></i></a>
-                  </p>
-                </div>
-                <div>
-                    <div><a class="popup-open" href="#" data-popup=".daftar"><span style="color: black">Belum punya akun?</span> Mendaftar</a><a class="popup-open" href="#" data-popup=".lupapwd">Lupa Password?</a></div>
+                <div class="list no-hairlines-md">
+                  <ul>
+                    <li class="item-content item-input item-input-with-info">
+                      <div class="item-media">
+                        <i class="icon f7-icons">envelope</i>
+                      </div>
+                      <div class="item-inner">
+                        <div class="item-title item-label">Email</div>
+                        <div class="item-input-wrap">
+                          <input style="border:none;background:none;" type="email" placeholder="Email anda..." id="email_field" required validate>
+                          <span class="input-clear-button"></span>
+                          <div class="item-input-info"><a class="popup-open" href="#" data-popup=".daftar"><span style="color: black">Belum punya akun?</span> Mendaftar</a></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="item-content item-input item-input-with-info">
+                      <div class="item-media">
+                        <i class="icon f7-icons">lock</i>
+                      </div>
+                      <div class="item-inner">
+                        <div class="item-title item-label">Name</div>
+                        <div class="item-input-wrap">
+                          <input style="border:none;background:none;" type="text" placeholder="Sandi anda..." id="password_field" required validate>
+                          <span class="input-clear-button"></span>
+                          <div class="item-input-info"><a class="popup-open" href="#" data-popup=".lupapwd">Lupa Password?</a></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="item-content item-input item-input-with-info">
+                      <div class="item-media">
+                      </div>
+                      <div class="item-inner">
+                        <button onclick="login()" style="color:#ffffff;background-color: red;border: none;width: 50%;margin-top: 10px;" id="forgot-password">Masuk</button>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
 
                 <div class="popup daftar">
@@ -1181,7 +1190,7 @@
                         <img style="  display: block; margin-left: auto; margin-right: auto; width: 25%; margin-bottom: 25px;" src="img/logo.png">
                         <h4>Mendaftar Aplikasi Ushul Fiqih</h4>
                         <p style="margin-top: -10px;">(Hanya untuk versi Pro)</p>
-                        <iframe src="pages/reg.html" frameborder="0" style="position: fixed; clear: both; width: 85%; margin-top: -25px; height: 300px;left no-repeat;"></iframe>
+                        <iframe src="pages/firebase-signup.html" frameborder="0" style="position: relative; clear: both; width: 85%; margin-top: -25px; height: 300px;left no-repeat;"></iframe>
                     </div>
                 </div>
                 <div class="popup lupapwd">
@@ -1199,7 +1208,8 @@
                         <img style="  display: block; margin-left: auto; margin-right: auto; width: 25%; margin-bottom: 25px;" src="img/logo.png">
                         <h4>Mendaftar Aplikasi Ushul Fiqih</h4>
                         <p style="margin-top: -10px;">(Hanya untuk versi Pro)</p>
-                        <iframe src="pages/lost.html" frameborder="0" style="position: fixed; clear: both; width: 85%; margin-top: -25px; height: 200px;left no-repeat;"></iframe>
+                        <iframe src="pages/firebase-reset.html" frameborder="0" style="position: relative; clear: both; width: 85%; margin-top: -25px; height: 150px;left no-repeat;"></iframe>
+                        <div style="margin-top: 50px;">kembali</div>
                     </div>
                 </div>
 
@@ -1242,8 +1252,10 @@
   </script>
 
   <script src="js/login.js"></script>
-    
+  <script  src="js/registration-hapusini.js"></script>
+
   <script src='js/jquery.js'></script>
   <script  src="js/random.js"></script>
+  <script  src="js/type-promise.js"></script>
 </body>
 </html>
