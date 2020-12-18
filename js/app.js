@@ -12,6 +12,10 @@ var app = new Framework7({
   id: 'io.framework7.testapp',
   root: '#app',
   theme: theme,
+	view: {
+		pushState :true,
+		stackPages: true,            
+	},
   data: function () {
     return {
       user: {
