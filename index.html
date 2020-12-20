@@ -79,7 +79,7 @@
     
     <div class="toolbar tabbar-labels toolbar-bottom">
     <div class="toolbar-inner">
-      <a href="/0/" class="link" data-transition="f7-fade">
+      <a href="/1/" class="link" data-transition="f7-fade">
         <i class="icon f7-icons">search</i>
       </a>
       <a href="/2/" class="link" data-transition="f7-fade">
@@ -112,104 +112,189 @@
     <div class="tabs">
       <div id="tab-1" class="page-content tab tab-active">
           
-          <div class="block" style="margin-top: -30px">
+          <div class="inline various0" style="display:none; margin-top: -60px">
+              <div class="block ptr-content ptr-bottom">
 
-            <div id="user_div" class="loggedin-div">
-                <h3>Welcome</h3>
-                <p style="margin-top: -10px;" id="user_para">Welcome to Firebase web login Example. You're currently logged in.</p>
-
-
-                <p onclick="logout()">Logout</p>
-
-            </div>
-
-            <div id="login_div" class="main-div">
-
-                <p style="font-size: 10px;color: #000000;margin-top: 0px;"><b>Login</b></p>
-
-                <p style="font-size: 30px;line-height: 1;color: #000000"><b>Principles of Islamic Jurisprudence</b></p>
-
-                <div style="font-size: 16px;height: 50px;" id="type-text">
-                    <span class="blinking-cursor">_</span>
+                <div class="card demo-card-header-pic">
+                  <div style="background-image:url(img/bg.jpg)" class="card-header align-items-flex-end">Maslahah Mursalah</div>
+                  <div class="card-content card-content-padding">
+                    <p class="date">Posted on January 21, 2015</p>
+                    <p>Quisque eget vestibulum nulla. Quisque quis dui quis ex ultricies efficitur vitae non felis. Phasellus quis nibh hendrerit...</p>
+                  </div>
                 </div>
 
-                <div class="list no-hairlines-md">
-                  <ul>
-                    <li class="item-content item-input item-input-with-info">
-                      <div class="item-media">
-                        <i class="icon f7-icons color-custom">envelope_circle</i>
-                      </div>
-                      <div class="item-inner">
-                        <div class="item-title item-label">Email</div>
-                        <div class="item-input-wrap">
-                          <input style="border:none;background:none;" type="email" placeholder="Email anda..." id="email_field" required>
-                          <span class="input-clear-button"></span>
-                          <div class="item-input-info"><a class="popup-open" href="#" data-popup=".daftar"><span style="color: black">Belum punya akun?</span> Mendaftar</a></div>
-                        </div>
-                      </div>
-                    </li>
-                    <li class="item-content item-input item-input-with-info">
-                      <div class="item-media">
-                        <i class="icon f7-icons color-custom">lock_shield</i>
-                      </div>
-                      <div class="item-inner">
-                        <div class="item-title item-label">Name</div>
-                        <div class="item-input-wrap">
-                          <input style="border:none;background:none;" type="text" placeholder="Sandi anda..." id="password_field" required>
-                          <span class="input-clear-button"></span>
-                          <div class="item-input-info"><a class="popup-open" href="#" data-popup=".lupapwd">Lupa Password?</a></div>
-                        </div>
-                      </div>
-                    </li>
-                    <li class="item-content item-input item-input-with-info">
-                      <div class="item-media">
-                      </div>
-                      <div class="item-inner">
-                        <button onclick="login()" style="color:#ffffff;background-color: red;border: none;width: 33%;height: 35px; padding-top: 9px;" id="forgot-password">Masuk</button>
-                      </div>
-                    </li>
-                  </ul>
+                <div class="card demo-card-header-pic">
+                  <div style="background-image:url(img/bg2.jpg)" class="card-header align-items-flex-end">Qiyas</div>
+                  <div class="card-content card-content-padding">
+                    <p class="date">Posted on January 21, 2015</p>
+                    <p>Quisque eget vestibulum nulla. Quisque quis dui quis ex ultricies efficitur vitae non felis. Phasellus quis nibh hendrerit...</p>
+                  </div>
                 </div>
 
-                <div class="popup daftar">
-                    <div class="navbar">
-                        <div class="navbar-inner sliding">
-                          <div class="left" style="margin-left: 10px">
-                            <a class="link popup-close" href="#">
-                              <i class="icon icon-back"></i>
-                              <span class="ios-only">Back</span>
-                            </a>
-                          </div>
-                        </div>
-                    </div>
-                    <div style="margin-top: -10px;" class="block text-align-center">
-                        <img style="  display: block; margin-left: auto; margin-right: auto; width: 25%; margin-bottom: 25px;" src="img/logo.png">
-                        <h4>Mendaftar Aplikasi Ushul Fiqih</h4>
-                        <p style="margin-top: -10px;">(Hanya untuk versi Pro)</p>
-                        <iframe src="pages/firebase-signup.html" frameborder="0" style="position: relative; clear: both; width: 85%; margin-top: -25px; height: 300px;left no-repeat;"></iframe>
-                    </div>
-                </div>
-                <div class="popup lupapwd">
-                    <div class="navbar">
-                        <div class="navbar-inner sliding">
-                          <div class="left" style="margin-left: 10px">
-                            <a class="link popup-close" href="#">
-                              <i class="icon icon-back"></i>
-                              <span class="ios-only">Back</span>
-                            </a>
-                          </div>
-                        </div>
-                    </div>
-                    <div style="margin-top: -10px;" class="block text-align-center">
-                        <img style="  display: block; margin-left: auto; margin-right: auto; width: 25%; margin-bottom: 25px;" src="img/logo.png">
-                        <h4>Mendaftar Aplikasi Ushul Fiqih</h4>
-                        <p style="margin-top: -10px;">(Hanya untuk versi Pro)</p>
-                        <iframe src="pages/firebase-reset.html" frameborder="0" style="position: relative; clear: both; width: 85%; margin-top: -25px; height: 150px;left no-repeat;"></iframe>
-                        <div style="margin-top: 50px;">kembali</div>
-                    </div>
+                <div class="card demo-card-header-pic">
+                  <div style="background-image:url(img/bg2.jpg)" class="card-header align-items-flex-end">Maqashid Syariah</div>
+                  <div class="card-content card-content-padding">
+                    <p class="date">Posted on January 21, 2015</p>
+                    <p>Quisque eget vestibulum nulla. Quisque quis dui quis ex ultricies efficitur vitae non felis. Phasellus quis nibh hendrerit...</p>
+                  </div>
                 </div>
 
-            </div>
+                <div class="card demo-card-header-pic">
+                  <div style="background-image:url(img/bg2.jpg)" class="card-header align-items-flex-end">Maqashid Syariah</div>
+                  <div class="card-content card-content-padding">
+                    <p class="date">Posted on January 21, 2015</p>
+                    <p>Quisque eget vestibulum nulla. Quisque quis dui quis ex ultricies efficitur vitae non felis. Phasellus quis nibh hendrerit...</p>
+                  </div>
+                </div>
+
+                <div class="card demo-card-header-pic">
+                  <div style="background-image:url(img/bg2.jpg)" class="card-header align-items-flex-end">Amr (Perintah)</div>
+                  <div class="card-content card-content-padding">
+                    <p class="date">Posted on January 21, 2015</p>
+                    <p>Quisque eget vestibulum nulla. Quisque quis dui quis ex ultricies efficitur vitae non felis. Phasellus quis nibh hendrerit...</p>
+                  </div>
+                </div>
+
+                <div class="card demo-card-header-pic">
+                  <div style="background-image:url(img/bg2.jpg)" class="card-header align-items-flex-end">Hukum Taklifi dan Wadhi</div>
+                  <div class="card-content card-content-padding">
+                    <p class="date">Posted on January 21, 2015</p>
+                    <p>Quisque eget vestibulum nulla. Quisque quis dui quis ex ultricies efficitur vitae non felis. Phasellus quis nibh hendrerit...</p>
+                  </div>
+                </div>
+
+                <div class="card demo-card-header-pic">
+                  <div style="background-image:url(img/bg2.jpg)" class="card-header align-items-flex-end">Kaidah Ushul Fiqih</div>
+                  <div class="card-content card-content-padding">
+                    <p class="date">Posted on January 21, 2015</p>
+                    <p>Quisque eget vestibulum nulla. Quisque quis dui quis ex ultricies efficitur vitae non felis. Phasellus quis nibh hendrerit...</p>
+                  </div>
+                </div>
+
+                <div class="card demo-card-header-pic">
+                  <div style="background-image:url(img/bg2.jpg)" class="card-header align-items-flex-end">‘Urf (Adat Kebiasaan atau Tradisi)</div>
+                  <div class="card-content card-content-padding">
+                    <p class="date">Posted on January 21, 2015</p>
+                    <p>Quisque eget vestibulum nulla. Quisque quis dui quis ex ultricies efficitur vitae non felis. Phasellus quis nibh hendrerit...</p>
+                  </div>
+                </div>
+
+                <div class="card demo-card-header-pic">
+                  <div style="background-image:url(img/bg2.jpg)" class="card-header align-items-flex-end">Syar’u Man Qablana</div>
+                  <div class="card-content card-content-padding">
+                    <p class="date">Posted on January 21, 2015</p>
+                    <p>Quisque eget vestibulum nulla. Quisque quis dui quis ex ultricies efficitur vitae non felis. Phasellus quis nibh hendrerit...</p>
+                  </div>
+                </div>
+
+                <div class="card demo-card-header-pic">
+                  <div style="background-image:url(img/bg2.jpg)" class="card-header align-items-flex-end">Kaidah Fiqih tentang Rukhsah</div>
+                  <div class="card-content card-content-padding">
+                    <p class="date">Posted on January 21, 2015</p>
+                    <p>Quisque eget vestibulum nulla. Quisque quis dui quis ex ultricies efficitur vitae non felis. Phasellus quis nibh hendrerit...</p>
+                  </div>
+                </div>
+
+                <div class="card demo-card-header-pic">
+                  <div style="background-image:url(img/bg2.jpg)" class="card-header align-items-flex-end">Sejarah Ushul Fiqih</div>
+                  <div class="card-content card-content-padding">
+                    <p class="date">Posted on January 21, 2015</p>
+                    <p>Quisque eget vestibulum nulla. Quisque quis dui quis ex ultricies efficitur vitae non felis. Phasellus quis nibh hendrerit...</p>
+                  </div>
+                </div>
+
+                <div class="card demo-card-header-pic">
+                  <div style="background-image:url(img/bg2.jpg)" class="card-header align-items-flex-end">Manfaat Mempelajari Ushul Fiqih</div>
+                  <div class="card-content card-content-padding">
+                    <p class="date">Posted on January 21, 2015</p>
+                    <p>Quisque eget vestibulum nulla. Quisque quis dui quis ex ultricies efficitur vitae non felis. Phasellus quis nibh hendrerit...</p>
+                  </div>
+                </div>
+
+
+              </div>
+          </div>
+
+          <div class="inline various1" style="display:none; margin-top: -60px">
+
+              <div class="block ptr-content ptr-bottom">
+
+                <div class="card demo-facebook-card">
+                  <a href="#">
+                  <div class="card-header">
+                    <div class="demo-facebook-avatar"><img src="img/logo.png" width="34" height="34"/></div>
+                    <div class="demo-facebook-name">ushulfiqih.com</div>
+                    <div class="demo-facebook-date">Manfaat Mempelajari Ushul Fiqih</div>
+                  </div>
+                  <div class="card-content">
+                    <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
+                    <div class="embed-container"><iframe src="https://www.youtube.com/embed/UIOYqsXWs4o" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>
+                  </div>
+                  </a>
+                  <div class="card-footer"><a href="https://www.youtube.com/channel/UCkB3ruzb5VerCTc5vDlKKUQ" class="link external"><i class="icon f7-icons" style="font-size: 14px;">doc_on_doc</i>&nbsp;&nbsp;Official Youtube Account</a><a href="https://www.youtube.com/channel/UCkB3ruzb5VerCTc5vDlKKUQ?sub_confirmation=1" class="link external">Subscribe</a></div>
+                </div>
+
+                <div class="card demo-facebook-card">
+                  <a href="#">
+                  <div class="card-header">
+                    <div class="demo-facebook-avatar"><img src="img/logo.png" width="34" height="34"/></div>
+                    <div class="demo-facebook-name">ushulfiqih.com</div>
+                    <div class="demo-facebook-date">Perbedaan Objek Kajian Ushul Fiqih dan Fiqih</div>
+                  </div>
+                  <div class="card-content">
+                    <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
+                    <div class="embed-container"><iframe src="https://www.youtube.com/embed/auSxvDD-Pgo" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>
+                  </div>
+                  </a>
+                  <div class="card-footer"><a href="https://www.youtube.com/channel/UCkB3ruzb5VerCTc5vDlKKUQ" class="link external"><i class="icon f7-icons" style="font-size: 14px;">doc_on_doc</i>&nbsp;&nbsp;Official Youtube Account</a><a href="https://www.youtube.com/channel/UCkB3ruzb5VerCTc5vDlKKUQ?sub_confirmation=1" class="link external">Subscribe</a></div>
+                </div>
+
+                <div class="card demo-facebook-card">
+                  <a href="#">
+                  <div class="card-header">
+                    <div class="demo-facebook-avatar"><img src="img/logo.png" width="34" height="34"/></div>
+                    <div class="demo-facebook-name">ushulfiqih.com</div>
+                    <div class="demo-facebook-date">Sejarah Ilmu Ushul Fiqih</div>
+                  </div>
+                  <div class="card-content">
+                    <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
+                    <div class="embed-container"><iframe src="https://www.youtube.com/embed/eHzcF5vlC8o" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>
+                  </div>
+                  </a>
+                  <div class="card-footer"><a href="https://www.youtube.com/channel/UCkB3ruzb5VerCTc5vDlKKUQ" class="link external"><i class="icon f7-icons" style="font-size: 14px;">doc_on_doc</i>&nbsp;&nbsp;Official Youtube Account</a><a href="https://www.youtube.com/channel/UCkB3ruzb5VerCTc5vDlKKUQ?sub_confirmation=1" class="link external">Subscribe</a></div>
+                </div>
+
+                <div class="card demo-facebook-card">
+                  <a href="#">
+                  <div class="card-header">
+                    <div class="demo-facebook-avatar"><img src="img/logo.png" width="34" height="34"/></div>
+                    <div class="demo-facebook-name">ushulfiqih.com</div>
+                    <div class="demo-facebook-date">Sejarah Ilmu Ushul Fiqih</div>
+                  </div>
+                  <div class="card-content">
+                    <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
+                    <div class="embed-container"><iframe src="https://www.youtube.com/embed/XYYH_X3kycw" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>
+                  </div>
+                  </a>
+                  <div class="card-footer"><a href="https://www.youtube.com/channel/UCkB3ruzb5VerCTc5vDlKKUQ" class="link external"><i class="icon f7-icons" style="font-size: 14px;">doc_on_doc</i>&nbsp;&nbsp;Official Youtube Account</a><a href="https://www.youtube.com/channel/UCkB3ruzb5VerCTc5vDlKKUQ?sub_confirmation=1" class="link external">Subscribe</a></div>
+                </div>
+
+                <div class="card demo-facebook-card">
+                  <a href="#">
+                  <div class="card-header">
+                    <div class="demo-facebook-avatar"><img src="img/logo.png" width="34" height="34"/></div>
+                    <div class="demo-facebook-name">ushulfiqih.com</div>
+                    <div class="demo-facebook-date">Kaidah Ushul Fiqih Amr dan Nahi</div>
+                  </div>
+                  <div class="card-content">
+                    <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
+                    <div class="embed-container"><iframe src="https://www.youtube.com/embed/cw56_ztPg1o" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>
+                  </div>
+                  </a>
+                  <div class="card-footer"><a href="https://www.youtube.com/channel/UCkB3ruzb5VerCTc5vDlKKUQ" class="link external"><i class="icon f7-icons" style="font-size: 14px;">doc_on_doc</i>&nbsp;&nbsp;Official Youtube Account</a><a href="https://www.youtube.com/channel/UCkB3ruzb5VerCTc5vDlKKUQ?sub_confirmation=1" class="link external">Subscribe</a></div>
+                </div>
+
+              </div>
 
           </div>
           
