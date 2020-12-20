@@ -2,8 +2,26 @@ var routes = [
   // Index page
   {
     path: '/',
-    url: './index.html',
+    url: '../index.html',
     name: 'home',
+  },
+  // About page
+  {
+    path: '/2/',
+    url: './pages/2.html',
+    name: '2',
+  },
+  // About page
+  {
+    path: '/3/',
+    url: './pages/3.html',
+    name: '3',
+  },
+  // About page
+  {
+    path: '/4/',
+    url: './pages/4.html',
+    name: '4',
   },
   // About page
   {
