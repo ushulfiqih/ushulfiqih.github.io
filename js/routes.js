@@ -7,22 +7,22 @@ var routes = [
   },
   // About page
   {
+    path: '/1/',
+    url: './pages/1.html',
+    name: '1',
+  },
+  {
     path: '/2/',
     url: './pages/2.html',
     name: '2',
   },
-  // About page
   {
     path: '/3/',
     url: './pages/3.html',
     name: '3',
   },
-  // About page
-  {
-    path: '/4/',
-    url: './pages/4.html',
-    name: '4',
-  },
+
+
   // About page
   {
     path: '/about/',

@@ -3381,8 +3381,8 @@ html.device-full-viewport body {
 }
 .md .tabbar-labels .tab-link,
 .md .tabbar-labels .link {
-  padding-top: 7px;
-  padding-bottom: 7px;
+  padding-top: 0px;
+  padding-bottom: 12px;
 }
 .md .tabbar-label {
   max-width: 100%;
