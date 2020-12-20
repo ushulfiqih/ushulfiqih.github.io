@@ -1,0 +1,44 @@
+<template>
+  <div class="page no-toolbar no-navbar no-swipeback login-screen-page">
+    <div class="page-content">
+      <div>
+          <img style="display: block; margin-left: auto; margin-right: auto; width: 25%; margin-bottom: 25px;margin-top: -25px;" src="img/logo.png">
+        </div>
+      <form>
+        <div class="list">
+
+        </div>
+        <div class="list">
+          <ul>
+            <li><a class="list-button external" >Upgrade Ushul Fiqih</a></li>
+          </ul>
+          <div class="block-footer">Anda menginstall Ushul Fiqih versi Gratis<br>Upgrade untuk experience yang lebih baik</div>
+                      <div  style="margin-top: 20px;" class="block text-align-center">
+                        <a href="/" class="external" ><button style="color:#ffffff;background-color: red;border: none;width: 33%;height: 35px; padding-top: 0px;border-radius: 9px;" >Upgrade</button></a>
+                        <br/><br/><a style="font-size: 14px;" href="/" class="external" ><b>Tidak, terima kasih.</b></a>
+                      </div>
+                      <div  style="margin-top: -30px;" class="text-align-center">
+                        <a style="font-size: 12px;" href="/" class="external" >Lanjutkan Free</a>
+                      </div>
+          </div>
+      </form>
+    </div>
+  </div>
+</template>
+<script>
+  return {
+    methods: {
+      signIn: function () {
+        var $ = this.$;
+        var app = this.$app;
+        var router = this.$router;
+        var username = $('input#demo-username-2').val();
+        var password = $('input#demo-password-2').val();
+        app.dialog.alert('Username: ' + username + '<br>Password: ' + password, function () {
+          app.loginScreen.close();
+          router.back();
+        })
+      }
+    }
+  }
+</script>

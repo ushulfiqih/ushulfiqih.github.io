@@ -82,6 +82,10 @@ var routes = [
   },
 
   // Components
+ {
+    path: '/0/',
+    componentUrl: './pages/0.html',
+  },
   {
     path: '/accordion/',
     url: './pages/accordion.html',
@@ -197,10 +201,6 @@ var routes = [
   {
     path: '/list-index/',
     componentUrl: './pages/list-index.html',
-  },
-  {
-    path: '/login-screen/',
-    componentUrl: './pages/login-screen.html',
   },
   {
     path: '/login-screen-page/',
