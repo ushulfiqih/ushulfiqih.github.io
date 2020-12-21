@@ -7,84 +7,20 @@ var routes = [
   },
   // About page
   {
-    path: '/1/',
-    url: './pages/1.html',
-    name: '1',
+    path: '/tab-card/',
+    url: './pages/tab-card.html',
+    name: 'home',
   },
   {
-    path: '/2/',
-    url: './pages/2.html',
-    name: '2',
-  },
-  {
-    path: '/3/',
-    url: './pages/3.html',
-    name: '3',
-  },
-
-
-  // About page
-  {
-    path: '/about/',
-    url: './pages/about.html',
-    name: 'about',
-  },
-  // Right Panel pages
-  {
-    path: '/panel-right-1/',
-    content: '\
-      <div class="page">\
-        <div class="navbar">\
-          <div class="navbar-bg"></div>\
-          <div class="navbar-inner sliding">\
-            <div class="left">\
-              <a href="#" class="link back">\
-                <i class="icon icon-back"></i>\
-                <span class="if-not-md">Back</span>\
-              </a>\
-            </div>\
-            <div class="title">Panel Page 1</div>\
-          </div>\
-        </div>\
-        <div class="page-content">\
-          <div class="block">\
-            <p>This is a right panel page 1</p>\
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo saepe aspernatur inventore dolorum voluptates consequatur tempore ipsum! Quia, incidunt, aliquam sit veritatis nisi aliquid porro similique ipsa mollitia eaque ex!</p>\
-          </div>\
-        </div>\
-      </div>\
-    ',
-  },
-  {
-    path: '/panel-right-2/',
-    content: '\
-      <div class="page">\
-        <div class="navbar">\
-          <div class="navbar-bg"></div>\
-          <div class="navbar-inner sliding">\
-            <div class="left">\
-              <a href="#" class="link back">\
-                <i class="icon icon-back"></i>\
-                <span class="if-not-md">Back</span>\
-              </a>\
-            </div>\
-            <div class="title">Panel Page 2</div>\
-          </div>\
-        </div>\
-        <div class="page-content">\
-          <div class="block">\
-            <p>This is a right panel page 2</p>\
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo saepe aspernatur inventore dolorum voluptates consequatur tempore ipsum! Quia, incidunt, aliquam sit veritatis nisi aliquid porro similique ipsa mollitia eaque ex!</p>\
-          </div>\
-        </div>\
-      </div>\
-    ',
+    path: '/tab-search/',
+    url: './pages/tab-search.html',
+    name: 'home',
   },
 
   // Components
  {
-    path: '/0/',
-    componentUrl: './pages/0.html',
+    path: '/tab-upgrade/',
+    componentUrl: './pages/tab-upgrade.html',
   },
   {
     path: '/accordion/',

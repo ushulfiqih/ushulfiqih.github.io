@@ -1,4 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="robots" content="noindex">
+  <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap:">
+  <title>app.ushulfiqih.com</title>
+  <link rel="stylesheet" href="core/css/framework7.bundle.css">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="apple-touch-icon" href="img/logo.png">
+  <link rel="icon" href="img/logo.png">
+
+  <link rel="stylesheet" href="css/type-promise.css">
+  <link rel="stylesheet" href="css/login.css">
+  <link rel="stylesheet" href="css/horizontal.css">
+
+</head>
+<body>
+  <div id="app">
+    <div class="panel panel-left panel-cover panel-resizable panel-init">
+      <div class="page">
+        <div class="page-content">
+          <div class="block-title">Left Panel</div>
+          <div class="block">
+            <p>This is a left side panel. You can close it by clicking outsite or on this link: <a href="#" class="panel-close">close me</a>. You can put here anything, even another isolated view like in <a href="#" data-panel="right" class="panel-open">Right Panel</a></p>
+          </div>
+          <div class="block-title">Main View Navigation</div>
+          <div class="list links-list">
+            <ul>
+              <li>
+                <a href="/about/" class="panel-close">Accordion</a>
+              </li>
+              <li>
+                <a href="/action-sheet/" class="panel-close">Action Sheet</a>
+              </li>
+              <li>
+                <a href="/badge/" class="panel-close">Badge</a>
+              </li>
+            </ul>
+          </div>
+          <div class="block">
+            <p>Lorem ipsum dolor sit amet</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-right panel-reveal panel-resizable panel-init">
+      <div class="view view-init view-right" data-name="right" data-url="/">
+        <div class="page">
+          <div class="navbar">
+            <div class="navbar-bg"></div>
+            <div class="navbar-inner sliding">
+              <div class="title">Right Panel</div>
+            </div>
+          </div>
+          <div class="page-content">
+            <div class="block">
+              <p>This is a right side panel. You can close it by clicking outsite or on this link: <a href="#" class="panel-close">close me</a>. You can put here anything, even another isolated view.</p>
+            </div>
+            <div class="block-title">Panel Navigation</div>
+            <div class="list links-list">
+              <ul>
+                <li><a href="/panel-right-1/">Right panel page 1</a></li>
+                <li><a href="/panel-right-2/">Right panel page 2</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      
+    <div class="view view-main view-init safe-areas" data-master-detail-breakpoint="800" data-url="/">
+        
+    <div style=" position: absolute; left: 15px; bottom: 12px;z-index: 9999; line-height: 1em;"> <a href="/" class="link external" style="color: black"><img src="img/logo.png" style="width: 25px;">&nbsp;&nbsp;Principles of Islamic<br/>&nbsp;&nbsp;Jurisprudence</a></div>
+    
+    <div class="toolbar tabbar-labels toolbar-bottom">
+    <div class="toolbar-inner">
+      <a href="/#!/tab-search/" class="link external" data-transition="f7-fade">
+        <i class="icon f7-icons">search</i>
+      </a>
+      <a href="/#!/tab-card/" class="link external" data-transition="f7-fade">
+        <i class="icon f7-icons">rectangle_on_rectangle_angled</i>
+      </a>
+      <a href="#" class="link" data-transition="f7-fade">
+        <i class="icon f7-icons">person</i>
+      </a>
+    </div>
+    </div>
+        
 <div class="page">
+    
   <div class="navbar navbar-large navbar-transparent">
     <div class="navbar-bg"></div>
     <div class="navbar-inner sliding">
@@ -8,29 +102,18 @@
                 <i class="icon material-icons md-only color-black">menu</i>
               </a>
             </div>
-      <div class="title">Video</div>
-      <div class="title-large">
-        <div class="title-large-text">Video</div>
-      </div>
+      <div class="title">Ushulfiqih.com</div>
     </div>
   </div>
-    <div class="toolbar tabbar-labels toolbar-bottom">
-    <div class="toolbar-inner">
-      <a href="/1/" class="link" data-transition="f7-fade">
-        <i class="icon f7-icons">search</i>
-      </a>
-      <a href="/2/" class="link" data-transition="f7-fade">
-        <i class="icon f7-icons">rectangle_on_rectangle_angled</i>
-      </a>
-      <a href="/3/" class="link" data-transition="f7-fade">
-        <i class="icon f7-icons">person</i>
-      </a>
-    </div>
-    </div>
-  <div class="page-content" style="margin-top: 50px">
-              <div class="block ptr-content ptr-bottom">
+    
+  <div class="page-content">
 
-            <div id="user_div" class="loggedin-div">
+    <div class="tabs">
+      <div id="tab-1" class="page-content tab tab-active">
+
+          <div class="block">
+
+             <div id="user_div" class="loggedin-div">
                 <h3>Welcome</h3>
                 <p style="margin-top: -10px;" id="user_para">Welcome to Firebase web login Example. You're currently logged in.</p>
 
@@ -126,7 +209,51 @@
                 </div>
 
             </div>
+          
+          </div>
 
-              </div>
+      </div>
+        
+    </div>
+    
   </div>
+    
 </div>
+
+        
+    </div>
+      
+  </div>
+    
+  <script src="core/js/framework7.bundle.js"></script>
+  <script src="js/routes.js"></script>
+  <script src="js/app.js"></script>
+    
+  <!--FIREBASE versi 7.14.1-->
+  <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js"></script>
+
+  <!--SDKs Firebase versi 7.14.1-->
+  <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-auth.js"></script>
+
+  <script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBnyCkwL36UUWTavh_Li-Ksbzky2aRxxfQ",
+    authDomain: "ushulfiqih-89047.firebaseapp.com",
+    projectId: "ushulfiqih-89047",
+    storageBucket: "ushulfiqih-89047.appspot.com",
+    messagingSenderId: "643670286454",
+    appId: "1:643670286454:web:6f0ced96ff67c8caaabf57",
+    measurementId: "G-SL8P3RB8RW"
+  };
+  firebase.initializeApp(config);
+  </script>
+
+  <script src="js/login.js"></script>
+  <script  src="js/registration-hapusini.js"></script>
+
+  <script src='js/jquery.js'></script>
+  <script  src="js/random.js"></script>
+  <script  src="js/type-promise.js"></script>
+</body>
+</html>
