@@ -1,1 +1,20 @@
 a:focus { color: #ec521e } /* active links */
+
+.navbar-bg:before {
+    background: none;
+}
+.navbar-bg:after {
+    background-color: #eeeeee;
+}
+
+.toolbar {
+    background-color: #ffffff;
+}
+
+.toolbar-bottom:after, .ios .toolbar-bottom-ios:after, .md .toolbar-bottom-md:after, .aurora .toolbar-bottom-aurora:after {
+    display: none;
+}
+
+.toolbar-bottom:before, .ios .toolbar-bottom-ios:before, .md .toolbar-bottom-md:before, .aurora .toolbar-bottom-aurora:before {
+    background-color: #eeeeee;
+}
