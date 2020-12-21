@@ -16,6 +16,11 @@ var routes = [
     url: './pages/tab-search.html',
     name: 'home',
   },
+  {
+    path: '/tab-forum/',
+    url: './pages/tab-forum.html',
+    name: 'home',
+  },
 
   // Components
  {
