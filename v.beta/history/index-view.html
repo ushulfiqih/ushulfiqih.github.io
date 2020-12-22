@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap: content:">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
+  <title>ushulfiqih</title>
+
+  <link rel="stylesheet" href="core/css/framework7.bundle.css">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/type-promise.css">
+  <link disabled id="dark-reader" href="css/dark.css" rel="stylesheet" type="text/css">
+
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <link rel="stylesheet" href="todo/css/todo.css">
+
+  <script type="text/javascript" src="js/localstorage.js"></script>
+  <script type="text/javascript">//<![CDATA[
+
+    window.addEvent('load', function() {
+
+  function handleFileSelect(evt) {
+    var files = evt.target.files; // FileList object
+
+    // Loop through the FileList and render image files as thumbnails.
+    for (var i = 0, f; f = files[i]; i++) {
+
+      // Only process image files.
+      if (!f.type.match('image.*')) {
+        continue;
+      }
+
+      var reader = new FileReader();
+
+      // Closure to capture the file information.
+      reader.onload = (function(theFile) {
+        return function(e) {
+          // Render thumbnail.
+          var span = document.createElement('span');
+          span.innerHTML = ['<img class="thumb" src="', e.target.result,
+                            '" title="', escape(theFile.name), '"/>'].join('');
+
+          document.getElementById('list').insertBefore(span, null);
+          localStorage.setItem('img', e.target.result);
+        };
+      })(f);
+
+      // Read in the image file as a data URL.
+      reader.readAsDataURL(f);
+    }
+  }
+
+  document.getElementById('files').addEventListener('change', handleFileSelect, false);
+
+
+  if(localStorage.img) {
+
+         var span = document.createElement('span');
+          span.innerHTML += ['<img class="thumb" src="', localStorage.img,
+                            '" title="test"/>'].join('');
+
+          document.getElementById('list').insertBefore(span, null);
+
+    }
+
+    });
+
+  //]]></script>
+
+</head>
+<body>
+  <div id="app">
+      
+    <!-- Status bar overlay for fullscreen mode-->
+    <div class="statusbar"></div>
+    <!-- Left panel with cover effect-->
+    <div class="panel panel-left panel-reveal">
+      <div class="view">
+        <div class="page">
+          <div class="navbar">
+            <div class="navbar-inner">
+              <div class="title"></div>
+            </div>
+          </div>
+          <div class="page-content">
+            <div class="block">
+              <div class="page-header">
+              <h1 style="text-align: left">Perpustakaan</h1>
+                <div>SMPN 21 Purworejo</div>
+                <br/>
+              </div>
+                Perpustakaan TOP. TOP adalah akronim dari Perpustakaan SMPN 21 <a style="color: red" href="/profil/">"Twenty One Purworejo"</a>
+
+                <div class="container features-page panel-close">
+                <a href="/berita/"><i class="far fa-file"></i> Library News <i class="fa fa-angle-right"></i></a>
+                <a href="/statistik/" style="background-color: transparent;color: #c0392b;"><i class="fas fa-chart-line" style="background-color: transparent"></i> Data &amp; Statistik <i class="fa fa-angle-right" style="background-color: transparent"></i></a>
+                <a href="/galeri-kartu/" style="background-color: transparent;color: #c0392b;"><i class="fas fa-id-card-alt" style="background-color: transparent"></i> Anggota <i class="fa fa-angle-right" style="background-color: transparent"></i></a>
+                </div>
+
+                <br/>Dibuat dengan <i style="color: red;" class="fas fa-heart"></i> di Perpustakaan<br/>SMPN 21 Purworejo</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Views/Tabs container -->
+    <div class="views tabs safe-areas">
+      <!-- Tabbar for switching views-tabs -->
+        
+    <div style=" position: absolute; left: 30px; bottom: 12px;z-index: 9999; line-height: 1em;"> <a href="#view-home" class="tab-link" style="color: black"><img src="img/logo.png" style="width: 25px;">&nbsp;official android app<br/>&nbsp;ushulfiqih.com</a>
+    </div>
+        
+      <div class="toolbar tabbar-labels toolbar-bottom">
+        <div class="toolbar-inner">
+          <a href="#view-1" class="tab-link">
+            <i class="icon f7-icons">square_favorites_alt</i>
+          </a>
+          <a href="#view-2" class="tab-link">
+            <i class="icon f7-icons">rectangle_on_rectangle_angled</i>
+          </a>
+          <a href="#view-3" class="tab-link">
+            <i class="icon f7-icons">bag_badge_plus</i>
+          </a>
+        </div>
+      </div>
+      <!-- Your main view/tab, should have "view-main" class. It also has "tab-active" class -->
+      <div id="view-home" class="view view-main tab tab-active">
+        <!-- Page, data-name contains page name which can be used in page callbacks -->
+        <div class="page" data-name="home">
+          <!-- Top Navbar -->
+        <div class="navbar navbar-large navbar-transparent">
+          <div class="navbar-bg"></div>
+          <div class="navbar-inner">
+            <div class="left">
+              <a href="#" class="link icon-only panel-open" data-panel="left">
+                <i class="icon f7-icons if-not-md color-black">menu</i>
+                <i class="icon material-icons md-only color-black">menu</i>
+              </a>
+            </div>
+            <div class="title sliding">ushulfiqih.com</div>
+            <div class="right">
+              <a class="link icon-only searchbar-enable" data-searchbar=".searchbar-components">
+                <i class="icon f7-icons if-not-md">search</i>
+                <i class="icon material-icons md-only">search</i>
+              </a>
+            </div>
+            <form data-search-container=".components-list" data-search-in="a" class="searchbar searchbar-expandable searchbar-components searchbar-init">
+              <div class="searchbar-inner">
+                <div class="searchbar-input-wrap">
+                  <input type="search" placeholder="Search components"/>
+                  <i class="searchbar-icon"></i>
+                  <span class="input-clear-button"></span>
+                </div>
+                <span class="searchbar-disable-button if-not-aurora">Cancel</span>
+              </div>
+            </form>
+          </div>
+        </div>
+
+          <!-- Scrollable page content-->
+          <div class="page-content">
+
+  <div class="block" style="top:-30px">
+
+    <div href="#" data-popup="#my-popup1" class="page-header popup-open">
+        <p class="greeting"></p>
+        <h1 id="val" class="lcnama"></h1>
+
+    </div>
+
+    <br/><p class="half-bottom" style="font-size: 30px;line-height: 1;color: #000000"><b>Principles of Islamic Jurisprudence</b></p>
+
+<div href="#" data-popup="#my-popup2" class="link icon-only popup-open" class="page-header" style="background-color: #ffffff;padding: 13px 20px 13px 20px;border: 1px solid #dddddd;box-shadow: 1px 1px 4px rgba(0, 0, 0, .1);border-radius: 8px;width: 100%;height: 40px;"><span class="carispan" style="width:100%;background-color: transparent"><i class="fas fa-search" style="background-color: transparent;color: #c0392b;"></i><a class="yukcari" style="background-color: transparent;color: #c0392b !important">Yuk, cari disini...</a></span>
+</div>
+      
+<br/><br/><div style="font-size: 20px;" id="type-text"><span class="blinking-cursor">_</span></div>
+                        
+
+
+  <br/><br/><br/>
+  <h4 style="text-align: left; margin-bottom: -10px;margin-left: :30px;">Teori Ushul Fiqih:</h4>
+
+<div class="app" style="z-index: 1">
+
+  <kotak class="hs full no-scrollbar">
+    <a href="/koleksi-terlaris/"><li class="terlaris"><h3>Maslahah Mursalah</h3><p>Buku terlaris</p></li></a>
+    <a href="/koleksi-terbaru/"><li class="terbaru"><h3>Urf</h3><p>Koleksi terbaru</p></li></a>
+    <a href="/koleksi-fiksi/"><li class="fiksi"><h3>Syar'u Man Qablana</h3><p>Buku fiksi terbaik</p></li></a>
+    <a href="/koleksi-pilihan/"><li class="pilihan"><h3>Maqasid Syariah</h3><p>Pilihan Bu Annisa</p></li></a>
+    <a href="/koleksi-ebook/"><li class="ebook"><h3>Qiyas</h3><p>Buku elektronik</p></li></a>
+    <a href="/koleksi-referensi/"><li class="referensi"><h3>Referensi</h3><p>Koleksi referensi</p></li></a>
+  </kotak>
+
+</div>
+
+      <div style="margin-top: -50px;margin-bottom: -50px;z-index: 2">
+      <iframe src="iframe/eevee.html" frameborder="0" style="overflow:hidden;height:340px;width:100%" height="100%" width="100%"></iframe>
+      </div>
+      
+      <div>
+        <label class="pengumuman"><b>Library News:</b></label>
+        <div id ="ambil">Sepertinya kamu tidak terhubung internet?</div>
+      </div>
+
+</div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Literasi View -->
+      <div id="view-1" class="view tab">
+        <!-- Literasi page will be loaded here dynamically from /literasi/ route -->
+      </div>
+
+      <!-- Settings View -->
+      <div id="view-2" class="view tab">
+        <!-- Settings page will be loaded here dynamically from /settings/ route -->
+      </div>
+        
+      <!-- Settings View -->
+      <div id="view-3" class="view tab">
+        <!-- Settings page will be loaded here dynamically from /settings/ route -->
+      </div>
+    </div>
+
+    <!-- Popup -->
+    <div class="popup" id="my-popup1">
+      <div class="view">
+        <div class="page">
+          <div class="navbar" style="background-color: #ffffff">
+            <div class="navbar-inner" style="padding-left: 20px;">
+              <div class="right" style="position: relative;margin-right: 15px;">
+                <a onclick="location.reload();" href="#" class="link popup-close"><i class="fas fa-times"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="page-content">
+            <div class="block">
+
+                <div class="container">
+                  <div class="page-header">
+                  <h1 style="text-align: left">Pengaturan</h1>
+                    <div>Personalisasi aplikasi Perpustakaan</div>
+                    <br/>
+                    <div class="alert alert-danger" id="ooh">Pemustaka</div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <h3><div class="alert alert-info" id="val2"><h5>Pemustaka</h5></div></h3>
+
+                      <form action="#" class="form-inline">
+                        <div class="form-group">
+                          <input style="width: 100%;padding: 12px 20px;margin: 8px 0;box-sizing: border-box;border: 1px solid #eeeeee;" type="text" name="save" id="text" class="form-control" placeholder="Nama Lengkap...">
+                        </div>
+                        <button id="set" class="button button-fill">Ubah nama</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+
+                <h6>Tambahkan foto profil</h6>
+                <input style="border: none; left:-8px;" type="file" id="files" name="files[]" multiple="">
+                <output id="list"><span></span></output>
+
+                <br/>
+                <h6>Pengaturan mode gelap</h6>
+                <div>Mode gelap (dark mode) adalah pilihan untuk mengubah tampilan agar berwarna gelap. Aktifkan fitur ini untuk menerapkan skema warna gelap di aplikasi.</div>
+                <br/>
+                <label href="javascript:void(0)" onclick="dark_toggle();return false;" title="Toggle night mode" class="toggle toggle-init"><input type="checkbox"><span class="toggle-icon"></span></label>
+
+
+                <div href="javascript:void(0)" onclick="dark_toggle();return false;location.reload();" style="margin-left: 50px;margin-top: -19px;">Mode Gelap</div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup" id="my-popup2">
+      <div class="view">
+        <div class="page">
+
+          <div class="page-content">
+            <div class="block">
+
+            <div class="container">
+                  <div class="page-header">
+                  <h1 style="text-align: left">Pencarian Buku</h1>
+                    <div>Masukkan kata kunci judul, pengarang, atau penerbit.</div>
+                    <br/>
+                  </div>
+              <div class="row">
+                <div class="col s12">
+                  <div class="input-field">
+                    <input type="text" id="search" autofocus="autofocus" autocomplete="off" placeholder="Pencarian buku...">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="container" style="margin-top: -20px">
+                <!-- Results --><br/>
+                <div id="results">
+                <h6>Panduan pencarian</h6><br/>
+                <div><li>Hasil pencarian akan otomatis muncul berdasarkan kata kunci.</li><li>Klik judul buku untuk mengakses OPAC dan melihat ketersediaan buku</li><li>Database terakhir diperbarui 14/05/2019. Pencarian dapat menemukan <a href="#" class="link popup-close">480 judul buku</a> dari total keseluruhan judul buku: 1080, atau total eksemplar/kopi:	10436 yang ada dalam buku induk perpustakaan.</li><li>Periksa pembaruan secara berkala</li></div>
+                <br/>
+                </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup" id="my-popup3">
+      <div class="view">
+        <div class="page">
+          <div class="navbar" style="background-color: #ffffff">
+            <div class="navbar-inner" style="padding-left: 20px;">
+              <div class="right" style="position: relative;margin-right: 15px;">
+                <a href="#" class="link popup-close"><i class="fas fa-times"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="page-content">
+            <div class="block">
+
+                <div class="container">
+                  <div class="page-header">
+                  <h1 style="text-align: left">Statistik</h1>
+                    <div>Perpustakaan SMPN 21 Purworejo</div>
+                  </div>
+                </div>
+
+                <h6>Data disajikan interaktif</h6>
+                <p class="half-bottom">
+                Laporan statistik koleksi perpustakaan, statistik peminjaman, dan berbagai aktivitas pengunjung lainnya. Data diperbaharui secara berkala.
+                </p>
+                <p class="user-list-follow">
+                <a href="/statistik/" class="followkita">Lihat statistik&nbsp;&nbsp;&nbsp;<i class="fa fa-angle-right"></i></a>
+                </p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+    <script type="text/javascript" src="core/js/framework7.bundle.min.js"></script>
+    <script>var theme = 'ios';
+    if (location.href.indexOf('theme=md') >= 0) theme = 'md';
+    if (location.href.indexOf('theme=aurora') >= 0) theme = 'aurora';
+    var plugin = {
+      params: {
+        theme: theme,
+        root: '#app',
+      }
+    };
+    if (Framework7.use) Framework7.use(plugin);
+    else if (Framework7.Class && Framework7.Class.use) Framework7.Class.use(plugin);
+    </script><style>.demo-icon {
+      background: #EE350F;
+      color: #fff;
+      border-radius: 50%;
+      text-align: center;
+    }</style><script>var app = new Framework7();
+
+    var $$ = Dom7;
+
+    // Create full-layout notification
+    var notificationFull = app.notification.create({
+      icon: '<i class="icon demo-icon">7</i>',
+      title: 'Framework7',
+      titleRightText: 'now',
+      subtitle: 'This is a subtitle',
+      text: 'This is a simple notification message',
+      closeTimeout: 3000,
+    });
+
+    // Open Notifications
+    $$('.open-full').on('click', function () {
+      notificationFull.open();
+    });
+    </script>
+
+  <script  src="js/type-promise.js"></script>
+
+  <!-- Framework7 library -->
+  <script src="core/js/framework7.bundle.min.js"></script>
+
+  <!-- App routes -->
+  <script src="js/routes.js"></script>
+
+  <!-- Your custom app scripts -->
+  <script src="js/app.js"></script>
+
+  <script src='js/materialize.min.js'></script>
+  <script src='js/fuse.min.js'></script>
+  <script  src="js/databuku.js"></script>
+
+</body>
+</html>
