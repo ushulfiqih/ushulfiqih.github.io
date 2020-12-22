@@ -18,3 +18,19 @@ a:focus { color: #ec521e } /* active links */
 .toolbar-bottom:before, .ios .toolbar-bottom-ios:before, .md .toolbar-bottom-md:before, .aurora .toolbar-bottom-aurora:before {
     background-color: #eeeeee;
 }
+
+.subnavbar:before {
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 100%;
+    top: 100%;
+    bottom: auto;
+    height: 1px;
+    pointer-events: none;
+    background-color: #eeeeee;
+}
+
+.subnavbar:after {
+    background-color: #eeeeee;
+}
