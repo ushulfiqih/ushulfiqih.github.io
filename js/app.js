@@ -76,6 +76,14 @@ var swipeToClosePopup = app.popup.create({
 
 
 
+// Preloader
+$$('.open-preloader').on('click', function () {
+  app.dialog.preloader();
+  setTimeout(function () {
+    app.dialog.close();
+  }, 3000);
+});
+
 // Preloader with custom text
 $$('.open-preloader-custom').on('click', function () {
   app.dialog.preloader('My text...');
