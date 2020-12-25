@@ -36,6 +36,16 @@ var routes = [
     url: './pages/tab-forum-reset.html',
     name: 'home',
   },
+{
+    path: '/tab-forum-out/',
+    url: './pages/tab-forum-out.html',
+    name: 'home',
+  },
+{
+    path: '/tab-forum-dashboard/',
+    url: './pages/tab-forum-dashboard.html',
+    name: 'home',
+  },
 
   // Components
  {
