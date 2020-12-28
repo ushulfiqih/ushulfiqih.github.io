@@ -32,14 +32,3 @@
 .subnavbar:after {
     background-color: #eeeeee;
 }
-
-/* Usual state */
-.link {
-    color: #ffffff;
-}
-/* Active/tapped state */
-.link.active-state {
-    color: #ec521e;
-}
-
-.link:focus { color: #ec521e } /* active links */
