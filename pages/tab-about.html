@@ -1,5 +1,16 @@
 <template>
   <div class="page no-toolbar no-navbar no-swipeback login-screen-page">
+
+    <div class="navbar">
+      <div class="navbar-inner sliding">
+        <div class="left">
+          <a href="#" class="link back">
+
+          </a>
+        </div>
+      </div>
+    </div>
+
     <div class="page-content">
       <div>
           <img style="display: block; margin-left: auto; margin-right: auto; width: 25%; margin-bottom: 25px;margin-top: -25px;" src="img/logo.png">
@@ -10,19 +21,76 @@
         </div>
         <div class="list">
           <ul>
-            <li><a class="list-button external" >Upgrade Ushul Fiqih</a></li>
+            <li><a class="list-button external">Ushul Fiqih</a></li>
           </ul>
-          <div class="block-footer">Anda menginstall Ushul Fiqih versi Gratis<br>Upgrade untuk experience yang lebih baik</div>
-                      <div  style="margin-top: 20px;" class="block text-align-center">
-                        <a href="/" class="external" ><button style="color:#ffffff;background-color: red;border: none;width: 33%;height: 35px; padding-top: 0px;border-radius: 9px;" >Upgrade</button></a>
-                        <br/><br/><a style="font-size: 14px;" href="/tab-home/" class="link" ><b>Tidak, terima kasih.</b></a>
-                      </div>
-                      <div  style="margin-top: -30px;" class="text-align-center">
-                        <a style="font-size: 12px;" href="/tab-home/" class="link" >Lanjutkan Free</a>
-                      </div>
+          <div  style="margin-top: -20px;margin-bottom: 10px;" class="text-align-center">
+            <a style="font-size: 12px;" href="/tab-home/" class="link" > by Ushulfiqih.com</a>
+          </div>
+          <div class="block-footer"><i class="icon f7-icons color-gray">chevron_compact_down</i><br/>Dibuat di bulan <a href="/tab-home/" class="link" >Desember</a> 2020<br/>Hubungi <a href="/tab-home/" class="link" >kami</a> via <a href="/tab-home/" class="link" >email</a></div>
+
+          <div  style="margin-top: 20px;" class="block text-align-center">
+            <a href="/tab-home/"><button style="color:#ffffff;background-color: red;border: none;width: 33%;height: 35px; padding-top: 0px;border-radius: 9px;" >Kembali</button></a>
+          </div>
+          <div  style="margin-top:0px;" class="text-align-center">
+            <p style="font-size: 12px;">MENU ADMIN</p>
+          </div>
+          <div  style="margin-top: -10px;" class="block text-align-center">
+            <a style="font-size: 14px;" href="#" class="button login-screen-open" data-login-screen=".login-screen">Admin&nbsp;<i class="icon f7-icons color-custom" style="font-size: 18px;">lock_shield</i>&nbsp;Login</a>
+          </div>
+
           </div>
       </form>
     </div>
+
+    <div class="login-screen">
+      <div class="view">
+        <div class="page">
+          <div class="page-content login-screen-content">
+            <div class="login-screen-title">
+              <img style="display: block; margin-left: auto; margin-right: auto; width: 25%; margin-bottom: 25px;margin-top: -25px;" src="img/logo.png">
+            </div>
+            <div class="block"><div class="block"><div class="block">
+            <form>
+              <div class="list">
+                <ul>
+                  <li><a class="list-button external">Admin Dashboard</a></li>
+                </ul>
+                <div  style="margin-top: -20px;margin-bottom: 10px;" class="text-align-center">
+                  <a style="font-size: 12px;" href="/tab-home/" class="link" > LOGIN</a>
+                </div>
+                <div class="block-footer"><i class="icon f7-icons color-gray">chevron_compact_down</i></div>
+                <ul>
+                  <li class="item-content item-input">
+                    <div class="item-inner">
+                      <div class="item-title item-label">Username</div>
+                      <div class="item-input-wrap">
+                        <input type="text" name="username" placeholder="Your username">
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item-content item-input">
+                    <div class="item-inner">
+                      <div class="item-title item-label">Password</div>
+                      <div class="item-input-wrap">
+                        <input type="password" name="password" placeholder="Your password">
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="list">
+                <div class="block-footer">
+                  <a href="/tab-home/"><button style="color:#ffffff;background-color: red;border: none;width: 33%;height: 35px; padding-top: 0px;border-radius: 9px;" >Log in</button></a>
+                  <p><a class="link login-screen-close" href="/tab-home/">Kembali</a></p>
+                </div>
+              </div>
+            </form>
+            </div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </template>
 <script>

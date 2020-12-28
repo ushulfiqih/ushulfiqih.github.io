@@ -50,15 +50,10 @@ var routes = [
     url: './pages/tab-forum-dashboard.html',
     name: 'home',
   },
-
   // Components
  {
     path: '/tab-about/',
     componentUrl: './pages/tab-about.html',
-  },
-  {
-    path: '/accordion/',
-    url: './pages/accordion.html',
   },
   {
     path: '/action-sheet/',
