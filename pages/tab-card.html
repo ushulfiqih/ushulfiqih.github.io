@@ -1,7 +1,7 @@
 <div class="page">
-  <div class="navbar navbar-large navbar-transparent">
+  <div class="navbar">
     <div class="navbar-bg"></div>
-    <div class="navbar-inner sliding">
+    <div class="navbar-inner">
             <div class="left">
               <a href="#" class="link icon-only panel-open" data-panel="left">
                 <i class="icon f7-icons if-not-md color-black">menu</i>
@@ -9,21 +9,30 @@
               </a>
             </div>
       <div class="title">Kaidah Fiqih</div>
-      <div class="title-large">
-        <div class="title-large-text">Kaidah Fiqih</div>
-      </div>
     </div>
   </div>
-  <div class="page-content" style="margin-top: 50px">
+
+  <div class="page-content">
+
+    <div class="fab fab-extended fab-center-bottom color-red">
+      <a href="/tab-forum/" class="link">
+        <i class="icon f7-icons" style="font-size: 18px;">bubble_left</i>
+        <div class="fab-text">Diskusi</div>
+      </a>
+    </div>
+
+    <div class="tabs-swipeable-wrap">
+
+      <div class="tabs">
+        <div id="tab-a" class="page-content tab">
           <div class="block">
-              
-      <div class="block block-strong">
-        <p class="row">
-          <button class="col button open-preloader">Preloader</button>
-          <button class="col button open-preloader-custom">Custom Title</button>
-        </p>
-      </div>
-              
+            <p>Tab 1 content</p>
+            ...
+          </div>
+        </div>
+        <div id="tab-b" class="page-content tab tab-active">
+          <div class="block"  style="margin-top:-30px;">
+
             <div class="card demo-facebook-card">
               <a class="popup-open" href="#" data-popup=".kf1">
               <div class="card-header">
@@ -171,5 +180,17 @@
             <br/><br/>
 
           </div>
+        </div>
+        <div id="tab-c" class="page-content tab">
+          <div class="block">
+            <p>Tab 3 content</p>
+            ...
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
   </div>
 </div>
