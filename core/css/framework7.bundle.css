@@ -2766,6 +2766,7 @@ html.device-full-viewport body {
   */
   --f7-tabbar-link-active-bg-color: transparent;
   --f7-tabbar-label-text-transform: none;
+    --f7-toolbar-hide-show-transition-duration: 0ms;
 }
 .ios {
   --f7-toolbar-height: 44px;
