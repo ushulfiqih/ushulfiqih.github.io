@@ -14,17 +14,21 @@
 
 <div class="toolbar tabbar-labels toolbar-bottom">
 <div class="toolbar-inner">
-  <a href="/tab-home/" class="link" data-animate="false">
-    <i class="icon f7-icons">rectangle_on_rectangle_angled</i>
-  </a>
-  <a href="/tab-search/" class="link" data-animate="false">
-    <i class="icon f7-icons">search</i>
-  </a>
-  <a href="/tab-card/" class="link tab-link-active" data-animate="false">
-    <i class="icon f7-icons">bubble_left_bubble_right</i>
-  </a>
-
+  <a href="/tab-home/" data-animate="false" class="link"><i class="icon f7-icons">rectangle_on_rectangle_angled</i></a>
+  <a href="/tab-search/" data-animate="false" class="link"><i class="icon f7-icons">search</i></a>
+  <a class="link popover-open" href="#" data-popover=".popover-links"><i class="icon f7-icons">ellipsis</i></a>
 </div>
+</div>
+
+<div class="popover popover-links" style="width:40%">
+  <div class="popover-inner">
+    <div class="list">
+      <ul>
+        <li><a class="list-button item-link popover-close" href="/tab-card/">Kaidah Fiqih</a></li>
+        <li><a class="list-button item-link popover-close" href="/tab-forum/">Forum Diskusi</a></li>
+      </ul>
+    </div>
+  </div>
 </div>
 
   <div class="page-content">
