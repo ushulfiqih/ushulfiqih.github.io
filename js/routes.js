@@ -5,7 +5,11 @@ var routes = [
     url: '../index.html',
     name: 'home',
   },
-  // About page
+  {
+    path: '/tab-home/',
+    url: './pages/tab-home.html',
+    name: 'home',
+  },
   {
     path: '/tab-card/',
     url: './pages/tab-card.html',
@@ -49,8 +53,8 @@ var routes = [
 
   // Components
  {
-    path: '/tab-upgrade/',
-    componentUrl: './pages/tab-upgrade.html',
+    path: '/tab-about/',
+    componentUrl: './pages/tab-about.html',
   },
   {
     path: '/accordion/',

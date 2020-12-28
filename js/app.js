@@ -2,7 +2,7 @@
 var $ = Dom7;
 
 // Theme
-var theme = 'auto';
+var theme = 'md';
 if (document.location.search.indexOf('theme=') >= 0) {
   theme = document.location.search.split('theme=')[1].split('&')[0];
 }
@@ -14,7 +14,7 @@ var app = new Framework7({
   theme: theme,
 	view: {
 		pushState :true,
-		stackPages: true,            
+		stackPages: true,
 	},
   data: function () {
     return {
@@ -59,13 +59,13 @@ var swipeToClosePopup = app.popup.create({
   el: '.sample',
   swipeToClose: true,
 });
-        
+
 // Create Popup with swipe to close
 var swipeToClosePopup = app.popup.create({
   el: '.daftar',
   swipeToClose: true,
 });
-        
+
 // Create Popup with swipe to close
 var swipeToClosePopup = app.popup.create({
   el: '.lupapwd',
