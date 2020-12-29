@@ -1,21 +1,27 @@
+
 <!DOCTYPE html>
 <html>
+<head>
+    <style>
+
+    </style>
+</head>
 <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
-<p><a id="myAnchor" href="http://www.microsoft.com">www.microsoft.com</a></p>
-
-<p>Click the button to change the value of the href attribute of the link above to "www.cnn.com".</p>
-
-<button onclick="myFunction()">Try it</button>
-
-<p id="demo"></p>
-
-<script>
-function myFunction() {
-  document.getElementById("myAnchor").href = "http://www.cnn.com/";
-  document.getElementById("demo").innerHTML = "The link above now goes to www.cnn.com.";
+<div id="1">This is content 1  </div>
+<div id="2">This is content 2  </div>
+<div id="3">This is content 3  </div>
+    <script type="text/javascript">
+        var elems = $("div");
+if (elems.length) {
+  var keep = Math.floor(Math.random() * elems.length);
+  for (var i = 0; i < elems.length; ++i) {
+    if (i !== keep) {
+      $(elems[i]).hide();
+    }
+  }
 }
-</script>
-
+    </script>
 </body>
 </html>
