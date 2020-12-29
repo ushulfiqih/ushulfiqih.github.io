@@ -15,6 +15,7 @@
   <link rel="icon" href="img/logo.png">
 
   <link rel="stylesheet" href="css/type-promise.css">
+  <link rel="stylesheet" href="css/kaidahfiqih.css">
   <link rel="stylesheet" href="css/login.css">
   <link rel="stylesheet" href="css/horizontal.css">
   <link rel="stylesheet" href="css/custom.css">
@@ -249,19 +250,22 @@
                 </div>
 
                 <div class="card demo-facebook-card">
-                  <a class="popup-open" href="#" data-popup=".kf1">
+                  <a href="#">
                   <div class="card-header">
                     <div class="demo-facebook-avatar"><img src="img/logo.png" width="34" height="34"/></div>
-                    <div class="demo-facebook-name">ushulfiqih.com</div>
-                    <div class="demo-facebook-date">Kaidah Fiqih</div>
+                    <div class="demo-facebook-name">Kaidah Fiqih</div>
+                    <div class="demo-facebook-date">Of The Day</div>
                   </div>
-                  <div class="card-content card-content-padding">
-                    <h1>اَلْيَقِيْنُ لَايُزَالُ بِالشَكِّ</h1>
-                    <p class="likes">Kepastian / keyakinan itu tidak bisa dihilangkan dengan keraguan.</p>
+                  <div class="card-content">
+                    <blockquote>
+                      <p id="quotation"></p>
+                      <footer>
+                        <p id="source"></p>
+                      </footer>
+                    </blockquote>
                   </div>
-                  <div id="copy1" style="display:none;">اَلْيَقِيْنُ لَايُزَالُ بِالشَكِّ (Kepastian / keyakinan itu tidak bisa dihilangkan dengan keraguan) - ushulfiqih.com</div>
                   </a>
-                  <div class="card-footer"><a href="#" class="link button-raised open-confirm show-determinate" onclick="copyToClipboard('#copy1')"><i class="icon f7-icons" style="font-size: 14px;">doc_on_doc</i>&nbsp;&nbsp;Salin</a><a href="whatsapp://send?text=اَلْيَقِيْنُ لَايُزَالُ بِالشَكِّ %0aKepastian / keyakinan itu tidak bisa dihilangkan dengan keraguan.%0aushulfiqih.com" class="link external open-progress-infinite">Bagikan ke Whatsapp</a></div>
+                  <div class="card-footer"><quotebutton><i class="icon f7-icons" style="font-size: 14px;">arrow_2_circlepath</i>&nbsp;&nbsp;Refresh</quotebutton></div>
                 </div>
 
                 <div class="card">
@@ -952,6 +956,7 @@
   <script src='js/jquery.js'></script>
   <script src="js/random.js"></script>
   <script src="js/type-promise.js"></script>
+  <script src="js/kaidahfiqih.js"></script>
 
 </body>
 </html>

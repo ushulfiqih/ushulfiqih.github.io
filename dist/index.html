@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p><a id="myAnchor" href="http://www.microsoft.com">www.microsoft.com</a></p>
+
+<p>Click the button to change the value of the href attribute of the link above to "www.cnn.com".</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  document.getElementById("myAnchor").href = "http://www.cnn.com/";
+  document.getElementById("demo").innerHTML = "The link above now goes to www.cnn.com.";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+#quotation {
+  font-size: 5vmin;
+  line-height: 1.2;
+  hanging-punctuation: first;
+}
+
+#source {
+  font-size: 3vmin;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+quotebutton {
+  font-family: "Assistant", sans-serif;
+  display: block;
+  padding: 0.5rem;
+  outline: none;
+  font-size: 0.8rem;
+  background: none;
+}
