@@ -13,7 +13,7 @@
 
   <div class="toolbar tabbar-labels toolbar-bottom">
     <div class="toolbar-inner">
-      <a href="/tab-home/" data-animate="false" class="link tab-link-active"><i class="icon f7-icons">rectangle_on_rectangle_angled</i></a>
+      <a href="/tab-forum/" data-animate="false" class="link"><i class="icon f7-icons">rectangle_on_rectangle_angled</i></a>
       <a href="/tab-search/" data-animate="false" class="link"><i class="icon f7-icons">search</i></a>
       <a class="link popover-open" href="#" data-popover=".popover-links"><i class="icon f7-icons">ellipsis</i></a>
     </div>
@@ -36,6 +36,30 @@
 
                       <div class="card">
                         <div class="card-header">Rekomendasi</div>
+
+                        <div class="inline various0" style="display:none; margin-top: -60px">
+                            <div class="block ptr-content ptr-bottom">
+                              1
+                            </div>
+                        </div>
+
+                        <div class="inline various1" style="display:none; margin-top: -60px">
+                            <div class="block ptr-content ptr-bottom">
+                              2
+                            </div>
+                        </div>
+
+                        <div class="inline various3" style="display:none; margin-top: -60px">
+                            <div class="block ptr-content ptr-bottom">
+                              3
+                            </div>
+                        </div>
+
+                        <script>$(function() {
+                          $(".various" + new Date().getTime() % 3).css("display", "block");
+                        });
+</script>
+
                         <div class="card-content card-content-padding">
                             <div class="list media-list">
                                 <ul>
