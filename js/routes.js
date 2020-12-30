@@ -1,4 +1,4 @@
-var routes = [
+var routes = [  
   // Index page
   {
     path: '/',
