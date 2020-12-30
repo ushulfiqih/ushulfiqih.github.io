@@ -4,7 +4,6 @@ var routes = [
     path: '/',
     url: './index.html',
     name: 'home',
-    reloadPages: 'true'
   },
   {
     path: '/tab-home/',
