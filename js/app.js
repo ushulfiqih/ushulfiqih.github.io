@@ -53,7 +53,6 @@ var app = new Framework7({
 
 
 
-
 // Create Popup with swipe to close
 var swipeToClosePopup = app.popup.create({
   el: '.sample',
