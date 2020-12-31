@@ -1,4 +1,4 @@
-var routes = [  
+var routes = [
   // Index page
   {
     path: '/',
@@ -55,10 +55,6 @@ var routes = [
     path: '/tab-about/',
     componentUrl: './pages/tab-about.html',
   },
-  {
-     path: '/tab-home2/',
-     componentUrl: './pages/tab-home2.html',
-   },
   {
     path: '/ijtihad/',
     componentUrl: './teks/uf-ijtihad.html',

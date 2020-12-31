@@ -1,3 +1,3 @@
 setTimeout(function() {
 	$('#mydiv').fadeOut('fast');
-	}, 4000); // <-- time in milliseconds
+}, 8000); // <-- time in milliseconds
