@@ -56,8 +56,16 @@ var routes = [
     componentUrl: './pages/tab-about.html',
   },
   {
-    path: '/ijtihad/',
-    componentUrl: './teks/uf-ijtihad.html',
+    path: '/pengertian-ijtihad/',
+    componentUrl: './teks/pengertian-ijtihad.html',
+  },
+  {
+    path: '/dasar-hukum-ijtihad/',
+    componentUrl: './teks/dasar-hukum-ijtihad.html',
+  },
+  {
+    path: '/macam-macam-ijtihad/',
+    componentUrl: './teks/macam-macam-ijtihad.html',
   },
 
   // Default route (404 page). MUST BE THE LAST
