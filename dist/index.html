@@ -1,27 +1,26 @@
-
 <!DOCTYPE html>
 <html>
-<head>
-    <style>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#2196f3">
+    <title>Welcomescreen demo | Framework7</title>
+    <link rel="stylesheet" href="../core/css/framework7.bundle.css">
+    <script type="text/javascript" src="bundle.js"></script>
 
-    </style>
-</head>
-<body>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="f7welcomescree.js"></script>
+    <link rel="stylesheet" href="f7welcomescree.css">
 
-<div id="1">This is content 1  </div>
-<div id="2">This is content 2  </div>
-<div id="3">This is content 3  </div>
-    <script type="text/javascript">
-        var elems = $("div");
-if (elems.length) {
-  var keep = Math.floor(Math.random() * elems.length);
-  for (var i = 0; i < elems.length; ++i) {
-    if (i !== keep) {
-      $(elems[i]).hide();
-    }
-  }
-}
-    </script>
-</body>
+  </head>
+
+  <body>
+    <div id="app">
+      <div class="statusbar"></div>
+
+
+    </div>
+
+    <script type="text/javascript" src="../core/js/framework7.bundle.js"></script>
+  </body>
 </html>
