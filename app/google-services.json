@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "643670286454",
+    "firebase_url": "https://ushulfiqih-89047-default-rtdb.firebaseio.com",
+    "project_id": "ushulfiqih-89047",
+    "storage_bucket": "ushulfiqih-89047.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:643670286454:android:aee4826b47d279c7aabf57",
+        "android_client_info": {
+          "package_name": "com.ushulfiqih.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "643670286454-u7u5ukh0mr23fomn3r1q9rorie49sk61.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZPUQpEb7IMKATi570CuTiDtLn9DR7Crw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "643670286454-u7u5ukh0mr23fomn3r1q9rorie49sk61.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

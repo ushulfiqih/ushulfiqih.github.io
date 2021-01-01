@@ -1,0 +1,18 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.quentin7b:android-location-tracker:3.2@aar">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e84bdac09fe9382be921d9b8c388d037/jetified-android-location-tracker-3.2/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/dd605fe066e7bf5f579b84fc2c058032/jetified-android-location-tracker-3.2/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e84bdac09fe9382be921d9b8c388d037/jetified-android-location-tracker-3.2/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e84bdac09fe9382be921d9b8c388d037/jetified-android-location-tracker-3.2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e84bdac09fe9382be921d9b8c388d037/jetified-android-location-tracker-3.2/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/dd605fe066e7bf5f579b84fc2c058032/jetified-android-location-tracker-3.2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/dd605fe066e7bf5f579b84fc2c058032/jetified-android-location-tracker-3.2/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/dd605fe066e7bf5f579b84fc2c058032/jetified-android-location-tracker-3.2/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

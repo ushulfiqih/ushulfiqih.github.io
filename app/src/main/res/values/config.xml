@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="banner_ad_unit_id" translatable="false"></string>
+    <string name="interstitial_ad_unit_id" translatable="false">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="ad_app_id" translatable="false">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="test_device_id" translatable="false"></string>
+    <!--This field is mandatory for app. If you don't use ads you have to put ca-app-pub-3940256099942544~3347511713 for APP_ID-->
+
+    <!--If you want to load local site remove value only-->
+    <string name="target_url" translatable="false">https://app.ushulfiqih.com/</string>
+    <!--If you don't want to load toolbar remove value only-->
+    <string name="toolbar" translatable="false"></string>
+    <!--If you don't want zoom option remove value only-->
+    <string name="zoom" translatable="false"></string>
+    <string name="hide_status_bar" translatable="false"></string>
+    <string name="cache" translatable="false">true</string>
+    <string name="pullToRefresh" translatable="false"></string>
+
+    <!--If you want to enable gps put true-->
+    <string name="enable_gps" translatable="false"></string>
+
+    <!--SKU KEY FROM GOOGLE PLAY-->
+    <string name="item_sku" translatable="false">com.brommko.android.universalwebview.removeads</string>
+</resources>
