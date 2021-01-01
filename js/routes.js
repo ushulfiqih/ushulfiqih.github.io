@@ -83,7 +83,10 @@ var routes = [
     path: '/tingkatan-mujtahid/',
     componentUrl: './teks/tingkatan-mujtahid.html',
   },
-
+  {
+    path: '/pengertian-istihsan/',
+    componentUrl: './teks/pengertian-istihsan.html',
+  },
   // Default route (404 page). MUST BE THE LAST
   {
     path: '(.*)',
