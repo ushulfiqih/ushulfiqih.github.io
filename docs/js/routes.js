@@ -56,6 +56,10 @@ var routes = [
     componentUrl: './pages/tab-about.html',
   },
   {
+     path: '/tab-kaidah/',
+     componentUrl: './pages/tab-kaidah.html',
+   },
+  {
     path: '/pengertian-ijtihad/',
     componentUrl: './teks/pengertian-ijtihad.html',
   },

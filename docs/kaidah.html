@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="robots" content="noindex">
+  <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap:">
+  <title>app.ushulfiqih.com</title>
+  <link rel="stylesheet" href="core/css/framework7.bundle.css">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="apple-touch-icon" href="img/logo.png">
+  <link rel="icon" href="img/logo.png">
+
+  <link rel="stylesheet" href="css/type-promise.css">
+  <link rel="stylesheet" href="css/login.css">
+  <link rel="stylesheet" href="css/horizontal.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/kaidahfiqih.css">
+
+</head>
+<body>
+
+  <div id="app">
+
+      <div class="panel panel-left panel-cover panel-resizable panel-init">
+        <div class="page">
+          <div class="page-content">
+            <div class="block-title">Left Panel</div>
+            <div class="block">
+              <p>This is a left side panel. You can close it by clicking outsite or on this link: <a href="#" class="panel-close">close me</a>. You can put here anything, even another isolated view like in <a href="#" data-panel="right" class="panel-open">Right Panel</a></p>
+            </div>
+            <div class="block-title">Main View Navigation</div>
+            <div class="list links-list">
+              <ul>
+                <li>
+                  <a href="/tab-forum-login/" class="panel-close">Login</a>
+                </li>
+                <li>
+                  <a href="/tab-forum-register/" class="panel-close">Register</a>
+                </li>
+                <li>
+                  <a href="/tab-forum-reset/" class="panel-close">Reset</a>
+                </li>
+                <li>
+                  <a href="/tab-forum-dashboard/" class="panel-close">Dashboard</a>
+                </li>
+                <li>
+                  <a href="/tab-forum-out/" class="panel-close">Out</a>
+                </li>
+              </ul>
+            </div>
+            <div class="block">
+              <p>Lorem ipsum dolor sit amet</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-right panel-reveal panel-resizable panel-init">
+        <div class="view view-init view-right" data-name="right" data-url="/">
+          <div class="page">
+            <div class="navbar">
+              <div class="navbar-bg"></div>
+              <div class="navbar-inner sliding">
+                <div class="title">Right Panel</div>
+              </div>
+            </div>
+            <div class="page-content">
+              <div class="block">
+                <p>This is a right side panel test. You can close it by clicking outsite or on this link: <a href="#" class="panel-close">close me</a>. You can put here anything, even another isolated view.</p>
+              </div>
+              <div class="block-title">Panel Navigation</div>
+              <div class="list links-list">
+                <ul>
+                  <li><a href="/panel-right-1/">Right panel page 1</a></li>
+                  <li><a href="/panel-right-2/">Right panel page 2</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <div class="view view-main view-init safe-areas" data-master-detail-breakpoint="800" data-url="/">
+
+			<div class="toolbar tabbar-labels toolbar-bottom">
+		    <a href="/" class="link external" style="color: black"><div style="position: absolute; left: 15px; bottom: 14px; z-index: 9999; line-height: 1em;"><img src="img/logo.png" style="width: 25px;"><div style="position: absolute; left: 35px; bottom: 2px;font-size:8px; z-index: 9999;line-height: 1.4; ">Principles of Islamic<br/>Jurisprudence</div></div></a>
+		  <div class="toolbar-inner">
+		    <a href="/tab-search/" data-animate="false" class="link"><i class="icon f7-icons">search</i></a>
+		    <a href="/tab-forum/" data-animate="false" class="link"><i class="icon f7-icons">bubble_left_bubble_right</i></a>
+		    <a class="link popover-open" href="#" data-popover=".popover-links"><i class="icon f7-icons">ellipsis</i></a>
+		  </div>
+		  </div>
+
+      <div class="popover popover-links" style="width:40%">
+        <div class="popover-inner">
+          <div class="list">
+            <ul>
+              <li><a class="list-button item-link popover-close" href="/tab-card/">Kaidah Fiqih</a></li>
+              <li><a class="list-button item-link popover-close" href="/tab-about/">Tentang</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="page">
+
+				<div class="navbar">
+			    <div class="navbar-bg"></div>
+			    <div class="navbar-inner">
+			      <div class="left">
+			        <a href="#" class="link icon-only panel-open" data-panel="left">
+			          <i class="icon f7-icons color-black" style="font-size:22px">line_horizontal_3</i>
+			        </a>
+			      </div>
+			      <div class="title">Kaidah Fiqih</div>
+			    </div>
+			  </div>
+
+        <div class="page-content">
+
+          <div class="fab fab-extended fab-center-bottom color-red">
+            <a href="/tab-forum/" class="link">
+              <i class="icon f7-icons" style="font-size: 18px;">bubble_left</i>
+              <div class="fab-text">Diskusi</div>
+            </a>
+          </div>
+
+          <div class="tabs-swipeable-wrap">
+
+            <div class="tabs">
+              <div id="tab-a" class="page-content tab tab-active">
+                <div class="block"  style="margin-top:-30px;">
+
+                  <div class="card demo-facebook-card">
+                    <a class="popup-open" href="#" data-popup=".kf1">
+                    <div class="card-header">
+                      <div class="demo-facebook-avatar"><img src="img/logo.png" width="34" height="34"/></div>
+                      <div class="demo-facebook-name">ushulfiqih.com</div>
+                      <div class="demo-facebook-date">Kaidah Fiqih</div>
+                    </div>
+                    <div class="card-content card-content-padding">
+                      <h1>اَلْيَقِيْنُ لَايُزَالُ بِالشَكِّ</h1>
+                      <p class="likes">Kepastian / keyakinan itu tidak bisa dihilangkan dengan keraguan.</p>
+                    </div>
+                    <div id="copy1" style="display:none;">اَلْيَقِيْنُ لَايُزَالُ بِالشَكِّ (Kepastian / keyakinan itu tidak bisa dihilangkan dengan keraguan) - ushulfiqih.com</div>
+                    </a>
+                    <div class="card-footer"><a href="#" class="link button-raised open-confirm show-determinate" onclick="copyToClipboard('#copy1')"><i class="icon f7-icons" style="font-size: 14px;">doc_on_doc</i>&nbsp;&nbsp;Salin</a><a href="whatsapp://send?text=اَلْيَقِيْنُ لَايُزَالُ بِالشَكِّ %0aKepastian / keyakinan itu tidak bisa dihilangkan dengan keraguan.%0aushulfiqih.com" class="link external open-progress-infinite">Bagikan ke Whatsapp</a></div>
+                  </div>
+
+                  <div class="card demo-facebook-card">
+                    <a class="popup-open" href="#" data-popup=".kf2">
+                    <div class="card-header">
+                      <div class="demo-facebook-avatar"><img src="img/logo.png" width="34" height="34"/></div>
+                      <div class="demo-facebook-name">ushulfiqih.com</div>
+                      <div class="demo-facebook-date">Kaidah Fiqih</div>
+                    </div>
+                    <div class="card-content card-content-padding">
+                      <h1>مَا لَا يُشْتَرَطُ لَهُ التَعَرَّضُ جُمْلَةً وَتَفْصِيْلًا اِذَا عَيَّنَهُ وَاَخْطَاءَ لَمْ يَضُرَّ</h1>
+                      <p class="likes">Sesuatu yang tidak disyaratkan menentukannya secara keseluruhan dan detail / terperinci, apabila salah dalam menunjukkan / menentukannya, kesalahan itu tidak merugikan (tidak berbahaya, tidak berpengaruh)</p>
+                    </div>
+                    <div id="copy2" style="display:none;">مَا لَا يُشْتَرَطُ لَهُ التَعَرَّضُ جُمْلَةً وَتَفْصِيْلًا اِذَا عَيَّنَهُ وَاَخْطَاءَ لَمْ يَضُرَّ (Sesuatu yang tidak disyaratkan menentukannya secara keseluruhan dan detail / terperinci, apabila salah dalam menunjukkan / menentukannya, kesalahan itu tidak merugikan (tidak berbahaya, tidak berpengaruh)) - ushulfiqih.com</div>
+                    </a>
+                    <div class="card-footer"><a href="#" class="link button-raised open-confirm show-determinate" onclick="copyToClipboard('#copy2')"><i class="icon f7-icons" style="font-size: 14px;">doc_on_doc</i>&nbsp;&nbsp;Salin</a><a href="whatsapp://send?text=مَا لَا يُشْتَرَطُ لَهُ التَعَرَّضُ جُمْلَةً وَتَفْصِيْلًا اِذَا عَيَّنَهُ وَاَخْطَاءَ لَمْ يَضُرَّ%0aSesuatu yang tidak disyaratkan menentukannya secara keseluruhan dan detail / terperinci, apabila salah dalam menunjukkan / menentukannya, kesalahan itu tidak merugikan (tidak berbahaya, tidak berpengaruh)%0aushulfiqih.com" class="link external open-progress-infinite">Bagikan ke Whatsapp</a></div>
+                  </div>
+
+                  <div class="card demo-facebook-card">
+                    <a class="popup-open" href="#" data-popup=".kf3">
+                    <div class="card-header">
+                      <div class="demo-facebook-avatar"><img src="img/logo.png" width="34" height="34"/></div>
+                      <div class="demo-facebook-name">ushulfiqih.com</div>
+                      <div class="demo-facebook-date">Kaidah Fiqih</div>
+                    </div>
+                    <div class="card-content card-content-padding">
+                      <h1>مَا يُشْتَرَطُ فِيْهِ التَعْيِـيْن ُفَالْخَطَاءُ فِيْهِ مُبْطِلٌ</h1>
+                      <p class="likes">Sesuatu yang di dalamnya disyaratkan menentukan secara detail / spesifik (ta’yin), maka kesalahan dalam menentukannya akan membatalkan (batal demi hukum)</p>
+                    </div>
+                    <div id="copy3" style="display:none;">مَا يُشْتَرَطُ فِيْهِ التَعْيِـيْن ُفَالْخَطَاءُ فِيْهِ مُبْطِلٌ (Sesuatu yang di dalamnya disyaratkan menentukan secara detail / spesifik (ta’yin), maka kesalahan dalam menentukannya akan membatalkan (batal demi hukum)) - ushulfiqih.com</div>
+                    </a>
+                    <div class="card-footer"><a href="#" class="link button-raised open-confirm show-determinate" onclick="copyToClipboard('#copy3')"><i class="icon f7-icons" style="font-size: 14px;">doc_on_doc</i>&nbsp;&nbsp;Salin</a><a href="whatsapp://send?text=مَا يُشْتَرَطُ فِيْهِ التَعْيِـيْن ُفَالْخَطَاءُ فِيْهِ مُبْطِلٌ%0aSesuatu yang di dalamnya disyaratkan menentukan secara detail / spesifik (ta’yin), maka kesalahan dalam menentukannya akan membatalkan (batal demi hukum)%0aushulfiqih.com" class="link external open-progress-infinite">Bagikan ke Whatsapp</a></div>
+                  </div>
+
+                  <div class="card demo-facebook-card">
+                    <a class="popup-open" href="#" data-popup=".kf4">
+                    <div class="card-header">
+                      <div class="demo-facebook-avatar"><img src="img/logo.png" width="34" height="34"/></div>
+                      <div class="demo-facebook-name">ushulfiqih.com</div>
+                      <div class="demo-facebook-date">Kaidah Fiqih</div>
+                    </div>
+                    <div class="card-content card-content-padding">
+                      <h1>مَا يُشْتَرَطُ التَعَرُّضُ جُمْلَةً لَا تَفْصِيْلًا اِذَا عَيَّنَهُ وَاَخْطَاءَ ضَرَّ</h1>
+                      <p class="likes">Sesuatu yang diharuskan / disyaratkan menentukannya secara lengkap – tidak secara rinci – maka jika ditentukan dan salah dalam menentukannya akan berbahaya</p>
+                    </div>
+                    <div id="copy4" style="display:none;">مَا يُشْتَرَطُ التَعَرُّضُ جُمْلَةً لَا تَفْصِيْلًا اِذَا عَيَّنَهُ وَاَخْطَاءَ ضَرَّ (Sesuatu yang diharuskan / disyaratkan menentukannya secara lengkap – tidak secara rinci – maka jika ditentukan dan salah dalam menentukannya akan berbahaya) - ushulfiqih.com</div>
+                    </a>
+                    <div class="card-footer"><a href="#" class="link button-raised open-confirm show-determinate" onclick="copyToClipboard('#copy4')"><i class="icon f7-icons" style="font-size: 14px;">doc_on_doc</i>&nbsp;&nbsp;Salin</a><a href="whatsapp://send?text=مَا يُشْتَرَطُ التَعَرُّضُ جُمْلَةً لَا تَفْصِيْلًا اِذَا عَيَّنَهُ وَاَخْطَاءَ ضَرَّ%0aSesuatu yang diharuskan / disyaratkan menentukannya secara lengkap – tidak secara rinci – maka jika ditentukan dan salah dalam menentukannya akan berbahaya%0aushulfiqih.com" class="link external open-progress-infinite">Bagikan ke Whatsapp</a></div>
+                  </div>
+
+                  <div class="card demo-facebook-card">
+                    <a class="popup-open" href="#" data-popup=".kf5">
+                    <div class="card-header">
+                      <div class="demo-facebook-avatar"><img src="img/logo.png" width="34" height="34"/></div>
+                      <div class="demo-facebook-name">ushulfiqih.com</div>
+                      <div class="demo-facebook-date">Kaidah Fiqih</div>
+                    </div>
+                    <div class="card-content card-content-padding">
+                      <h1>مَقَاصِدُ اللَّفْظِ عَلَى نِـيَّـةِ الْلَافِظِ</h1>
+                      <p class="likes">Tujuan lafal tergantung pada maksud pengucapannya / niat orang yang mengucapkannya</p>
+                    </div>
+                    <div id="copy5" style="display:none;">مَقَاصِدُ اللَّفْظِ عَلَى نِـيَّـةِ الْلَافِظِ (Tujuan lafal tergantung pada maksud pengucapannya / niat orang yang mengucapkannya) - ushulfiqih.com</div>
+                    </a>
+                    <div class="card-footer"><a href="#" class="link button-raised open-confirm show-determinate" onclick="copyToClipboard('#copy5')"><i class="icon f7-icons" style="font-size: 14px;">doc_on_doc</i>&nbsp;&nbsp;Salin</a><a href="whatsapp://send?text=مَقَاصِدُ اللَّفْظِ عَلَى نِـيَّـةِ الْلَافِظِ%0aTujuan lafal tergantung pada maksud pengucapannya / niat orang yang mengucapkannya%0aushulfiqih.com" class="link external open-progress-infinite">Bagikan ke Whatsapp</a></div>
+                  </div>
+
+                  <div class="card demo-facebook-card">
+                    <a class="popup-open" href="#" data-popup=".kf6">
+                    <div class="card-header">
+                      <div class="demo-facebook-avatar"><img src="img/logo.png" width="34" height="34"/></div>
+                      <div class="demo-facebook-name">ushulfiqih.com</div>
+                      <div class="demo-facebook-date">Kaidah Fiqih</div>
+                    </div>
+                    <div class="card-content card-content-padding">
+                      <h1>اَلْيَقِيْنُ لَايُزَالُ بِالشَكِّ</h1>
+                      <p class="likes">Kepastian / keyakinan itu tidak bisa dihilangkan dengan keraguan</p>
+                    </div>
+                    <div id="copy6" style="display:none;">اَلْيَقِيْنُ لَايُزَالُ بِالشَكِّ (Kepastian / keyakinan itu tidak bisa dihilangkan dengan keraguan) - ushulfiqih.com</div>
+                    </a>
+                    <div class="card-footer"><a href="#" class="link button-raised open-confirm show-determinate" onclick="copyToClipboard('#copy6')"><i class="icon f7-icons" style="font-size: 14px;">doc_on_doc</i>&nbsp;&nbsp;Salin</a><a href="whatsapp://send?text=اَلْيَقِيْنُ لَايُزَالُ بِالشَكِّ%0aKepastian / keyakinan itu tidak bisa dihilangkan dengan keraguan%0aushulfiqih.com" class="link external open-progress-infinite">Bagikan ke Whatsapp</a></div>
+                  </div>
+
+                  <div class="card demo-facebook-card">
+                    <a class="popup-open" href="#" data-popup=".kf7">
+                    <div class="card-header">
+                      <div class="demo-facebook-avatar"><img src="img/logo.png" width="34" height="34"/></div>
+                      <div class="demo-facebook-name">ushulfiqih.com</div>
+                      <div class="demo-facebook-date">Kaidah Fiqih</div>
+                    </div>
+                    <div class="card-content card-content-padding">
+                      <h1>اَلْأَصْلُ بَقَاءُ مَا كَانَ عَلَى مَا كَانَ</h1>
+                      <p class="likes">Yang menjadi patokan adalah tetapnya sesuatu menurut keadaan semula</p>
+                    </div>
+                    <div id="copy7" style="display:none;">اَلْأَصْلُ بَقَاءُ مَا كَانَ عَلَى مَا كَانَ (Yang menjadi patokan adalah tetapnya sesuatu menurut keadaan semula) - ushulfiqih.com</div>
+                    </a>
+                    <div class="card-footer"><a href="#" class="link button-raised open-confirm show-determinate" onclick="copyToClipboard('#copy7')"><i class="icon f7-icons" style="font-size: 14px;">doc_on_doc</i>&nbsp;&nbsp;Salin</a><a href="whatsapp://send?text=اَلْأَصْلُ بَقَاءُ مَا كَانَ عَلَى مَا كَانَ%0aYang menjadi patokan adalah tetapnya sesuatu menurut keadaan semula%0aushulfiqih.com" class="link external open-progress-infinite">Bagikan ke Whatsapp</a></div>
+                  </div>
+
+                  <div class="card demo-facebook-card">
+                    <a class="popup-open" href="#" data-popup=".kf8">
+                    <div class="card-header">
+                      <div class="demo-facebook-avatar"><img src="img/logo.png" width="34" height="34"/></div>
+                      <div class="demo-facebook-name">ushulfiqih.com</div>
+                      <div class="demo-facebook-date">Kaidah Fiqih</div>
+                    </div>
+                    <div class="card-content card-content-padding">
+                      <h1>اَلْأَصْلُ بَرَاءَةُ الذِّمَّةِ</h1>
+                      <p class="likes">Menurut asalnya setiap orang itu bebas dari kewajiban / tanggungan</p>
+                    </div>
+                    <div id="copy8" style="display:none;">اَلْأَصْلُ بَرَاءَةُ الذِّمَّةِ (Menurut asalnya setiap orang itu bebas dari kewajiban / tanggungan) - ushulfiqih.com</div>
+                    </a>
+                    <div class="card-footer"><a href="#" class="link button-raised open-confirm show-determinate" onclick="copyToClipboard('#copy8')"><i class="icon f7-icons" style="font-size: 14px;">doc_on_doc</i>&nbsp;&nbsp;Salin</a><a href="whatsapp://send?text=اَلْأَصْلُ بَرَاءَةُ الذِّمَّةِ%0aMenurut asalnya setiap orang itu bebas dari kewajiban / tanggungan%0aushulfiqih.com" class="link external open-progress-infinite">Bagikan ke Whatsapp</a></div>
+                  </div>
+
+                  <div class="card demo-facebook-card">
+                    <a class="popup-open" href="#" data-popup=".kf">
+                    <div class="card-header">
+                      <div class="demo-facebook-avatar"><img src="img/logo.png" width="34" height="34"/></div>
+                      <div class="demo-facebook-name">ushulfiqih.com</div>
+                      <div class="demo-facebook-date">Kaidah Fiqih</div>
+                    </div>
+                    <div class="card-content card-content-padding">
+                      <h1>arab</h1>
+                      <p class="likes">arti</p>
+                    </div>
+                    <div id="copy1" style="display:none;">arab (arti) - ushulfiqih.com</div>
+                    </a>
+                    <div class="card-footer"><a href="#" class="link button-raised open-confirm show-determinate" onclick="copyToClipboard('#copy1')"><i class="icon f7-icons" style="font-size: 14px;">doc_on_doc</i>&nbsp;&nbsp;Salin</a><a href="whatsapp://send?text=arab%0aArti%0aushulfiqih.com" class="link external open-progress-infinite">Bagikan ke Whatsapp</a></div>
+                  </div>
+
+                  <br/><br/>
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+	<style>
+	  p {
+	    margin: 10px 0;
+	  }
+	</style>
+	<script>
+	  return {
+	    // Component Data
+	    data: function () {
+	      // Must return an object
+	      return {
+	        name: 'Jimmy',
+	        age: 25,
+	        like: ['Tennis', 'Chess', 'Football'],
+	        clickCounter: 0,
+	        listItems: null,
+	        listLoading: null,
+	      }
+	    },
+	    // Component Methods
+	    methods: {
+	      openAlert: function () {
+	        var self = this;
+	        self.$app.dialog.alert('Hello World');
+	      },
+	      onInput: function (e) {
+	        var self = this;
+	        self.$setState({
+	          name: e.target.value,
+	        });
+	      },
+	      onButtonClick: function () {
+	        var self = this;
+	        self.$setState({
+	          clickCounter: self.clickCounter + 1
+	        });
+	      },
+	      loadList: function () {
+	        var self = this;
+	        self.$setState({ listLoading: true });
+	        // Emulate Ajax request
+	        setTimeout(() => {
+	          self.$setState({
+	            listLoading: false,
+	            listItems: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+	          });
+	        }, 2000);
+	      },
+	    },
+	    // Lifecycle Hooks
+	    beforeCreate() {
+	      console.log('componentBeforeCreate', this)
+	    },
+	    created() {
+	      console.log('componentCreated', this)
+	    },
+	    beforeMount() {
+	      console.log('componentBeforeMount', this)
+	    },
+	    mounted() {
+	      console.log('componentMounted', this);
+	    },
+	    updated() {
+	      console.log('componentUpdated', this);
+	    },
+	    beforeDestroy() {
+	      console.log('componentBeforeDestroy', this);
+	    },
+	    destroyed() {
+	      console.log('componentDestroyed', this);
+	    },
+	    // Page Events
+	    on: {
+	      pageMounted: function(e, page) {
+	        console.log('pageMounted', page);
+	      },
+	      pageInit: function(e, page) {
+	        console.log('pageInit', page);
+	      },
+	      pageBeforeIn: function(e, page) {
+	        console.log('pageBeforeIn', page);
+	      },
+	      pageAfterIn: function(e, page) {
+	        console.log('pageAfterIn', page);
+	      },
+	      pageBeforeOut: function(e, page) {
+	        console.log('pageBeforeOut', page);
+	      },
+	      pageAfterOut: function(e, page) {
+	        console.log('pageAfterOut', page);
+	      },
+	      pageBeforeRemove: function(e, page) {
+	        console.log('pageBeforeRemove', page);
+	      },
+	    }
+	  }
+	</script>
+
+  <script src="core/js/framework7.bundle.js"></script>
+  <script src="js/routes.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/preloader.js"></script>
+
+  <script src='js/jquery.js'></script>
+  <script src='js/rekomendasi.js'></script>
+
+  <!--FIREBASE versi 7.14.1-->
+  <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js"></script>
+
+  <!--SDKs Firebase versi 7.14.1-->
+  <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-auth.js"></script>
+
+  <script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBnyCkwL36UUWTavh_Li-Ksbzky2aRxxfQ",
+    authDomain: "ushulfiqih-89047.firebaseapp.com",
+    projectId: "ushulfiqih-89047",
+    storageBucket: "ushulfiqih-89047.appspot.com",
+    messagingSenderId: "643670286454",
+    appId: "1:643670286454:web:6f0ced96ff67c8caaabf57",
+    measurementId: "G-SL8P3RB8RW"
+  };
+  firebase.initializeApp(config);
+  </script>
+
+  <script>
+     app.router.back('/',force: true);
+  }</script>
+
+  <script src="js/login.js"></script>
+  <script src="js/random.js"></script>
+  <script src="js/type-promise.js"></script>
+  <script src="js/kaidahfiqih.js"></script>
+  <script src="js/custom.js"></script>
+
+</body>
+</html>
