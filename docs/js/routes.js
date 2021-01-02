@@ -87,14 +87,14 @@ var routes = [
     path: '/pengertian-istihsan/',
     componentUrl: './teks/pengertian-istihsan.html',
   },
-  // Default route (404 page). MUST BE THE LAST
-  {
-    path: '(.*)',
-    url: './pages/404.html',
-  },
   // Privacy
   {
     path: '/privacy/',
     componentUrl: './pages/privacy.html',
+  },
+  // Default route (404 page). MUST BE THE LAST
+  {
+    path: '(.*)',
+    url: './pages/404.html',
   },
 ];
