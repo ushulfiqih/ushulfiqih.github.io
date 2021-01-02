@@ -1,12 +1,17 @@
 #quotation {
-  font-size: 5vmin;
+  font-size: 20px;
   line-height: 1.2;
   hanging-punctuation: first;
 }
 
 #source {
-  font-size: 3vmin;
+  font-size: 14px;
   color: rgba(0, 0, 0, 0.6);
+}
+
+#contoh {
+  font-size: 3vmin;
+  color: red;
 }
 
 quotebutton {
