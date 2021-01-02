@@ -92,4 +92,9 @@ var routes = [
     path: '(.*)',
     url: './pages/404.html',
   },
+  // Privacy
+  {
+    path: '/privacy/',
+    componentUrl: './pages/privacy.html',
+  },
 ];
