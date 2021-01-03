@@ -24,6 +24,19 @@
 			}
 			</script>
 			<script src="js/kaidahfiqih.js"></script>
+      <script type="text/javascript">
+      <!--
+          function toggle_visibility(id) {
+             var e = document.getElementById(id);
+             if(e.style.display == 'block')
+                e.style.display = 'none';
+             else
+                e.style.display = 'block';
+          }
+      //-->
+      </script>
+
+
 
 			<div class="fab fab-extended fab-center-bottom color-red">
 				<a href="/tab-forum/" class="link">
@@ -37,20 +50,29 @@
 					<div id="tab-a" class="page-content tab tab-active">
 						<div class="block">
 
-							<div class="card demo-facebook-card" style="margin-top:-50px;">
+              <div class="block-title">Progress Dialog</div>
+              <div class="block block-strong">
+                <p class="row">
+                  <button class="col button button-fill open-progress">Determined</button>
+                  <button class="col button button-fill open-progress-infinite">Infinite</button>
+                </p>
+              </div>
+
+							<div class="card demo-facebook-card" style="margin-top:-0px;">
 								<a class="popup-open" href="#" data-popup=".kf1">
 								<div class="card-header">
 									<div class="demo-facebook-avatar"><img src="img/logo.png" width="34" height="34"/></div>
 									<div class="demo-facebook-name">ushulfiqih.com</div>
 									<div class="demo-facebook-date">Kaidah Fiqih</div>
 								</div>
-								<div class="card-content card-content-padding">
+								<div class="card-content card-content-padding" onclick="toggle_visibility('kf1');">
 									<h2>اَلْيَقِيْنُ لَايُزَالُ بِالشَكِّ</h2>
 									<p class="likes">Kepastian / keyakinan itu tidak bisa dihilangkan dengan keraguan.</p>
+                  <div id="kf1" style="display:none">Belum ada contoh kasus</div>
 								</div>
-								<div id="copy1" style="display:none;">اَلْيَقِيْنُ لَايُزَالُ بِالشَكِّ (Kepastian / keyakinan itu tidak bisa dihilangkan dengan keraguan) - ushulfiqih.com</div>
+								<div id="copy-kf1" style="display:none;">اَلْيَقِيْنُ لَايُزَالُ بِالشَكِّ (Kepastian / keyakinan itu tidak bisa dihilangkan dengan keraguan) - ushulfiqih.com</div>
 								</a>
-								<div class="card-footer"><a href="#" class="link button-raised open-confirm show-determinate" onclick="copyToClipboard('#copy1')"><i class="icon f7-icons" style="font-size: 14px;">doc_on_doc</i>&nbsp;&nbsp;Salin</a><a href="whatsapp://send?text=اَلْيَقِيْنُ لَايُزَالُ بِالشَكِّ %0aKepastian / keyakinan itu tidak bisa dihilangkan dengan keraguan.%0aushulfiqih.com" class="link external open-progress-infinite">Bagikan ke Whatsapp</a></div>
+								<div class="card-footer"><a href="#" class="link button-raised open-confirm show-determinate" onclick="copyToClipboard('#copy-kf1')"><i class="icon f7-icons" style="font-size: 14px;">doc_on_doc</i>&nbsp;&nbsp;Salin</a><a href="whatsapp://send?text=اَلْيَقِيْنُ لَايُزَالُ بِالشَكِّ %0aKepastian / keyakinan itu tidak bisa dihilangkan dengan keraguan.%0aushulfiqih.com" class="link external open-progress-infinite">Bagikan ke Whatsapp</a></div>
 							</div>
 
 							<div class="card demo-facebook-card">
@@ -190,8 +212,6 @@
     </div>
   </div>
 </template>
-
-
 
 <script>
   return {

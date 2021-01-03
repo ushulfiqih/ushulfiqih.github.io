@@ -55,6 +55,10 @@ var routes = [
      componentUrl: './pages/tab-kaidah.html',
    },
    {
+      path: '/dialog/',
+      componentUrl: './pages/dialog.html',
+    },
+   {
       path: '/tab-home/',
       componentUrl: './pages/tab-home.html',
     },
