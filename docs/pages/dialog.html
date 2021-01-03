@@ -1,30 +1,204 @@
 <template>
   <div class="page">
-    <div class="navbar">
-      <div class="navbar-bg"></div>
-      <div class="navbar-inner sliding">
-        <div class="left">
-          <a href="#" class="link back">
-            <i class="icon icon-back"></i>
-            <span class="if-not-md">Back</span>
-          </a>
-        </div>
-        <div class="title">Dialog</div>
-      </div>
-    </div>
+		<div class="navbar">
+	    <div class="navbar-bg"></div>
+	    <div class="navbar-inner">
+	      <div class="left">
+	        <a href="#" class="link icon-only panel-open" data-panel="left">
+	          <i class="icon f7-icons color-black" style="font-size:22px">line_horizontal_3</i>
+	        </a>
+	      </div>
+	      <div class="title">Kaidah Fiqih</div>
+	    </div>
+	  </div>
+
     <div class="page-content">
-      <div class="block block-strong">
-        <p class="row">
-          <button class="col button button-fill" @click="openDeterminedProgress">Determined</button>
-        </p>
-      </div>
+
+			<script>
+			function copyToClipboard(element) {
+				var $temp = $("<input>");
+				$("body").append($temp);
+				$temp.val($(element).text()).select();
+				document.execCommand("copy");
+				$temp.remove();
+			}
+			</script>
+      <script type="text/javascript">
+      <!--
+          function toggle_visibility(id) {
+             var e = document.getElementById(id);
+             if(e.style.display == 'block')
+                e.style.display = 'none';
+             else
+                e.style.display = 'block';
+          }
+      //-->
+      </script>
+
+			<div class="fab fab-extended fab-center-bottom color-red">
+				<a href="/tab-forum/" class="link">
+					<i class="icon f7-icons" style="font-size: 18px;">bubble_left</i>
+					<div class="fab-text">Diskusi</div>
+				</a>
+			</div>
+
+			<div class="tabs-swipeable-wrap">
+				<div class="tabs">
+					<div id="tab-a" class="page-content tab tab-active">
+						<div class="block">
+
+							<div class="card demo-facebook-card" style="margin-top:-50px;">
+								<a class="popup-open" href="#" data-popup=".kf1">
+								<div class="card-header">
+									<div class="demo-facebook-avatar"><img src="img/logo.png" width="34" height="34"/></div>
+									<div class="demo-facebook-name">ushulfiqih.com</div>
+									<div class="demo-facebook-date">Kaidah Fiqih</div>
+								</div>
+								<div class="card-content card-content-padding" onclick="toggle_visibility('kf1');">
+									<h2>اَلْيَقِيْنُ لَايُزَالُ بِالشَكِّ</h2>
+									<p class="likes">Kepastian / keyakinan itu tidak bisa dihilangkan dengan keraguan.</p>
+                  <div id="kf1" style="display:none">Belum ada contoh kasus</div>
+								</div>
+								<div id="copy-kf1" style="display:none;">
+                  اَلْيَقِيْنُ لَايُزَالُ بِالشَكِّ (Kepastian / keyakinan itu tidak bisa dihilangkan dengan keraguan) - ushulfiqih.com
+                </div>
+								</a>
+								<div class="card-footer">
+                  <a href="#" class="link" @click="openDeterminedProgress" onclick="copyToClipboard('#copy-kf1')"><i class="icon f7-icons" style="font-size: 14px;">doc_on_doc</i>&nbsp;&nbsp;Salin</a><a @click="showToastWithCustomButton" href="whatsapp://send?text=اَلْيَقِيْنُ لَايُزَالُ بِالشَكِّ %0aKepastian / keyakinan itu tidak bisa dihilangkan dengan keraguan.%0aushulfiqih.com" class="link external">Bagikan ke Whatsapp</a>
+                </div>
+							</div>
+
+							<div class="card demo-facebook-card">
+								<a class="popup-open" href="#" data-popup=".kf">
+								<div class="card-header">
+									<div class="demo-facebook-avatar"><img src="img/logo.png" width="34" height="34"/></div>
+									<div class="demo-facebook-name">ushulfiqih.com</div>
+									<div class="demo-facebook-date">Kaidah Fiqih</div>
+								</div>
+								<div class="card-content card-content-padding">
+									<h1>arab</h1>
+									<p class="likes">arti</p>
+								</div>
+								<div id="copy1" style="display:none;">arab (arti) - ushulfiqih.com</div>
+								</a>
+								<div class="card-footer"><a href="#" class="link button-raised open-confirm show-determinate" onclick="copyToClipboard('#copy1')"><i class="icon f7-icons" style="font-size: 14px;">doc_on_doc</i>&nbsp;&nbsp;Salin</a><a href="whatsapp://send?text=arab%0aArti%0aushulfiqih.com" class="link external open-progress-infinite">Bagikan ke Whatsapp</a></div>
+							</div>
+
+
+						</div>
+					</div>
+				</div>
+			</div>
+
     </div>
   </div>
 </template>
+
+<script>
+  return {
+    // Lifecycle Hooks
+    beforeCreate() {
+      console.log('componentBeforeCreate', this)
+    },
+    created() {
+      console.log('componentCreated', this)
+    },
+    beforeMount() {
+      console.log('componentBeforeMount', this)
+    },
+    mounted() {
+      console.log('componentMounted', this);
+    },
+    updated() {
+      console.log('componentUpdated', this);
+    },
+    beforeDestroy() {
+      console.log('componentBeforeDestroy', this);
+    },
+    destroyed() {
+      console.log('componentDestroyed', this);
+    },
+    // Page Events
+    on: {
+      pageMounted: function(e, page) {
+        console.log('pageMounted', page);
+      },
+      pageInit: function(e, page) {
+        console.log('pageInit', page);
+      },
+      pageBeforeIn: function(e, page) {
+        console.log('pageBeforeIn', page);
+      },
+      pageAfterIn: function(e, page) {
+        console.log('pageAfterIn', page);
+      },
+      pageBeforeOut: function(e, page) {
+        console.log('pageBeforeOut', page);
+      },
+      pageAfterOut: function(e, page) {
+        console.log('pageAfterOut', page);
+      },
+      pageBeforeRemove: function(e, page) {
+        console.log('pageBeforeRemove', page);
+      },
+    }
+  }
+</script>
 <script>
   return {
     methods: {
-
+      openDeterminedProgress: function () {
+        var app = this.$app;
+        var progress = 0;
+        var dialog = app.dialog.progress('Menyalin Kaidah Fiqih', progress);
+        dialog.setText('Menyalin 1 of 10');
+        var interval = setInterval(function () {
+          progress += 10;
+          dialog.setProgress(progress);
+          dialog.setText('Menyalin ' + ((progress) / 10) + ' of 10 assets');
+          if (progress === 100) {
+            clearInterval(interval);
+            dialog.close();
+          }
+        }, 300)
+      },
+      showToastWithCustomButton: function () {
+        var self = this;
+        // Create toast
+        if (!self.toastWithCustomButton) {
+          self.toastWithCustomButton = self.$app.toast.create({
+            text: 'Membagikan ke Whatsapp',
+            closeButton: true,
+            closeButtonText: 'OK',
+            closeButtonColor: 'red',
+          });
+        }
+        // Open it
+        self.toastWithCustomButton.open();
+      },
+      showToastLargeMessage: function () {
+        var self = this;
+        // Create toast
+        if (!self.toastLargeMessage) {
+          self.toastLargeMessage = self.$app.toast.create({
+            text: 'This toast contains a lot of text. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, quae, ab. Delectus amet optio facere autem sapiente quisquam beatae culpa dolore.',
+            closeTimeout: 2000,
+          });
+        }
+        // Open it
+        self.toastLargeMessage.open();
+      },
+    },
+    on: {
+      pageBeforeOut: function () {
+        var self = this;
+        self.$app.toast.close();
+      },
+      pageBeforeRemove: function () {
+        var self = this;
+        // Destroy toasts when page removed
+        if (self.toastWithCustomButton) self.toastWithCustomButton.destroy();
+      },
     }
   }
 </script>
