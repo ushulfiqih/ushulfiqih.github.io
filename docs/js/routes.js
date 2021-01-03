@@ -6,11 +6,6 @@ var routes = [
     name: 'home',
   },
   {
-    path: '/tab-home/',
-    url: './pages/tab-home.html',
-    name: 'home',
-  },
-  {
     path: '/tab-card/',
     url: './pages/tab-card.html',
     name: 'home',
@@ -59,6 +54,10 @@ var routes = [
      path: '/tab-kaidah/',
      componentUrl: './pages/tab-kaidah.html',
    },
+   {
+      path: '/tab-home/',
+      componentUrl: './pages/tab-home.html',
+    },
   {
     path: '/pengertian-ijtihad/',
     componentUrl: './teks/pengertian-ijtihad.html',
