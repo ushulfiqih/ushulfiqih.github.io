@@ -20,6 +20,11 @@ var routes = [
     url: './pages/tab-forum-discuss.html',
     name: 'home',
   },
+  {
+    path: '/tab-forum-akun/',
+    url: './pages/tab-forum-akun.html',
+    name: 'home',
+  },
 {
     path: '/tab-forum-login/',
     url: './pages/tab-forum-login.html',
