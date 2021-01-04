@@ -11,13 +11,13 @@ var routes = [
     name: 'home',
   },
   {
-    path: '/tab-search-form/',
-    url: './pages/tab-search-form.html',
+    path: '/tab-forum/',
+    url: './pages/tab-forum.html',
     name: 'home',
   },
   {
-    path: '/tab-forum/',
-    url: './pages/tab-forum.html',
+    path: '/tab-forum-discuss/',
+    url: './pages/tab-forum-discuss.html',
     name: 'home',
   },
 {
