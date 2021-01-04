@@ -6,13 +6,13 @@ var routes = [
     name: 'home',
   },
   {
-    path: '/tab-card/',
-    url: './pages/tab-card.html',
+    path: '/tab-search/',
+    url: './pages/tab-search.html',
     name: 'home',
   },
   {
-    path: '/tab-search/',
-    url: './pages/tab-search.html',
+    path: '/tab-search-form/',
+    url: './pages/tab-search-form.html',
     name: 'home',
   },
   {
