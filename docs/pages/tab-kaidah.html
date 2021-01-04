@@ -47,7 +47,6 @@
 						<div class="block">
 
 							<div class="card demo-facebook-card" style="margin-top:-50px;">
-								<a class="popup-open" href="#" data-popup=".kf1">
 								<div class="card-header">
 									<div class="demo-facebook-avatar"><img src="img/logo.png" width="34" height="34"/></div>
 									<div class="demo-facebook-name">Kaidah Fiqih</div>
@@ -61,28 +60,200 @@
 								<div id="copy-kf1" style="display:none;">
                   اَلْيَقِيْنُ لَايُزَالُ بِالشَكِّ (Kepastian / keyakinan itu tidak bisa dihilangkan dengan keraguan) - ushulfiqih.com
                 </div>
-								</a>
 								<div class="card-footer">
                   <a href="#" class="link" @click="openDeterminedProgress" onclick="copyToClipboard('#copy-kf1')"><i class="icon f7-icons" style="font-size: 14px;">doc_on_doc</i>&nbsp;&nbsp;Salin</a><a @click="showToastWithCustomButton" href="whatsapp://send?text=اَلْيَقِيْنُ لَايُزَالُ بِالشَكِّ %0aKepastian / keyakinan itu tidak bisa dihilangkan dengan keraguan.%0aushulfiqih.com" class="link external">Bagikan ke Whatsapp</a>
                 </div>
 							</div>
 
-							<div class="card demo-facebook-card">
-								<a class="popup-open" href="#" data-popup=".kf">
+              <div class="card demo-facebook-card">
 								<div class="card-header">
 									<div class="demo-facebook-avatar"><img src="img/logo.png" width="34" height="34"/></div>
-									<div class="demo-facebook-name">ushulfiqih.com</div>
-									<div class="demo-facebook-date">Kaidah Fiqih</div>
+									<div class="demo-facebook-name">Kaidah Fiqih</div>
+									<div class="demo-facebook-date">ushulfiqih.com</div>
 								</div>
-								<div class="card-content card-content-padding">
-									<h1>arab</h1>
-									<p class="likes">arti</p>
+								<div class="card-content card-content-padding" onclick="toggle_visibility('kf2');">
+									<h2>مَا لَا يُشْتَرَطُ لَهُ التَعَرَّضُ جُمْلَةً وَتَفْصِيْلًا اِذَا عَيَّنَهُ وَاَخْطَاءَ لَمْ يَضُرّ</h2>
+									<p class="likes">Sesuatu yang tidak disyaratkan menentukannya secara keseluruhan dan detail / terperinci, apabila salah dalam menunjukkan / menentukannya, kesalahan itu tidak merugikan (tidak berbahaya, tidak berpengaruh)</p>
+                  <div id="kf2" style="display:none">Belum ada contoh kasus</div>
 								</div>
-								<div id="copy1" style="display:none;">arab (arti) - ushulfiqih.com</div>
-								</a>
-								<div class="card-footer"><a href="#" class="link button-raised open-confirm show-determinate" onclick="copyToClipboard('#copy1')"><i class="icon f7-icons" style="font-size: 14px;">doc_on_doc</i>&nbsp;&nbsp;Salin</a><a href="whatsapp://send?text=arab%0aArti%0aushulfiqih.com" class="link external open-progress-infinite">Bagikan ke Whatsapp</a></div>
+								<div id="copy-kf2" style="display:none;">
+                  مَا لَا يُشْتَرَطُ لَهُ التَعَرَّضُ جُمْلَةً وَتَفْصِيْلًا اِذَا عَيَّنَهُ وَاَخْطَاءَ لَمْ يَضُرَّ (Sesuatu yang tidak disyaratkan menentukannya secara keseluruhan dan detail / terperinci, apabila salah dalam menunjukkan / menentukannya, kesalahan itu tidak merugikan (tidak berbahaya, tidak berpengaruh)) - ushulfiqih.com
+                </div>
+								<div class="card-footer">
+                  <a href="#" class="link" @click="openDeterminedProgress" onclick="copyToClipboard('#copy-kf2')"><i class="icon f7-icons" style="font-size: 14px;">doc_on_doc</i>&nbsp;&nbsp;Salin</a><a @click="showToastWithCustomButton" href="whatsapp://send?text=مَا لَا يُشْتَرَطُ لَهُ التَعَرَّضُ جُمْلَةً وَتَفْصِيْلًا اِذَا عَيَّنَهُ وَاَخْطَاءَ لَمْ يَضُرَّ%0aSesuatu yang tidak disyaratkan menentukannya secara keseluruhan dan detail / terperinci, apabila salah dalam menunjukkan / menentukannya, kesalahan itu tidak merugikan (tidak berbahaya, tidak berpengaruh)%0a - ushulfiqih.com" class="link external">Bagikan ke Whatsapp</a>
+                </div>
 							</div>
 
+              <div class="card demo-facebook-card">
+								<div class="card-header">
+									<div class="demo-facebook-avatar"><img src="img/logo.png" width="34" height="34"/></div>
+									<div class="demo-facebook-name">Kaidah Fiqih</div>
+									<div class="demo-facebook-date">ushulfiqih.com</div>
+								</div>
+								<div class="card-content card-content-padding" onclick="toggle_visibility('kf3');">
+									<h2>مَا يُشْتَرَطُ فِيْهِ التَعْيِـيْن ُفَالْخَطَاءُ فِيْهِ مُبْطِل</h2>
+									<p class="likes">Sesuatu yang di dalamnya disyaratkan menentukan secara detail / spesifik (ta’yin), maka kesalahan dalam menentukannya akan membatalkan (batal demi hukum)</p>
+                  <div id="kf3" style="display:none">Belum ada contoh kasus</div>
+								</div>
+								<div id="copy-kf3" style="display:none;">
+                  مَا يُشْتَرَطُ فِيْهِ التَعْيِـيْن ُفَالْخَطَاءُ فِيْهِ مُبْطِل (Sesuatu yang di dalamnya disyaratkan menentukan secara detail / spesifik (ta’yin), maka kesalahan dalam menentukannya akan membatalkan (batal demi hukum)) - ushulfiqih.com
+                </div>
+								<div class="card-footer">
+                  <a href="#" class="link" @click="openDeterminedProgress" onclick="copyToClipboard('#copy-kf3')"><i class="icon f7-icons" style="font-size: 14px;">doc_on_doc</i>&nbsp;&nbsp;Salin</a><a @click="showToastWithCustomButton" href="whatsapp://send?text=مَا يُشْتَرَطُ فِيْهِ التَعْيِـيْن ُفَالْخَطَاءُ فِيْهِ مُبْطِل%0a%0aSesuatu yang di dalamnya disyaratkan menentukan secara detail / spesifik (ta’yin), maka kesalahan dalam menentukannya akan membatalkan (batal demi hukum) - ushulfiqih.com" class="link external">Bagikan ke Whatsapp</a>
+                </div>
+							</div>
+
+              <div class="card demo-facebook-card">
+								<div class="card-header">
+									<div class="demo-facebook-avatar"><img src="img/logo.png" width="34" height="34"/></div>
+									<div class="demo-facebook-name">Kaidah Fiqih</div>
+									<div class="demo-facebook-date">ushulfiqih.com</div>
+								</div>
+								<div class="card-content card-content-padding" onclick="toggle_visibility('kf4');">
+									<h2>مَا يُشْتَرَطُ التَعَرُّضُ جُمْلَةً لَا تَفْصِيْلًا اِذَا عَيَّنَهُ وَاَخْطَاءَ ضَرّ</h2>
+									<p class="likes">Sesuatu yang diharuskan / disyaratkan menentukannya secara lengkap – tidak secara rinci – maka jika ditentukan dan salah dalam menentukannya akan berbahaya</p>
+                  <div id="kf4" style="display:none">Belum ada contoh kasus</div>
+								</div>
+								<div id="copy-kf4" style="display:none;">
+                  مَا يُشْتَرَطُ التَعَرُّضُ جُمْلَةً لَا تَفْصِيْلًا اِذَا عَيَّنَهُ وَاَخْطَاءَ ضَرّ (Sesuatu yang diharuskan / disyaratkan menentukannya secara lengkap – tidak secara rinci – maka jika ditentukan dan salah dalam menentukannya akan berbahaya) - ushulfiqih.com
+                </div>
+								<div class="card-footer">
+                  <a href="#" class="link" @click="openDeterminedProgress" onclick="copyToClipboard('#copy-kf4')"><i class="icon f7-icons" style="font-size: 14px;">doc_on_doc</i>&nbsp;&nbsp;Salin</a><a @click="showToastWithCustomButton" href="whatsapp://send?text=مَا يُشْتَرَطُ التَعَرُّضُ جُمْلَةً لَا تَفْصِيْلًا اِذَا عَيَّنَهُ وَاَخْطَاءَ ضَرّ%0a%0aSesuatu yang diharuskan / disyaratkan menentukannya secara lengkap – tidak secara rinci – maka jika ditentukan dan salah dalam menentukannya akan berbahaya. - ushulfiqih.com" class="link external">Bagikan ke Whatsapp</a>
+                </div>
+							</div>
+
+              <div class="card demo-facebook-card">
+								<div class="card-header">
+									<div class="demo-facebook-avatar"><img src="img/logo.png" width="34" height="34"/></div>
+									<div class="demo-facebook-name">Kaidah Fiqih</div>
+									<div class="demo-facebook-date">ushulfiqih.com</div>
+								</div>
+								<div class="card-content card-content-padding" onclick="toggle_visibility('kf5');">
+									<h2>مَقَاصِدُ اللَّفْظِ عَلَى نِـيَّـةِ الْلَافِظِ</h2>
+									<p class="likes">Tujuan lafal tergantung pada maksud pengucapannya / niat orang yang mengucapkannya</p>
+                  <div id="kf5" style="display:none">Belum ada contoh kasus</div>
+								</div>
+								<div id="copy-kf5" style="display:none;">
+                  مَقَاصِدُ اللَّفْظِ عَلَى نِـيَّـةِ الْلَافِظِ (Tujuan lafal tergantung pada maksud pengucapannya / niat orang yang mengucapkannya) - ushulfiqih.com
+                </div>
+								<div class="card-footer">
+                  <a href="#" class="link" @click="openDeterminedProgress" onclick="copyToClipboard('#copy-kf5')"><i class="icon f7-icons" style="font-size: 14px;">doc_on_doc</i>&nbsp;&nbsp;Salin</a><a @click="showToastWithCustomButton" href="whatsapp://send?text=مَقَاصِدُ اللَّفْظِ عَلَى نِـيَّـةِ الْلَافِظِ%0a%0aTujuan lafal tergantung pada maksud pengucapannya / niat orang yang mengucapkannya - ushulfiqih.com" class="link external">Bagikan ke Whatsapp</a>
+                </div>
+							</div>
+
+              <div class="card demo-facebook-card">
+								<div class="card-header">
+									<div class="demo-facebook-avatar"><img src="img/logo.png" width="34" height="34"/></div>
+									<div class="demo-facebook-name">Kaidah Fiqih</div>
+									<div class="demo-facebook-date">ushulfiqih.com</div>
+								</div>
+								<div class="card-content card-content-padding" onclick="toggle_visibility('kf6');">
+									<h2>اَلْيَقِيْنُ لَايُزَالُ بِالشَكّ</h2>
+									<p class="likes">Kepastian / keyakinan itu tidak bisa dihilangkan dengan keraguan.</p>
+                  <div id="kf6" style="display:none">Belum ada contoh kasus</div>
+								</div>
+								<div id="copy-kf6" style="display:none;">
+                  اَلْيَقِيْنُ لَايُزَالُ بِالشَكّ (Kepastian / keyakinan itu tidak bisa dihilangkan dengan keraguan.) - ushulfiqih.com
+                </div>
+								<div class="card-footer">
+                  <a href="#" class="link" @click="openDeterminedProgress" onclick="copyToClipboard('#copy-kf6')"><i class="icon f7-icons" style="font-size: 14px;">doc_on_doc</i>&nbsp;&nbsp;Salin</a><a @click="showToastWithCustomButton" href="whatsapp://send?text=اَلْيَقِيْنُ لَايُزَالُ بِالشَكّ%0a%0aKepastian / keyakinan itu tidak bisa dihilangkan dengan keraguan. - ushulfiqih.com" class="link external">Bagikan ke Whatsapp</a>
+                </div>
+							</div>
+
+              <div class="card demo-facebook-card">
+								<div class="card-header">
+									<div class="demo-facebook-avatar"><img src="img/logo.png" width="34" height="34"/></div>
+									<div class="demo-facebook-name">Kaidah Fiqih</div>
+									<div class="demo-facebook-date">ushulfiqih.com</div>
+								</div>
+								<div class="card-content card-content-padding" onclick="toggle_visibility('kf7');">
+									<h2>اَلْأَصْلُ بَقَاءُ مَا كَانَ عَلَى مَا كَان</h2>
+									<p class="likes">Yang menjadi patokan adalah tetapnya sesuatu menurut keadaan semula.</p>
+                  <div id="kf7" style="display:none">Belum ada contoh kasus</div>
+								</div>
+								<div id="copy-kf7" style="display:none;">
+                  اَلْأَصْلُ بَقَاءُ مَا كَانَ عَلَى مَا كَان (Yang menjadi patokan adalah tetapnya sesuatu menurut keadaan semula.) - ushulfiqih.com
+                </div>
+								<div class="card-footer">
+                  <a href="#" class="link" @click="openDeterminedProgress" onclick="copyToClipboard('#copy-kf7')"><i class="icon f7-icons" style="font-size: 14px;">doc_on_doc</i>&nbsp;&nbsp;Salin</a><a @click="showToastWithCustomButton" href="whatsapp://send?text=اَلْأَصْلُ بَقَاءُ مَا كَانَ عَلَى مَا كَان%0a%0aYang menjadi patokan adalah tetapnya sesuatu menurut keadaan semula. - ushulfiqih.com" class="link external">Bagikan ke Whatsapp</a>
+                </div>
+							</div>
+
+              <div class="card demo-facebook-card">
+								<div class="card-header">
+									<div class="demo-facebook-avatar"><img src="img/logo.png" width="34" height="34"/></div>
+									<div class="demo-facebook-name">Kaidah Fiqih</div>
+									<div class="demo-facebook-date">ushulfiqih.com</div>
+								</div>
+								<div class="card-content card-content-padding" onclick="toggle_visibility('kf8');">
+									<h2>اَلْأَصْلُ بَرَاءَةُ الذِّمَّة</h2>
+									<p class="likes">Menurut asalnya setiap orang itu bebas dari kewajiban / tanggungan.</p>
+                  <div id="kf8" style="display:none">Belum ada contoh kasus</div>
+								</div>
+								<div id="copy-kf8" style="display:none;">
+                  اَلْأَصْلُ بَرَاءَةُ الذِّمَّة (Menurut asalnya setiap orang itu bebas dari kewajiban / tanggungan.) - ushulfiqih.com
+                </div>
+								<div class="card-footer">
+                  <a href="#" class="link" @click="openDeterminedProgress" onclick="copyToClipboard('#copy-kf8')"><i class="icon f7-icons" style="font-size: 14px;">doc_on_doc</i>&nbsp;&nbsp;Salin</a><a @click="showToastWithCustomButton" href="whatsapp://send?text=اَلْأَصْلُ بَرَاءَةُ الذِّمَّة%0a%0aMenurut asalnya setiap orang itu bebas dari kewajiban / tanggungan. - ushulfiqih.com" class="link external">Bagikan ke Whatsapp</a>
+                </div>
+							</div>
+
+              <div class="card demo-facebook-card">
+								<div class="card-header">
+									<div class="demo-facebook-avatar"><img src="img/logo.png" width="34" height="34"/></div>
+									<div class="demo-facebook-name">Kaidah Fiqih</div>
+									<div class="demo-facebook-date">ushulfiqih.com</div>
+								</div>
+								<div class="card-content card-content-padding" onclick="toggle_visibility('kf9');">
+									<h2>مَنْ شَكَّ أَفَعَلَ شَيْأً اَمْ لَا فَالْأَصْلُ أَنَّهُ لَمْ يَفْعَلْه</h2>
+									<p class="likes">Jika seseorang ragu apakah dia sudah melakukan sesuatu atau tidak, prinsip dasarnya adalah da dianggap belum melakukannya.</p>
+                  <div id="kf9" style="display:none">Belum ada contoh kasus</div>
+								</div>
+								<div id="copy-kf9" style="display:none;">
+                  مَنْ شَكَّ أَفَعَلَ شَيْأً اَمْ لَا فَالْأَصْلُ أَنَّهُ لَمْ يَفْعَلْه (Jika seseorang ragu apakah dia sudah melakukan sesuatu atau tidak, prinsip dasarnya adalah da dianggap belum melakukannya.) - ushulfiqih.com
+                </div>
+								<div class="card-footer">
+                  <a href="#" class="link" @click="openDeterminedProgress" onclick="copyToClipboard('#copy-kf9')"><i class="icon f7-icons" style="font-size: 14px;">doc_on_doc</i>&nbsp;&nbsp;Salin</a><a @click="showToastWithCustomButton" href="whatsapp://send?text=مَنْ شَكَّ أَفَعَلَ شَيْأً اَمْ لَا فَالْأَصْلُ أَنَّهُ لَمْ يَفْعَلْه%0a%0aJika seseorang ragu apakah dia sudah melakukan sesuatu atau tidak, prinsip dasarnya adalah da dianggap belum melakukannya. - ushulfiqih.com" class="link external">Bagikan ke Whatsapp</a>
+                </div>
+							</div>
+
+              <div class="card demo-facebook-card">
+								<div class="card-header">
+									<div class="demo-facebook-avatar"><img src="img/logo.png" width="34" height="34"/></div>
+									<div class="demo-facebook-name">Kaidah Fiqih</div>
+									<div class="demo-facebook-date">ushulfiqih.com</div>
+								</div>
+								<div class="card-content card-content-padding" onclick="toggle_visibility('kf10');">
+									<h2>مَنْ تَيَقَّنَ الْفِعْلَ وَ شَكَّ فِيْ القَلِيْلِ اَوِالْكَثِيْرِحُمِلَ عَلَى الْقَلِيْلِ</h2>
+									<p class="likes">Seseorang yag yakin telah melakukan pekerjaan namun ragu-ragu tentang sedikit banyaknya perbuatan, maka yang dianggap adalah yang sedikit</p>
+                  <div id="kf10" style="display:none">Belum ada contoh kasus</div>
+								</div>
+								<div id="copy-kf10" style="display:none;">
+                  مَنْ تَيَقَّنَ الْفِعْلَ وَ شَكَّ فِيْ القَلِيْلِ اَوِالْكَثِيْرِحُمِلَ عَلَى الْقَلِيْلِ (Seseorang yag yakin telah melakukan pekerjaan namun ragu-ragu tentang sedikit banyaknya perbuatan, maka yang dianggap adalah yang sedikit) - ushulfiqih.com
+                </div>
+								<div class="card-footer">
+                  <a href="#" class="link" @click="openDeterminedProgress" onclick="copyToClipboard('#copy-kf10')"><i class="icon f7-icons" style="font-size: 14px;">doc_on_doc</i>&nbsp;&nbsp;Salin</a><a @click="showToastWithCustomButton" href="whatsapp://send?text=مَنْ تَيَقَّنَ الْفِعْلَ وَ شَكَّ فِيْ القَلِيْلِ اَوِالْكَثِيْرِحُمِلَ عَلَى الْقَلِيْلِ%0a%0aSeseorang yag yakin telah melakukan pekerjaan namun ragu-ragu tentang sedikit banyaknya perbuatan, maka yang dianggap adalah yang sedikit - ushulfiqih.com" class="link external">Bagikan ke Whatsapp</a>
+                </div>
+							</div>
+
+              <div class="card demo-facebook-card">
+								<div class="card-header">
+									<div class="demo-facebook-avatar"><img src="img/logo.png" width="34" height="34"/></div>
+									<div class="demo-facebook-name">Kaidah Fiqih</div>
+									<div class="demo-facebook-date">ushulfiqih.com</div>
+								</div>
+								<div class="card-content card-content-padding" onclick="toggle_visibility('kf');">
+									<h2></h2>
+									<p class="likes"></p>
+                  <div id="kf" style="display:none">Belum ada contoh kasus</div>
+								</div>
+								<div id="copy-kf" style="display:none;">
+                 () - ushulfiqih.com
+                </div>
+								<div class="card-footer">
+                  <a href="#" class="link" @click="openDeterminedProgress" onclick="copyToClipboard('#copy-kf')"><i class="icon f7-icons" style="font-size: 14px;">doc_on_doc</i>&nbsp;&nbsp;Salin</a><a @click="showToastWithCustomButton" href="whatsapp://send?text=%0a%0aushulfiqih.com" class="link external">Bagikan ke Whatsapp</a>
+                </div>
+							</div>
 
 						</div>
 					</div>
