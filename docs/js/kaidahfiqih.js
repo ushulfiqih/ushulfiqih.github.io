@@ -222,7 +222,6 @@ const quotes = [
 	{
 		"quote" : "اَلْحَرِيْمُ لَهُ حُكْمُ مَا هُوَ حَرِيْمٌ لَهُ",
 		"source" : "Yang menjaga sesuatu, hukumnya sama dengan apa yang dijaga",
-		"contoh" : "",
 		"contoh" : ""
 	},
 	{
@@ -231,7 +230,7 @@ const quotes = [
 		"contoh" : ""
 	},
 	{
-		"quote" : "15اِعْمَالُ الْكَلَامِ اَوْلَى مِنْ اِهْمَالِهِ",
+		"quote" : "اِعْمَالُ الْكَلَامِ اَوْلَى مِنْ اِهْمَالِهِ",
 		"source" : "Penggunaan kalimat lebih diutamakan dari pengabaiannya",
 		"contoh" : ""
 	},
