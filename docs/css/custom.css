@@ -32,3 +32,19 @@
 .subnavbar:after {
     background-color: #eeeeee;
 }
+
+
+
+
+
+
+/* NO SELECT + HIGHLIGHT COLOR */
+* {
+  user-select: none;
+}
+*::selection {
+  background: none;
+}
+*::-moz-selection {
+  background: none;
+}
