@@ -195,7 +195,7 @@ const quotes = [
 		"contoh" : ""
 	},
 	{
-		"quote" : "10تَصَرُّفُ اْلإِمَامِ لِلرَّعِيَّةِ مَنُوْطٌ بِالْمَصْلَحَةِ",
+		"quote" : "تَصَرُّفُ اْلإِمَامِ لِلرَّعِيَّةِ مَنُوْطٌ بِالْمَصْلَحَةِ",
 		"source" : "Tindakan imam terhadap rakyatnya harus dikaitkan dengan kemaslahatan.",
 		"contoh" : ""
 	},
