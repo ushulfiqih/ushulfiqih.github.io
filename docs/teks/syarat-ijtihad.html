@@ -11,6 +11,9 @@
         </a>
       </div>
       <div class="title">Ushulfiqih.com</div>
+      <div class="right">
+          <i class="icon f7-icons color-black" @click="openPrompt" style="font-size:22px;margin-right:20px;">pencil</i>
+      </div>
     </div>
   </div>
   <!-- Additional "hide-navbar-on-scroll" class to hide navbar on scroll automatically -->
@@ -54,3 +57,17 @@
 
 </div>
 </template>
+<script>
+  return {
+    methods: {
+      openPrompt: function () {
+        var app = this.$app;
+        app.dialog.prompt('Admin / Editor Password', function (name) {
+          app.dialog.confirm('Are you sure that your Admin / Editor password is ' + name + '?', function () {
+            app.dialog.alert('Unknown password' + name +);
+          });
+        });
+      },
+    }
+  }
+</script>
