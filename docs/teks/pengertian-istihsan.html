@@ -13,6 +13,7 @@
       <div class="title">Ushulfiqih.com</div>
       <div class="right">
           <i class="icon f7-icons color-black" @click="openPrompt" style="font-size:22px;margin-right:20px;">pencil</i>
+          <i class="icon f7-icons color-black" @click="openAlert" style="font-size:22px;margin-right:20px;">floppy_disk</i>
       </div>
     </div>
   </div>
@@ -40,6 +41,10 @@
 <script>
   return {
     methods: {
+      openAlert: function () {
+        var app = this.$app;
+        app.dialog.alert('Tidak ada perubahan untuk disimpan!');
+      },
       openPrompt: function () {
         var app = this.$app;
         app.dialog.prompt('Admin / Editor Password', function (name) {
