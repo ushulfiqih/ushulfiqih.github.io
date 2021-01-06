@@ -16,6 +16,10 @@ var app = new Framework7({
 		pushState :true,
 		stackPages: true,
 	},
+  // Extended by Dialog component:
+   dialog: {
+     title: 'Ushulfiqih.com',
+   },
   data: function () {
     return {
       user: {

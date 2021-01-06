@@ -44,7 +44,7 @@
         var app = this.$app;
         app.dialog.prompt('Admin / Editor Password', function (name) {
           app.dialog.confirm('Are you sure that your Admin / Editor password is ' + name + '?', function () {
-            app.dialog.alert('Unknown password' + name +);
+            app.dialog.alert('Unknown password: ' + name);
           });
         });
       },
