@@ -1890,7 +1890,7 @@ html.device-full-viewport body {
   right: auto;
   bottom: 0;
   left: 0;
-  height: 1px;
+  height: 0px;
   width: 100%;
   transform-origin: 50% 100%;
   transform: scaleY(calc(1 / var(--f7-device-pixel-ratio)));
@@ -2974,7 +2974,7 @@ html.device-full-viewport body {
   width: 100%;
   top: 100%;
   bottom: auto;
-  height: 8px;
+  height: 1px;
   pointer-events: none;
   background: var(--f7-toolbar-top-shadow-image);
 }
@@ -16985,6 +16985,17 @@ table.data-table {
   align-items: center;
   box-sizing: border-box;
   padding: 0 calc(var(--f7-searchbar-inner-padding-right) + var(--f7-safe-area-right)) 0 calc(var(--f7-searchbar-inner-padding-left) + var(--f7-safe-area-left));
+}
+.searchbar-inner:after {
+  content: '';
+  position: absolute;
+  right: 0;
+  width: 100%;
+  top: 100%;
+  bottom: auto;
+  height: 1px;
+  pointer-events: none;
+  background: var(--f7-toolbar-top-shadow-image);
 }
 .searchbar-disable-button {
   cursor: pointer;
