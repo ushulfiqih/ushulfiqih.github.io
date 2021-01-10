@@ -1,0 +1,52 @@
+<template>
+<div class="page">
+
+  <div class="navbar">
+    <div class="navbar-bg"></div>
+    <div class="navbar-inner sliding">
+      <div class="left">
+        <a class="link back" data-animate="false">
+          <i class="icon icon-back"></i>
+          <span class="if-not-md">Back</span>
+        </a>
+      </div>
+      <div class="title">Ushulfiqih.com</div>
+      <div class="right">
+          <i class="icon f7-icons color-black" @click="openPrompt" style="font-size:22px;margin-right:20px;">pencil</i>
+          <i class="icon f7-icons color-black" @click="openAlert" style="font-size:22px;margin-right:20px;">floppy_disk</i>
+      </div>
+    </div>
+  </div>
+  <!-- Additional "hide-navbar-on-scroll" class to hide navbar on scroll automatically -->
+  <div class="page-content hide-navbar-on-scroll">
+      <div class="block">
+        <h1>Pengertian Ijtihad secara Bahasa dan Istilah</h1>
+        <p>Secara etimologi, <em>ijtihad </em>diambil dari kata <em>al-jahd </em>atau <em>al-juhd, </em>yang berarti <em>al- masyaqat </em>(kesulitan dan kesusahan) atau <em>ath-thaqat </em>(kesanggupan dan kemampuan).</p>
+        <p>Kata <em>al-jahd </em>beserta seluruh turunan atau derivasinya menunjukkan pekerjaan yang dilakukan lebih dari biasanya karena sulit untuk dilaksanakan dan tidak cukup disenangi.</p>
+        <p>Ijtihad membutuhkan usaha yang lebih lebih kuat dan sungguh- sungguh, membutuhkan usaha keras dengan pengerahan seluruh daya upaya secara maksimal untuk mendapatkan atau memperoleh sesuatu. Dengan demikian, suatu usaha yang dilakukan tidak maksimal dan tidak menggunakan daya upaya yang keras tidak disebut <em>ijtihad, </em>tetapi daya nalar biasa, <em>ar-ra&rsquo;y </em>atau <em>at-tafkir.</em></p>
+        <p>Sedangkan secara terminologi, definisi <em>ijtihad </em>yang dikemukakan oleh ulama <em>ushul fiqih</em> adalah <em>Aktivitas untuk memperoleh pengetahuan (istinbath) hukum syara&rsquo; dari dalil terperinci dalam syari 'at.</em></p>
+        <p>Jadi kesimpulannya, <em>ijtihad </em>adalah pengerahan segala kesanggupan seorang faqih (pakar liqih Islam) untuk memperoleh pengetahuan tentang hukum sesuatu dari dalil <em>syara' </em>(agama).</p>
+      </div>
+  </div>
+
+</div>
+</template>
+</template>
+<script>
+  return {
+    methods: {
+      openAlert: function () {
+        var app = this.$app;
+        app.dialog.alert('Tidak ada perubahan untuk disimpan!');
+      },
+      openPrompt: function () {
+        var app = this.$app;
+        app.dialog.prompt('Admin / Editor Password', function (name) {
+          app.dialog.confirm('Are you sure that your Admin / Editor password is ' + name + '?', function () {
+            app.dialog.alert('Unknown password: ' + name);
+          });
+        });
+      },
+    }
+  }
+</script>

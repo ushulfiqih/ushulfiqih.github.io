@@ -1,0 +1,68 @@
+<template>
+<div class="page">
+
+  <div class="navbar">
+    <div class="navbar-bg"></div>
+    <div class="navbar-inner sliding">
+      <div class="left">
+        <a class="link back" data-animate="false">
+          <i class="icon icon-back"></i>
+          <span class="if-not-md">Back</span>
+        </a>
+      </div>
+      <div class="title">Ushulfiqih.com</div>
+      <div class="right">
+          <i class="icon f7-icons color-black" @click="openPrompt" style="font-size:22px;margin-right:20px;">pencil</i>
+          <i class="icon f7-icons color-black" @click="openAlert" style="font-size:22px;margin-right:20px;">floppy_disk</i>
+      </div>
+    </div>
+  </div>
+  <!-- Additional "hide-navbar-on-scroll" class to hide navbar on scroll automatically -->
+  <div class="page-content hide-navbar-on-scroll">
+      <div class="block">
+	      <h1>Tingkatan Mujtahid</h1>
+				<p>Berikut tingkatan para <em>mujtahid, </em>menurut ulama Ushul Fiqih:</p>
+				<ol>
+				<li><em>Mujtahid mustaqil</em></li>
+				<p>Yaitu seorang <em>mujtahid </em>yang bebas menggunakan kaidah-kaidah yang ia buat sendiri, dia menyusun <em>flqih-nya </em>sendiri yang berbeda dengan <em>madzhab </em>yang ada. Menurut As-Suyuthi, tingkatan ini sudah tidak ada lagi.</p>
+				</ol>
+				<ol start="2">
+				<li><em>Mujtahid mutlaq ghairu mustaqil</em></li>
+				<p>Adalah orang yang memiliki kriteria seperti <em>mujtahid mustaqil, </em>namun dia tidak menciptakan sendiri kaidah-kaidahnya, tetapi mengikuti metode salah satu imam <em>madzhab. </em>Dia bisa disebut juga sebagai <em>muthlaq muntasib</em>, tidak <em>mustaqil. </em>Tetapi juga tidak terikat, karena dia tidak dikategorikan <em>taqlid </em>kepada imamnya, melainkan mengikuti jalan yang ditempuh imamnya.</p>
+				</ol>
+				<ol start="3">
+				<li><em>Mujtahid Muqayyad </em><strong>/ </strong><em>Mujtahid Takhrij</em></li>
+				<p>Yaitu <em>mujtahid </em>yang terikat oleh <em>madzhab </em>imamnya. Memang dia diberi kebebasan dalam menentukan berbagai landasannya berdasarkan dalil, tetapi tidak boleh keluar dari kaidah-kaidah yang telah dipakai imamnya.</p>
+				</ol>
+				<ol start="4">
+				<li><em>Mujtahid Tarjih</em></li>
+				<p>Yaitu <em>mujtahid </em>yang belum sampai derajatnya pada <em>mujtahid takhrij. </em>Meski sangat <em>faqih</em>, hapal kaidah-kaidah imamnya, mengetahui dalil-dalilnya, cara memutuskan hukumnya, dia juga mengetahui bagaimana cara mencari dalil yang lebih kuat, dan lain-lain. Tetapi kalau dibandingkan dengan tingkatan <em>mujtahid </em>di atas, dalam mengetahui kaidah-kaidah imamnya, ia tergolong masih kurang.</p>
+				</ol>
+				<ol start="5">
+				<li><em>Mujtahid Fatwa</em></li>
+				<p>Yaitu <em>mujtahid </em>yang hapal dan paham terhadap kaidah-kaidah imam <em>madzhab, </em>mampu menguasai permasalahan yang sudah jelas atau yang sulit, namun dia masih lemah dalam menetapkan suatu putusan berdasarkan dalil serta lemah dalam menetapkan <em>Qiyas.</em></p>
+				<p>Mujtahid ini dalam fatwanya sangat bergantung kepada fatwa-fatwa yang telah disusun oleh imam <em>madzhab</em>, serta berbagai cabang yang ada dalam <em>madzhab </em>tersebut.</p>
+				</ol>
+			<div>
+  </div>
+
+</div>
+</template>
+<script>
+  return {
+    methods: {
+      openAlert: function () {
+        var app = this.$app;
+        app.dialog.alert('Tidak ada perubahan untuk disimpan!');
+      },
+      openPrompt: function () {
+        var app = this.$app;
+        app.dialog.prompt('Admin / Editor Password', function (name) {
+          app.dialog.confirm('Are you sure that your Admin / Editor password is ' + name + '?', function () {
+            app.dialog.alert('Unknown password: ' + name);
+          });
+        });
+      },
+    }
+  }
+</script>

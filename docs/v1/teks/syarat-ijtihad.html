@@ -1,0 +1,77 @@
+<template>
+<div class="page">
+
+  <div class="navbar">
+    <div class="navbar-bg"></div>
+    <div class="navbar-inner sliding">
+      <div class="left">
+        <a class="link back" data-animate="false">
+          <i class="icon icon-back"></i>
+          <span class="if-not-md">Back</span>
+        </a>
+      </div>
+      <div class="title">Ushulfiqih.com</div>
+      <div class="right">
+          <i class="icon f7-icons color-black" @click="openPrompt" style="font-size:22px;margin-right:20px;">pencil</i>
+          <i class="icon f7-icons color-black" @click="openAlert" style="font-size:22px;margin-right:20px;">floppy_disk</i>
+      </div>
+    </div>
+  </div>
+  <!-- Additional "hide-navbar-on-scroll" class to hide navbar on scroll automatically -->
+  <div class="page-content hide-navbar-on-scroll">
+      <div class="block">
+	      <h1>Syarat-syarat Ijtihad</h1>
+				<p>Syarat-syarat yang harus dimiliki oleh seorang <em>mujtahid </em>(orang yang melakukan <em>ijtihad</em> adalah:</p>
+				<ol>
+				<li>Menguasai dan mengetahui ayat-ayat hukum yang terdapat dalam Quran dan dan hadis-hadis tentang hukum.</li>
+        <p>Baik Quran maupun Hadis tidak disyaratkan harus menghapalnya, melainkan cukup mengetahui letak-letaknya saja, sehingga memudahkan baginya apabila ia membutuhkan. Menurut Imam Ghazali, Ibnu Arabi, dan Ar-Razi ada sekitar lima ratus ayat-ayat hukum dalam Quran. Dan minimal 3000 hadis menurut Ibnu Arabi, atau 1.200 hadis menurut Ibnu Hanbal.</p>
+        <p>Asy-Svaukani menambahkan, seorang <em>mujtahid </em>juga harus mengetahui persambungan sanad dalam hadis. Ulama lain menambahkan, sebaiknya mujtahid mengambil referensi dari kitab-kitab yang sudah mashyur kesahihannya, seperti Bukhari, Muslim, Baghawi, dan lain-lain.</p>
+				</ol>
+				<ol start="2">
+				<li>Mengetahui nasakh dan mansukh dari Quran dan Sunah</li>
+        <p>Hal ini supaya tidak salah dalam menetapkan hukum.</p>
+				</ol>
+				<ol start="3">
+				<li>Mengetahui permasalahan yang sudah ditetapkan melalui <em>ijma&rsquo; </em>ulama</li>
+        <p>Hal ini supaya <em>ijtihad-nya </em>tidak bertentangan dengan <em>ijma '.</em></p>
+				</ol>
+				<ol start="4">
+				<li>Mengetahui konsep <em>Qiyas</em> dan berbagai persyaratan dan cara <em>beristinbath.</em></li>
+        </ol>
+        <ol start="5">
+				<li>Mengetahui bahasa Arab</li>
+        <p>Hal ini karena Quran dan Sunah sebagai sumber utama hukum Islam menggunakan medium bahasa Arab. Tujuannya adalah untuk mengetahui maksud yang dikandung dari Quran atau Hadis. Karenanya mesti mempelajari juga berbagai disiplin ilmu yang berkaitan dengan bahasa, serta berbagai problematikanya, meski tidak disyaratkan untuk betul-betul menguasainya atau menjadi ahlinya.</p>
+				</ol>
+        </ol>
+				<ol start="6">
+				<li>Mengetahui Ilmu <em>Ushul Fiqih</em></li>
+        <p>Ilmu Ushul Fiqih adalah merupakan fondasi dari <em>ijtihad. </em>Menurut Fakhru Ar-Razi ilmu <em>Ushul Fiqih</em> adalah ilmu yang paling penting dalam ber-<em>ijtihad.</em></p>
+				</ol>
+				<ol start="7">
+				<li>Mengetahui <em>Maqashid Asy-Syari&rsquo;ah</em></li>
+        <p><em>Maqashid Asy-Syari&rsquo;ah</em> adalam tujuan syari'at, atau tujuan disyari'atkannya suatu hukum. Maksud dari <em>maqashid al-Syari&rsquo;ah, </em>antara lain menjaga kemaslahatan manusia dan menjauhkan dari kemadaratan.</p>
+        <p>Mujtahid juga sebaiknya, mengambil rujukan pada <em>isitihsan, maslahah mursalah. urf, </em>dan sebagainya yang menggunakan <em>maqashidu Asy- Syari&rsquo;ah </em>sebagai standarnya.</p>
+				</ol>
+			<div>
+  </div>
+
+</div>
+</template>
+<script>
+  return {
+    methods: {
+      openAlert: function () {
+        var app = this.$app;
+        app.dialog.alert('Tidak ada perubahan untuk disimpan!');
+      },
+      openPrompt: function () {
+        var app = this.$app;
+        app.dialog.prompt('Admin / Editor Password', function (name) {
+          app.dialog.confirm('Are you sure that your Admin / Editor password is ' + name + '?', function () {
+            app.dialog.alert('Unknown password: ' + name);
+          });
+        });
+      },
+    }
+  }
+</script>
