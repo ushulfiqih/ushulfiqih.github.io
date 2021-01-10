@@ -57,8 +57,8 @@ var routes = [
   },
   // Components
  {
-    path: '/tab-about/',
-    componentUrl: './pages/tab-about.html',
+    path: '/about/',
+    componentUrl: './pages/about.html',
   },
   {
      path: '/tab-kaidah/',
