@@ -1,0 +1,61 @@
+<template>
+<div class="page">
+
+  <div class="navbar">
+    <div class="navbar-bg"></div>
+    <div class="navbar-inner sliding">
+      <div class="left">
+        <a class="link back" data-animate="false">
+          <i class="icon icon-back"></i>
+          <span class="if-not-md">Back</span>
+        </a>
+      </div>
+      <div class="title">Ushulfiqih.com</div>
+      <div class="right">
+          <i class="icon f7-icons color-black" @click="openPrompt" style="font-size:22px;margin-right:20px;">pencil</i>
+          <i class="icon f7-icons color-black" @click="openAlert" style="font-size:22px;margin-right:20px;">floppy_disk</i>
+      </div>
+    </div>
+  </div>
+  <!-- Additional "hide-navbar-on-scroll" class to hide navbar on scroll automatically -->
+  <div class="page-content hide-navbar-on-scroll">
+      <div class="block">
+        <h1>Kehujahan Istishab</h1>
+				<p><em>Istishhab</em> adalah menetapkan sesuatu menurut keadaan sebelumnya sampai terdapat dalil-dalil yang menunjukkan perubahan keadaan, atau menjadikan hukum yang telah ditetapkan pada masa lampau sampai terdapat dalil yang menunjukkan perubahannya.</p>
+				<p>Suatu permasalahan yang hukumnya tidak ditemukan <em>nash-nya </em>dalam Quran dan Sunah, juga tidak ditemukan dalil syara' yang meng<em>itlak-</em>kan hukumnya, maka hukumnya adalah boleh. Contohnya adalah hukum binatang, benda-benda, tumbuh-tumbuhan, makanan dan minuman, atau suatu amal yang hukumnya tidak ditemukan dalam suatu dalil syara', maka hukumnya adalah boleh.</p>
+				<p>Hal ini berdasarkan kaidah:</p>
+				<p dir="RTL">اَلْأَصْلُ فِي الْاَشْيَاءِ اَلْاِبَاحَةْ</p>
+				<p><em>&ldquo;Asal dari segala seuatu adalah boleh&rdquo;.</em></p>
+				<p>&nbsp;</p>
+				<p>Kebolehan adalah pangkal (asal) dari segala sesuatu. Hukum kebolehan ini berlaku meskipun tidak terdapat dalil yang menunjukkan atas kebolehannya. Dengan demikian, pangkal sesuatu itu adalah boleh.</p>
+				<p>&nbsp;</p>
+				<p>Allah telah berfirman dalam kitab Al-Quran:</p>
+				<p dir="RTL">هُوَ ٱلَّذِى خَلَقَ لَكُم مَّا فِى ٱلْأَرْضِ جَمِيعًۭا</p>
+				<p><em>&ldquo;Dialah Allah yang menjadikan segala yang ada di bumi untuk kamu. </em>&rdquo; (QS. Al-Baqarah : 29)</p>
+				<p>&nbsp;</p>
+				<p>Allah menjadikan segala yang<strong> </strong>ada di bumi untuk manusia. Dengan kata lain, segala sesuatu yang ada di bumi itu tidak akan dijadikan kecuali dibolehkan bagi manusia. Seandainya hal yanga da di bumi terlarang untuk manusia, maka tentu tidak diciptakan.</p>
+				<p>Dengan demikian kaidah <em>&ldquo;Asal dari segala seuatu adalah boleh&rdquo;</em> berlaku. Maka selama tidak terdapat dalil yang menunjukkan atas perubahan dari kebolehannya, keadaan segala sesuatu itu dihukumi dengan sifat asalnya.</p>
+      </div>
+  </div>
+
+</div>
+</template>
+</template>
+<script>
+  return {
+    methods: {
+      openAlert: function () {
+        var app = this.$app;
+        app.dialog.alert('Tidak ada perubahan untuk disimpan!');
+      },
+      openPrompt: function () {
+        var app = this.$app;
+        app.dialog.prompt('Admin / Editor Password', function (name) {
+          app.dialog.confirm('Are you sure that your Admin / Editor password is ' + name + '?', function () {
+            app.dialog.alert('Unknown password: ' + name);
+          });
+        });
+      },
+    }
+  }
+</script>

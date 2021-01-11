@@ -1,0 +1,53 @@
+<template>
+<div class="page">
+
+  <div class="navbar">
+    <div class="navbar-bg"></div>
+    <div class="navbar-inner sliding">
+      <div class="left">
+        <a class="link back" data-animate="false">
+          <i class="icon icon-back"></i>
+          <span class="if-not-md">Back</span>
+        </a>
+      </div>
+      <div class="title">Ushulfiqih.com</div>
+      <div class="right">
+          <i class="icon f7-icons color-black" @click="openPrompt" style="font-size:22px;margin-right:20px;">pencil</i>
+          <i class="icon f7-icons color-black" @click="openAlert" style="font-size:22px;margin-right:20px;">floppy_disk</i>
+      </div>
+    </div>
+  </div>
+  <!-- Additional "hide-navbar-on-scroll" class to hide navbar on scroll automatically -->
+  <div class="page-content hide-navbar-on-scroll">
+      <div class="block">
+        <h1>Pengertian Maslahah Mursalah</h1>
+				<p>Dari segi bahasa, <em>al-maslahah </em>memiliki arti yang sama seperti <em>lafazh al- manfa 'at. Al-mashlahah </em>merupakan bentuk tunggal <em>(mufrad) </em>dari kata <em>al-mashalih,</em> yang<em> </em>berarti adanya <em>manfaat </em>baik secara asal maupun melalui suatu proses. Contohnya adalah sesuatu yang dapat menghasilkan kenikmatan dan faedah, atau berupa pencegahan dan penjagaan terhadap kenikmatan tersebut, dengan cara menjaganya dari kemadaratan dan sebab- sebabnya, seperti menjauhi kemadaratan dan penyakit. Semua itu bisa dikatakan <em>mashlahah.</em></p>
+				<p>Manfaat yang dimaksud oleh pembuat hukum syara' (Allah) adalah sifat menjaga agama, jiwa, akal, keturunan, dan harta. Lihat: Maqashid Syariah.</p>
+				<p>Sedangkan yang dimaksud <em>al-mursalah</em>, adalah syara&rsquo; memutlakkannya, karena tidak terdapat kaidah syara&rsquo; yang menjadi penguatnya ataupun pembatalnya.</p>
+				<p>A<em>l-Maslahah al-Mursalah </em>adalah kemasalahatan yang tidak mempunyai dasar dalil, tetapi juga tidak ada pembatalnya.</p>
+				<p>Jika terdapat suatu yang tidak ada ketentuan syari&rsquo;at, dan tidak ada <em>illat </em>dari syara&rsquo; yang menentukan kejelasan hukum kejadian tersebut dengan cara analogi (Qiyas), dan hal tersebut relevan atau sesuai dengan maksud diturunkannya hukum syara&rsquo;, yaitu suatu ketentuan yang berdasarkan pemeliharaan kemadaratan atau untuk menyatakan suatu manfaat, maka kejadian tersebut dinamakan <em>al-Mashlahah al-Mursalah.</em></p>
+				<p>Tujuan utama <em>al-MasIahah al -Mursalah </em>adalah kemaslahatan; yakni memelihara dari kemadaratan dan men jaga kemanfaatannya.</p>
+      </div>
+  </div>
+
+</div>
+</template>
+</template>
+<script>
+  return {
+    methods: {
+      openAlert: function () {
+        var app = this.$app;
+        app.dialog.alert('Tidak ada perubahan untuk disimpan!');
+      },
+      openPrompt: function () {
+        var app = this.$app;
+        app.dialog.prompt('Admin / Editor Password', function (name) {
+          app.dialog.confirm('Are you sure that your Admin / Editor password is ' + name + '?', function () {
+            app.dialog.alert('Unknown password: ' + name);
+          });
+        });
+      },
+    }
+  }
+</script>

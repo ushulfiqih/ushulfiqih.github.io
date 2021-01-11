@@ -61,7 +61,7 @@ const quotes = [
 	},
 	{
 		"quote" : "اَلْأَصْلُ فِي الْاَشْيَاءِ اَلْاِبَاحَةْ حَتَّى يَدُلُّ اَلدَّلِيْلُ عَلَى التَّحْرِيْمِ",
-		"source" : "Asal dari segala seuatu adalah boleh, sampai ada bukti / petunjuk (dalil) yang menyatakan / menunjukkan bahwa itu adalah haram",
+		"source" : "Asal dari segala sesuatu adalah boleh, sampai ada bukti / petunjuk (dalil) yang menyatakan / menunjukkan bahwa itu adalah haram",
 		"contoh" : ""
 	},
 	{

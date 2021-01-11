@@ -104,6 +104,26 @@ var routes = [
     path: '/pengertian-istihsan/',
     componentUrl: './teks/pengertian-istihsan.html',
   },
+  {
+    path: '/kehujahan-istihsan/',
+    componentUrl: './teks/kehujahan-istihsan.html',
+  },
+  {
+    path: '/pengertian-maslahah-mursalah/',
+    componentUrl: './teks/pengertian-maslahah-mursalah.html',
+  },
+  {
+    path: '/pengertian-istishab/',
+    componentUrl: './teks/pengertian-istishab.html',
+  },
+  {
+    path: '/pengertian-istishab/',
+    componentUrl: './teks/pengertian-istishab.html',
+  },
+  {
+    path: '/kehujahan-istishab/',
+    componentUrl: './teks/kehujahan-istishab.html',
+  },
   // Privacy
   {
     path: '/privacy/',
