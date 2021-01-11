@@ -11,11 +11,6 @@ var routes = [
     name: 'home',
   },
   {
-    path: '/tab-search-input/',
-    url: './pages/tab-search-input.html',
-    name: 'home',
-  },
-  {
     path: '/tab-forum/',
     url: './pages/tab-forum.html',
     name: 'home',

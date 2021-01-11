@@ -1,155 +1,242 @@
-<template>
-  <div class="page">
-    <div class="navbar">
-      <div class="navbar-bg"></div>
-      <div class="navbar-inner sliding">
-        <div class="left">
-          <a href="#" class="link back">
-            <i class="icon icon-back"></i>
-            <span class="if-not-md">Back</span>
-          </a>
+<div class="page">
+  <div class="navbar">
+    <div class="navbar-bg"></div>
+    <div class="navbar-inner">
+      <div class="left sliding">
+        <a href="#" class="link back">
+          <i class="icon icon-back"></i>
+          <span class="if-not-md">Back</span>
+        </a>
+      </div>
+      <div class="title sliding">Searchbar</div>
+      <div class="right">
+        <a class="link icon-only searchbar-enable" data-searchbar=".searchbar-demo">
+          <i class="icon f7-icons if-not-md">search</i>
+          <i class="icon material-icons md-only">search</i>
+        </a>
+      </div>
+      <form data-search-container=".search-list" data-search-in=".item-title" class="searchbar searchbar-expandable searchbar-demo searchbar-init">
+        <div class="searchbar-inner">
+          <div class="searchbar-input-wrap">
+            <input type="search" placeholder="Search"/>
+            <i class="searchbar-icon"></i>
+            <span class="input-clear-button"></span>
+          </div>
+          <span class="searchbar-disable-button if-not-aurora">Cancel</span>
         </div>
-        <div class="title">Dialog</div>
-      </div>
-    </div>
-    <div class="page-content">
-      <div class="block block-strong">
-        <p>There are 1:1 replacements of native Alert, Prompt and Confirm modals. They support callbacks, have very easy api and can be combined with each other. Check these examples:</p>
-        <p class="row">
-          <button class="col button button-fill" @click="openAlert">Alert</button>
-          <button class="col button button-fill" @click="openConfirm">Confirm</button>
-          <button class="col button button-fill" @click="openPrompt">Prompt</button>
-        </p>
-        <p class="row">
-          <button class="col button button-fill" @click="openLogin">Login</button>
-          <button class="col button button-fill" @click="openPassword">Password</button>
-        </p>
-      </div>
-      <div class="block-title">Vertical Buttons</div>
-      <div class="block block-strong">
-        <p>
-          <button class="button button-fill" @click="openVerticalButtons">Vertical Buttons</button>
-        </p>
-      </div>
-      <div class="block-title">Preloader Dialog</div>
-      <div class="block block-strong">
-        <p class="row">
-          <button class="col button button-fill" @click="openPreloader">Preloader</button>
-          <button class="col button button-fill" @click="openCustomPreloader">Custom Text</button>
-        </p>
-      </div>
-      <div class="block-title">Progress Dialog</div>
-      <div class="block block-strong">
-        <p class="row">
-          <button class="col button button-fill" @click="openInfiniteProgress">Infinite</button>
-          <button class="col button button-fill" @click="openDeterminedProgress">Determined</button>
-        </p>
-      </div>
-      <div class="block-title">Dialogs Stack</div>
-      <div class="block block-strong">
-        <p>This feature doesn't allow to open multiple dialogs at the same time, and will automatically open next dialog when you close the current one. Such behavior is similar to browser native dialogs: </p>
-        <p>
-          <button class="button button-fill" @click="openAlerts">Open Multiple Alerts</button>
-        </p>
-      </div>
+      </form>
     </div>
   </div>
-</template>
-<script>
-  return {
-    methods: {
-      openAlert: function () {
-        var app = this.$app;
-        app.dialog.alert('Hello!');
-      },
-      openConfirm: function () {
-        var app = this.$app;
-        app.dialog.confirm('Are you feel good today?', function () {
-          app.dialog.alert('Great!');
-        });
-      },
-      openPrompt: function () {
-        var app = this.$app;
-        app.dialog.prompt('What is your name?', function (name) {
-          app.dialog.confirm('Are you sure that your name is ' + name + '?', function () {
-            app.dialog.alert('Ok, your name is ' + name);
-          });
-        });
-      },
-      openLogin: function () {
-        var app = this.$app;
-        app.dialog.login('Enter your username and password', function (username, password) {
-          app.dialog.alert('Thank you!<br>Username:' + username + '<br>Password:' + password);
-        });
-      },
-      openPassword: function () {
-        var app = this.$app;
-        app.dialog.password('Enter your password', function (password) {
-          app.dialog.alert('Thank you!<br>Password:' + password);
-        });
-      },
-      openAlerts: function () {
-        var app = this.$app;
-        app.dialog.alert('Alert 1');
-        app.dialog.alert('Alert 2');
-        app.dialog.alert('Alert 3');
-        app.dialog.alert('Alert 4');
-        app.dialog.alert('Alert 5');
-      },
-      openVerticalButtons: function () {
-        var app = this.$app;
-        app.dialog.create({
-          title: 'Vertical Buttons',
-          buttons: [
-            {
-              text: 'Button 1',
-            },
-            {
-              text: 'Button 2',
-            },
-            {
-              text: 'Button 3',
-            },
-          ],
-          verticalButtons: true,
-        }).open();
-      },
-      openPreloader: function () {
-        var app = this.$app;
-        app.dialog.preloader();
-        setTimeout(function () {
-          app.dialog.close();
-        }, 3000);
-      },
-      openCustomPreloader: function () {
-        var app = this.$app;
-        app.dialog.preloader('My text...');
-        setTimeout(function () {
-          app.dialog.close();
-        }, 3000);
-      },
-      openInfiniteProgress: function () {
-        var app = this.$app;
-        app.dialog.progress();
-        setTimeout(function () {
-          app.dialog.close();
-        }, 3000);
-      },
-      openDeterminedProgress: function () {
-        var app = this.$app;
-        var progress = 0;
-        var dialog = app.dialog.progress('Loading assets', progress);
-        dialog.setText('Image 1 of 10');
-        var interval = setInterval(function () {
-          progress += 10;
-          dialog.setProgress(progress);
-          dialog.setText('Image ' + ((progress) / 10) + ' of 10');
-          if (progress === 100) {
-            clearInterval(interval);
-            dialog.close();
-          }
-        }, 300)
-      },
-    }
-  }
-</script>
+  <div class="page-content">
+    <div class="searchbar-backdrop"></div>
+    <div class="list simple-list searchbar-not-found">
+      <ul>
+        <li>Nothing found</li>
+      </ul>
+    </div>
+    <div class="list search-list searchbar-found">
+      <ul>
+        <li class="item-content">
+          <div class="item-inner">
+            <div class="item-title">Acura</div>
+          </div>
+        </li>
+        <li class="item-content">
+          <div class="item-inner">
+            <div class="item-title">Audi</div>
+          </div>
+        </li>
+        <li class="item-content">
+          <div class="item-inner">
+            <div class="item-title">BMW</div>
+          </div>
+        </li>
+        <li class="item-content">
+          <div class="item-inner">
+            <div class="item-title">Cadillac </div>
+          </div>
+        </li>
+        <li class="item-content">
+          <div class="item-inner">
+            <div class="item-title">Chevrolet </div>
+          </div>
+        </li>
+        <li class="item-content">
+          <div class="item-inner">
+            <div class="item-title">Chrysler </div>
+          </div>
+        </li>
+        <li class="item-content">
+          <div class="item-inner">
+            <div class="item-title">Dodge </div>
+          </div>
+        </li>
+        <li class="item-content">
+          <div class="item-inner">
+            <div class="item-title">Ferrari </div>
+          </div>
+        </li>
+        <li class="item-content">
+          <div class="item-inner">
+            <div class="item-title">Ford </div>
+          </div>
+        </li>
+        <li class="item-content">
+          <div class="item-inner">
+            <div class="item-title">GMC </div>
+          </div>
+        </li>
+        <li class="item-content">
+          <div class="item-inner">
+            <div class="item-title">Honda</div>
+          </div>
+        </li>
+        <li class="item-content">
+          <div class="item-inner">
+            <div class="item-title">Hummer</div>
+          </div>
+        </li>
+        <li class="item-content">
+          <div class="item-inner">
+            <div class="item-title">Hyundai</div>
+          </div>
+        </li>
+        <li class="item-content">
+          <div class="item-inner">
+            <div class="item-title">Infiniti </div>
+          </div>
+        </li>
+        <li class="item-content">
+          <div class="item-inner">
+            <div class="item-title">Isuzu </div>
+          </div>
+        </li>
+        <li class="item-content">
+          <div class="item-inner">
+            <div class="item-title">Jaguar </div>
+          </div>
+        </li>
+        <li class="item-content">
+          <div class="item-inner">
+            <div class="item-title">Jeep </div>
+          </div>
+        </li>
+        <li class="item-content">
+          <div class="item-inner">
+            <div class="item-title">Kia</div>
+          </div>
+        </li>
+        <li class="item-content">
+          <div class="item-inner">
+            <div class="item-title">Lamborghini </div>
+          </div>
+        </li>
+        <li class="item-content">
+          <div class="item-inner">
+            <div class="item-title">Land Rover</div>
+          </div>
+        </li>
+        <li class="item-content">
+          <div class="item-inner">
+            <div class="item-title">Lexus </div>
+          </div>
+        </li>
+        <li class="item-content">
+          <div class="item-inner">
+            <div class="item-title">Lincoln </div>
+          </div>
+        </li>
+        <li class="item-content">
+          <div class="item-inner">
+            <div class="item-title">Lotus </div>
+          </div>
+        </li>
+        <li class="item-content">
+          <div class="item-inner">
+            <div class="item-title">Mazda</div>
+          </div>
+        </li>
+        <li class="item-content">
+          <div class="item-inner">
+            <div class="item-title">Mercedes-Benz</div>
+          </div>
+        </li>
+        <li class="item-content">
+          <div class="item-inner">
+            <div class="item-title">Mercury </div>
+          </div>
+        </li>
+        <li class="item-content">
+          <div class="item-inner">
+            <div class="item-title">Mitsubishi</div>
+          </div>
+        </li>
+        <li class="item-content">
+          <div class="item-inner">
+            <div class="item-title">Nissan </div>
+          </div>
+        </li>
+        <li class="item-content">
+          <div class="item-inner">
+            <div class="item-title">Oldsmobile </div>
+          </div>
+        </li>
+        <li class="item-content">
+          <div class="item-inner">
+            <div class="item-title">Peugeot </div>
+          </div>
+        </li>
+        <li class="item-content">
+          <div class="item-inner">
+            <div class="item-title">Pontiac </div>
+          </div>
+        </li>
+        <li class="item-content">
+          <div class="item-inner">
+            <div class="item-title">Porsche</div>
+          </div>
+        </li>
+        <li class="item-content">
+          <div class="item-inner">
+            <div class="item-title">Regal</div>
+          </div>
+        </li>
+        <li class="item-content">
+          <div class="item-inner">
+            <div class="item-title">Saab </div>
+          </div>
+        </li>
+        <li class="item-content">
+          <div class="item-inner">
+            <div class="item-title">Saturn </div>
+          </div>
+        </li>
+        <li class="item-content">
+          <div class="item-inner">
+            <div class="item-title">Subaru </div>
+          </div>
+        </li>
+        <li class="item-content">
+          <div class="item-inner">
+            <div class="item-title">Suzuki </div>
+          </div>
+        </li>
+        <li class="item-content">
+          <div class="item-inner">
+            <div class="item-title">Toyota</div>
+          </div>
+        </li>
+        <li class="item-content">
+          <div class="item-inner">
+            <div class="item-title">Volkswagen</div>
+          </div>
+        </li>
+        <li class="item-content">
+          <div class="item-inner">
+            <div class="item-title">Volvo</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
