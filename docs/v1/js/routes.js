@@ -52,9 +52,13 @@ var routes = [
   },
   // Components
  {
-    path: '/about/',
-    componentUrl: './pages/about.html',
+    path: '/akun/',
+    url: './pages/akun.html',
   },
+  {
+     path: '/about/',
+     componentUrl: './pages/about.html',
+   },
   {
      path: '/tab-kaidah/',
      componentUrl: './pages/tab-kaidah.html',

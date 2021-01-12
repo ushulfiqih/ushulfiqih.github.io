@@ -33,9 +33,8 @@
             <div class="card-content">
               <div class="list media-list">
                 <ul>
-                  <a href="/akun/" class="link panel-close" data-animate="false">
                   <li class="item-content">
-                    <div class="item-media"><img src="img/logo.png" width="44"/></div>
+                    <div class="item-media"><img src="https://cdn.framework7.io/placeholder/fashion-88x88-4.jpg" width="44"/></div>
                     <div class="item-inner">
                       <div class="item-title-row">
                         <div class="item-title">My Account</div>
@@ -43,11 +42,24 @@
                       <div class="item-subtitle"><i class="icon f7-icons" style="font-size:14px">gear_alt</i> Edit</div>
                     </div>
                   </li>
-                  </a>
                 </ul>
               </div>
             </div>
-
+            <div class="card-content">
+              <div class="list media-list">
+                <ul>
+                  <li class="item-content">
+                    <div class="item-media fotoprofil"><img src="" width="44"/></div>
+                    <div class="item-inner">
+                      <div class="item-title-row">
+                        <div class="item-title nama">My Account</div>
+                      </div>
+                      <div class="item-subtitle"><i class="icon f7-icons" style="font-size:14px">gear_alt</i> Edit</div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
             <div class="block">
               <a href="index.html" class="link external panel-close" data-animate="false" style="color:#000000"><i class="icon f7-icons" style="font-size:24px">house</i> &nbsp;&nbsp;&nbsp;Ushul Fiqih (Beranda)</a><br/><br/>
               <a href="/tab-search/" class="panel-close" data-animate="false" style="color:#000000"><i class="icon f7-icons" style="font-size:24px">search</i>&nbsp;&nbsp;&nbsp;Pencarian</a><br/><br/>
@@ -458,7 +470,7 @@
                   <a href="//" class="link"></a><br/>
                   <a href="//" class="link"></a><br/>
                   <a href="//" class="link"></a><br/>
-                  <a href="/akun/" class="link">akun</a><br/>
+                  <a href="//" class="link"></a><br/>
 
 
                   <br/><br/>
@@ -483,6 +495,19 @@
 
   <script src='js/jquery.js'></script>
   <script src='js/rekomendasi.js'></script>
+
+  <script>
+  $.getJSON('https://forum.ushulfiqih.com/api/v2/users/me', function(data) {
+      var text = `${data.name}`
+      $(".nama").html(text);
+  });
+  </script>
+  <script>
+  $.getJSON('https://forum.ushulfiqih.com/api/v2/users/me', function(data) {
+      var imgurl = `${data.photoUrl}`
+      $('div.fotoprofil').append('<img src="' + imgurl + '"/>');
+  });
+  </script>
 
   <script src="js/login.js"></script>
   <script src="js/type-promise.js"></script>
