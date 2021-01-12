@@ -119,6 +119,14 @@ var routes = [
     path: '/kehujahan-istishab/',
     componentUrl: './teks/kehujahan-istishab.html',
   },
+  {
+    path: '/pengertian-urf/',
+    componentUrl: './teks/pengertian-urf.html',
+  },
+  {
+    path: '/macam-macam-urf/',
+    componentUrl: './teks/macam-macam-urf.html',
+  },
   // Privacy
   {
     path: '/privacy/',

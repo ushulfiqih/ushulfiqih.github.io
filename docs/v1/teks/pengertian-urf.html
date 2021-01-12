@@ -1,0 +1,61 @@
+<template>
+<div class="page">
+
+  <div class="navbar">
+    <div class="navbar-bg"></div>
+    <div class="navbar-inner sliding">
+      <div class="left">
+        <a class="link back" data-animate="false">
+          <i class="icon icon-back"></i>
+          <span class="if-not-md">Back</span>
+        </a>
+      </div>
+      <div class="title">Ushulfiqih.com</div>
+      <div class="right">
+          <i class="icon f7-icons color-black" @click="openPrompt" style="font-size:22px;margin-right:20px;">pencil</i>
+          <i class="icon f7-icons color-black" @click="openAlert" style="font-size:22px;margin-right:20px;">floppy_disk</i>
+      </div>
+    </div>
+  </div>
+  <!-- Additional "hide-navbar-on-scroll" class to hide navbar on scroll automatically -->
+  <div class="page-content hide-navbar-on-scroll">
+      <div class="block">
+        <h1>Pengertian Urf</h1>
+				<p><em>&lsquo;urf </em>berarti suatu keadaan, ucapan, perbuatan, atau ketentuan yang telah dikenal manusia, dan telah menjadi tradisi baik melaksanakan sesuatu atau meninggalkan sesuatu.</p>
+				<p>Di kalangan masyarakat, urf ini sering disebut sebagai adat.</p>
+				<p>Contoh <em>'urf </em></p>
+				<ol style="list-style-type: upper-alpha;" start="4">
+				<li style="list-style: none;">
+				<ol>
+				<li>adanya saling pengertian di antara manusia tentang jual beli tanpa mengucapkan <em>shigat. </em></li>
+				<li>adanya pengertian tentang kemutlakan lafal <em>al-walad </em>atas anak laki-laki bukan perempuan</li>
+				<li>meng-<em>itlak</em>-kan <em>lafazh al-lahm </em>yang bermakna daging, sebagai daging binatang ternak, bukan daging ikan.</li>
+				</ol>
+				</li>
+				</ol>
+				<p>&nbsp;</p>
+				<p>Dengan demikian, <em>'urf </em>itu mencakup sikap saling pengertian di antara manusia atas perbedaan tingkatan penyebutan, baik umum ataupun kekhususannya. Sebagai kesepakatan yang berupa tradisi, 'urf berbeda dengan <em>ijma </em>karena <em>Ijma</em>&rsquo; merupakan tradisi dari kesepakatan para <em>mujtahidin </em>secara khusus.</p>
+      </div>
+  </div>
+
+</div>
+</template>
+</template>
+<script>
+  return {
+    methods: {
+      openAlert: function () {
+        var app = this.$app;
+        app.dialog.alert('Tidak ada perubahan untuk disimpan!');
+      },
+      openPrompt: function () {
+        var app = this.$app;
+        app.dialog.prompt('Admin / Editor Password', function (name) {
+          app.dialog.confirm('Are you sure that your Admin / Editor password is ' + name + '?', function () {
+            app.dialog.alert('Unknown password: ' + name);
+          });
+        });
+      },
+    }
+  }
+</script>
