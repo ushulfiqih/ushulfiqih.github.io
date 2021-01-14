@@ -4,4 +4,4 @@ setTimeout(function() {
 
 setTimeout(function() {
 	$('#mytitle').fadeOut('fast');
-}, 10000); // <-- time in milliseconds
+}, 20000); // <-- time in milliseconds
