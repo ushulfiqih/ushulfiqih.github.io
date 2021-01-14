@@ -1,0 +1,64 @@
+<template>
+<div class="page">
+
+  <div class="navbar">
+    <div class="navbar-bg"></div>
+    <div class="navbar-inner sliding">
+      <div class="left">
+        <a class="link back" data-animate="false">
+          <i class="icon icon-back"></i>
+          <span class="if-not-md">Back</span>
+        </a>
+      </div>
+      <div class="title">Ushulfiqih.com</div>
+      <div class="right">
+          <i class="icon f7-icons color-black" @click="openPrompt" style="font-size:22px;margin-right:20px;">pencil</i>
+          <i class="icon f7-icons color-black" @click="openAlert" style="font-size:22px;margin-right:20px;">floppy_disk</i>
+      </div>
+    </div>
+  </div>
+  <!-- Additional "hide-navbar-on-scroll" class to hide navbar on scroll automatically -->
+  <div class="page-content hide-navbar-on-scroll">
+      <div class="block">
+	      <h1>Hukum Melakukan Ijtihad</h1>
+				<p>Berikut hukum melakukan Ijtihad bagi seseorang <em>Mujtahid</em> atau seseorang yang sudah memenuhi persyaratan <em>ijtihad, </em>yaitu:</p>
+				<ol>
+				<li><em>Fardu</em><em> ain</em></li>
+				<p>Yaitu bagi seorang mujtahid untuk <em>berijtihad, </em>apabila ada permasalahan yang menimpa dirinya, dan harus mengamalkan hasil dari <em>ijtihad-nya </em>dan tidak boleh taqlid kepada orang lain.</p>
+				<p>Juga dihukumi <em>fardu 'ain </em>jika seorang <em>mujtahid</em> ditanya tentang suatu permasalahan yang belum ada hukumnya. Karena jika tidak segera dijawab, dikhawatirkan akan terjadi kesalahan dalam melaksanakan hukum tersebut, atau habis waktunya.</p>
+				</ol>
+				<ol start="2">
+				<li><em>Fardu kifayah,</em></li>
+				<p>Yaitu jika permasalahan yang diajukan kepadanya tidak dikhawatirkan akan habis waktunya, atau ada orang lain selain dirinya yang sama-sama&nbsp; memenuhi syarat sebagai seorang <em>mujtahid.</em></p>
+				</ol>
+				<ol start="3">
+				<li><em>Sunah</em></li>
+				<p>Yaitu <em>ber-ijtihad </em>terhadap permasalahan yang baru, baik ditanya ataupun tidak.</p>
+				</ol>
+				<ol start="4">
+				<li><em>Haram</em></li>
+				<p>Yaitu <em>ber-ijtihad </em>terhadap permasalahan yang sudah ditetapkan secara <em>Qathi', </em>karena hasil <em>ijltihad-nya </em>akan bertentangan dengan dalil <em>syara &rsquo;.</em></p>
+				</ol>
+			<div>
+  </div>
+
+</div>
+</template>
+<script>
+  return {
+    methods: {
+      openAlert: function () {
+        var app = this.$app;
+        app.dialog.alert('Tidak ada perubahan untuk disimpan!');
+      },
+      openPrompt: function () {
+        var app = this.$app;
+        app.dialog.prompt('Admin / Editor Password', function (name) {
+          app.dialog.confirm('Are you sure that your Admin / Editor password is ' + name + '?', function () {
+            app.dialog.alert('Unknown password: ' + name);
+          });
+        });
+      },
+    }
+  }
+</script>

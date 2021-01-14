@@ -1,0 +1,49 @@
+<template>
+<div class="page">
+
+  <div class="navbar">
+    <div class="navbar-bg"></div>
+    <div class="navbar-inner sliding">
+      <div class="left">
+        <a class="link back" data-animate="false">
+          <i class="icon icon-back"></i>
+          <span class="if-not-md">Back</span>
+        </a>
+      </div>
+      <div class="title">Ushulfiqih.com</div>
+      <div class="right">
+          <i class="icon f7-icons color-black" @click="openPrompt" style="font-size:22px;margin-right:20px;">pencil</i>
+          <i class="icon f7-icons color-black" @click="openAlert" style="font-size:22px;margin-right:20px;">floppy_disk</i>
+      </div>
+    </div>
+  </div>
+  <!-- Additional "hide-navbar-on-scroll" class to hide navbar on scroll automatically -->
+  <div class="page-content hide-navbar-on-scroll">
+      <div class="block">
+        <h1>Kehujjahan Istihsan</h1>
+				<p>Abu Hanifah banyak menggunakan <em>istihsan.</em> Ulama Hanafiyah mengakui adanya <em>istihsan,</em> dan dalam beberapa kitab fiqih Hanafiyah terdapat banyak permasalahan yang menyangkut <em>istihsan.</em> Sebagaimana Imam Abu Hanifah, Imam Maliki dan Asy- Syatibi juga menilai <em>istihsan </em>sebagai dalil yang kuat dalam hukum. Imam Malik juga sering berfatwa dengan menggunakan <em>istihsan.</em> Dan menurut Imam Al-Amudi dan Ibnu Hazib, Hanabilah juga mengakui adanya <em>istihsan. </em>Tetapi Al-Jalal al-Mahalli dalam kitab <em>Syarh Al- Jam &rsquo;Al-Jawami &rsquo; </em>mengatakan golongan Hanabilah mengingkari.</p>
+				<p>Syafi&rsquo;iyah secara mashyur tidak mengakui adanya <em>istihsan. </em>Ulama Syafi&rsquo;iyah tidak menggunakannya dalam <em>istinbat </em>hukum dan tidak menilainya sebagai dalil. Bahkan, Imam Syafi&rsquo;i berkata &ldquo;Barang siapa yang menggunakan <em>istihsan </em>berarti ia telah membuat syari&rsquo;at.&rdquo; Beliau juga berkata, &ldquo;Segala urusan itu telah diatur oleh Allah SWT., setidaknya ada yang menyerupainya sehingga dibolehkan menggunakan qiyas, namun tidak dibolehkan menggunakan <em>istihsan.</em></p>
+      </div>
+  </div>
+
+</div>
+</template>
+</template>
+<script>
+  return {
+    methods: {
+      openAlert: function () {
+        var app = this.$app;
+        app.dialog.alert('Tidak ada perubahan untuk disimpan!');
+      },
+      openPrompt: function () {
+        var app = this.$app;
+        app.dialog.prompt('Admin / Editor Password', function (name) {
+          app.dialog.confirm('Are you sure that your Admin / Editor password is ' + name + '?', function () {
+            app.dialog.alert('Unknown password: ' + name);
+          });
+        });
+      },
+    }
+  }
+</script>

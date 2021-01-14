@@ -1,0 +1,77 @@
+<template>
+<div class="page">
+
+  <div class="navbar">
+    <div class="navbar-bg"></div>
+    <div class="navbar-inner sliding">
+      <div class="left">
+        <a class="link back" data-animate="false">
+          <i class="icon icon-back"></i>
+          <span class="if-not-md">Back</span>
+        </a>
+      </div>
+      <div class="title">Ushulfiqih.com</div>
+      <div class="right">
+          <i class="icon f7-icons color-black" @click="openPrompt" style="font-size:22px;margin-right:20px;">pencil</i>
+          <i class="icon f7-icons color-black" @click="openAlert" style="font-size:22px;margin-right:20px;">floppy_disk</i>
+      </div>
+    </div>
+  </div>
+  <!-- Additional "hide-navbar-on-scroll" class to hide navbar on scroll automatically -->
+  <div class="page-content hide-navbar-on-scroll">
+      <div class="block">
+        <h1>Kehujahan Istishab</h1>
+        <p><em>Istishhab </em>adalah teori dalam pengambilan dalil yaiyu dengan menetapkan sesuatu menurut hukum yang telah ditetapkan sebelumnya, selama tidak terdapat dalil yang mengubahnya. Asal sesuatu itu adalah ketetapan sesuatu yang telah ada, menurut keadaan semula, sampai terdapat sesuatu yang mengubahnya.</p>
+        <p>Ulama Hanafiyah menetapkan bahwa <em>Istishhab </em>merupakan hujjah untuk mempertahankan sesuatu, dan bukan untuk menetapkan sesuatu. Ketetapan sesuatu yang telah ada menurut keadaan semula, tetap dipertahankan sampai ada dalil yang menetapkan atas perbedaannya.</p>
+        <p><em>Istishhab </em>bisa dijadikan dalil hukum karena hakikatnya <em>dalillah </em>yang telah menetapkan hukum tersebut. <em>Istishhab </em>menetapkan <em>dalalah </em>dalil sesuai hukum asalnya.</p>
+        <p><em>Istishhab </em>bukanlah <em>hujjah </em>untuk menetapkan sesuatu yang tidak tetap.</p>
+        <p>Contohnya adalah kasus penetapan orang yang hilang atau yang tidak diketahui tempat tinggalnya dan tempat kematiannya, bahwa orang tersebut ditetapkan tidak hilang dan dihukumi sebagai orang yang hidup sampai adanya petunjuk yang menunjukkan kematiannya. <em>Istishhab-</em>lah yang menunjukkan atas hidupnya orang tersebut dan menolak dugaan kematiannya serta warisan harta bendanya juga perceraian pernikahannya. Tetapi hal itu bukanlah hujjah untuk menetapkan pewaris dari lainnya, karena hidup yang ditetapkan menurut <em>Istishhab </em>itu adalah hidup yang didasarkan pengakuan.</p>
+        <p>&nbsp;</p>
+        <p>Contoh lainnya:</p>
+        <ol style="list-style-type: upper-alpha;">
+        <li style="list-style: none;">
+        <ol>
+        <li>seorang manusia yang hidup tetap dihukumi atas hidupnya dan pengelolaan atas kehidupan ini diberikan kepadanya sampai terdapat dalil yang menunjukkan adanya keputusan tentang kematiannya.</li>
+        <li>Setiap orang yang mengetahui wujud sesuatu, maka dihukumi wujudnya sampai terdapat dalil yang meniadakannya,</li>
+        <li>barang siapa mengetahui ketiadaanya sesuatu, maka dihukumi dengan ketiadaannya sampai terdapat dalil yang menunjukkan keberadaannya.</li>
+        <li>kepemilikan misalnya, tetap menjadi milik siapa saja berdasarkan sebab beberapa kepemilikan. Maka kepemilikan itu dianggap ada sampai ada ketetapan yang menghilangkan kepemilikan tersebut.</li>
+        <li>kehalalan pernikahan bagi suami-istri sebab akad pernikahan dianggap ada sampai ada ketetapan yang menghapuskan kehalalan itu.</li>
+        <li>tanggungan karena utang piutang atau sebab ketetapan apa saja, dianggap tetap ada sampai ada' ketetapan yang menghapuskannya. Tanggungan yang telah dibebaskan dari orang yang terkena tuntutan utang piutang atau ketetapan apa saja, dianggap bebas sampai ada ketetapan yang membebaskannya.</li>
+        </ol>
+        </li>
+        </ol>
+        <p>&nbsp;</p>
+        <p>Kaidah <em>Istishhab </em>adalah. &ldquo;Asal sesuatu adaiah ketetapan yangada</p>
+        <p>menurut keadaan semula sehingga terdapat suatu ketetapan yang mengubahnya&rdquo;.</p>
+        <p>&nbsp;</p>
+        <p><em>Istishhab</em> juga relevan dengan kaidah:</p>
+        <p dir="RTL">اَلْأَصْلُ فِي الْاَشْيَاءِ اَلْاِبَاحَةْ</p>
+        <p>&nbsp;</p>
+        <p>Artinya:</p>
+        <p><em>&ldquo;Asal segala sesuatu itu adalah kebolehan.&rdquo;</em></p>
+        <p dir="RTL">اَلْأَصْلُ بَقَاءُ مَا كَانَ عَلَى مَا كَانَ</p>
+        <p>Yang menjadi patokan adalah tetapnya sesuatu menurut keadaan semula</p>
+      </div>
+  </div>
+
+</div>
+</template>
+</template>
+<script>
+  return {
+    methods: {
+      openAlert: function () {
+        var app = this.$app;
+        app.dialog.alert('Tidak ada perubahan untuk disimpan!');
+      },
+      openPrompt: function () {
+        var app = this.$app;
+        app.dialog.prompt('Admin / Editor Password', function (name) {
+          app.dialog.confirm('Are you sure that your Admin / Editor password is ' + name + '?', function () {
+            app.dialog.alert('Unknown password: ' + name);
+          });
+        });
+      },
+    }
+  }
+</script>

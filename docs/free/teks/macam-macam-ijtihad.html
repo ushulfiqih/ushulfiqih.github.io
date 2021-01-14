@@ -1,0 +1,59 @@
+<template>
+<div class="page">
+
+  <div class="navbar">
+    <div class="navbar-bg"></div>
+    <div class="navbar-inner sliding">
+      <div class="left">
+        <a class="link back" data-animate="false">
+          <i class="icon icon-back"></i>
+          <span class="if-not-md">Back</span>
+        </a>
+      </div>
+      <div class="title">Ushulfiqih.com</div>
+      <div class="right">
+          <i class="icon f7-icons color-black" @click="openPrompt" style="font-size:22px;margin-right:20px;">pencil</i>
+          <i class="icon f7-icons color-black" @click="openAlert" style="font-size:22px;margin-right:20px;">floppy_disk</i>
+      </div>
+    </div>
+  </div>
+  <!-- Additional "hide-navbar-on-scroll" class to hide navbar on scroll automatically -->
+  <div class="page-content hide-navbar-on-scroll">
+      <div class="block">
+        <h1>Macam-macam Ijtihad</h1>
+  			<p>Imam Syafi&rsquo;i menyamakan <em>ijtihad</em><em> </em>dengan <em>qiyas</em>, dan tidak mengakui <em>ra'yu </em>yang didasarkan pada <em>istihsan </em>atau <em>maslahah</em><em> mursalah.</em></p>
+  			<p><em>&nbsp;</em>Menurut ulama lain, <em>ijtihad </em>itu mencakup <em>ra&rsquo;yu, qiyas, </em>dan akal. <em>Ra&rsquo;yu</em><em> </em>adalah mengamalkan apa-apa yang dipandang maslahat oleh seorang <em>mujtahid, </em>atau setidak-tidaknya mendekati syari'at, tanpa melihat apakah hal itu ada dasarnya atau tidak.</p>
+  			<p><em>ijtihad </em>mada tiga macam:</p>
+  			<ol>
+  			<li><em>Ijtihad Al-Batani, </em>yaitu <em>ijtihad</em><em> </em>untuk menjelaskan hukum-hukum <em>syara</em><em> &rsquo; </em>dari <em>nash.</em></li>
+  			<li><em>Ijtihad Al-qiyasi, </em>yaitu <em>ijtihad </em>terhadap permasalahan yang tidak terdapat dalam Quran dan Sunah dengan menggunakan metode <em>qiyas.</em></li>
+  			<li><em>Ijtihad al-istishlah, </em>yaitu <em>ijtihad </em>terhadap permasalahan yang tidak terdapat dalam Quran dan Sunah dengan menggunakan <em>ra&rsquo;yu </em>berdasarkan kaidah <em>istishlah.</em></li>
+  			</ol>
+  			<p>Pembagian tersebut sesuai pendapat Asy-Syatibi dalam kitab <em>Al-Muwafaqat</em> Ada juga ulama lain membagi <em>ijtihad </em>menjadi dua, yaitu:</p>
+  			<ol>
+  			<li><em>Ijtihadal-aqli, </em>yaitu <em>ijtihad </em>yang hujjahnya didasarkan pada akal, tidak menggunakan dalil <em>syara'. Mujtahid </em>dibebaskan untuk berpikir, dengan mengikuti kaidah-kaidah Ushul Fiqih.</li>
+  			<li><em>Ijtihad syari', </em>yaitu <em>ijtihad </em>yang didasarkan pada <em>syara</em>&rsquo;, termasuk dalam pembagian ini adalah <em>ijma&rsquo;, qiyas, istihsan. Istishlah, &lsquo;urf, istishhab, </em>dan lain-lain.</li>
+  			</ol>
+      </div>
+  </div>
+
+</div>
+</template>
+<script>
+  return {
+    methods: {
+      openAlert: function () {
+        var app = this.$app;
+        app.dialog.alert('Tidak ada perubahan untuk disimpan!');
+      },
+      openPrompt: function () {
+        var app = this.$app;
+        app.dialog.prompt('Admin / Editor Password', function (name) {
+          app.dialog.confirm('Are you sure that your Admin / Editor password is ' + name + '?', function () {
+            app.dialog.alert('Unknown password: ' + name);
+          });
+        });
+      },
+    }
+  }
+</script>
