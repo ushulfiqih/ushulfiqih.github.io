@@ -50,6 +50,11 @@ var routes = [
     url: './pages/tab-forum-dashboard.html',
     name: 'home',
   },
+  // Status
+  {
+     path: '/status-1/',
+     componentUrl: './pages/status-1.html',
+   },
   // Components
  {
     path: '/akun/',
