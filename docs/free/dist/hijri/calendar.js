@@ -298,13 +298,13 @@ function Calendar(isHijr,year,month,firstDay,lang,theme,tmout){
 		let ct=Calendar.themes,ctl=ct.length,i=0;
 		if(typeof t=='number'){
 			if(0<=t&&t<ctl){isAutoNewTheme=false;theme=ct[t]}
-			else{isAutoNewTheme=true;newTheme()}
+			else{isAutoNewTheme=false;newTheme()}
 		}else if(typeof t=='string'){
 			t=t.toLowerCase();
 			for(;i<ctl;i++)if(ct[i]==t)break;
 			if(i<ctl){isAutoNewTheme=false;theme=ct[i]}
-			else{isAutoNewTheme=true;newTheme()}
-		}else{isAutoNewTheme=true;newTheme()}
+			else{isAutoNewTheme=false;newTheme()}
+		}else{isAutoNewTheme=false;newTheme()}
 		applyTheme();return isAutoNewTheme
 	};
 	cd.setTime=function(t){
@@ -412,7 +412,7 @@ Object.defineProperty(Calendar,'getDigit',{value:function(d){
 	let c=Calendar.getVal('digit');
 	if(c)return d.toString().replace(/\d(?=[^<>]*(<|$))/g,function($0){return c[$0]});return d
 }});
-Object.defineProperty(Calendar,'themes',{value:['amber','aqua','black','blue','blue-grey','brown','cyan','dark-grey','deep-orange','deep-purple','green','grey','indigo','khaki','light-blue','light-green','lime','orange','pink','purple','red','teal','yellow']});
+Object.defineProperty(Calendar,'themes',{value:['none']});
 Object.defineProperty(Calendar,'lang',{value:'en',writable:true});
 Object.defineProperty(Calendar,'getVal',{value:function(key){return Calendar.language[Calendar.lang][key]}});
 Calendar.language={en:{
