@@ -73,8 +73,8 @@ var routes = [
       componentUrl: './pages/dialog.html',
     },
    {
-      path: '/tab-home/',
-      componentUrl: './pages/tab-home.html',
+      path: '/linimasa/',
+      componentUrl: './teks/linimasa.html',
     },
   {
     path: '/pengertian-ijtihad/',
