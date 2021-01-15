@@ -58,6 +58,14 @@
 }
 
 
+
+
 .white {
- color:white;
+ color:#dddddd;
+}
+.gelap {
+ background-color:#121212
+}
+.ushulfiqihcom {
+ background-image:url(../img/bg.jpg)
 }
