@@ -55,6 +55,10 @@ var routes = [
      path: '/status-1/',
      componentUrl: './pages/status-1.html',
    },
+   {
+      path: '/hijri/',
+      componentUrl: './pages/hijri.html',
+    },
   // Components
  {
     path: '/akun/',
