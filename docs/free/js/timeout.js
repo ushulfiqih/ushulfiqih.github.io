@@ -4,8 +4,8 @@ setTimeout(function() {
 
 setTimeout(function() {
 	$('#judul').fadeOut('fast');
-}, 5000); // <-- time in milliseconds
+}, 2000); // <-- time in milliseconds
 
 setTimeout(function() {
-	$('#mytitle2').fadeOut('fast');
-}, 8000); // <-- time in milliseconds
+	$('#subjudul').fadeOut('fast');
+}, 2000); // <-- time in milliseconds
