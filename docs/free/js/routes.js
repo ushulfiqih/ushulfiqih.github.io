@@ -50,7 +50,7 @@ var routes = [
     url: './pages/tab-forum-dashboard.html',
     name: 'home',
   },
-  // Status
+  // Features
   {
      path: '/status-1/',
      componentUrl: './pages/status-1.html',
@@ -59,6 +59,10 @@ var routes = [
       path: '/hijri/',
       componentUrl: './pages/hijri.html',
     },
+    {
+       path: '/praytimes/',
+       componentUrl: './pages/praytimes.html',
+     },
   // Components
  {
     path: '/akun/',
