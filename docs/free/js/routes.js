@@ -52,8 +52,8 @@ var routes = [
   },
   // Features
   {
-     path: '/status-1/',
-     componentUrl: './pages/status-1.html',
+     path: '/quran/',
+     componentUrl: './pages/quran.html',
    },
    {
       path: '/hijri/',
