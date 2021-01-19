@@ -36,22 +36,13 @@
               <div id="tab-1" class="page-content tab tab-active">
                 <div class="block" style="margin-top: -30px;">
 
-
-                  <p id="demo"></p>
-
+                  <script src='js/jquery.js'></script>
+                  <div id ="ambil">Sepertinya kamu tidak terhubung internet?</div>
                   <script>
-                  var xmlhttp = new XMLHttpRequest();
-                  xmlhttp.onreadystatechange = function() {
-                    if (this.readyState == 4 && this.status == 200) {
-                      var myObj = JSON.parse(this.responseText);
-                      document.getElementById("demo").innerHTML = myObj.text + myObj.name;
-                    }
-                  };
-                  xmlhttp.open("GET", "https://github.com/rioastamal/quran-json/blob/master/surah/1.json", true);
-                  xmlhttp.send();
+                  $(document).ready(function(){
+                     $('#ambil').load("https://raw.githubusercontent.com/rioastamal/quran-text/master/surah/1/1.txt");
+                  });
                   </script>
-
-
 
 
 
