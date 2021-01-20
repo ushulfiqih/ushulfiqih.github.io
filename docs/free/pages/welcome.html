@@ -1,11 +1,1101 @@
 <template>
 <div class="page no-toolbar">
 
-	<div class="page-content hide-navbar-on-scroll">
-      <div style="margin-top:-30px">
-<iframe src="dist/welcome/index.html" frameborder="0" style="position: absolute; float: left; clear: both; width: 100%; height: 96%; z-index: 0; left no-repeat; "></iframe>
-      </div>
-  </div>
+	<style>
+		*, *:before, *:after {
+		  box-sizing: border-box;
+		  margin: 0;
+		  padding: 0;
+		}
+
+		.demo {
+		  background: #121212;
+		  min-height: 100vh;
+		  display: flex;
+		  justify-content: center;
+		  align-items: center;
+		  font-size: 0;
+		  -webkit-user-select: none;
+		     -moz-user-select: none;
+		      -ms-user-select: none;
+		          user-select: none;
+		  overflow: hidden;
+		  position: relative;
+		}
+		.demo__screen {
+		  position: relative;
+		  background: #121212;
+		  overflow: hidden;
+		  flex-shrink: 0;
+		}
+		.demo__screen--clickable {
+		  cursor: pointer;
+		  -webkit-tap-highlight-color: transparent;
+		}
+		.demo__logo {
+		  font-family: Muli, sans-serif;
+		  font-weight: 600;
+		  letter-spacing: 1.155px;
+		  font-size: 11.55px;
+		  position: absolute;
+		  width: 100%;
+		  text-align: center;
+		  color: white;
+		  top: 16.5px;
+		  transition: all 0.25s ease;
+		  will-change: transform, opacity;
+		}
+		.demo__logo--hidden {
+		  opacity: 0;
+		  transform: translate3d(0, -33px, 0);
+		}
+		.demo__logo-particles {
+		  position: absolute;
+		  width: 3.3px;
+		  height: 3.3px;
+		  left: 146.85px;
+		  top: 24.75px;
+		  opacity: 0;
+		}
+		.demo__logo-particles--visible {
+		  opacity: 1;
+		}
+		.demo__logo-particle {
+		  width: 2.475px;
+		  height: 2.475px;
+		  border-radius: 50%;
+		  background-color: white;
+		  opacity: 1;
+		  transition: all 1.7s ease;
+		  position: absolute;
+		  will-change: transform;
+		}
+		@media (max-width: 400px) {
+		  .demo__logo-particle {
+		    display: none;
+		  }
+		}
+		.demo__logo-particle:nth-child(1) {
+		  left: 21.45px;
+		  background-color: #8742cc;
+		}
+		.demo__logo-particle--exploded:nth-child(1) {
+		  transform: translate3d(24.75px, 31.35px, 0);
+		  opacity: 0;
+		}
+		.demo__logo-particle:nth-child(2) {
+		  left: 21.45px;
+		  background-color: #8742cc;
+		}
+		.demo__logo-particle--exploded:nth-child(2) {
+		  transform: translate3d(-4.95px, 8.25px, 0);
+		  opacity: 0;
+		}
+		.demo__logo-particle:nth-child(3) {
+		  left: 4.95px;
+		  background-color: #8742cc;
+		}
+		.demo__logo-particle--exploded:nth-child(3) {
+		  transform: translate3d(4.95px, 47.85px, 0);
+		  opacity: 0;
+		}
+		.demo__logo-particle:nth-child(4) {
+		  left: 18.15px;
+		  background-color: #8742cc;
+		}
+		.demo__logo-particle--exploded:nth-child(4) {
+		  transform: translate3d(-51.15px, 31.35px, 0);
+		  opacity: 0;
+		}
+		.demo__logo-particle:nth-child(5) {
+		  left: 28.05px;
+		  background-color: #8742cc;
+		}
+		.demo__logo-particle--exploded:nth-child(5) {
+		  transform: translate3d(-31.35px, 34.65px, 0);
+		  opacity: 0;
+		}
+		.demo__logo-particle:nth-child(6) {
+		  left: -34.65px;
+		  background-color: #8742cc;
+		}
+		.demo__logo-particle--exploded:nth-child(6) {
+		  transform: translate3d(8.25px, 57.75px, 0);
+		  opacity: 0;
+		}
+		.demo__logo-particle:nth-child(7) {
+		  left: 13.2px;
+		  background-color: #a94a8c;
+		}
+		.demo__logo-particle--exploded:nth-child(7) {
+		  transform: translate3d(0px, 14.85px, 0);
+		  opacity: 0;
+		}
+		.demo__logo-particle:nth-child(8) {
+		  left: 14.85px;
+		  background-color: #a94a8c;
+		}
+		.demo__logo-particle--exploded:nth-child(8) {
+		  transform: translate3d(34.65px, 6.6px, 0);
+		  opacity: 0;
+		}
+		.demo__logo-particle:nth-child(9) {
+		  left: -31.35px;
+		  background-color: #8742cc;
+		}
+		.demo__logo-particle--exploded:nth-child(9) {
+		  transform: translate3d(-42.9px, 57.75px, 0);
+		  opacity: 0;
+		}
+		.demo__logo-particle:nth-child(10) {
+		  left: -6.6px;
+		  background-color: #8742cc;
+		}
+		.demo__logo-particle--exploded:nth-child(10) {
+		  transform: translate3d(82.5px, 14.85px, 0);
+		  opacity: 0;
+		}
+		.demo__logo-particle:nth-child(11) {
+		  left: 3.3px;
+		  background-color: #8742cc;
+		}
+		.demo__logo-particle--exploded:nth-child(11) {
+		  transform: translate3d(-11.55px, 34.65px, 0);
+		  opacity: 0;
+		}
+		.demo__logo-particle:nth-child(12) {
+		  left: -4.95px;
+		  background-color: #a94a8c;
+		}
+		.demo__logo-particle--exploded:nth-child(12) {
+		  transform: translate3d(-41.25px, 24.75px, 0);
+		  opacity: 0;
+		}
+		.demo__logo-particle:nth-child(13) {
+		  left: 18.15px;
+		  background-color: #8742cc;
+		}
+		.demo__logo-particle--exploded:nth-child(13) {
+		  transform: translate3d(-47.85px, 52.8px, 0);
+		  opacity: 0;
+		}
+		.demo__logo-particle:nth-child(14) {
+		  left: 1.65px;
+		  background-color: #a94a8c;
+		}
+		.demo__logo-particle--exploded:nth-child(14) {
+		  transform: translate3d(6.6px, 34.65px, 0);
+		  opacity: 0;
+		}
+		.demo__logo-particle:nth-child(15) {
+		  left: 9.9px;
+		  background-color: #8742cc;
+		}
+		.demo__logo-particle--exploded:nth-child(15) {
+		  transform: translate3d(-28.05px, 54.45px, 0);
+		  opacity: 0;
+		}
+		.demo__logo-particle:nth-child(16) {
+		  left: -11.55px;
+		  background-color: #a94a8c;
+		}
+		.demo__logo-particle--exploded:nth-child(16) {
+		  transform: translate3d(-29.7px, 19.8px, 0);
+		  opacity: 0;
+		}
+		.demo__logo-particle:nth-child(17) {
+		  left: -14.85px;
+		  background-color: #a94a8c;
+		}
+		.demo__logo-particle--exploded:nth-child(17) {
+		  transform: translate3d(-87.45px, 34.65px, 0);
+		  opacity: 0;
+		}
+		.demo__logo-particle:nth-child(18) {
+		  left: -39.6px;
+		  background-color: #8742cc;
+		}
+		.demo__logo-particle--exploded:nth-child(18) {
+		  transform: translate3d(-79.2px, 23.1px, 0);
+		  opacity: 0;
+		}
+		.demo__logo-particle:nth-child(19) {
+		  left: 6.6px;
+		  background-color: #8742cc;
+		}
+		.demo__logo-particle--exploded:nth-child(19) {
+		  transform: translate3d(-14.85px, 21.45px, 0);
+		  opacity: 0;
+		}
+		.demo__logo-particle:nth-child(20) {
+		  left: -3.3px;
+		  background-color: #a94a8c;
+		}
+		.demo__logo-particle--exploded:nth-child(20) {
+		  transform: translate3d(-47.85px, 13.2px, 0);
+		  opacity: 0;
+		}
+		.demo__logo-particle:nth-child(21) {
+		  left: 8.25px;
+		  background-color: #8742cc;
+		}
+		.demo__logo-particle--exploded:nth-child(21) {
+		  transform: translate3d(74.25px, 18.15px, 0);
+		  opacity: 0;
+		}
+		.demo__logo-particle:nth-child(22) {
+		  left: -9.9px;
+		  background-color: #a94a8c;
+		}
+		.demo__logo-particle--exploded:nth-child(22) {
+		  transform: translate3d(-70.95px, 52.8px, 0);
+		  opacity: 0;
+		}
+		.demo__logo-particle:nth-child(23) {
+		  left: 24.75px;
+		  background-color: #8742cc;
+		}
+		.demo__logo-particle--exploded:nth-child(23) {
+		  transform: translate3d(-52.8px, 57.75px, 0);
+		  opacity: 0;
+		}
+		.demo__logo-particle:nth-child(24) {
+		  left: -8.25px;
+		  background-color: #a94a8c;
+		}
+		.demo__logo-particle--exploded:nth-child(24) {
+		  transform: translate3d(14.85px, 52.8px, 0);
+		  opacity: 0;
+		}
+		.demo__logo-particle:nth-child(25) {
+		  left: 6.6px;
+		  background-color: #8742cc;
+		}
+		.demo__logo-particle--exploded:nth-child(25) {
+		  transform: translate3d(52.8px, 44.55px, 0);
+		  opacity: 0;
+		}
+		.demo__logo-particle:nth-child(26) {
+		  left: 36.3px;
+		  background-color: #8742cc;
+		}
+		.demo__logo-particle--exploded:nth-child(26) {
+		  transform: translate3d(-24.75px, 28.05px, 0);
+		  opacity: 0;
+		}
+		.demo__logo-particle:nth-child(27) {
+		  left: 18.15px;
+		  background-color: #8742cc;
+		}
+		.demo__logo-particle--exploded:nth-child(27) {
+		  transform: translate3d(-19.8px, 49.5px, 0);
+		  opacity: 0;
+		}
+		.demo__logo-particle:nth-child(28) {
+		  left: 16.5px;
+		  background-color: #a94a8c;
+		}
+		.demo__logo-particle--exploded:nth-child(28) {
+		  transform: translate3d(4.95px, 51.15px, 0);
+		  opacity: 0;
+		}
+		.demo__logo-particle:nth-child(29) {
+		  left: -9.9px;
+		  background-color: #8742cc;
+		}
+		.demo__logo-particle--exploded:nth-child(29) {
+		  transform: translate3d(-26.4px, 51.15px, 0);
+		  opacity: 0;
+		}
+		.demo__logo-particle:nth-child(30) {
+		  left: -37.95px;
+		  background-color: #a94a8c;
+		}
+		.demo__logo-particle--exploded:nth-child(30) {
+		  transform: translate3d(3.3px, 29.7px, 0);
+		  opacity: 0;
+		}
+		.demo__logo-name {
+		  display: inline-block;
+		  vertical-align: middle;
+		}
+		.demo__logo-pic {
+		  display: inline-block;
+		  width: 26.4px;
+		  height: 26.4px;
+		  vertical-align: middle;
+		  position: relative;
+		  transform: scale(0.65);
+		}
+		.demo__logo-glass {
+		  border: 1.65px solid #ECC8DD;
+		  width: 11.55px;
+		  height: 11.55px;
+		  border-radius: 50%;
+		  position: absolute;
+		}
+		.demo__logo-glass:after {
+		  display: block;
+		  content: "";
+		  width: 6.6px;
+		  height: 1.65px;
+		  background-color: #ECC8DD;
+		  top: 50%;
+		  position: absolute;
+		  left: 8.25px;
+		  top: 3.3px;
+		}
+		.demo__logo-glass:nth-child(2) {
+		  left: 19.8px;
+		  transform: rotate(120deg);
+		  border: 1.65px solid #a94a8c;
+		}
+		.demo__logo-glass:nth-child(2):after {
+		  background-color: #a94a8c;
+		}
+		.demo__logo-glass:nth-child(3) {
+		  left: 9.9px;
+		  top: 16.5px;
+		  transform: rotate(240deg);
+		  border: 1.65px solid #8742cc;
+		}
+		.demo__logo-glass:nth-child(3):after {
+		  background-color: #8742cc;
+		}
+		.demo__fprint-path {
+		  stroke-width: 2.5px;
+		  stroke-linecap: round;
+		  fill: none;
+		  stroke: white;
+		  visibility: hidden;
+		  transition: opacity 0.5s ease;
+		  will-change: stroke-dashoffset, stroke-dasharray;
+		  transform: translateZ(0);
+		}
+		.demo__fprint-path--pinkish {
+		  stroke: #a94a8c;
+		}
+		.demo__fprint-path--purplish {
+		  stroke: #8742cc;
+		}
+		.demo__fprint-path--gradient {
+		  stroke: url(#linear);
+		  transition: stroke 0.3s ease;
+		  transition-delay: 0.5s;
+		}
+		.demo__fprint-path#demo__elastic-path {
+		  will-change: opacity;
+		  opacity: 1;
+		}
+		.demo__hidden-path {
+		  display: none;
+		}
+		.demo__ending-path {
+		  fill: none;
+		  stroke-width: 2.5px;
+		  stroke-dasharray: 60 1000;
+		  stroke-dashoffset: 61;
+		  stroke-linecap: round;
+		  will-change: stroke-dashoffset, stroke-dasharray, opacity;
+		  transform: translateZ(0);
+		  transition: stroke-dashoffset 1s ease, stroke-dasharray 0.5s linear, opacity 0.75s ease;
+		}
+		.demo__ending-path--removed {
+		  stroke-dashoffset: -130;
+		  stroke-dasharray: 5 1000;
+		}
+		.demo__ending-path--transparent {
+		  opacity: 0;
+		}
+		.demo__ending-path--pinkish {
+		  stroke: #a94a8c;
+		}
+		.demo__ending-path--purplish {
+		  stroke: #8742cc;
+		}
+		.demo__fprint {
+		  width: 297px;
+		  height: 528px;
+		  position: relative;
+		  top: 33px;
+		  overflow: visible;
+		  background-image: url("https://kiyutink.github.io/svg/fprintBackground.svg");
+		  background-size: cover;
+		}
+		.demo__fprint--no-bg {
+		  background-image: none;
+		}
+		.demo__bullet {
+		  position: absolute;
+		  width: 6.6px;
+		  height: 6.6px;
+		  background-color: white;
+		  border-radius: 50%;
+		  top: 346.5px;
+		  left: 145.2px;
+		  opacity: 0;
+		  transition: all 0.7s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+		  will-change: transform, opacity;
+		}
+		.demo__bullet--with-aura {
+		  box-shadow: 0 0 0 4.95px rgba(255, 255, 255, 0.3);
+		}
+		.demo__bullet--elevated {
+		  transform: translate3d(0, -412.5px, 0);
+		  opacity: 1;
+		}
+		.demo__bullet--descended {
+		  transform: translate3d(0, 49.5px, 0);
+		  opacity: 1;
+		  transition: all 0.6s cubic-bezier(0.285, 0.21, 0.605, 0.91);
+		}
+		.demo__top-bullet {
+		  position: absolute;
+		  width: 3.3px;
+		  height: 3.3px;
+		  background-color: white;
+		  top: 26.4px;
+		  left: 0;
+		  border-radius: 50%;
+		  opacity: 0.7;
+		  transition: all 0.5s ease;
+		  transition-delay: 0.1s;
+		  will-change: opacity, transform;
+		}
+		.demo__top-bullet--1 {
+		  left: 64.35px;
+		  transform: translate3d(82.5px, 0, 0);
+		  opacity: 0.2;
+		}
+		.demo__top-bullet--2 {
+		  left: 105.6px;
+		  transform: translate3d(41.25px, 0, 0);
+		  opacity: 0.4;
+		}
+		.demo__top-bullet--3 {
+		  background-color: transparent;
+		  width: 9.9px;
+		  height: 9.9px;
+		  border: 2px solid white;
+		  top: 23.1px;
+		  left: 143.55px;
+		  box-shadow: 0 0 13.2px white;
+		}
+		.demo__top-bullet--4 {
+		  left: 188.1px;
+		  transform: translate3d(-41.25px, 0, 0);
+		  opacity: 0.4;
+		}
+		.demo__top-bullet--5 {
+		  left: 229.35px;
+		  transform: translate3d(-82.5px, 0, 0);
+		  opacity: 0.2;
+		}
+		.demo__top-bullet--hidden {
+		  opacity: 0;
+		}
+		.demo__top-bullet--spread {
+		  transform: none;
+		}
+		.demo__month {
+		  width: 100%;
+		  height: 33px;
+		  position: absolute;
+		  top: 41.25px;
+		  text-align: center;
+		  color: white;
+		  font-size: 11.55px;
+		  font-weight: 300;
+		  font-family: Muli, sans-serif;
+		  opacity: 0;
+		  transform: translate3d(0, -24.75px, 0);
+		  transition: all 0.25s ease-out;
+		  transition-delay: 0.3s;
+		  will-change: transform, opacity;
+		}
+		.demo__month--visible {
+		  opacity: 1;
+		  transform: none;
+		}
+		.demo__money {
+		  width: 100%;
+		  height: 42.9px;
+		  font-size: 42.9px;
+		  position: absolute;
+		  display: flex;
+		  color: white;
+		  font-family: Muli, sans-serif;
+		  font-weight: 300;
+		  top: 115.5px;
+		  justify-content: center;
+		  align-items: flex-start;
+		  transform: translate3d(0, -49.5px, 0);
+		  opacity: 0;
+		  transition: all 0.3s ease;
+		  transition-delay: 0.3s;
+		  will-change: transform, opacity;
+		  overflow: hidden;
+		}
+		.demo__money--visible {
+		  transform: none;
+		  opacity: 1;
+		}
+		.demo__money-particles {
+		  position: absolute;
+		  width: 3.3px;
+		  height: 3.3px;
+		  left: 146.85px;
+		  top: 165px;
+		  opacity: 0;
+		}
+		.demo__money-particles--visible {
+		  opacity: 1;
+		}
+		.demo__money-particle {
+		  width: 2.475px;
+		  height: 2.475px;
+		  border-radius: 50%;
+		  background-color: white;
+		  opacity: 1;
+		  transition: all 1.5s ease;
+		  position: absolute;
+		  will-change: transform;
+		}
+		@media (max-width: 400px) {
+		  .demo__money-particle {
+		    display: none;
+		  }
+		}
+		.demo__money-particle:nth-child(1) {
+		  left: -77.55px;
+		  background-color: #8742cc;
+		}
+		.demo__money-particle--exploded:nth-child(1) {
+		  transform: translate3d(13.2px, 31.35px, 0);
+		  opacity: 0;
+		}
+		.demo__money-particle:nth-child(2) {
+		  left: -11.55px;
+		  background-color: #8742cc;
+		}
+		.demo__money-particle--exploded:nth-child(2) {
+		  transform: translate3d(39.6px, 33px, 0);
+		  opacity: 0;
+		}
+		.demo__money-particle:nth-child(3) {
+		  left: -28.05px;
+		  background-color: #a94a8c;
+		}
+		.demo__money-particle--exploded:nth-child(3) {
+		  transform: translate3d(-82.5px, 18.15px, 0);
+		  opacity: 0;
+		}
+		.demo__money-particle:nth-child(4) {
+		  left: 57.75px;
+		  background-color: #8742cc;
+		}
+		.demo__money-particle--exploded:nth-child(4) {
+		  transform: translate3d(-49.5px, 37.95px, 0);
+		  opacity: 0;
+		}
+		.demo__money-particle:nth-child(5) {
+		  left: -23.1px;
+		  background-color: #a94a8c;
+		}
+		.demo__money-particle--exploded:nth-child(5) {
+		  transform: translate3d(-21.45px, 33px, 0);
+		  opacity: 0;
+		}
+		.demo__money-particle:nth-child(6) {
+		  left: 3.3px;
+		  background-color: #a94a8c;
+		}
+		.demo__money-particle--exploded:nth-child(6) {
+		  transform: translate3d(-36.3px, 41.25px, 0);
+		  opacity: 0;
+		}
+		.demo__money-particle:nth-child(7) {
+		  left: 37.95px;
+		  background-color: #a94a8c;
+		}
+		.demo__money-particle--exploded:nth-child(7) {
+		  transform: translate3d(79.2px, 47.85px, 0);
+		  opacity: 0;
+		}
+		.demo__money-particle:nth-child(8) {
+		  left: 70.95px;
+		  background-color: #8742cc;
+		}
+		.demo__money-particle--exploded:nth-child(8) {
+		  transform: translate3d(33px, 14.85px, 0);
+		  opacity: 0;
+		}
+		.demo__money-particle:nth-child(9) {
+		  left: -6.6px;
+		  background-color: #a94a8c;
+		}
+		.demo__money-particle--exploded:nth-child(9) {
+		  transform: translate3d(16.5px, 47.85px, 0);
+		  opacity: 0;
+		}
+		.demo__money-particle:nth-child(10) {
+		  left: -19.8px;
+		  background-color: #8742cc;
+		}
+		.demo__money-particle--exploded:nth-child(10) {
+		  transform: translate3d(21.45px, 33px, 0);
+		  opacity: 0;
+		}
+		.demo__money-particle:nth-child(11) {
+		  left: 66px;
+		  background-color: #a94a8c;
+		}
+		.demo__money-particle--exploded:nth-child(11) {
+		  transform: translate3d(90.75px, 24.75px, 0);
+		  opacity: 0;
+		}
+		.demo__money-particle:nth-child(12) {
+		  left: 34.65px;
+		  background-color: #a94a8c;
+		}
+		.demo__money-particle--exploded:nth-child(12) {
+		  transform: translate3d(-74.25px, 49.5px, 0);
+		  opacity: 0;
+		}
+		.demo__money-particle:nth-child(13) {
+		  left: -3.3px;
+		  background-color: #8742cc;
+		}
+		.demo__money-particle--exploded:nth-child(13) {
+		  transform: translate3d(-1.65px, 19.8px, 0);
+		  opacity: 0;
+		}
+		.demo__money-particle:nth-child(14) {
+		  left: 79.2px;
+		  background-color: #8742cc;
+		}
+		.demo__money-particle--exploded:nth-child(14) {
+		  transform: translate3d(70.95px, 39.6px, 0);
+		  opacity: 0;
+		}
+		.demo__money-particle:nth-child(15) {
+		  left: 77.55px;
+		  background-color: #8742cc;
+		}
+		.demo__money-particle--exploded:nth-child(15) {
+		  transform: translate3d(-37.95px, 23.1px, 0);
+		  opacity: 0;
+		}
+		.demo__money-particle:nth-child(16) {
+		  left: -44.55px;
+		  background-color: #8742cc;
+		}
+		.demo__money-particle--exploded:nth-child(16) {
+		  transform: translate3d(-67.65px, 31.35px, 0);
+		  opacity: 0;
+		}
+		.demo__money-particle:nth-child(17) {
+		  left: -67.65px;
+		  background-color: #a94a8c;
+		}
+		.demo__money-particle--exploded:nth-child(17) {
+		  transform: translate3d(24.75px, 21.45px, 0);
+		  opacity: 0;
+		}
+		.demo__money-particle:nth-child(18) {
+		  left: 77.55px;
+		  background-color: #8742cc;
+		}
+		.demo__money-particle--exploded:nth-child(18) {
+		  transform: translate3d(72.6px, 31.35px, 0);
+		  opacity: 0;
+		}
+		.demo__money-particle:nth-child(19) {
+		  left: -61.05px;
+		  background-color: #8742cc;
+		}
+		.demo__money-particle--exploded:nth-child(19) {
+		  transform: translate3d(24.75px, 56.1px, 0);
+		  opacity: 0;
+		}
+		.demo__money-particle:nth-child(20) {
+		  left: 46.2px;
+		  background-color: #8742cc;
+		}
+		.demo__money-particle--exploded:nth-child(20) {
+		  transform: translate3d(41.25px, 8.25px, 0);
+		  opacity: 0;
+		}
+		.demo__money-particle:nth-child(21) {
+		  left: -74.25px;
+		  background-color: #a94a8c;
+		}
+		.demo__money-particle--exploded:nth-child(21) {
+		  transform: translate3d(-62.7px, 29.7px, 0);
+		  opacity: 0;
+		}
+		.demo__money-particle:nth-child(22) {
+		  left: 0px;
+		  background-color: #a94a8c;
+		}
+		.demo__money-particle--exploded:nth-child(22) {
+		  transform: translate3d(77.55px, 46.2px, 0);
+		  opacity: 0;
+		}
+		.demo__money-particle:nth-child(23) {
+		  left: -26.4px;
+		  background-color: #a94a8c;
+		}
+		.demo__money-particle--exploded:nth-child(23) {
+		  transform: translate3d(-56.1px, 46.2px, 0);
+		  opacity: 0;
+		}
+		.demo__money-particle:nth-child(24) {
+		  left: 77.55px;
+		  background-color: #a94a8c;
+		}
+		.demo__money-particle--exploded:nth-child(24) {
+		  transform: translate3d(-54.45px, 29.7px, 0);
+		  opacity: 0;
+		}
+		.demo__money-particle:nth-child(25) {
+		  left: 47.85px;
+		  background-color: #8742cc;
+		}
+		.demo__money-particle--exploded:nth-child(25) {
+		  transform: translate3d(-44.55px, 4.95px, 0);
+		  opacity: 0;
+		}
+		.demo__money-particle:nth-child(26) {
+		  left: 77.55px;
+		  background-color: #8742cc;
+		}
+		.demo__money-particle--exploded:nth-child(26) {
+		  transform: translate3d(9.9px, 36.3px, 0);
+		  opacity: 0;
+		}
+		.demo__money-particle:nth-child(27) {
+		  left: 59.4px;
+		  background-color: #a94a8c;
+		}
+		.demo__money-particle--exploded:nth-child(27) {
+		  transform: translate3d(-1.65px, 28.05px, 0);
+		  opacity: 0;
+		}
+		.demo__money-particle:nth-child(28) {
+		  left: 37.95px;
+		  background-color: #8742cc;
+		}
+		.demo__money-particle--exploded:nth-child(28) {
+		  transform: translate3d(37.95px, 4.95px, 0);
+		  opacity: 0;
+		}
+		.demo__money-particle:nth-child(29) {
+		  left: 62.7px;
+		  background-color: #a94a8c;
+		}
+		.demo__money-particle--exploded:nth-child(29) {
+		  transform: translate3d(-36.3px, 24.75px, 0);
+		  opacity: 0;
+		}
+		.demo__money-particle:nth-child(30) {
+		  left: -24.75px;
+		  background-color: #8742cc;
+		}
+		.demo__money-particle--exploded:nth-child(30) {
+		  transform: translate3d(16.5px, 16.5px, 0);
+		  opacity: 0;
+		}
+		.demo__money-currency {
+		  display: flex;
+		  align-items: center;
+		  width: 28.05px;
+		  line-height: 42.9px;
+		}
+		.demo__money-digit {
+		  width: 24.75px;
+		  display: flex;
+		  line-height: 42.9px;
+		  will-change: transform;
+		  justify-content: center;
+		  align-items: center;
+		}
+		.demo__money-digit:nth-child(3) {
+		  margin-right: 8.25px;
+		}
+		.demo__money-digit:nth-child(2) {
+		  transition: transform 0.4s ease;
+		  transition-delay: 0.3s;
+		  transform: translate3d(0, -343.2px, 0);
+		}
+		.demo__money-digit--visible:nth-child(2) {
+		  transform: none;
+		}
+		.demo__money-digit:nth-child(3) {
+		  transition: transform 0.5s ease;
+		  transition-delay: 0.3s;
+		  transform: translate3d(0, -343.2px, 0);
+		}
+		.demo__money-digit--visible:nth-child(3) {
+		  transform: none;
+		}
+		.demo__money-digit:nth-child(4) {
+		  transition: transform 0.6s ease;
+		  transition-delay: 0.3s;
+		  transform: translate3d(0, -343.2px, 0);
+		}
+		.demo__money-digit--visible:nth-child(4) {
+		  transform: none;
+		}
+		.demo__money-digit:nth-child(5) {
+		  transition: transform 0.7s ease;
+		  transition-delay: 0.3s;
+		  transform: translate3d(0, -343.2px, 0);
+		}
+		.demo__money-digit--visible:nth-child(5) {
+		  transform: none;
+		}
+		.demo__money-digit:nth-child(6) {
+		  transition: transform 0.8s ease;
+		  transition-delay: 0.3s;
+		  transform: translate3d(0, -343.2px, 0);
+		}
+		.demo__money-digit--visible:nth-child(6) {
+		  transform: none;
+		}
+		.demo__under-curve {
+		  fill: url(#linear);
+		  opacity: 0;
+		  transition: opacity 0.4s linear;
+		  transition-delay: 0.6s;
+		  will-change: opacity;
+		}
+		.demo__under-curve--visible {
+		  opacity: 0.8;
+		}
+		.demo__touch-id {
+		  position: absolute;
+		  font-family: Muli, sans-serif;
+		  font-size: 16.5px;
+		  top: 148.5px;
+		  color: white;
+		  width: 100%;
+		  text-align: center;
+		  transition: all 0.25s ease;
+		  will-change: transform, opacity;
+		}
+		.demo__touch-id--hidden {
+		  opacity: 0;
+		  transition: translate3d(0, -33px, 0);
+		}
+		.demo__tip {
+		  position: absolute;
+		  top: 173.25px;
+		  font-family: Muli, sans-serif;
+		  font-size: 9.9px;
+		  color: rgba(255, 255, 255, 0.6);
+		  text-align: center;
+		  width: 100%;
+		  transition: opacity 0.3s ease;
+		}
+		.demo__tip--hidden {
+		  opacity: 0;
+		}
+		.demo__dates {
+		  position: absolute;
+		  bottom: 8.25px;
+		  width: 100%;
+		  display: flex;
+		  justify-content: center;
+		  transform: translate3d(0, 33px, 0);
+		  opacity: 0;
+		  transition: all 0.3s ease;
+		  will-change: transform, opacity;
+		}
+		.demo__dates--visible {
+		  opacity: 1;
+		  transform: none;
+		}
+		.demo__member {
+		  position: absolute;
+		  width: 100%;
+		  bottom: 16.5px;
+		  text-align: center;
+		  color: white;
+		  font-family: Muli, sans-serif;
+		  font-size: 11.55px;
+		  transition: all 0.3s ease;
+		  will-change: transform, opacity;
+		}
+		.demo__member--hidden {
+		  transform: translate3d(0, 33px, 0);
+		  opacity: 0;
+		}
+		.demo__date {
+		  border-radius: 50%;
+		  height: 29.7px;
+		  width: 29.7px;
+		  color: white;
+		  font-size: 11.55px;
+		  font-family: Muli, sans-serif;
+		  margin: 0 3.3px;
+		  transition: all 0.3s ease;
+		  display: flex;
+		  align-items: center;
+		  justify-content: center;
+		}
+		.demo__date:nth-child(4) {
+		  border: 2px solid #ECC8DD;
+		}
+		.demo__buttons {
+		  position: absolute;
+		  width: 99px;
+		  height: 90.75px;
+		  display: flex;
+		  flex-wrap: wrap;
+		  align-items: center;
+		  justify-content: space-between;
+		  flex-direction: column;
+		  transform: translateY(-33px);
+		  pointer-events: none;
+		}
+		.demo__restart-button {
+		  transform: translate3d(0, -165px, 0);
+		}
+		.demo__codepen {
+		  transform: translate3d(-165px, 0, 0);
+		}
+		.demo__codepen a {
+		  color: black;
+		}
+		.demo__twitter {
+		  transform: translate3d(165px, 0, 0);
+		}
+		.demo__twitter a {
+		  color: #1DA1F2;
+		}
+		.demo__original {
+		  transform: translate3d(0, 165px, 0);
+		}
+		.demo__original a {
+		  color: #ea4c89;
+		}
+		.demo__button {
+		  width: 41.25px;
+		  height: 41.25px;
+		  flex-shrink: 0;
+		  background-color: rgba(255, 255, 255, 0.7);
+		  display: flex;
+		  align-items: center;
+		  justify-content: center;
+		  border-radius: 50%;
+		  opacity: 0;
+		  will-change: opacity, transform;
+		  transition: all 0.4s ease;
+		  pointer-events: none;
+		  font-size: 24.75px;
+		  line-height: 41.25px;
+		}
+		.demo__button--visible {
+		  transform: none;
+		  opacity: 1;
+		  pointer-events: auto;
+		  cursor: pointer;
+		}
+		.demo__button--visible:hover {
+		  background-color: white;
+		  box-shadow: 0 0 8.25px white;
+		}
+		.demo__restart-icon {
+		  flex-shrink: 0;
+		  width: 24.75px;
+		  height: 24.75px;
+		  fill: #372546;
+		}
+
+		.no-animation {
+		  opacity: 0;
+		  transition: none !important;
+		}
+
+	</style>
+
+	<div class="demo">
+	  <div class="demo__screen demo__screen--clickable">
+
+	    <div class="demo__touch-id">Login with Touch ID</div>
+	    <div class="demo__tip">(Touch / click the fingerprint)</div>
+	    <div class="demo__logo-particles">
+	      <div class="demo__logo-particle"></div>
+	      <div class="demo__logo-particle"></div>
+	      <div class="demo__logo-particle"></div>
+	      <div class="demo__logo-particle"></div>
+	      <div class="demo__logo-particle"></div>
+	      <div class="demo__logo-particle"></div>
+	      <div class="demo__logo-particle"></div>
+	      <div class="demo__logo-particle"></div>
+	      <div class="demo__logo-particle"></div>
+	      <div class="demo__logo-particle"></div>
+	      <div class="demo__logo-particle"></div>
+	      <div class="demo__logo-particle"></div>
+	      <div class="demo__logo-particle"></div>
+	      <div class="demo__logo-particle"></div>
+	      <div class="demo__logo-particle"></div>
+	    </div>
+	    <div class="demo__logo">
+	      <div class="demo__logo-pic">
+	        <img src="img/logo.png" style="width:25px">
+	      </div>
+	      <div class="demo__logo-name">Ushulfiqih</div>
+	    </div>
+
+
+	    <svg onclick="location.href='index.html'" class="demo__fprint" viewBox="0 0 180 320">
+
+	      <path class="demo__fprint-path demo__fprint-path--removes-backwards demo__fprint-path--pinkish" d="M46.1,214.3c0,0-4.7-15.6,4.1-33.3"/>
+	      <path class="demo__fprint-path demo__fprint-path--removes-backwards demo__fprint-path--purplish" d="M53.5,176.8c0,0,18.2-30.3,57.5-13.7"/>
+	      <path class="demo__fprint-path demo__fprint-path--removes-forwards demo__fprint-path--pinkish" d="M115.8,166.5c0,0,19.1,8.7,19.6,38.4"/>
+	      <path class="demo__fprint-path demo__fprint-path--removes-backwards demo__fprint-path--pinkish" d="M47.3,221c0,0,3.1-2.1,4.1-4.6s-5.7-20.2,7-36.7c8.5-11,22.2-19,37.9-15.3"/>
+	      <path class="demo__fprint-path demo__fprint-path--removes-forwards demo__fprint-path--pinkish" d="M102.2,165.4c10.2,2.7,19.5,10.4,23.5,20.2c6.2,15.2,4.9,27.1,4.1,39.4"/>
+	      <path class="demo__fprint-path demo__fprint-path--removes-backwards demo__fprint-path--purplish" d="M51.1,226.5c3.3-2.7,5.1-6.3,5.7-10.5c0.5-4-0.3-7.7-0.3-11.7"/>
+	      <path class="demo__fprint-path demo__fprint-path--removes-backwards demo__fprint-path--purplish" d="M56.3,197.9c3.1-16.8,17.6-29.9,35.1-28.8c17.7,1.1,30.9,14.9,32.8,32.2"/>
+	      <path class="demo__fprint-path demo__fprint-path--removes-forwards demo__fprint-path--purplish" d="M124.2,207.9c0.5,9.3,0.5,18.7-2.1,27.7"/>
+	      <path class="demo__fprint-path demo__fprint-path--removes-backwards demo__fprint-path--pinkish" d="M54.2,231.1c2.1-2.6,4.6-5.1,6.3-8c4.2-6.8,0.9-14.8,1.5-22.3c0.5-7.1,3.4-16.3,10.4-19.7"/>
+	      <path class="demo__fprint-path demo__fprint-path--removes-backwards demo__fprint-path--purplish" d="M77.9,178.2c9.3-5.1,22.9-4.7,30.5,3.3"/>
+	      <path class="demo__fprint-path demo__fprint-path--removes-forwards demo__fprint-path--purplish" d="M113,186.5c0,0,13.6,18.9,1,54.8"/>
+	      <path class="demo__fprint-path demo__fprint-path--removes-backwards demo__fprint-path--pinkish" d="M57.3,235.2c0,0,5.7-3.8,9-12.3"/>
+	      <path class="demo__fprint-path demo__fprint-path--removes-forwards demo__fprint-path--pinkish" d="M111.7,231.5c0,0-4.1,11.5-5.7,13.6"/>
+	      <path class="demo__fprint-path demo__fprint-path--removes-backwards demo__fprint-path--purplish" d="M61.8,239.4c9.3-8.4,12.7-19.7,11.8-31.9c-0.9-12.7,3.8-20.6,18.5-21.2"/>
+	      <path class="demo__fprint-path demo__fprint-path--removes-forwards demo__fprint-path--pinkish" d="M97.3,188.1c8.4,2.7,11,13,11.3,20.8c0.4,11.8-2.5,23.7-7.9,34.1c-0.1,0.1-0.1,0.2-0.2,0.3
+	        c-0.4,0.8-0.8,1.5-1.2,2.3c-0.5,0.8-1,1.7-1.5,2.5"/>
+	      <path class="demo__fprint-path demo__fprint-path--removes-backwards demo__fprint-path--purplish" d="M66.2,242.5c0,0,15.3-11.1,13.6-34.9"/>
+	      <path class="demo__fprint-path demo__fprint-path--removes-backwards demo__fprint-path--pinkish" d="M78.7,202.5c1.5-4.6,3.8-9.4,8.9-10.6c13.5-3.2,15.7,13.3,14.6,22.1"/>
+	      <path class="demo__fprint-path demo__fprint-path--removes-forwards demo__fprint-path--pinkish" d="M102.2,219.7c0,0-1.7,15.6-10.5,28.4"/>
+	      <path class="demo__fprint-path demo__fprint-path--removes-backwards demo__fprint-path--pinkish" d="M72,244.9c0,0,8.8-9.9,9.9-15.7"/>
+	      <path class="demo__fprint-path demo__fprint-path--removes-forwards demo__fprint-path--pinkish" d="M84.5,223c0.3-2.6,0.5-5.2,0.7-7.8c0.1-2.1,0.2-4.6-0.1-6.8c-0.3-2.2-1.1-4.3-0.9-6.5c0.5-4.4,7.2-6.9,10.1-3.1
+	        c1.7,2.2,1.7,5.3,1.9,7.9c0.4,3.8,0.3,7.6,0,11.4c-1,10.8-5.4,21-11.5,29.9"/>
+	      <path class="demo__fprint-path demo__fprint-path--removes-forwards demo__fprint-path--purplish" d="M90,201.2c0,0,4.6,28.1-11.4,45.2"/>
+	      <line id='demo__straight-path' x1="0" y1="151.3" x2="180" y2="151.3"/>
+	      <path class="demo__hidden-path" id='demo__arc-to-top' d="M0,148.4c62.3-13.5,122.3-13.5,180,0"/>
+	      <path class="demo__hidden-path" id='demo__curve' d="M0,140.2c13.1-10.5,34.7-17,48.5-4.1c5.5,5.2,7.6,12.1,9.2,19.2c2.4,10.5,4.3,21,7.2,31.4c2.4,8.6,4.3,19.6,10.4,26.7c4.3,5,17.7,13.4,23.1,4.8c5.9-9.4,6.8-22.5,9.7-33c4.9-17.8,13-14.6,15.7-14.6c1.8,0,9,2.3,15.4,5.4c6.2,3,11.9,7.7,17.9,11.2c7,4.1,16.5,9.2,22.8,6.6"/>
+	      <path class="demo__ending-path demo__ending-path--pinkish"d="M48.4,220c-5.8,4.2-6.9,11.5-7.6,18.1c-0.8,6.7-0.9,14.9-9.9,12.4c-9.1-2.5-14.7-5.4-19.9-13.4c-3.4-5.2-0.4-12.3,2.3-17.2c3.2-5.9,6.8-13,14.5-11.6c3.5,0.6,7.7,3.4,4.5,7.1"/>
+	      <path class="demo__ending-path demo__ending-path--pinkish"d="M57.3,235.2c-14.4,9.4-10.3,19.4-17.8,21.1c-5.5,1.3-8.4-7.8-13.8-4.2c-2.6,1.7-5.7,7.7-4.6,10.9c0.7,2,4.1,2,5.8,2.4c3,0.7,8.4,3,7.6,7.2c-0.6,3-5,5.3-2.4,8.7c1.8,2.2,4.7,1.1,6.9,0.3c11.7-4.3,14.5,0.8,16.5,0.9"/>
+	      <path class="demo__ending-path demo__ending-path--purplish"d="M79,246c-1.8,2.4-4.9,2.9-7.6,3.2c-2.7,0.3-5.8-0.8-7.7,1.6c-2.9,3.3,0.7,8.2-1.2,12c-1.5,2.8-4.5,2.4-6.9,1.3c-10.1-4.7-33.2-17.5-38.1-2.5c-1.1,3.4-1.9,7.5-1.3,11c0.6,4,5.6,7.9,7.7,2.3c0.8-2.1,3.1-8.6-1-8.9"/>
+	      <path class="demo__ending-path demo__ending-path--pinkish"d="M91.8,248c0,0-3.9,6.4-6.2,9.2c-3.8,4.5-7.9,8.9-11.2,13.8c-1.9,2.8-4.4,6.4-3.7,10c0.9,5.2,4.7,12.5,9.7,14.7c5.2,2.2,15.9-4.7,13.1-10.8c-1.4-3-6.3-7.9-10-7.2c-1,0.2-1.8,1-2,2"/>
+	      <path class="demo__ending-path demo__ending-path--purplish"d="M114.8,239.4c-2.7,6.1-8.3,12.8-7.8,19.8c0.3,4.6,3.8,7.4,7.8,9.1c8.9,3.8,19.7,0.4,28.6-1.3c8.8-1.7,19.7-3.2,23.7,6.7c2.8,6.8,6.1,14.7,4.4,22.2"/>
+	      <path class="demo__ending-path demo__ending-path--pinkish"d="M129.9,224.2c-0.4,7.5-3.1,18,0.7,25c2.8,5.1,14.3,6.3,19.5,7.4c3.7,0.7,8.7,2.2,12-0.5c6.7-5.4,11.1-13.7,14.1-21.6c3.1-8-4.4-12.8-11.1-14.5c-5-1.3-19.1-0.7-21-6.7c-0.9-2.8,1.8-5.9,3.4-7.9"/>
+	      <path class="demo__under-curve" d="M0,140.2c13.1-10.5,34.7-17,48.5-4.1c5.5,5.2,7.6,12.1,9.2,19.2c2.4,10.5,4.3,21,7.2,31.4c2.4,8.6,4.3,19.6,10.4,26.7c4.3,5,17.7,13.4,23.1,4.8c5.9-9.4,6.8-22.5,9.7-33c4.9-17.8,13-14.6,15.7-14.6c1.8,0,9,2.3,15.4,5.4c6.2,3,11.9,7.7,17.9,11.2c7,4.1,16.5,9.2,23.8,6.6l0,125.5l-181,0l0,-179.8"/>
+	    </svg>
+	    <div class="demo__member">Official App Ushulfiqih.com</div>
+
+	  </div>
+
+	</div>
+
+	<script src='dist/welcome/TweenMax.min.js'></script>
+	<script src='dist/welcome/jquery.min.js'></script>
+	<script src='dist/welcome/MorphSVGPlugin.min.js'></script>
+	<script src="dist/welcome/script.js"></script>
 
 </div>
 </template>
