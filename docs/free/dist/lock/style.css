@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css?family=Ubuntu");
+#sky {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 50%;
+  width: 100%;
+  background: linear-gradient(20deg, #f98b60, #ec5f5a);
+}
+
+#sea {
+  z-index: 10;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 50%;
+  width: 100%;
+  background: #ec5f5a;
+  /*linear-gradient(20deg, #DA8D6C, #CE6C3B );*/
+}
+
+#sunHalo:before {
+  animation: slowPulse 4s linear;
+  animation-delay: -1.5s;
+  content: "";
+  border-radius: 50%;
+  background: linear-gradient(20deg, #f99161, #f4815f);
+  opacity: 0.9;
+  position: absolute;
+  width: 30vmax;
+  height: 30vmax;
+  left: -10vmax;
+  top: -10vmax;
+}
+
+#sunHalo:after {
+  animation: slowPulse 4s linear;
+  content: "";
+  border-radius: 50%;
+  background: linear-gradient(30deg, #f89362, #f58c60);
+  opacity: 0.9;
+  position: absolute;
+  width: 20vmax;
+  height: 20vmax;
+  left: -5vmax;
+  top: -5vmax;
+}
+
+#sunHalo {
+  z-index: 4;
+  border-radius: 50%;
+  position: absolute;
+  width: 10vmax;
+  height: 10vmax;
+  left: 80%;
+  top: calc(50% - 8vmax);
+}
+
+#sun {
+  z-index: 5;
+  border-radius: 50%;
+  background: #fbcf6f;
+  position: absolute;
+  width: 10vmax;
+  height: 10vmax;
+  left: 80%;
+  top: calc(50% - 8vmax);
+}
+
+@keyframes pulse {
+  40% {
+    background: #fa8a68;
+  }
+  50% {
+    background: #faa88f;
+  }
+  60% {
+    background: #fa8a68;
+  }
+  80% {
+    background: #fa8a68;
+  }
+  90% {
+    background: #faa88f;
+  }
+  100% {
+    background: #fa8a68;
+  }
+}
+
+@keyframes slowPulse {
+  20% {
+    opacity: 0.9;
+  }
+  60% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0.9;
+  }
+}
+
+@keyframes slowMove {
+  0% {
+    transform: translateX(-10%);
+  }
+  50% {
+    transform: translateX(10%);
+  }
+  100% {
+    transform: translateX(-10%);
+  }
+}
+
+@keyframes AppearSize {
+  70% {
+    opacity: 0;
+  }
+  85% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 0;
+  }
+}
+
+#sunRefl,
+#sunRefl2 {
+  z-index: 11;
+  position: absolute;
+  left: 80%;
+  top: 50%;
+}
+
+#sunRefl p,
+#sunRefl2 p {
+  animation: slowMove 10s infinite linear;
+  margin: -0px 0;
+  padding: 0;
+  width: 10vmax;
+  position: relative;
+  line-height: 1vmax;
+  height: 1vmax;
+}
+
+#sunRefl p span {
+  transform: translateX(-50%);
+  height: 1vmax;
+  left: 50%;
+  display: inline-block;
+  background: #fa8a68;
+  position: absolute;
+  border-radius: 0.5vmax;
+  transition: all 0.1s;
+}
+
+#sunRefl p span:nth-child(1) {
+  animation: pulse 8s infinite;
+  width: 10vmax;
+}
+
+#sunRefl p span:nth-child(2) {
+  animation: AppearSize 5s infinite;
+  width: 1.5vmax;
+  opacity: 0;
+}
+
+#sunRefl p span:nth-child(3) {
+  animation: AppearSize 5s infinite;
+  width: 1.5vmax;
+  opacity: 0;
+}
+
+#hour {
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  top: 10%;
+}
+
+#hour * {
+  z-index: 100;
+  text-align: center;
+  color: white;
+  font-family: "Ubuntu", Verdana, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+#hour h1 {
+  font-size: 14vh;
+}
+
+#hour h2 {
+  font-size: 6vh;
+  font-weight: 300;
+}
