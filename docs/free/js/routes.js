@@ -72,22 +72,26 @@ componentUrl: './pages/hijri.html',
    path: '/about/',
    componentUrl: './pages/about.html',
  },
- {
-    path: '/welcome/',
-    componentUrl: './pages/welcome.html',
-  },
 {
-   path: '/tab-kaidah/',
-   componentUrl: './pages/tab-kaidah.html',
- },
- {
-    path: '/dialog/',
-    componentUrl: './pages/dialog.html',
-  },
- {
-    path: '/linimasa/',
-    componentUrl: './teks/linimasa.html',
-  },
+  path: '/welcome/',
+  componentUrl: './pages/welcome.html',
+},
+{
+  path: '/lock/',
+  componentUrl: './pages/lock.html',
+},
+{
+  path: '/tab-kaidah/',
+  componentUrl: './pages/tab-kaidah.html',
+},
+{
+  path: '/dialog/',
+  componentUrl: './pages/dialog.html',
+},
+{
+  path: '/linimasa/',
+  componentUrl: './teks/linimasa.html',
+},
 {
   path: '/pengertian-ijtihad/',
   componentUrl: './teks/pengertian-ijtihad.html',

@@ -1,5 +1,6 @@
 <template>
 <div class="page no-toolbar">
+<div class="page-content">
 
 	<style>
 		#sky {
@@ -42,34 +43,37 @@
 		  transform: translateX(-50%);
 		  left: 50%;
 		  top: 40%;
+			color:#ffffff
 		}
-
+		#kaidah h2 {
+		  font-size: 2vh;
+		  font-weight: 200;
+			margin-top:30px;
+		}
 	  #lock {
 	    position: absolute;
 		  transform: translateX(-50%);
 		  left: 50%;
 		  bottom: 10%;
 	  }
+		#lock h2 {
+			font-size: 1.8vh;
+			font-weight: 200;
+			margin-top:10px;
+		}
 	</style>
 
 	<div id="sky"></div>
 	<div id="hour"><h1>Time</h1><h2>Date</h2></div>
 
-  <div id="kaidah">
+		<div id="kaidah" class="form-store-data" id="demo-form">
+				<input style="pointer-events: none;padding-left:10px;" name="name" type="text" placeholder="Pembelajar Ushul Fiqih">
+				<h2>ddd</h2>
+		</div>
 
-			<blockquote>
-				<p id="quotation"></p>
-				<footer>
-					<p style="color:#ffffff" id="source"></p>
-					<p id="contoh"></p>
-				</footer>
-			</blockquote>
-			<quotebutton><i class="icon f7-icons" style="font-size: 14px;">arrow_2_circlepath</i>&nbsp;&nbsp;Refresh</quotebutton>
-
+	<div id="lock"><a href="index.html" class="link external"><i class="icon f7-icons color-white status-icon">lock</i></a>
+  <h2>&nbsp;Terkunci</h2>
 	</div>
-
-
-	<div id="lock"><a href="index.html" class="link external"><i class="icon f7-icons color-white status-icon">lock</i></a></div>
 
 	<script type="text/javascript">
 	var rows = document.querySelectorAll(".ref p span");
@@ -98,6 +102,6 @@
 
 	</script>
 
-
+</div>
 </div>
 </template>
