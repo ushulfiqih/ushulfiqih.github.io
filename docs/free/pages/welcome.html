@@ -37,6 +37,13 @@
 		  font-weight: 100;
 		}
 
+		#kaidah * {
+			position: absolute;
+		  transform: translateX(-50%);
+		  left: 50%;
+		  top: 40%;
+		}
+
 	  #lock {
 	    position: absolute;
 		  transform: translateX(-50%);
@@ -48,7 +55,21 @@
 	<div id="sky"></div>
 	<div id="hour"><h1>Time</h1><h2>Date</h2></div>
 
-	<div id="lock"><a href="/" class="link external"><i class="icon f7-icons color-white status-icon">lock</i></a></div>
+  <div id="kaidah">
+
+			<blockquote>
+				<p id="quotation"></p>
+				<footer>
+					<p style="color:#ffffff" id="source"></p>
+					<p id="contoh"></p>
+				</footer>
+			</blockquote>
+			<quotebutton><i class="icon f7-icons" style="font-size: 14px;">arrow_2_circlepath</i>&nbsp;&nbsp;Refresh</quotebutton>
+
+	</div>
+
+
+	<div id="lock"><a href="index.html" class="link external"><i class="icon f7-icons color-white status-icon">lock</i></a></div>
 
 	<script type="text/javascript">
 	var rows = document.querySelectorAll(".ref p span");
@@ -76,6 +97,7 @@
 	updateTimeDate();
 
 	</script>
+
 
 </div>
 </template>
