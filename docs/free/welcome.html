@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="css/horizontal.css">
   <link rel="stylesheet" href="css/custom.css">
   <link rel="stylesheet" href="css/kaidahfiqih.css">
+  <link rel="stylesheet" href="dist/welcome/style.css">
 
 </head>
 <body class="theme-dark">
@@ -29,28 +30,10 @@
 
       <div class="page">
 
-        <div class="page-content">
-          <div class="tabs-swipeable-wrap">
-
-            <div class="tabs">
-              <div id="tab-1" class="page-content tab tab-active">
-                <div class="block" style="margin-top: -30px;">
-
-                  <script src='js/jquery.js'></script>
-                  <div id ="ambil">Sepertinya kamu tidak terhubung internet?</div>
-                  <script>
-                  $(document).ready(function(){
-                     $('#ambil').load("https://raw.githubusercontent.com/rioastamal/quran-text/master/surah/1/1.txt");
-                  });
-                  </script>
-
-
-
-                </div>
-              </div>
+        <div class="page-content hide-navbar-on-scroll">
+            <div style="margin-top:-30px">
+      <iframe src="dist/welcome/index.html" frameborder="0" style="position: absolute; float: left; clear: both; width: 100%; height: 96%; z-index: 0; left no-repeat; "></iframe>
             </div>
-
-          </div>
         </div>
 
       </div>
