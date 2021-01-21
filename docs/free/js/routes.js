@@ -56,6 +56,10 @@ var routes = [
  componentUrl: './pages/quran.html',
 },
 {
+ path: '/hadis/',
+ componentUrl: './pages/hadis.html',
+},
+{
 path: '/hijri/',
 componentUrl: './pages/hijri.html',
 },
