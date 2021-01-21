@@ -70,7 +70,7 @@ componentUrl: './pages/hijri.html',
 // Components
 {
   path: '/akun/',
-  url: './pages/akun.html',
+  componentUrl: './pages/akun.html',
 },
 {
    path: '/about/',
