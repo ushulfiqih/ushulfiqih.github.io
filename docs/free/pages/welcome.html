@@ -36,6 +36,7 @@
 		#hour h2 {
 		  font-size: 2vh;
 		  font-weight: 100;
+			margin-top:-10px;
 		}
 
 		#nama * {
@@ -54,7 +55,7 @@
 			position: absolute;
 		  transform: translateX(-50%);
 		  left: 50%;
-		  top: 40%;
+		  bottom: 10%;
 			color:#ffffff
 		}
 		#pesan h2 {
@@ -68,7 +69,7 @@
 	    position: absolute;
 		  transform: translateX(-50%);
 		  left: 50%;
-		  bottom: 10%;
+		  bottom: 30%;
 	  }
 		#lock h2 {
 			font-size: 1.8vh;
@@ -80,13 +81,21 @@
 	<div id="sky"></div>
 	<div id="hour"><h1>Time</h1><h2>Date</h2></div>
 
-		<div id="pesan" class="form-store-data" id="demo-form">
-				<h2>Selamat belajar di Official App<br/>Ushulfiqih.com</h2>
+		<div id="pesan">
+				<h2>Sedang memuat data dari<br/>Ushulfiqih.com</h2>
 		</div>
 
-	<div id="lock"><a href="index.html" class="link external"><i class="icon f7-icons color-white status-icon">chevron_right</i></a>
-  <h2>MULAI</h2>
+	<div id="lock"><div class="preloader color-multi"></div>
 	</div>
+
+
+	<script type="text/javascript">
+      $(document).ready(function () {
+          setTimeout(function () {
+              window.location = "index.html";
+          }, 5000);
+      });
+  </script>
 
 	<script type="text/javascript">
 	var rows = document.querySelectorAll(".ref p span");
