@@ -19,10 +19,14 @@ e.preventDefault();
 
 var newMessageRef = messagesRef.push();
 newMessageRef.set({
-	name: $('.fullname').val(),
+	nama: $('.fullname').val(),
 	email: $('.email').val(),
-	subject: $('.subject').val(),
-	message: $('.message').val()
+	whatsapp: $('.whatsapp').val(),
+	gender: $('.gender').val(),
+	ulangtahun: $('.ulangtahun').val(),
+	instagram: $('.instagram').val(),
+	bio: $('.bio').val(),
+	password: $('.password').val(),
 });
 
 $('.success-message').show();
