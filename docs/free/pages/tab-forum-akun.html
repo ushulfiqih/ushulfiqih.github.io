@@ -1,62 +1,105 @@
-<div class="page">
-<div class="navbar">
+<template>
+<div class="page no-toolbar">
+
+  <div class="navbar">
     <div class="navbar-bg gelap"></div>
     <div class="navbar-inner sliding">
       <div class="left">
-        <a href="#" class="link back">
+        <a class="link back" data-animate="false">
           <i class="icon icon-back"></i>
           <span class="if-not-md">Back</span>
         </a>
       </div>
-    <div class="title">Forum</div>
-    </div>
-</div>
-
-<div class="toolbar tabbar-labels toolbar-bottom" style="background-color:#121212">
-  <a href="index.html" class="link external"><div style="position: absolute; left: 15px; bottom: 14px; z-index: 9999; line-height: 1em;"><img src="img/logo.png" style="width: 25px;"><div style="position: absolute; left: 35px; bottom: 2px;font-size:8px; z-index: 9999;line-height: 1.4;color:#ffffff;">Principles of Islamic<br/>Jurisprudence</div></div></a>
-<div class="toolbar-inner">
-  <a href="/tab-search/" data-animate="false" class="link"><i class="icon f7-icons">search</i></a>
-  <a href="/tab-forum/" data-animate="false" class="link tab-link-active"><i class="icon f7-icons">bubble_left_bubble_right</i></a>
-  <a class="link popover-open" href="#" data-popover=".popover-links"><i class="icon f7-icons">ellipsis</i></a>
-</div>
-</div>
-
-<div class="popover popover-links" style="width:40%">
-  <div class="popover-inner">
-    <div class="list">
-      <ul>
-        <li><a class="list-button item-link popover-close" href="/tab-kaidah/">Kaidah Fiqih</a></li>
-        <li><a class="list-button item-link popover-close" href="/about/">Tentang</a></li>
-      </ul>
+      <div class="title"></div>
     </div>
   </div>
-</div>
-
+  <!-- Additional "hide-navbar-on-scroll" class to hide navbar on scroll automatically -->
   <div class="page-content">
+      <div class="block">
+        <div class="card gelap">
+          <div class="card-header">Forum</div>
+          <div class="card-content card-content-padding">
+              <div class="list media-list">
+                  <ul>
+                      <li>
+                        <a href="/tab-forum-login/" class="item-link item-content">
+                          <div class="item-inner">
+                            <div class="item-title-row">
+                              <div class="item-title">Login</div>
+                            </div>
+                            <div class="item-subtitle">Login jika anda sudah bergabung</div>
+                            <div class="item-text">Login jika anda memiliki akun atau sudah pernah bergabung sebelumnya</div>
+                          </div>
+                        </a>
+                      </li>
+                  </ul>
+                  <hr style="height:1px;border-width:0;color:#333333;background-color:#333333">
+                  <ul>
+                      <li>
+                        <a href="/tab-forum-login/" class="item-link item-content">
+                          <div class="item-inner">
+                            <div class="item-title-row">
+                              <div class="item-title">Mendaftar</div>
+                            </div>
+                            <div class="item-subtitle">Register jika anda belum bergabung</div>
+                            <div class="item-text">Bersiap untuk bgabung di Forum Komunitas Peminat Studi Ushul Fiqih</div>
+                          </div>
+                        </a>
+                      </li>
+                  </ul>
+                  <hr style="height:1px;border-width:0;color:#333333;background-color:#333333">
+                  <ul>
+                      <li>
+                        <a href="/tab-forum-reset/" class="item-link item-content">
+                          <div class="item-inner">
+                            <div class="item-title-row">
+                              <div class="item-title">Lupa Sandi</div>
+                            </div>
+                            <div class="item-subtitle">Reset kata sandi</div>
+                            <div class="item-text">Setel ulang kata sandi jika anda sudah bergabung dan lupa sandi</div>
+                          </div>
+                        </a>
+                      </li>
+                  </ul>
+              </div>
+            </div>
+            <br/>
+            <div class="card-header">Admin</div>
+            <div class="card-content card-content-padding">
+                <div class="list media-list">
+                    <ul>
+                        <li>
+                          <a href="/tab-forum-login/" class="item-link item-content">
+                            <div class="item-inner">
+                              <div class="item-title-row">
+                                <div class="item-title">Dashboard</div>
+                              </div>
+                              <div class="item-subtitle">Kelola Forum ushul Fiqih</div>
+                              <div class="item-text">Login dengan akun Admin, Moderator, atau Editor Ushul Fiqih anda</div>
+                            </div>
+                          </a>
+                        </li>
+                    </ul>
+                </div>
+              </div>
+              <br/>
+              <div class="card-header">Keluar</div>
+              <div class="card-content card-content-padding">
+                <div class="item-subtitle">Keluar dari Forum Ushul Fiqih</div>
+                <div class="item-text">Sign-out dan anda dapat Login kapan saja.</div>
+                <a href="/tab-forum-out/" data-animate="false" class="item-link item-content">
+                  <div class="chip chip-outline color-red" style="margin-top:20px;">
+                    <div class="chip-label">Keluar</div>
+                  </div>
+                </a>
+              </div>
+          <div class="card-footer">
 
-		<div class="block-title">Main View Navigation</div>
-		<div class="list links-list">
-			<ul>
-				<li>
-					<a href="/tab-forum-login/" class="panel-close">Login</a>
-				</li>
-				<li>
-					<a href="/tab-forum-register/" class="panel-close">Register</a>
-				</li>
-				<li>
-					<a href="/tab-forum-reset/" class="panel-close">Reset</a>
-				</li>
-				<li>
-					<a href="/tab-forum-dashboard/" class="panel-close">Dashboard</a>
-				</li>
-				<li>
-					<a href="/tab-forum-out/" class="panel-close">Out</a>
-				</li>
-			</ul>
-		</div>
-		<div class="block">
-			<p>Lorem ipsum dolor sit amet</p>
-		</div>
+          </div>
+        </div>
 
+      </div>
   </div>
+
 </div>
+</template>

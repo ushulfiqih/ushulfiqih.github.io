@@ -1,5 +1,6 @@
 <template>
 <div class="page no-toolbar">
+
   <div class="navbar">
     <div class="navbar-bg gelap"></div>
     <div class="navbar-inner sliding">
@@ -12,103 +13,53 @@
       <div class="title"></div>
     </div>
   </div>
-<div class="page-content">
-  <script src="dist/firebase/jquery.min.js"></script>
-  <script src="dist/firebase/firebase-app.js"></script>
-  <script src="dist/firebase/firebase-database.js"></script>
-  <script src="dist/firebase/main.js"></script>
+  <!-- Additional "hide-navbar-on-scroll" class to hide navbar on scroll automatically -->
+  <div class="page-content">
+      <div class="block">
+        <div class="card gelap">
+          <div class="card-header">Pengaturan Akun</div>
+          <div class="card-content card-content-padding">
+              <div class="list media-list">
+                  <ul>
+                      <li>
+                        <a href="/profil/" class="item-link item-content">
+                          <div class="item-inner">
+                            <div class="item-title-row">
+                              <div class="item-title">Profil</div>
+                            </div>
+                            <div class="item-subtitle">Lengkapi profil anda</div>
+                            <div class="item-text">Secara etimologi, <em>ijtihad </em>diambil dari kata <em>al-jahd </em>atau <em>al-juhd, </em>yang berarti <em>al- masyaqat </em>(kesulitan dan kesusahan)...</div>
+                          </div>
+                        </a>
+                      </li>
+                  </ul>
+                  <hr style="height:1px;border-width:0;color:#333333;background-color:#333333">
+                  <ul>
+                      <li>
+                        <a href="/tab-forum-akun/" class="item-link item-content">
+                          <div class="item-inner">
+                            <div class="item-title-row">
+                              <div class="item-title">Forum</div>
+                            </div>
+                            <div class="item-subtitle">Bergabung di Forum Ushul Fiqih</div>
+                            <div class="item-text">Bergabung dengan komunitas peminat studi Ushul Fiqih. Belajar, berbagi, dan ...</div>
+                          </div>
+                        </a>
+                      </li>
+                  </ul>
+              </div>
+            </div>
+          <div class="card-footer">
+            <a href="index.html" data-animate="false" class="link external">
+              <div class="chip chip-outline color-green" style="margin-top:20px;">
+                <div class="chip-label">Selesai</div>
+              </div>
+            </a>
+          </div>
+        </div>
 
-  <form class="list form-store-data" id="contactForm">
-      <div class="item-content item-input gelap">
-        <div class="item-inner">
-          <div class="item-title item-label">Nama</div>
-          <div class="item-input-wrap">
-            <input name="nama" type="text" class="form-control fullname" placeholder="Pembelajar Ushul Fiqih">
-            <span class="input-clear-button"></span>
-          </div>
-        </div>
       </div>
-      <div class="item-content item-input gelap">
-        <div class="item-inner">
-          <div class="item-title item-label">Email</div>
-          <div class="item-input-wrap">
-            <input name="email" type="email" placeholder="email@gmail.com" class="form-control email">
-            <span class="input-clear-button"></span>
-          </div>
-        </div>
-      </div>
-      <div class="item-content item-input">
-        <div class="item-inner">
-          <div class="item-title item-label">Phone / Whatsapp</div>
-          <div class="item-input-wrap">
-            <input name="whatsapp" type="text" placeholder="+62" class="form-control whatsapp">
-            <span class="input-clear-button"></span>
-          </div>
-        </div>
-      </div>
-      <div class="item-content">
-        <h3>Keamanan</h3>
-      </div>
-      <div class="item-content item-input">
-        <div class="item-inner">
-          <div class="item-title item-label">Password</div>
-          <div class="item-input-wrap">
-            <input name="password" type="password" placeholder="Your password" class="form-control password">
-            <span class="input-clear-button"></span>
-          </div>
-        </div>
-      </div>
-      <div class="item-content">
-        <h3>Lengkapi data anda</h3>
-      </div>
-      <div class="item-content item-input">
-        <div class="item-inner">
-          <div class="item-title item-label">Gender</div>
-          <div class="item-input-wrap input-dropdown-wrap">
-            <select name="gender" placeholder="Please choose..." class="form-control gender">
-              <option value="Cowok">Cowok</option>
-              <option value="Cewek">Cewek</option>
-            </select>
-          </div>
-        </div>
-      </div>
-      <div class="item-content item-input">
-        <div class="item-inner">
-          <div class="item-title item-label">Ulang Tahun</div>
-          <div class="item-input-wrap">
-            <input name="ulangtahun" type="date" value="01-01-2021" placeholder="Please choose..." class="form-control ulangtahun">
-          </div>
-        </div>
-      </div>
-      <div class="item-content">
-        <h3>Sosial Media</h3>
-      </div>
-      <div class="item-content item-input">
-        <div class="item-inner">
-          <div class="item-title item-label">Instagram</div>
-          <div class="item-input-wrap">
-            <input name="instagram" type="text" placeholder="" class="form-control instagram">
-            <span class="input-clear-button"></span>
-          </div>
-        </div>
-      </div>
-      <div class="item-content item-input">
-        <div class="item-inner">
-          <div class="item-title item-label">Tentangmu</div>
-          <div class="item-input-wrap">
-            <textarea style="font-size:12px" name="bio" class="resizable form-control bio" placeholder="Bio"></textarea>
-          </div>
-        </div>
-      </div>
-      <div class="item-content item-input">
-        <div class="item-inner">
-          <div class="alert alert-success success-message" style="display:none;">Data tersimpan</div>
-          <button type="submit" style="width:30%" type="submit" class="button button-round button-round button-outline color-green">Simpan</button>
-        </div>
-      </div>
+  </div>
 
-  </form>
-
-</div>
 </div>
 </template>

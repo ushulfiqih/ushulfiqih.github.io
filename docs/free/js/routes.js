@@ -22,8 +22,7 @@ var routes = [
 },
 {
   path: '/tab-forum-akun/',
-  url: './pages/tab-forum-akun.html',
-  name: 'home',
+  componentUrl: './pages/tab-forum-akun.html',
 },
 {
   path: '/tab-forum-login/',
@@ -71,6 +70,10 @@ componentUrl: './pages/hijri.html',
 {
   path: '/akun/',
   componentUrl: './pages/akun.html',
+},
+{
+  path: '/profil/',
+  componentUrl: './pages/profil.html',
 },
 {
    path: '/about/',
