@@ -1,0 +1,129 @@
+<template>
+<div class="page no-toolbar">
+<div class="page-content">
+
+	<style>
+		#sky {
+		  position: absolute;
+		  top: 0;
+		  left: 0;
+		  height: 100%;
+		  width: 100%;
+		  background: linear-gradient(20deg, #121212, #121212);
+		}
+
+		#hour {
+		  position: absolute;
+		  transform: translateX(-50%);
+		  left: 50%;
+		  top: 5%;
+		}
+
+		#hour * {
+		  z-index: 100;
+		  text-align: center;
+		  color: white;
+		  font-family: "Ubuntu", Verdana, sans-serif;
+		  padding: 0;
+		  margin: 0;
+		}
+
+		#hour h1 {
+		  font-size: 10vh;
+	    font-weight: 300;
+		}
+
+		#hour h2 {
+		  font-size: 2vh;
+		  font-weight: 100;
+			margin-top:-10px;
+		}
+
+		#nama * {
+			position: absolute;
+		  transform: translateX(-50%);
+		  left: 50%;
+		  top: 40%;
+			color:#ffffff
+		}
+		#nama h2 {
+		  font-size: 2vh;
+		  font-weight: 200;
+			margin-top:30px;
+		}
+		#pesan * {
+			position: absolute;
+		  transform: translateX(-50%);
+		  left: 50%;
+		  bottom: 10%;
+			color:#ffffff
+		}
+		#pesan h2 {
+		  font-size: 2vh;
+		  font-weight: 200;
+			margin-top:30px;
+			margin-left:-3px;
+			text-align: center;
+		}
+	  #lock {
+	    position: absolute;
+		  transform: translateX(-50%);
+		  left: 50%;
+		  bottom: 30%;
+	  }
+		#lock h2 {
+			font-size: 1.8vh;
+			font-weight: 200;
+			margin-top:10px;
+		}
+	</style>
+
+	<div id="sky"></div>
+	<div id="hour"><h1>Time</h1><h2>Date</h2></div>
+
+		<div id="pesan">
+				<h2>Sedang memuat data dari<br/>Ushulfiqih.com</h2>
+		</div>
+
+	<div id="lock"><div class="preloader color-multi"></div>
+	</div>
+
+
+	<script type="text/javascript">
+      $(document).ready(function () {
+          setTimeout(function () {
+              window.location = "index.html";
+          }, 9000);
+      });
+  </script>
+
+	<script type="text/javascript">
+	var rows = document.querySelectorAll(".ref p span");
+	for (var i = rows.length - 1; i >= 0; i--) {
+		rows[i].style.animationDelay = Math.random() * -30 +"s";
+	};
+	var widths = [8, 6, 10, 12, 5, 9, 5, 3];
+	rows = document.querySelectorAll(".ref p");
+	for (var i = rows.length - 1; i >= 0; i--) {
+		rows[i].querySelector("span:first-child").style.width = widths[i] + "vmax";
+		rows[i].querySelector("span:nth-child(2)").style.left = "calc(50% - " + widths[i]/2 + "vmax - 1.2vmax)";
+		rows[i].querySelector("span:last-child").style.left = "calc(50% + " + widths[i]/2 + "vmax + 1.2vmax)";
+	};
+
+	var updateTimeDate = function()
+	{
+		var d = new Date();
+		document.querySelector("h1").textContent = d.getHours() + ":" + (d.getMinutes() < 10 ? "0" + d.getMinutes() : d.getMinutes());
+
+		var days = ["Ahad","Senin","Selasa","Rabu","Kamis","Jumat","Sabtu"];
+		var months = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September","Oktober","November","Desember"];
+		document.querySelector("h2").textContent = days[d.getDay()] + ", " + d.getDate() + " "+ months[d.getMonth()] + " " + d.getFullYear();
+		setTimeout(updateTimeDate,5000);
+	}
+	updateTimeDate();
+
+	</script>
+
+</div>
+</div>
+</template>

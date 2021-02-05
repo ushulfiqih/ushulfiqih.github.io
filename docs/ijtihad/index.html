@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="robots" content="noindex">
+  <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap:">
+  <title>app.ushulfiqih.com</title>
+  <link rel="stylesheet" href="core/css/framework7.bundle.css">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="apple-touch-icon" href="img/logo.png">
+  <link rel="icon" href="img/logo.png">
+
+  <link rel="stylesheet" href="css/type-promise.css">
+  <link rel="stylesheet" href="css/login.css">
+  <link rel="stylesheet" href="css/horizontal.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/kaidahfiqih.css">
+
+</head>
+<body class="theme-dark">
+
+  <div id="app">
+
+      <div class="panel panel-left panel-cover panel-resizable panel-init">
+        <div class="page ">
+          <div class="page-content">
+            <div class="block-title" style="margin-top:-20px">Ushulfiqih.com <i class="icon f7-icons" style="font-size:14px">arrow_up_right_square</i></div>
+
+            <div class="card-content">
+              <div class="list media-list">
+                <ul>
+                  <a href="/akun/" class="link panel-close" data-animate="false">
+                  <li class="item-content">
+                    <div class="item-media"><img src="img/logo.png" width="44"/></div>
+                    <div class="item-inner white">
+                      <div class="item-title-row">My Account</div>
+                      <div class="item-subtitle"><i class="icon f7-icons" style="font-size:14px">gear_alt</i> Edit</div>
+                    </div>
+                  </li>
+                  </a>
+                </ul>
+              </div>
+            </div>
+
+            <div class="block">
+              <a href="index.html" class="link external panel-close" data-animate="false" style="color:#ffffff"><i class="icon f7-icons" style="font-size:24px">house</i> &nbsp;&nbsp;&nbsp;Ushul Fiqih (Beranda)</a><br/><br/>
+              <a href="/tab-search/" class="panel-close" data-animate="false" style="color:#ffffff"><i class="icon f7-icons" style="font-size:24px">search</i>&nbsp;&nbsp;&nbsp;Pencarian</a><br/><br/>
+              <a href="/tab-forum/" class="panel-close" data-animate="false" style="color:#ffffff"><i class="icon f7-icons" style="font-size:22px">bubble_left_bubble_right</i>&nbsp;&nbsp;&nbsp;Forum Diskusi</a>
+              <br/><br/>
+              <a href="/tab-kaidah/" class="panel-close" data-animate="false" style="color:#ffffff"><i class="icon f7-icons" style="font-size:22px">rectangle_on_rectangle_angled</i>&nbsp;&nbsp;&nbsp;Kaidah Fiqih</a><br/>
+            </div>
+            <hr style="height:1px;border-width:0;color:#cccccc;background-color:#cccccc">
+            <div class="block">
+              <p>Versi aplikasi: 2.2-free</p>
+            </div>
+            <div class="block">
+              <a href="/privacy/" class="panel-close" data-animate="false" style="color:#ffffff"><i class="icon f7-icons" style="font-size:22px">flag</i>&nbsp;&nbsp;&nbsp;Kebijakan Privasi</a><br/><br/>
+              <a href="/about/" class="panel-close" data-animate="false" style="color:#ffffff"><i class="icon f7-icons" style="font-size:22px">info_circle</i>&nbsp;&nbsp;&nbsp;Tentang</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <div class="view view-main view-init safe-areas" data-master-detail-breakpoint="800" data-url="/">
+
+      <div class="toolbar tabbar-labels toolbar-bottom" style="background-color:#121212">
+        <div id="hijau" style="margin-top:-4px;">
+          <div class="progressbar-infinite color-green"></div>
+        </div>
+          <a href="index.html" class="link external" data-animate="false">
+            <div style="position: absolute; left: 15px; bottom: 14px; z-index: 9999; line-height: 1em;"><img src="img/logo.png" style="width: 25px;"><div style="position: absolute; left: 35px; bottom: 2px;font-size:8px; z-index: 9999;line-height: 1.4;color:#ffffff;">Principles of Islamic<br/>Jurisprudence</div></div>
+          </a>
+        <div class="toolbar-inner">
+          <a href="/tab-search/" data-animate="false" class="link"><i class="icon f7-icons">search</i></a>
+          <a href="/tab-forum/" data-animate="false" class="link"><i class="icon f7-icons">bubble_left_bubble_right</i></a>
+          <a class="link popover-open" href="#" data-popover=".popover-links"><i class="icon f7-icons">ellipsis</i></a>
+        </div>
+      </div>
+
+      <div class="popover popover-links" style="width:40%">
+        <div class="popover-inner">
+          <div class="list">
+            <ul>
+              <li><a class="list-button item-link popover-close" href="/tab-kaidah/">Kaidah Fiqih</a></li>
+              <li><a class="list-button item-link popover-close" href="/about/">Tentang</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="page">
+
+        <div class="navbar">
+          <div class="navbar-bg gelap"></div>
+          <div class="navbar-inner">
+            <div class="left">
+              <a href="#" class="link icon-only panel-open" data-panel="left">
+                <svg viewBox="0 0 100 80" width="40" height="40" style="fill: white">
+                  <rect y="5" width="90" height="8"></rect>
+                  <rect y="30" width="90" height="8"></rect>
+                  <rect y="55" width="90" height="8"></rect>
+                </svg>
+              </a>
+            </div>
+            <div class="title">Ushulfiqih.com</div>
+          </div>
+        </div>
+
+        <div class="page-content">
+          <div class="tabs-swipeable-wrap">
+
+            <div class="tabs">
+              <div id="tab-1" class="page-content tab tab-active">
+                <div class="block" style="margin-top: -30px;">
+
+                  <div id="judul">
+                    <p style="font-size: 30px;line-height: 1;color: #ffffff"><b>Principles of Islamic Jurisprudence</b></p>
+                  </div>
+
+                  <div>
+                    <div class="row">
+                      <div class="col" style="justify-content: center;
+                      align-items: center;">
+                        <p class="status"><a href="/quran/" class="link"><i class="icon f7-icons color-white status-icon">book</i></a></p>
+                        <p class="status">Quran (Tafsir)</p>
+                      </div>
+                      <div class="col">
+                        <p class="status"><a href="/tab-kaidah/" class="link"><i class="icon f7-icons color-white status-icon">rectangle_on_rectangle_angled</i></a></p>
+                        <p class="status">Kaidah Fiqih</p>
+                      </div>
+                      <div class="col">
+                        <p class="status"><a href="/hijri/" class="link"><i class="icon f7-icons color-white status-icon">calendar</i></a></p>
+                        <p class="status">Kalender Hijriyah</p>
+                      </div>
+                      <div class="col">
+                        <p class="status"><a href="/praytimes/" class="link"><i class="icon f7-icons color-white status-icon">stopwatch</i></a></p>
+                        <p class="status">Jadwal Shalat</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div id="subjudul">
+                    <p style="font-size: 12px;line-height: 1.5;color: #ffffff;margin: 20px 0 20px 0">Ushul Fiqih (Principles of Islamic Jurisprudence) adalah Ilmu yang mempelajari standar metodologi konvensional / tradisional untuk menurunkan dan mengembangkan aturan hukum Islam (syariah) menjadi yurisprudensi Islam aplikatif (fiqih)</p>
+                  </div>
+
+                  <div class="gelap">
+            				<div class="card-content card-content-padding">
+                      <p class="greeting" style="font-size: 12px;"><b></b></p>
+                      <div class="row">
+                        <div class="col-75">
+                          <div class="form-store-data" id="localStorage">
+                              <input style="pointer-events: none;" name="nama" type="text" placeholder="Pembelajar Ushul Fiqih">
+                              <input style="font-size: 12px;margin:5px 0 5px 0;pointer-events: none;" name="bio" type="text" placeholder="Lengkapi data anda">
+                              <a href="/akun/" class="link"><i class="icon f7-icons color-grey">chevron_compact_down</i></a>
+                          </div>
+                        </div>
+                        <div class="col-25">
+                          <a href="/akun/" data-animate="false" class="link">
+                            <div class="chip chip-outline color-green">
+                              <div class="chip-label">Akun</div>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+
+                    </div>
+            			</div>
+
+                  <div class="card">
+                    <div class="card-header">Rekomendasi</div>
+                    <div class="card-content card-content-padding">
+                        <div class="list media-list">
+                            <ul>
+                              <rekomendasi id="1">
+                                <li>
+                                  <a href="/pengertian-ijtihad/" class="item-link item-content">
+                                    <div class="item-media"><img src="img/logo.png" width="80"/></div>
+                                    <div class="item-inner">
+                                      <div class="item-title-row">
+                                        <div class="item-title">Pengertian Ijtihad</div>
+                                      </div>
+                                      <div class="item-subtitle">Ushul Fiqih</div>
+                                      <div class="item-text">Secara etimologi, <em>ijtihad </em>diambil dari kata <em>al-jahd </em>atau <em>al-juhd, </em>yang berarti <em>al- masyaqat </em>(kesulitan dan kesusahan)...</div>
+                                    </div>
+                                  </a>
+                                  <a href="/dasar-hukum-ijtihad/" class="item-link item-content">
+                                    <div class="item-media"><img src="img/logo.png" width="80"/></div>
+                                    <div class="item-inner">
+                                      <div class="item-title-row">
+                                        <div class="item-title">Dasar Hukum Ijtihad</div>
+                                      </div>
+                                      <div class="item-subtitle">Ushul Fiqih</div>
+                                      <div class="item-text">Dasar hukum Ijithad sebagai metode untuk menggali sumber hukum Islam didasarkan...</div>
+                                    </div>
+                                  </a>
+                                  <a href="/macam-macam-ijtihad/" class="item-link item-content">
+                                    <div class="item-media"><img src="img/logo.png" width="80"/></div>
+                                    <div class="item-inner">
+                                      <div class="item-title-row">
+                                        <div class="item-title">Macam-macam Ijtihad</div>
+                                      </div>
+                                      <div class="item-subtitle">Ushul Fiqih</div>
+                                      <div class="item-text">Imam Syafi&rsquo;i menyamakan <em>ijtihad</em><em> </em>dengan <em>qiyas</em>, dan tidak mengakui <em>ra'yu </em>yang didasarkan...</div>
+                                    </div>
+                                  </a>
+                                </li>
+                              </rekomendasi>
+                              <rekomendasi id="2">
+                                <li>
+                                  <a href="/syarat-ijtihad/" class="item-link item-content">
+                                    <div class="item-media"><img src="img/logo.png" width="80"/></div>
+                                    <div class="item-inner">
+                                      <div class="item-title-row">
+                                        <div class="item-title">Syarat Ijtihad</div>
+                                      </div>
+                                      <div class="item-subtitle">Ushul Fiqih</div>
+                                      <div class="item-text">Syarat-syarat yang harus dimiliki oleh seorang <em>mujtahid </em>(orang yang melakukan <em>ijtihad</em> adalah...</div>
+                                    </div>
+                                  </a>
+                                  <a href="/objek-ijtihad/" class="item-link item-content">
+                                    <div class="item-media"><img src="img/logo.png" width="80"/></div>
+                                    <div class="item-inner">
+                                      <div class="item-title-row">
+                                        <div class="item-title">Objek Ijtihad</div>
+                                      </div>
+                                      <div class="item-subtitle">Ushul Fiqih</div>
+                                      <div class="item-text">Objek <em>Ijtihad </em>adalah setiap hukum <em>syara&rsquo; </em>yang tidak memiliki dalil yang <em>Qathi&rsquo;. </em>Pendapat tersebut...</div>
+                                    </div>
+                                  </a>
+                                  <a href="/hukum-melakukan-ijtihad/" class="item-link item-content">
+                                    <div class="item-media"><img src="img/logo.png" width="80"/></div>
+                                    <div class="item-inner">
+                                      <div class="item-title-row">
+                                        <div class="item-title">Hukum Melakukan Ijtihad</div>
+                                      </div>
+                                      <div class="item-subtitle">Ushul Fiqih</div>
+                                      <div class="item-text">Berikut hukum melakukan Ijtihad bagi seseorang <em>Mujtahid</em> atau seseorang yang sudah memenuhi persyaratan...</div>
+                                    </div>
+                                  </a>
+                                </li>
+                              </rekomendasi>
+                              <rekomendasi id="3">
+                                <li>
+                                  <a href="/tingkatan-mujtahid/" class="item-link item-content">
+                                    <div class="item-media"><img src="img/logo.png" width="80"/></div>
+                                    <div class="item-inner">
+                                      <div class="item-title-row">
+                                        <div class="item-title">Tingkatan Mujtahid</div>
+                                      </div>
+                                      <div class="item-subtitle">Ushul Fiqih</div>
+                                      <div class="item-text">Berikut tingkatan para <em>mujtahid, </em>menurut ulama Ushul Fiqih...</div>
+                                    </div>
+                                  </a>
+                                  <a href="/pengertian-istihsan/" class="item-link item-content">
+                                    <div class="item-media"><img src="img/logo.png" width="80"/></div>
+                                    <div class="item-inner">
+                                      <div class="item-title-row">
+                                        <div class="item-title">Pengertian Istihsan</div>
+                                      </div>
+                                      <div class="item-subtitle">Ushul Fiqih</div>
+                                      <div class="item-text"><em>Istihsan </em>adalah semua hal yang dianggap baik oleh <em>mujtahid </em>menurut akalnya.&rdquo; - Al-Ghazali dalam <em>Al-Mustashfa</em>...</div>
+                                    </div>
+                                  </a>
+                                  <a href="/kehujahan-istihsan/" class="item-link item-content">
+                                    <div class="item-media"><img src="img/logo.png" width="80"/></div>
+                                    <div class="item-inner">
+                                      <div class="item-title-row">
+                                        <div class="item-title">Kehujahan Istihsan</div>
+                                      </div>
+                                      <div class="item-subtitle">Ushul Fiqih</div>
+                                      <div class="item-text">Abu Hanifah banyak menggunakan <em>istihsan.</em> Ulama Hanafiyah mengakui adanya <em>istihsan,</em> dan dalam beberapa kitab fiqih Hanafiyah terdapat banyak...</div>
+                                    </div>
+                                  </a>
+                                </li>
+                              </rekomendasi>
+                              <rekomendasi id="4">
+                                <li>
+                                  <a href="/pengertian-maslahah-mursalah/" class="item-link item-content">
+                                    <div class="item-media"><img src="img/logo.png" width="80"/></div>
+                                    <div class="item-inner">
+                                      <div class="item-title-row">
+                                        <div class="item-title">Pengertian Maslahah Mursalah</div>
+                                      </div>
+                                      <div class="item-subtitle">Ushul Fiqih</div>
+                                      <div class="item-text">Dari segi bahasa, <em>al-maslahah </em>memiliki arti yang sama seperti <em>lafazh al- manfa 'at. Al-mashlahah </em>merupakan bentuk tunggal <em>(mufrad) </em>dari kata...</div>
+                                    </div>
+                                  </a>
+                                  <a href="/pengertian-istishab/" class="item-link item-content">
+                                    <div class="item-media"><img src="img/logo.png" width="80"/></div>
+                                    <div class="item-inner">
+                                      <div class="item-title-row">
+                                        <div class="item-title">Pengertian Istishab</div>
+                                      </div>
+                                      <div class="item-subtitle">Ushul Fiqih</div>
+                                      <div class="item-text"><em>Istishhab</em> adalah menetapkan sesuatu menurut keadaan sebelumnya sampai terdapat dalil-dalil yang menunjukkan perubahan keadaan, atau menjadikan hukum...</div>
+                                    </div>
+                                  </a>
+                                  <a href="/kehujahan-istishab/" class="item-link item-content">
+                                    <div class="item-media"><img src="img/logo.png" width="80"/></div>
+                                    <div class="item-inner">
+                                      <div class="item-title-row">
+                                        <div class="item-title">Kehujahan Istishab</div>
+                                      </div>
+                                      <div class="item-subtitle">Ushul Fiqih</div>
+                                      <div class="item-text"><em>Istishhab </em>adalah teori dalam pengambilan dalil yaiyu dengan menetapkan sesuatu menurut hukum yang telah ditetapkan sebelumnya, selama tidak terdapat...</div>
+                                    </div>
+                                  </a>
+                                </li>
+                              </rekomendasi>
+                            </ul>
+                        </div>
+                      </div>
+                    <div class="card-footer">Sumber: ushulfiqih.com</div>
+                  </div>
+
+                  <div class="card demo-facebook-card">
+            				<div class="card-header">
+            					<div class="demo-facebook-avatar"><img src="img/logo.png" width="34" height="34"/></div>
+            					<div class="demo-facebook-name">Video</div>
+            					<div class="demo-facebook-date">5 Menit Belajar Ushul Fiqih</div>
+            				</div>
+            				<div class="card-content">
+            					<videoyoutube id="1">
+            					<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
+            					<div class="embed-container"><iframe src="https://www.youtube.com/embed/UIOYqsXWs4o?rel=0" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>
+            					</videoyoutube>
+            					<videoyoutube id="2">
+            					<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
+            					<div class="embed-container"><iframe src="https://www.youtube.com/embed/auSxvDD-Pgo?rel=0" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>
+            					</videoyoutube>
+            					<videoyoutube id="3">
+            					<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
+            					<div class="embed-container"><iframe src="https://www.youtube.com/embed/eHzcF5vlC8o?rel=0" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>
+            					</videoyoutube>
+            					<videoyoutube id="4">
+            					<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
+            					<div class="embed-container"><iframe src="https://www.youtube.com/embed/XYYH_X3kycw?rel=0" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>
+            					</videoyoutube>
+            					<videoyoutube id="5">
+            					<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
+            					<div class="embed-container"><iframe src="https://www.youtube.com/embed/cw56_ztPg1o?rel=0" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>
+            					</videoyoutube>
+            				</div>
+            					<div class="card-footer"><a href="https://www.youtube.com/channel/UCkB3ruzb5VerCTc5vDlKKUQ" class="link external"><i class="icon f7-icons" style="font-size: 14px;">doc_on_doc</i>&nbsp;&nbsp;Official Youtube Channel</a><a href="https://www.youtube.com/channel/UCkB3ruzb5VerCTc5vDlKKUQ?sub_confirmation=1" class="link external">Subscribe</a></div>
+            			</div>
+
+                  <div class="card">
+            				<div class="card-header">Tag Populer</div>
+            				<div class="card-content card-content-padding">
+                      <div class="chip chip-outline color-green">
+                        <div class="chip-label">Amr Nahi</div>
+                      </div>
+                      <div class="chip color-red">
+                        <div class="chip-label">Maqasid Syariah</div>
+                      </div>
+                      <div class="chip color-green">
+                        <div class="chip-label">Maslahah Mursalah</div>
+                      </div>
+                      <div class="chip chip-outline color-pink">
+                        <div class="chip-label">Ijtihad</div>
+                      </div>
+                      <div class="chip color-blue">
+                        <div class="chip-label">Urf</div>
+                      </div>
+                      <div class="chip color-orange">
+                        <div class="chip-label">Qiyas</div>
+                      </div>
+                      <div class="chip chip-outline color-red">
+                        <div class="chip-label">Syaru man Qablana</div>
+                      </div>
+                      <div class="chip chip-outline color-orange">
+                        <div class="chip-label">Mutlaq Muqayad</div>
+                      </div>
+                      <div class="chip color-red">
+                        <div class="chip-label">Ijma</div>
+                      </div>
+                      <div class="chip chip-outline color-blue">
+                        <div class="chip-label">Nasakh</div>
+                      </div>
+                      <div class="chip color-pink">
+                        <div class="chip-label">Ijtihad</div>
+                      </div>
+                      <div class="chip chip-outline color-green">
+                        <div class="chip-label">Sumber Hukum</div>
+                      </div>
+                    </div>
+            				<div class="card-footer">Sumber: ushulfiqih.com</div>
+            			</div>
+
+                  <div class="card">
+            				<div class="card-header">Podcast</div>
+            				<div class="card-content card-content-padding">
+            					<div class="container-audio">
+            					<audio style="width: 100%" controls loop>
+            						 <source src="dist/audio/friends.ogg" type="audio/ogg">
+            						 Your browser dose not Support the audio Tag
+            					</audio>
+            					</div>
+            				</div>
+                    <div class="card-content card-content-padding">
+                      <p>Teaser (test audio)</p>
+                      <hr style="height:1px;border-width:0;color:#333333;background-color:#333333">
+                      <p><small>Podcast Ushulfiqih.com belum tersedia. Insyaallah akan rilis setap weekend</small></p>
+                    </div>
+            				<div class="card-footer">Offline</div>
+            			</div>
+
+                  <div class="card demo-facebook-card">
+            				<div class="card-header">
+            					<div class="demo-facebook-avatar"><img src="img/logo.png" width="34" height="34"/></div>
+            					<div class="demo-facebook-name">Kaidah Fiqih Pilihan</div>
+            					<div class="demo-facebook-date">Of The Day</div>
+            				</div>
+            				<div class="card-content">
+            					<blockquote>
+            						<p id="quotation"></p>
+            						<footer>
+            							<p style="color:#ffffff" id="source"></p>
+                          <p id="contoh"></p>
+            						</footer>
+            					</blockquote>
+            				</div>
+            				<div class="card-footer"><quotebutton><i class="icon f7-icons" style="font-size: 14px;">arrow_2_circlepath</i>&nbsp;&nbsp;Refresh</quotebutton></div>
+            			</div>
+
+                  <div class="card">
+            				<div class="card-header gelap link external">&nbsp; <a href="https://www.instagram.com/ushulfiqihcom"><small>Ads</small>&nbsp;<i class="icon f7-icons md-only" style="font-size: 14px">info_circle</i></a></div>
+            				<div class="card-content">
+            					<img src="img/ushulfiqih.com%20-%20kaidah%20fiqih%20a.jpg" width="100%">
+            				</div>
+            				<div class="card-footer">ushulfiqihcom<a href="https://www.instagram.com/ushulfiqihcom" class="link external">Follow Instagram</a></div>
+            			</div>
+
+                  <ushulfiqihcom id="1">
+                    <a href="#" class="sheet-open" data-sheet=".sheet1">
+                      <div class="card demo-card-header-pic">
+                				<div class="card-header align-items-flex-end ushulfiqihcom">Maslahah Mursalah</div>
+                				<div class="card-content card-content-padding">
+                					<p class="date"><i class="icon f7-icons md-only" style="font-size: 14px">info_circle</i> Dipublikasikan di Ushulfiqih.com</p>
+                					<p class="white">Maslahah Mursalah secara bahasa tersusun dari kata maslahah (المصلحة) dan mursalah (المرسلة). Maslahlah berarti kebaikan, yaitu penetapan hukum...</p>
+                				</div>
+                			</div>
+                    </a>
+                  </ushulfiqihcom>
+                  <ushulfiqihcom id="2">
+                    <a href="#" class="sheet-open" data-sheet=".sheet2">
+                      <div class="card demo-card-header-pic">
+                        <div class="card-header align-items-flex-end ushulfiqihcom">Perbedaan Taqlid dan Ittiba’</div>
+                        <div class="card-content card-content-padding">
+                          <p class="date"><i class="icon f7-icons md-only" style="font-size: 14px">info_circle</i> Dipublikasikan di Ushulfiqih.com</p>
+                          <p class="white">Ittiba’ adalah mengikuti pendapat seorang mujtahid dengan mengetahui dalil serta metode yang digunakan seorang mujtahid dalam mengambil hukum...</p>
+                        </div>
+                      </div>
+                    </a>
+                  </ushulfiqihcom>
+                  <ushulfiqihcom id="3">
+                    <a href="#" class="sheet-open" data-sheet=".sheet3">
+                      <div class="card demo-card-header-pic">
+                        <div class="card-header align-items-flex-end ushulfiqihcom">Hubungan Syariah dan Fiqih</div>
+                        <div class="card-content card-content-padding">
+                          <p class="date"><i class="icon f7-icons md-only" style="font-size: 14px">info_circle</i> Dipublikasikan di Ushulfiqih.com</p>
+                          <p class="white">Syariah adalah adalah hukum agama yang ditetapkan oleh pembuat hukum (Allah) untuk manusia. Syariah memuat berbagai hukum dan ketentuan yang...</p>
+                        </div>
+                      </div>
+                    </a>
+                  </ushulfiqihcom>
+                  <ushulfiqihcom id="4">
+                    <a href="#" class="sheet-open" data-sheet=".sheet4">
+                      <div class="card demo-card-header-pic">
+                        <div class="card-header align-items-flex-end ushulfiqihcom">Maqashid Syariah</div>
+                        <div class="card-content card-content-padding">
+                          <p class="date"><i class="icon f7-icons md-only" style="font-size: 14px">info_circle</i> Dipublikasikan di Ushulfiqih.com</p>
+                          <p class="white">Maksud dan tujuan disyariatkan hukum Islam (Maqashid Syariah) adalah kemaslahatan untuk manusia dengan menolak berbagai kemudharatan...</p>
+                        </div>
+                      </div>
+                    </a>
+                  </ushulfiqihcom>
+                  <ushulfiqihcom id="5">
+                    <a href="#" class="sheet-open" data-sheet=".sheet5">
+                      <div class="card demo-card-header-pic">
+                        <div class="card-header align-items-flex-end ushulfiqihcom">Bentuk Amr (Perintah) dalam Quran</div>
+                        <div class="card-content card-content-padding">
+                          <p class="date"><i class="icon f7-icons md-only" style="font-size: 14px">info_circle</i> Dipublikasikan di Ushulfiqih.com</p>
+                          <p class="white">Dalam Ilmu Ushul Fiqih, Amr artinya adalah suatu tuntutan (perintah) untuk mengerjakan suatu pekerjaan dari atasan kepada bawahannya, dari...</p>
+                        </div>
+                      </div>
+                    </a>
+                  </ushulfiqihcom>
+                  <ushulfiqihcom id="6">
+                    <a href="#" class="sheet-open" data-sheet=".sheet6">
+                      <div class="card demo-card-header-pic" >
+                        <div class="card-header align-items-flex-end ushulfiqihcom">Hukum Taklifi dan Wadhi</div>
+                        <div class="card-content card-content-padding">
+                          <p class="date"><i class="icon f7-icons md-only" style="font-size: 14px">info_circle</i> Dipublikasikan di Ushulfiqih.com</p>
+                          <p class="white">Hukum Syariat terbagi dua macam, yaitu Hukum Taklifi dan Wadh’i. Hukum Taklifi memiliki bentuk Wajib, Sunah, Mubah, Makruh dan Haram...</p>
+                        </div>
+                      </div>
+                    </a>
+                  </ushulfiqihcom>
+                  <ushulfiqihcom id="7">
+                    <a href="#" class="sheet-open" data-sheet=".sheet7">
+                      <div class="card demo-card-header-pic">
+                        <div class="card-header align-items-flex-end ushulfiqihcom">Kaidah Ushul Fiqih</div>
+                        <div class="card-content card-content-padding">
+                          <p class="date"><i class="icon f7-icons md-only" style="font-size: 14px">info_circle</i> Dipublikasikan di Ushulfiqih.com</p>
+                          <p class="white">Kata kaidah (القاعدة) secara bahasa / etimologi artinya adalah asal (al-asl) atau asas (al-asas), yang berarti berarti asas, landasan, dasar...</p>
+                        </div>
+                      </div>
+                    </a>
+                  </ushulfiqihcom>
+                  <ushulfiqihcom id="8">
+                    <a href="#" class="sheet-open" data-sheet=".sheet8">
+                      <div class="card demo-card-header-pic">
+                        <div class="card-header align-items-flex-end ushulfiqihcom">‘Urf (Adat Kebiasaan atau Tradisi)</div>
+                        <div class="card-content card-content-padding">
+                          <p class="date"><i class="icon f7-icons md-only" style="font-size: 14px">info_circle</i> Dipublikasikan di Ushulfiqih.com</p>
+                          <p class="white">Urf adalah salah satu metode dalam penetapan hukum islam. ‘Urf dapat digunakan sebagai dalil hukum syariat jika tidak bertentangan dengan...</p>
+                        </div>
+                      </div>
+                    </a>
+                  </ushulfiqihcom>
+                  <ushulfiqihcom id="9">
+                    <a href="#" class="sheet-open" data-sheet=".sheet9">
+                      <div class="card demo-card-header-pic">
+                        <div class="card-header align-items-flex-end ushulfiqihcom">Syar’u Man Qablana</div>
+                        <div class="card-content card-content-padding">
+                          <p class="date"><i class="icon f7-icons md-only" style="font-size: 14px">info_circle</i> Dipublikasikan di Ushulfiqih.com</p>
+                          <p class="white">Quran dan Sunah banyak mengisahkan suatu hukum yang telah disyariatkan pada umat zaman dulu melalui para Rasul yang diutus...</p>
+                        </div>
+                      </div>
+                    </a>
+                  </ushulfiqihcom>
+
+                  <div class="sheet-modal sheet1 gelap" style="height:auto">
+                    <div class="sheet-modal-inner">
+                      <div class="sheet-modal-swipe-step">
+                        <div class="margin-top margin-bottom text-align-center">Anda akan dialihkan</div>
+                        <div class="padding-horizontal padding-bottom">
+                          <a href="https://ushulfiqih.com/maslahah-mursalah/" class="link external button button-large button-fill sheet-close">Membuka Ushulfiqih.com</a>
+                          <div class="margin-top text-align-center"><small>Tetap di aplikasi? <a class="sheet-close">Kembali</a> </small></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="sheet-modal sheet2 gelap" style="height:auto">
+                    <div class="sheet-modal-inner">
+                      <div class="sheet-modal-swipe-step">
+                        <div class="margin-top margin-bottom text-align-center">Anda akan dialihkan</div>
+                        <div class="padding-horizontal padding-bottom">
+                          <a href="https://ushulfiqih.com/perbedaan-taqlid-dan-ittiba/" class="link external button button-large button-fill sheet-close">Membuka Ushulfiqih.com</a>
+                          <div class="margin-top text-align-center"><small>Tetap di aplikasi? <a class="sheet-close">Kembali</a> </small></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="sheet-modal sheet3 gelap" style="height:auto">
+                    <div class="sheet-modal-inner">
+                      <div class="sheet-modal-swipe-step">
+                        <div class="margin-top margin-bottom text-align-center">Anda akan dialihkan</div>
+                        <div class="padding-horizontal padding-bottom">
+                          <a href="https://ushulfiqih.com/hubungan-syariah-dan-fiqih/" class="link external button button-large button-fill sheet-close">Membuka Ushulfiqih.com</a>
+                          <div class="margin-top text-align-center"><small>Tetap di aplikasi? <a class="sheet-close">Kembali</a> </small></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="sheet-modal sheet4 gelap" style="height:auto">
+                    <div class="sheet-modal-inner">
+                      <div class="sheet-modal-swipe-step">
+                        <div class="margin-top margin-bottom text-align-center">Anda akan dialihkan</div>
+                        <div class="padding-horizontal padding-bottom">
+                          <a href="https://ushulfiqih.com/maqashid-syariah-maksud-disyariatkannya-hukum-islam/" class="link external button button-large button-fill sheet-close">Membuka Ushulfiqih.com</a>
+                          <div class="margin-top text-align-center"><small>Tetap di aplikasi? <a class="sheet-close">Kembali</a> </small></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="sheet-modal sheet5 gelap" style="height:auto">
+                    <div class="sheet-modal-inner">
+                      <div class="sheet-modal-swipe-step">
+                        <div class="margin-top margin-bottom text-align-center">Anda akan dialihkan</div>
+                        <div class="padding-horizontal padding-bottom">
+                          <a href="https://ushulfiqih.com/pengertian-amr-dan-bentuk-perintah-dalam-quran/" class="link external button button-large button-fill sheet-close">Membuka Ushulfiqih.com</a>
+                          <div class="margin-top text-align-center"><small>Tetap di aplikasi? <a class="sheet-close">Kembali</a> </small></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="sheet-modal sheet6 gelap" style="height:auto">
+                    <div class="sheet-modal-inner">
+                      <div class="sheet-modal-swipe-step">
+                        <div class="margin-top margin-bottom text-align-center">Anda akan dialihkan</div>
+                        <div class="padding-horizontal padding-bottom">
+                          <a href="https://ushulfiqih.com/hukum-taklifi-dan-wadhi/" class="link external button button-large button-fill sheet-close">Membuka Ushulfiqih.com</a>
+                          <div class="margin-top text-align-center"><small>Tetap di aplikasi? <a class="sheet-close">Kembali</a> </small></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="sheet-modal sheet7 gelap" style="height:auto">
+                    <div class="sheet-modal-inner">
+                      <div class="sheet-modal-swipe-step">
+                        <div class="margin-top margin-bottom text-align-center">Anda akan dialihkan</div>
+                        <div class="padding-horizontal padding-bottom">
+                          <a href="https://ushulfiqih.com/kaidah-ushul-fiqih/" class="link external button button-large button-fill sheet-close">Membuka Ushulfiqih.com</a>
+                          <div class="margin-top text-align-center"><small>Tetap di aplikasi? <a class="sheet-close">Kembali</a> </small></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="sheet-modal sheet8 gelap" style="height:auto">
+                    <div class="sheet-modal-inner">
+                      <div class="sheet-modal-swipe-step">
+                        <div class="margin-top margin-bottom text-align-center">Anda akan dialihkan</div>
+                        <div class="padding-horizontal padding-bottom">
+                          <a href="https://ushulfiqih.com/urf-adat-kebiasaan-tradisi/" class="link external button button-large button-fill sheet-close">Membuka Ushulfiqih.com</a>
+                          <div class="margin-top text-align-center"><small>Tetap di aplikasi? <a class="sheet-close">Kembali</a> </small></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="sheet-modal sheet9 gelap" style="height:auto">
+                    <div class="sheet-modal-inner">
+                      <div class="sheet-modal-swipe-step">
+                        <div class="margin-top margin-bottom text-align-center">Anda akan dialihkan</div>
+                        <div class="padding-horizontal padding-bottom">
+                          <a href="https://ushulfiqih.com/syaru-man-qablana-hukum-syariat-sebelum-islam/" class="link external button button-large button-fill sheet-close">Membuka Ushulfiqih.com</a>
+                          <div class="margin-top text-align-center"><small>Tetap di aplikasi? <a class="sheet-close">Kembali</a> </small></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card demo-card-header-pic">
+            				<div class="card-content card-content-padding">
+                      <linimasa id="1">
+                  			<div class="timeline timeline-sides">
+                  				<div class="timeline-item">
+                  					<div class="timeline-item-date">570 <small>M</small></div>
+                  					<div class="timeline-item-divider"></div>
+                  					<div class="timeline-item-content">
+                  						<div class="timeline-item-inner">Nabi Muhammad lahir di Mekah</div>
+                  					</div>
+                  				</div>
+                  				<div class="timeline-item">
+                  					<div class="timeline-item-date">610 <small>M</small></div>
+                  					<div class="timeline-item-divider"></div>
+                  					<div class="timeline-item-content">
+                  						<div class="timeline-item-inner">Nabi Muhammad menerima wahyu pertama</div>
+                  					</div>
+                  				</div>
+                  				<div class="timeline-item">
+                  					<div class="timeline-item-date">634-644 <small>M</small></div>
+                  					<div class="timeline-item-divider"></div>
+                  					<div class="timeline-item-content">
+                  						<div class="timeline-item-inner">Umar bin Khattab menjadi Khalifah</div>
+                  					</div>
+                  				</div>
+                          <div class="timeline-item">
+                            <div class="timeline-item-date">661-750 <small>M</small></div>
+                            <div class="timeline-item-divider"></div>
+                            <div class="timeline-item-content">
+                              <div class="timeline-item-inner">Kekhalifahan Umayyah</div>
+                            </div>
+                          </div>
+                        </div>
+                      </linimasa>
+                      <linimasa id="2">
+                        <div class="timeline timeline-sides">
+                          <div class="timeline-item">
+                  					<div class="timeline-item-date">699-767 <small>M</small></div>
+                  					<div class="timeline-item-divider"></div>
+                  					<div class="timeline-item-content">
+                  						<div class="timeline-item-inner">Abu Hanifah</div>
+                  					</div>
+                  				</div>
+                          <div class="timeline-item">
+                            <div class="timeline-item-date">711-795 <small>M</small></div>
+                            <div class="timeline-item-divider"></div>
+                            <div class="timeline-item-content">
+                              <div class="timeline-item-inner">Imam Malik</div>
+                            </div>
+                          </div>
+                          <div class="timeline-item">
+                            <div class="timeline-item-date">720-790 <small>M</small></div>
+                            <div class="timeline-item-divider"></div>
+                            <div class="timeline-item-content">
+                              <div class="timeline-item-inner">As-Syatibi penulis Al-Muwafaqaat</div>
+                            </div>
+                          </div>
+                          <div class="timeline-item">
+                            <div class="timeline-item-date">750-1517 <small>M</small></div>
+                            <div class="timeline-item-divider"></div>
+                            <div class="timeline-item-content">
+                              <div class="timeline-item-inner">Kekhalifahan Abbasiyah</div>
+                            </div>
+                          </div>
+                        </div>
+                      </linimasa>
+                      <linimasa id="3">
+                        <div class="timeline timeline-sides">
+                          <div class="timeline-item">
+                            <div class="timeline-item-date">767-820 <small>M</small></div>
+                            <div class="timeline-item-divider"></div>
+                            <div class="timeline-item-content">
+                              <div class="timeline-item-inner">Imam Syafi’i penulis Al-Risalah</div>
+                            </div>
+                          </div>
+                          <div class="timeline-item">
+                            <div class="timeline-item-date">810-870 <small>M</small></div>
+                            <div class="timeline-item-divider"></div>
+                            <div class="timeline-item-content">
+                              <div class="timeline-item-inner">Imam Bukhari</div>
+                            </div>
+                          </div>
+                          <div class="timeline-item">
+                            <div class="timeline-item-date">817-875 <small>M</small></div>
+                            <div class="timeline-item-divider"></div>
+                            <div class="timeline-item-content">
+                              <div class="timeline-item-inner">Imam Muslim</div>
+                            </div>
+                          </div>
+                          <div class="timeline-item">
+                            <div class="timeline-item-date">1058-111 <small>M</small></div>
+                            <div class="timeline-item-divider"></div>
+                            <div class="timeline-item-content">
+                              <div class="timeline-item-inner">Abu Hamid Al-Ghazali</div>
+                            </div>
+                          </div>
+                        </div>
+                      </linimasa>
+            				</div>
+            				<div class="card-footer"><a href="/linimasa/" class="link white">Sejarah Ushul Fiqih</a></div>
+            			</div>
+
+
+                  <div class="card" style="margin-bottom:-40px;">
+            				<div class="card-header">Terbaru</div>
+            				<div class="card-content">
+            					<div class="list media-list">
+            						<ul>
+                          <li class="item-content">
+            								<div class="item-media"><img src="img/logo.png" width="44"/></div>
+            								<div class="item-inner">
+            									<div class="item-title-row">
+            										<div class="item-title"><a href="/kehujahan-istishab/" class="link white">Kehujahan Istishab</a></div>
+            									</div>
+            									<div class="item-subtitle">ushulfiqih.com</div>
+            								</div>
+            							</li>
+                          <li class="item-content">
+            								<div class="item-media"><img src="img/logo.png" width="44"/></div>
+            								<div class="item-inner">
+            									<div class="item-title-row">
+            										<div class="item-title"><a href="/pengertian-urf/" class="link white">Pengertian Urf</a></div>
+            									</div>
+            									<div class="item-subtitle">ushulfiqih.com</div>
+            								</div>
+            							</li>
+                          <li class="item-content">
+            								<div class="item-media"><img src="img/logo.png" width="44"/></div>
+            								<div class="item-inner">
+            									<div class="item-title-row">
+            										<div class="item-title"><a href="/macam-macam-urf/" class="link white">Macam-macam Urf</a></div>
+            									</div>
+            									<div class="item-subtitle">ushulfiqih.com</div>
+            								</div>
+            							</li>
+            						</ul>
+            					</div>
+            				</div>
+            				<div class="card-footer"> <span>Ushulfiqih.com</span></div>
+            			</div>
+
+                  <iframe src="https://forum.ushulfiqih.com/#/activity" frameborder="0" style="position: absolute; float: left; clear: both; width: 10px%; height: 10px; z-index: 0; left no-repeat;opacity:0.0"></iframe>
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="core/js/framework7.bundle.js"></script>
+  <script src="js/routes.js"></script>
+  <script src="js/app.js"></script>
+  <script src='js/jquery.js'></script>
+  <script src='js/rekomendasi.js'></script>
+  <script src="js/greeting.js"></script>
+  <script src="js/login.js"></script>
+  <script src="js/type-promise.js"></script>
+  <script src="js/kaidahfiqih.js"></script>
+  <script src="js/timeout.js"></script>
+  <script src="js/open-sheet.js"></script>
+
+</body>
+</html>

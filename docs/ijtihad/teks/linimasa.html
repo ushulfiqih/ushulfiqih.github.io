@@ -1,0 +1,52 @@
+<template>
+<div class="page">
+
+  <div class="navbar">
+    <div class="navbar-bg" style="background-color:#121212"></div>
+    <div class="navbar-inner sliding">
+      <div class="left">
+        <a class="link back" data-animate="false">
+          <i class="icon icon-back"></i>
+          <span class="if-not-md">Back</span>
+        </a>
+      </div>
+      <div class="title">Ushulfiqih.com</div>
+      <div class="right">
+          <i class="icon f7-icons color-white" @click="openPrompt" style="font-size:22px;margin-right:20px;">pencil</i>
+          <i class="icon f7-icons color-white" @click="openAlert" style="font-size:22px;margin-right:20px;">floppy_disk</i>
+      </div>
+    </div>
+  </div>
+  <!-- Additional "hide-navbar-on-scroll" class to hide navbar on scroll automatically -->
+  <div class="page-content hide-navbar-on-scroll">
+      <div class="block">
+        <h1>Timeline Sejarah Ushul Fiqih</h1>
+				<iframe src="https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1NBL9PK4ZGWrV0HqfLq_vDDVqPTfsB7Oh6f9CKV93EDU&amp;font=Default&amp;lang=id&amp;timenav_position=top&amp;initial_zoom=3&amp;height=180" width="100%" height="180" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+				<div style="font-size: 12px; font-color: #949494;">
+
+				Geser (Swipe), Klik ikon (+/-) untuk Zoom in/out.
+
+				</div>
+      </div>
+  </div>
+
+</div>
+</template>
+<script>
+  return {
+    methods: {
+      openAlert: function () {
+        var app = this.$app;
+        app.dialog.alert('Tidak ada perubahan untuk disimpan!');
+      },
+      openPrompt: function () {
+        var app = this.$app;
+        app.dialog.prompt('Admin / Editor Password', function (name) {
+          app.dialog.confirm('Are you sure that your Admin / Editor password is ' + name + '?', function () {
+            app.dialog.alert('Unknown password: ' + name);
+          });
+        });
+      },
+    }
+  }
+</script>

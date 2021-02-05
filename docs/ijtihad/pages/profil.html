@@ -1,0 +1,147 @@
+<template>
+<div class="page no-toolbar">
+
+<div class="page-content">
+  <script src="dist/firebase/jquery.min.js"></script>
+  <script src="dist/firebase/firebase-app.js"></script>
+  <script src="dist/firebase/firebase-database.js"></script>
+  <script src="dist/firebase/main.js"></script>
+
+  <form class="list form-store-data" id="localStorage">
+
+      <div class="item-content item-input gelap">
+        <div class="item-inner">
+          <div class="item-title item-label">Nama</div>
+          <div class="item-input-wrap">
+            <input name="nama" type="text" placeholder="Pembelajar Ushul Fiqih">
+            <span class="input-clear-button"></span>
+          </div>
+        </div>
+      </div>
+      <div class="item-content item-input gelap">
+        <div class="item-inner">
+          <div class="item-title item-label">Email</div>
+          <div class="item-input-wrap">
+            <input name="bio" style="font-size:12px" type="text" placeholder="email@gmail.com">
+            <span class="input-clear-button"></span>
+          </div>
+        </div>
+      </div>
+  </form>
+
+  <form class="list form-store-data" id="contactForm">
+
+    <div class="navbar" style="position:fixed">
+      <div class="navbar-bg gelap"></div>
+      <div class="navbar-inner sliding">
+        <div class="left">
+          <button type="submit" class="button" style="margin-right:20px;" onClick="window.location.href=window.location.href"><i class="icon icon-back"></i></button>
+        </div>
+        <div class="title"><div class="alert alert-success success-message" style="display:none;">Ok!</div></div>
+        <div class="right">
+          <button type="submit" class="button" style="margin-right:20px;" onClick="window.location.href=window.location.href">Simpan</button>
+        </div>
+      </div>
+    </div>
+    <div class="item-content">
+      <h3>Lengkapi data Anda</h3>
+    </div>
+      <div class="item-content item-input gelap">
+        <div class="item-inner">
+          <div class="item-title item-label">Nama Lengkap</div>
+          <div class="item-input-wrap">
+            <input name="nama" type="text" class="form-control fullname" placeholder="Pembelajar Ushul Fiqih">
+            <span class="input-clear-button"></span>
+          </div>
+        </div>
+      </div>
+      <div class="item-content item-input">
+        <div class="item-inner">
+          <div class="item-title item-label">Phone / Whatsapp</div>
+          <div class="item-input-wrap">
+            <input name="whatsapp" type="text" placeholder="+62" class="form-control whatsapp">
+            <span class="input-clear-button"></span>
+          </div>
+        </div>
+      </div>
+      <div class="item-content">
+        <h3>Keamanan</h3>
+      </div>
+      <div class="item-content" style="margin-top:-40px;">
+        <h6>Data yang diperlukan jika anda lupa password</h6>
+      </div>
+      <div class="item-content item-input gelap">
+        <div class="item-inner">
+          <div class="item-title item-label">Email</div>
+          <div class="item-input-wrap">
+            <input name="email" type="email" placeholder="email@gmail.com" class="form-control email">
+            <span class="input-clear-button"></span>
+          </div>
+        </div>
+      </div>
+      <div class="item-content item-input">
+        <div class="item-inner">
+          <div class="item-title item-label">Password</div>
+          <div class="item-input-wrap">
+            <input name="password" type="password" placeholder="Your password" class="form-control password">
+            <span class="input-clear-button"></span>
+          </div>
+        </div>
+      </div>
+      <div class="item-content">
+        <h3>Lengkapi data anda</h3>
+      </div>
+      <div class="item-content item-input">
+        <div class="item-inner">
+          <div class="item-title item-label">Gender</div>
+          <div class="item-input-wrap input-dropdown-wrap">
+            <select name="gender" placeholder="Please choose..." class="form-control gender">
+              <option value="Cowok">Cowok</option>
+              <option value="Cewek">Cewek</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="item-content item-input">
+        <div class="item-inner">
+          <div class="item-title item-label">Tanggal Lahir</div>
+          <div class="item-input-wrap">
+            <input name="ulangtahun" type="date" value="01-01-2021" placeholder="Please choose..." class="form-control ulangtahun">
+          </div>
+        </div>
+      </div>
+      <div class="item-content">
+        <h3>Sosial Media</h3>
+      </div>
+      <div class="item-content item-input">
+        <div class="item-inner">
+          <div class="item-title item-label">Instagram</div>
+          <div class="item-input-wrap">
+            <input name="instagram" type="text" placeholder="" class="form-control instagram">
+            <span class="input-clear-button"></span>
+          </div>
+        </div>
+      </div>
+      <div class="item-content item-input">
+        <div class="item-inner">
+          <div class="item-title item-label">Twitter</div>
+          <div class="item-input-wrap">
+            <input name="twitter" type="text" placeholder="" class="form-control twitter">
+            <span class="input-clear-button"></span>
+          </div>
+        </div>
+      </div>
+      <div class="item-content item-input">
+        <div class="item-inner">
+          <div class="item-title item-label">Youtube</div>
+          <div class="item-input-wrap">
+            <input name="youtube" type="text" placeholder="" class="form-control youtube">
+            <span class="input-clear-button"></span>
+          </div>
+        </div>
+      </div>
+  </form>
+
+</div>
+</div>
+</template>

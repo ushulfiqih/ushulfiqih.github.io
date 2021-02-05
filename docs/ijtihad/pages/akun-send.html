@@ -1,0 +1,181 @@
+<template>
+<div class="page no-toolbar">
+  <div class="navbar">
+    <div class="navbar-bg gelap"></div>
+    <div class="navbar-inner sliding">
+      <div class="left">
+        <a class="link back" data-animate="false">
+          <i class="icon icon-back"></i>
+          <span class="if-not-md">Back</span>
+        </a>
+      </div>
+      <div class="title"></div>
+    </div>
+  </div>
+<div class="page-content">
+  <script src="dist/firebase/jquery.min.js"></script>
+  <script src="dist/firebase/firebase-app.js"></script>
+  <script src="dist/firebase/firebase-database.js"></script>
+  <script src="dist/firebase/main.js"></script>
+
+  <form class="list form-store-data" id="contactForm">
+      <div class="item-content item-input gelap">
+        <div class="item-inner">
+          <div class="item-title item-label">Name</div>
+          <div class="item-input-wrap">
+            <input name="name" type="text" class="form-control fullname" placeholder="Your name">
+            <span class="input-clear-button"></span>
+          </div>
+        </div>
+      </div>
+      <div class="item-content item-input gelap">
+        <div class="item-inner">
+          <div class="item-title item-label">Name</div>
+          <div class="item-input-wrap">
+            <input name="name" type="text" placeholder="Your name" class="form-control email">
+            <span class="input-clear-button"></span>
+          </div>
+        </div>
+      </div>
+      <div class="item-content item-input">
+        <div class="item-inner">
+          <div class="item-title item-label">E-mail</div>
+          <div class="item-input-wrap">
+            <input name="email" type="email" placeholder="Your e-mail" class="form-control subject">
+            <span class="input-clear-button"></span>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+          <label for="exampleSubject">Subject</label>
+          <input type="text" class="form-control subject" id="exampleSubject" placeholder="Enter Subject">
+      </div>
+      <div class="form-group">
+          <label for="exampleMessage">Message</label>
+          <textarea class="form-control message" id="exampleMessage" placeholder="Enter Message" cols="30" rows="10"></textarea>
+      </div>
+      <div class="item-content item-input">
+        <div class="item-inner">
+          <div class="alert alert-success success-message" style="display:none;">Data tersimpan</div>
+          <button type="submit" style="width:50%" type="submit" class="button button-round button-round button-outline color-green">Simpan</button>
+        </div>
+      </div>
+
+  </form>
+
+  <form class="list form-store-data" id="contactForm">
+
+
+    <div class="block">
+      <p style="font-size:12px;">Bergabung dengan komunitas Ushul Fiqih?</p>
+      <a href="/tab-forum-register/" data-animate="false" class="link">
+        <div class="chip chip-outline color-green">
+          <div class="chip-label">Bergabung</div>
+        </div>
+      </a>
+    </div>
+    <div class="item-content">
+      <h3>Lengkapi data anda</h3>
+    </div>
+    <div class="item-content item-input">
+      <div class="item-inner">
+        <div class="item-title item-label">Phone</div>
+        <div class="item-input-wrap">
+          <input name="phone" type="tel" placeholder="Your phone number">
+          <span class="input-clear-button"></span>
+        </div>
+      </div>
+    </div>
+    <div class="item-content item-input">
+      <div class="item-inner">
+        <div class="item-title item-label">Gender</div>
+        <div class="item-input-wrap input-dropdown-wrap">
+          <select name="gender" placeholder="Please choose...">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="item-content item-input">
+      <div class="item-inner">
+        <div class="item-title item-label">Birthday</div>
+        <div class="item-input-wrap">
+          <input name="birthday" type="date" value="2021-01-01" placeholder="Please choose...">
+        </div>
+      </div>
+    </div>
+    <div class="item-content item-input">
+      <div class="item-inner">
+        <div class="item-title item-label">About you</div>
+        <div class="item-input-wrap">
+          <textarea style="font-size:12px" name="bio" class="resizable" placeholder="Bio"></textarea>
+        </div>
+      </div>
+    </div>
+    <div class="item-content">
+      <h3>Sosial Media</h3>
+    </div>
+    <div class="item-content item-input">
+      <div class="item-inner">
+        <div class="item-title item-label">URL</div>
+        <div class="item-input-wrap">
+          <input name="url" type="url" placeholder="URL">
+          <span class="input-clear-button"></span>
+        </div>
+      </div>
+    </div>
+    <div class="item-content">
+      <h3>Survey</h3>
+    </div>
+    <div class="item-content ">
+      <p style="font-size:12px;">Dalam skala 0-10, apakah kamu akan merekomendasikan aplikasi Ushul Fiqih ke keluarga atau teman?</p>
+    </div>
+    <div class="item-content item-input">
+      <div class="item-inner">
+        <div class="item-title item-label">Jawaban</div>
+        <div class="item-input-wrap">
+          <div class="range-slider range-slider-init" data-label="true">
+            <input name="range" type="range" value="5" min="0" max="10" step="1">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="item-content ">
+      <p style="font-size:12px;">Beri rating dan ulasan positif aplikasi di Playstore?</p>
+    </div>
+    <div class="item-content ">
+      <a href="https://play.google.com/store/apps/details?id=com.ushulfiqih.app" data-animate="false" class="link external">
+        <div class="chip chip-outline color-blue">
+          <div class="chip-label">Review</div>
+        </div>
+      </a>
+    </div>
+    <div class="item-content">
+      <h3>Keamanan</h3>
+    </div>
+    <div class="item-content item-input">
+      <div class="item-inner">
+        <div class="item-title item-label">Password</div>
+        <div class="item-input-wrap">
+          <input name="password" type="password" placeholder="Your password">
+          <span class="input-clear-button"></span>
+        </div>
+      </div>
+    </div>
+    <div class="item-content ">
+      <p style="font-size:12px;">Keluar dari Komunitas Ushul Fiqih?</p>
+    </div>
+    <div class="item-content ">
+      <a href="/tab-forum-out/" data-animate="false" class="link">
+        <div class="chip chip-outline color-red">
+          <div class="chip-label">Keluar</div>
+        </div>
+      </a>
+    </div>
+    <br/><br/>
+  </form>
+
+</div>
+</div>
+</template>

@@ -1,0 +1,57 @@
+<template>
+<div class="page">
+
+  <div class="navbar">
+    <div class="navbar-bg" style="background-color:#121212"></div>
+    <div class="navbar-inner sliding">
+      <div class="left">
+        <a class="link back" data-animate="false">
+          <i class="icon icon-back"></i>
+          <span class="if-not-md">Back</span>
+        </a>
+      </div>
+      <div class="title">Ushulfiqih.com</div>
+      <div class="right">
+          <i class="icon f7-icons color-white" @click="openPrompt" style="font-size:22px;margin-right:20px;">pencil</i>
+          <i class="icon f7-icons color-white" @click="openAlert" style="font-size:22px;margin-right:20px;">floppy_disk</i>
+      </div>
+    </div>
+  </div>
+  <!-- Additional "hide-navbar-on-scroll" class to hide navbar on scroll automatically -->
+  <div class="page-content hide-navbar-on-scroll">
+      <div class="block">
+        <h1>Macam-macam Urf</h1>
+				<p>'Urf dikategorikan menjadi dua macam, yaitu <em>&lsquo;urf </em>sahih dan 'urf fasid (rusak).</p>
+				<p><em>'Urf </em>sahih adalah sesuatu yang telah saling dikenal oleh manusia dan tidak bertentangan dengan dalil <em>syara</em>'. Yaitu tidak menghalalkan yang haram dan juga tidak membatalkan yang wajib. Contohnya:</p>
+				<ol style="list-style-type: upper-alpha;">
+				<li style="list-style: none;">
+				<ol>
+				<li>saling pengertian di antara manusia tentang kontrak borongan, pembagian mas kawin (<em>mahar)</em><em> </em>yang didahulukan dan yang diakhirkan.</li>
+				<li>Urf dimana istri tidak boleh menyerahkan dirinya kepada suaminya sebelumia menerima sebagian dari maharnya.</li>
+				<li>Urf tentang sesuatu yang telah diberikan oleh pelamar (calon suami) kepada calon istri, berupa perhiasan, pakaian, atau apa saja, dianggap sebagai hadiah dan bukan merupakan sebagian dari mahar.</li>
+				</ol>
+				</li>
+				</ol>
+				<p>&nbsp;</p>
+				<p>'urf fasid, yaitu sesuatu yang telah saling dikenal manusia, tetapi bertentangan dengan <em>syara</em>&rsquo;, atau menghalalkan yang haram dan membatalkan yang Wajib. Seperti adanya saling pengertian di antara manusia tentang beberapa perbuatan munkar dalam upacara kelahiran anak, juga tentang memakan barang riba dan kontrak judi.</p>
+</div>
+</template>
+</template>
+<script>
+  return {
+    methods: {
+      openAlert: function () {
+        var app = this.$app;
+        app.dialog.alert('Tidak ada perubahan untuk disimpan!');
+      },
+      openPrompt: function () {
+        var app = this.$app;
+        app.dialog.prompt('Admin / Editor Password', function (name) {
+          app.dialog.confirm('Are you sure that your Admin / Editor password is ' + name + '?', function () {
+            app.dialog.alert('Unknown password: ' + name);
+          });
+        });
+      },
+    }
+  }
+</script>

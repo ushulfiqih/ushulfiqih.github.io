@@ -1,0 +1,71 @@
+.navbar-bg:before {
+    background: none;
+}
+.navbar-bg:after {
+    background-color: #eeeeee;
+}
+
+.toolbar {
+    background-color: #ffffff;
+}
+
+.toolbar-bottom:after, .ios .toolbar-bottom-ios:after, .md .toolbar-bottom-md:after, .aurora .toolbar-bottom-aurora:after {
+    display: none;
+}
+
+.toolbar-bottom:before, .ios .toolbar-bottom-ios:before, .md .toolbar-bottom-md:before, .aurora .toolbar-bottom-aurora:before {
+    background-color: #eeeeee;
+}
+
+.subnavbar:before {
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 100%;
+    top: 100%;
+    bottom: auto;
+    height: 1px;
+    pointer-events: none;
+    background-color: #eeeeee;
+}
+
+.subnavbar:after {
+    background-color: #eeeeee;
+}
+
+
+
+
+
+
+/* NO SELECT + HIGHLIGHT COLOR */
+* {
+  user-select: none;
+}
+*::selection {
+  background: none;
+}
+*::-moz-selection {
+  background: none;
+}
+
+
+.status {
+  font-size: 10px;color: #ffffff;text-align:center;
+}
+.status-icon {
+  display: inline-block;border-radius: 60px; box-shadow: 0px 0px 2px #ffffff; padding: 0.5em 0.5em;font-size: 24px;
+}
+
+
+
+
+.white {
+ color:#dddddd;
+}
+.gelap {
+ background-color:#121212
+}
+.ushulfiqihcom {
+ background-image:url(../img/bg.jpg)
+}
