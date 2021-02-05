@@ -1,15 +1,54 @@
 <template>
-  <div class="page">
+  <div class="page no-toolbar">
     <div class="navbar">
       <div class="navbar-bg gelap"></div>
-      <div class="navbar-inner sliding">
+      <div class="navbar-inner">
         <div class="left">
-          <a class="link back" data-animate="false">
-            <i class="icon icon-back"></i>
-            <span class="if-not-md">Back</span>
+          <a href="#" class="link icon-only panel-open" data-panel="left">
+            <svg viewBox="0 0 100 80" width="40" height="40" style="fill: white">
+              <rect y="5" width="90" height="8"></rect>
+              <rect y="30" width="90" height="8"></rect>
+              <rect y="55" width="90" height="8"></rect>
+            </svg>
           </a>
         </div>
-        <div class="title">Ushulfiqih.com</div>
+        <div class="title sliding">Kaidah Fiqih</div>
+        <div class="right">
+          <a class="link icon-only searchbar-enable" data-searchbar=".searchbar-demo">
+            <i class="icon f7-icons color-white" style="font-size:22px">search</i>
+          </a>
+        </div>
+        <form data-search-container=".search-list" data-search-in=".item-title" class="searchbar searchbar-expandable searchbar-demo searchbar-init">
+          <div class="searchbar-inner">
+            <div class="searchbar-input-wrap">
+              <input type="search" placeholder="Pencarian"/>
+              <i class="searchbar-icon"></i>
+              <span class="input-clear-button"></span>
+            </div>
+            <span class="searchbar-disable-button if-not-aurora">Cancel</span>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="toolbar tabbar-labels toolbar-bottom" style="background-color:#121212">
+      <a href="index.html" class="link external"><div style="position: absolute; left: 15px; bottom: 14px; z-index: 9999; line-height: 1em;"><img src="img/logo.png" style="width: 25px;"><div style="position: absolute; left: 35px; bottom: 2px;font-size:8px; z-index: 9999;line-height: 1.4;color:#ffffff;">Principles of Islamic<br/>Jurisprudence</div></div></a>
+    <div class="toolbar-inner">
+      <a href="/tab-search/" data-animate="false" class="link"><i class="icon f7-icons">search</i></a>
+      <a href="/tab-kaidah/" data-animate="false" class="link tab-link-active"><i class="icon f7-icons">rectangle_on_rectangle_angled</i></a>
+      <a class="link popover-open" href="#" data-popover=".popover-links"><i class="icon f7-icons">ellipsis</i></a>
+    </div>
+    </div>
+
+    <div class="popover popover-links" style="width:40%">
+      <div class="popover-inner">
+        <div class="list">
+          <ul>
+            <li><a class="list-button item-link popover-close" href="/hijri/">Hijriyah</a></li>
+            <li><a class="list-button item-link popover-close" href="/praytimes/">Jadwal Shalat</a></li>
+            <li><a class="list-button item-link popover-close" href="/about/">Tentang</a></li>
+          </ul>
+        </div>
       </div>
     </div>
 
